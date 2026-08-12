@@ -432,3 +432,9 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
   color: #6d5210; font-size: 13.5px; line-height: 1.55; max-width: 90ch;
 }
 .brief-warn::before { content: '⚠ '; font-weight: 700; }
+
+.narrative { margin: 0; font-size: 15px; line-height: 1.7; color: var(--color-ink); max-width: 92ch; }
+.narrative-source {
+  margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--color-line);
+  font-size: 11.5px; color: var(--color-muted); max-width: 92ch;
+}

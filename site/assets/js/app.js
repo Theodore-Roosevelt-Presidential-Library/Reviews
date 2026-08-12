@@ -8,7 +8,7 @@
 (function () {
   "use strict";
 
-  var M = null, REVIEWS = [], BRIEF = null, chart = null;
+  var M = null, REVIEWS = [], BRIEF = null, SUMMARY = null, chart = null;
   var S = {
     tab: "overview",
     window: "30",
@@ -289,6 +289,23 @@
     var good = opts.invert ? v < 0 : v > 0;
     return '<span class="kpi-delta ' + (good ? "good" : "bad") + '">' +
       (v > 0 ? "▲" : "▼") + " " + Math.abs(v) + (opts.suffix || "") + "</span>";
+  }
+
+  /* The model-written narrative. Shown with its provenance attached: a reader of a
+     presidential library's dashboard should be able to tell at a glance which sentences
+     a machine wrote and which came from counting. */
+  function renderNarrative() {
+    var card = $("narrative-card");
+    if (!card) return;
+    var text = SUMMARY && SUMMARY.text;
+    if (!text) { card.hidden = true; return; }
+    card.hidden = false;
+    $("narrative").textContent = text;
+    $("narrative-tag").textContent = "Last 30 days";
+    var by = SUMMARY.generated_by || SUMMARY.model || "a language model";
+    $("narrative-source").textContent =
+      "Written by " + by + " on " + (SUMMARY.generated || "?") +
+      ", from the reviews in this period. Every figure elsewhere on this page is counted, not generated.";
   }
 
   function renderKpis() {
@@ -656,7 +673,9 @@
     if (S.source !== "all") bits.push((M.sources[S.source] || {}).label || S.source);
     $("f-count").textContent = bits.join(" · ");
 
-    if (S.tab === "overview") { renderKpis(); renderMix(); renderThemes(); renderSources(); renderChart(); }
+    if (S.tab === "overview") {
+      renderKpis(); renderNarrative(); renderMix(); renderThemes(); renderSources(); renderChart();
+    }
     if (S.tab === "reviews") renderThread();
     if (S.tab === "triage") renderTriage();
 
@@ -678,10 +697,13 @@
     Promise.all([
       fetch("data/derived/metrics.json" + bust).then(function (r) { return r.json(); }),
       fetch("data/reviews.json" + bust).then(function (r) { return r.json(); })
-        .catch(function () { return { reviews: [] }; })
+        .catch(function () { return { reviews: [] }; }),
+      fetch("data/derived/summary.json" + bust).then(function (r) { return r.json(); })
+        .catch(function () { return null; })
     ]).then(function (res) {
       M = res[0];
       REVIEWS = res[1].reviews || [];
+      SUMMARY = res[2];
 
       $("freshness").textContent = "Updated " + M.generated;
       $("freshness-sub").textContent = M.all_time.count + " reviews · " +

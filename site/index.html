@@ -17,7 +17,7 @@
     <a href="./" class="brand" aria-label="Theodore Roosevelt Presidential Library">
       <img src="assets/img/logo.png" alt="Theodore Roosevelt Presidential Library" class="brand-logo">
     </a>
-    <span class="topbar-title">Visitor Reviews</span>
+    <h1 class="topbar-title">Visitor Reviews</h1>
     <span class="topbar-spacer"></span>
     <div class="meta">
       <span id="freshness" class="freshness">Loading…</span><br>
@@ -62,6 +62,16 @@
   <!-- OVERVIEW -->
   <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
     <div class="kpi-grid" id="kpis"></div>
+    <article class="card" id="narrative-card" hidden>
+      <header class="card-head">
+        <h2>What visitors are saying</h2>
+        <span class="card-tag" id="narrative-tag">—</span>
+      </header>
+      <div class="card-body">
+        <p class="narrative" id="narrative"></p>
+        <p class="narrative-source" id="narrative-source"></p>
+      </div>
+    </article>
     <div class="grid-2">
       <article class="card">
         <header class="card-head">
