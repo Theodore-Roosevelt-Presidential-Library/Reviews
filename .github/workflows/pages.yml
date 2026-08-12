@@ -9,6 +9,11 @@ on:
       - "CNAME"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
+  # Called by the collect workflow. A push made with GITHUB_TOKEN does not trigger
+  # workflows — GitHub blocks that to prevent recursive runs — so the daily data commit
+  # would never fire the push trigger above. Without this, the dashboard silently freezes
+  # at whatever a human last pushed.
+  workflow_call:
 
 permissions:
   contents: read
@@ -27,6 +32,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Never publish data the dashboard cannot parse.
+      - name: Validate data
+        run: python3 collector/validate.py
 
       - name: Assemble the site
         run: |

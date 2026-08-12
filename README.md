@@ -15,12 +15,21 @@ verbatim, and nothing in this repo is ever fabricated — an unknown value is `n
 ```
  GitHub Actions (daily, 6am Central)
    │
-   ├─ collect.py   Apify → normalise → merge into data/reviews.json
-   ├─ analyze.py   GitHub Models → themes + sentiment + narrative summary
-   └─ derive.py    rolling windows, deltas, theme movement, triage queue
+   ├─ git pull --rebase          never hand-merge generated files
+   ├─ collect.py                 Apify → normalise → merge into data/reviews.json
+   ├─ analyze.py                 GitHub Models → themes + sentiment + summary
+   ├─ derive.py                  windows, deltas, theme movement, triage, brief
+   ├─ validate.py                refuse to ship unparseable data
+   └─ commit data/
    │
-   └─→ commits data/  ──→  Pages deploy  ──→  static dashboard
+   └─→ calls the deploy workflow ──→ static dashboard
 ```
+
+**The deploy is called, not triggered.** A push made with `GITHUB_TOKEN` deliberately does
+not fire other workflows, so the daily data commit would never start the Pages `push`
+trigger. The collect workflow calls `pages.yml` directly via `workflow_call` instead. It
+runs even when collection finds nothing new, which is what recovers the site if a bad
+deploy went out.
 
 No server and no database. The dashboard is one HTML file that reads generated JSON, so
 every number on screen is also a line in git history — you can diff any two days.
@@ -66,6 +75,7 @@ collector/
   analyze.py                   themes/sentiment/summary, rules fallback
   derive.py                    windows, deltas, triage, chart series
   brief.py                     the executive summary shown at the top of the dashboard
+  validate.py                  pre-commit gate: parseable JSON, no conflict markers
 data/
   reviews.json                 the dataset
   derived/metrics.json         everything the dashboard reads
@@ -141,6 +151,12 @@ ones. They are excluded from the response queue but counted everywhere else.
 **Google reviews have no titles.** The Maps actor returns the *place* name in a `title`
 field, which if taken at face value stamps "Theodore Roosevelt Presidential Library" across
 every Google review. The normaliser rejects any title matching the entity name.
+
+**Never hand-merge `data/`.** Everything in `data/derived/` is a pure function of
+`data/reviews.json`. On a conflict, take either side, then run `collector/derive.py` to
+regenerate and `collector/validate.py` to confirm. A conflict resolved by hand once put
+`<<<<<<< HEAD` inside `metrics.json`; it committed cleanly, deployed, and took the whole
+dashboard down with a JSON parse error. `validate.py` now blocks that in both workflows.
 
 **Actor output drift.** Apify actors change their output shape without notice. The normaliser
 checks several plausible key names per field and falls back to `null`, so a rename degrades a
