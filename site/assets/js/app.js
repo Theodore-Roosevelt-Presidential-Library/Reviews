@@ -297,11 +297,20 @@
   function renderNarrative() {
     var card = $("narrative-card");
     if (!card) return;
-    var text = SUMMARY && SUMMARY.text;
-    if (!text) { card.hidden = true; return; }
+    // One narrative per window, so the card answers the period selector above it.
+    var byWindow = (SUMMARY && SUMMARY.windows) || {};
+    var text = byWindow[S.window] || (S.window === "30" ? (SUMMARY && SUMMARY.text) : null);
+    if (!text) {
+      card.hidden = false;
+      $("narrative").textContent =
+        "No narrative for this period — too few reviews in the last " + S.window + " days.";
+      $("narrative-tag").textContent = "Last " + S.window + " days";
+      $("narrative-source").textContent = "";
+      return;
+    }
     card.hidden = false;
     $("narrative").textContent = text;
-    $("narrative-tag").textContent = "Last 30 days";
+    $("narrative-tag").textContent = "Last " + S.window + " days";
     var by = SUMMARY.generated_by || SUMMARY.model || "a language model";
     $("narrative-source").textContent =
       "Written by " + by + " on " + (SUMMARY.generated || "?") +

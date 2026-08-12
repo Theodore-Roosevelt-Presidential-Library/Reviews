@@ -169,18 +169,24 @@ def apply_analysis(review, result, answered=False):
     review["analysis_source"] = "rules"
 
 
-def summarise(reviews, client):
-    """One short narrative paragraph over the last 30 days of reviews."""
+def summarise(reviews, client, days=30):
+    """A short narrative over one window. Written per window, not once for 30 days.
+
+    The dashboard has a period selector; a single fixed-window summary sitting above it
+    looks like it should respond to that selector and doesn't. Generating one per window
+    costs a few extra calls a day and removes the contradiction.
+    """
     from common import days_ago
     recent = [r for r in reviews
-              if (days_ago(r.get("date")) is not None and days_ago(r.get("date")) <= 30)]
-    if not recent:
+              if (days_ago(r.get("date")) is not None and days_ago(r.get("date")) <= days)]
+    if len(recent) < 3:
         return None
     rated = [r["rating"] for r in recent if r.get("rating")]
     avg = round(sum(rated) / len(rated), 2) if rated else None
     lows = [r for r in recent if r.get("rating") and r["rating"] <= 3]
 
     facts = {
+        "window_days": days,
         "review_count": len(recent),
         "average_rating": avg,
         "critical_count": len(lows),
@@ -194,12 +200,12 @@ def summarise(reviews, client):
                                     key=lambda kv: -kv[1])[:12] if v}
 
     prompt = (
-        "Write 3-5 sentences summarising the last 30 days of visitor reviews for the "
+        f"Write 3-5 sentences summarising the last {days} days of visitor reviews for the "
         "Theodore Roosevelt Presidential Library, for the Library's communications team.\n\n"
-        "Rules: use only the data given. Never invent a number or a quote. Be specific and "
-        "plain-spoken — no marketing language, no words like 'world-class' or "
-        "'transformative'. Lead with what changed or what needs attention, not with praise. "
-        "Write in plain prose, no headings or bullets.\n\n"
+        "Rules: use only the data given. Never invent a number or a quote. Never name an "
+        "individual reviewer. Be specific and plain-spoken — no marketing language, no "
+        "words like 'world-class' or 'transformative'. Lead with what changed or what "
+        "needs attention, not with praise. Write in plain prose, no headings or bullets.\n\n"
         f"Data:\n{json.dumps(facts, indent=1)}"
     )
     return client.complete(None, prompt, temperature=0.2)
@@ -279,19 +285,25 @@ def main():
 
     save_reviews(doc)
 
-    summary = None
+    summaries = {}
     if client:
-        try:
-            summary = summarise(reviews, client)
-        except Exception as exc:
-            reason = reason or str(exc)
-            print(f"  summary generation failed: {exc}", file=sys.stderr, flush=True)
+        for days in CONFIG.get("windows", [30]):
+            try:
+                text = summarise(reviews, client, days)
+                if text:
+                    summaries[str(days)] = text
+                    print(f"  summary written for {days}d", flush=True)
+            except Exception as exc:
+                reason = reason or str(exc)
+                print(f"  summary for {days}d failed: {exc}", file=sys.stderr, flush=True)
+    summary = summaries.get("30")
 
     from collections import Counter
     sources = Counter(r.get("analysis_source") for r in reviews)
     write_json(DERIVED / "summary.json", {
         "generated": today(),
         "text": summary,
+        "windows": summaries,
         "generated_by": f"{A.get('provider')}:{A.get('model')}" if summary else None,
         "provider": A.get("provider"),
         "model": A.get("model"),
