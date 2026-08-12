@@ -30,6 +30,64 @@
   var stars = function (n) { return n ? "★".repeat(n) + "☆".repeat(5 - n) : ""; };
   var titleCase = function (t) { return t.replace(/_/g, " "); };
 
+  // Highlight search hits. Runs on already-escaped text, and escapes the needle too, so
+  // neither the review nor the query can inject markup.
+  function mark(escaped) {
+    if (!S.search) return escaped;
+    var needle = esc(S.search).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (!needle) return escaped;
+    return escaped.replace(new RegExp("(" + needle + ")", "gi"), "<mark>$1</mark>");
+  }
+
+  var SOURCE_LABEL = function (k) { return (M.sources[k] || {}).label || k; };
+
+  /* Every filter currently narrowing the view, as removable tokens. */
+  function activeFilters() {
+    var out = [];
+    if (S.theme) out.push({ key: "theme", label: "Theme", value: titleCase(S.theme) });
+    if (S.source !== "all") out.push({ key: "source", label: "Source", value: SOURCE_LABEL(S.source) });
+    if (S.rating !== "all") {
+      out.push({ key: "rating", label: "Rating",
+                 value: S.rating === "low" ? "3★ or below" : S.rating + "★" });
+    }
+    if (S.search) out.push({ key: "search", label: "Text", value: '"' + S.search + '"' });
+    if (S.tier !== "all" && S.tab === "triage") {
+      out.push({ key: "tier", label: "Tier", value: titleCase(S.tier) });
+    }
+    return out;
+  }
+
+  function clearFilter(key) {
+    if (key === "theme") S.theme = null;
+    if (key === "source") S.source = "all";
+    if (key === "rating") S.rating = "all";
+    if (key === "tier") S.tier = "all";
+    if (key === "search") { S.search = ""; $("f-search").value = ""; }
+  }
+
+  function renderActiveBar() {
+    var items = activeFilters();
+    var bar = $("activebar");
+    if (!items.length) { bar.hidden = true; return; }
+    bar.hidden = false;
+
+    $("tokens").innerHTML = items.map(function (f) {
+      return '<button class="token" data-clear="' + f.key + '" ' +
+        'aria-label="Remove filter ' + esc(f.label) + " " + esc(f.value) + '">' +
+        "<em>" + esc(f.label) + ":</em> " + esc(f.value) +
+        '<span class="token-x" aria-hidden="true">×</span></button>';
+    }).join("");
+
+    var shown = S.tab === "triage" ? triageRows().length : filtered().length;
+    var total = S.tab === "triage" ? M.triage.length : M.all_time.count;
+    $("activebar-result").textContent =
+      "Showing " + shown + " of " + total + " · " + (total - shown) + " hidden";
+
+    $("tokens").querySelectorAll("[data-clear]").forEach(function (b) {
+      b.onclick = function () { clearFilter(b.dataset.clear); render(); };
+    });
+  }
+
   /* ---------- reply drafting -------------------------------------------
      A template, not generated prose. Anything published in the Library's voice
      gets written by a person; this only removes the blank page.               */
@@ -193,9 +251,8 @@
           esc(a.issue) + " <b>" + a.mentions + "</b></button>";
       }).join("") + "</div>";
     }
-    (BRIEF.notes || []).forEach(function (n) {
-      main += '<div class="brief-note">' + esc(n) + "</div>";
-    });
+    // BRIEF.notes is standing context, not news — it reads the same every day, so it
+    // lives in the footer rather than taking space at the top of every view.
     main += "</div>";
 
     var st = BRIEF.stats || {};
@@ -252,7 +309,8 @@
     $("mix-tag").textContent = total + " rated";
     var rows = [5, 4, 3, 2, 1].map(function (s) {
       var n = c.distribution[s] || 0, pct = total ? (100 * n / total) : 0;
-      return '<tr class="clickable" data-rating="' + s + '"><td style="width:78px"><span class="stars">' +
+      return '<tr class="clickable' + (String(S.rating) === String(s) ? " is-active" : "") +
+        '" data-rating="' + s + '"><td style="width:78px"><span class="stars">' +
         stars(s) + '</span></td><td><span class="bar' + (s >= 4 ? "" : " soft") +
         '" style="width:' + Math.max(pct * 2.2, n ? 3 : 0) + 'px"></span></td>' +
         '<td class="num" style="width:56px">' + n + "</td>" +
@@ -277,7 +335,8 @@
         // More mentions of a theme is not inherently good or bad, but for complaint
         // themes a rise is worth noticing — colour by direction, not by judgement.
         var cls = m.change > 0 ? "neg" : m.change < 0 ? "pos" : "muted";
-        return '<tr class="clickable" data-theme="' + esc(m.theme) + '"><td>' +
+        return '<tr class="clickable' + (S.theme === m.theme ? " is-active" : "") +
+          '" data-theme="' + esc(m.theme) + '"><td>' +
           esc(titleCase(m.theme)) + '</td><td class="num">' + m.current +
           '</td><td class="num muted">' + m.prior + '</td><td class="num">' +
           m.current_share + '%</td><td class="num ' + cls + '">' +
@@ -297,7 +356,8 @@
     var rows = keys.map(function (k) {
       var n = c.by_source[k] || 0;
       var all = M.all_time.by_source[k] || 0;
-      return '<tr class="clickable" data-source="' + k + '"><td>' +
+      return '<tr class="clickable' + (S.source === k ? " is-active" : "") +
+        '" data-source="' + k + '"><td>' +
         esc(M.sources[k].label) + '</td><td class="num">' + n +
         '</td><td class="num muted">' + all + "</td></tr>";
     }).join("");
@@ -360,9 +420,10 @@
       '<div class="rev-head"><div class="rev-who">' + esc(r.author || "Anonymous") + " " + badge +
       '</div><div class="rev-meta">' + esc(src.label || r.source) + " · " + esc(r.date || "undated") + "</div></div>";
 
-    if (r.title) h += '<div class="rev-title">' + esc(r.title) + "</div>";
+    if (r.title) h += '<div class="rev-title">' + mark(esc(r.title)) + "</div>";
     if (r.text) {
-      h += '<p class="rev-text' + (long && !open ? " clamped" : "") + '">' + esc(r.text) + "</p>";
+      h += '<p class="rev-text' + (long && !open ? " clamped" : "") + '">' +
+        mark(esc(r.text)) + "</p>";
       if (long) h += '<button class="rev-more" data-expand="' + esc(r.id) + '">' +
         (open ? "Show less" : "Show more") + "</button>";
     }
@@ -373,8 +434,14 @@
         (overdue ? r.overdue_by + "d overdue" : "due within " + r.sla_days + "d") + "</span>";
     }
     if (r.responded) h += '<span class="chip replied static">Replied</span>';
-    (r.themes || []).forEach(function (t) {
-      h += '<button class="chip" data-theme="' + esc(t) + '">' + esc(titleCase(t)) + "</button>";
+    // Put the matching theme first and mark it, so each card shows why it survived the filter.
+    var themes = (r.themes || []).slice().sort(function (a, b) {
+      return (b === S.theme) - (a === S.theme);
+    });
+    themes.forEach(function (t) {
+      h += '<button class="chip' + (t === S.theme ? " is-active" : "") +
+        '" data-theme="' + esc(t) + '">' + esc(titleCase(t)) +
+        (t === S.theme ? " ×" : "") + "</button>";
     });
     h += "</div>";
 
@@ -428,13 +495,34 @@
     });
   }
 
+
+  /* Empty results should say what to undo, not just that there is nothing. */
+  function emptyState(lead) {
+    var items = activeFilters();
+    var html = '<div class="empty">' + (lead || "No reviews match");
+    if (items.length) {
+      html += " " + items.map(function (f) {
+        return f.label.toLowerCase() + " " + f.value;
+      }).join(" + ");
+    }
+    html += '.<br><button class="btn" id="empty-clear" style="margin-top:12px">' +
+      "Clear all filters</button></div>";
+    return html;
+  }
+
+  function wireEmptyClear() {
+    var b = $("empty-clear");
+    if (b) b.onclick = function () { $("f-reset").click(); };
+  }
+
   function renderThread() {
     var rows = filtered();
     $("thread-tag").textContent = rows.length + " shown";
     $("thread").innerHTML = rows.length
       ? rows.map(function (r) { return card(r, {}); }).join("")
-      : '<div class="empty">No reviews match these filters.</div>';
+      : emptyState();
     wire($("thread"), rows);
+    wireEmptyClear();
     renderSelection(rows);
   }
 
@@ -472,8 +560,8 @@
     html += '<table><thead><tr><th>Theme</th><th></th><th class="num">n</th></tr></thead><tbody>' +
       top.map(function (p) {
         var active = S.theme === p[0];
-        return '<tr class="clickable" data-theme="' + esc(p[0]) + '"' +
-          (active ? ' style="background:var(--color-bg-subtle)"' : "") + "><td>" +
+        return '<tr class="clickable' + (active ? " is-active" : "") +
+          '" data-theme="' + esc(p[0]) + '"><td>' +
           esc(titleCase(p[0])) + '</td><td style="width:46%"><span class="bar' +
           (active ? "" : " soft") + '" style="width:' + Math.round(100 * p[1] / max) +
           '%"></span></td><td class="num">' + p[1] + "</td></tr>";
@@ -482,7 +570,8 @@
     html += '<table style="border-top:1px solid var(--color-line)"><thead><tr><th>Source</th>' +
       '<th class="num">n</th></tr></thead><tbody>' +
       Object.keys(srcs).map(function (k) {
-        return '<tr class="clickable" data-source="' + esc(k) + '"><td>' +
+        return '<tr class="clickable' + (S.source === k ? " is-active" : "") +
+          '" data-source="' + esc(k) + '"><td>' +
           esc((M.sources[k] || {}).label || k) + '</td><td class="num">' + srcs[k] + "</td></tr>";
       }).join("") + "</tbody></table>";
 
@@ -499,10 +588,14 @@
     });
   }
 
-  function renderTriage() {
-    var q = M.triage.filter(function (t) {
+  function triageRows() {
+    return M.triage.filter(function (t) {
       if (S.tier !== "all" && t.tier !== S.tier) return false;
       if (S.source !== "all" && t.source !== S.source) return false;
+      if (S.rating !== "all") {
+        if (S.rating === "low" && !(t.rating != null && t.rating <= 3)) return false;
+        if (S.rating !== "low" && String(t.rating) !== S.rating) return false;
+      }
       if (S.theme && (t.themes || []).indexOf(S.theme) === -1) return false;
       if (S.search) {
         var hay = ((t.text || "") + " " + (t.title || "") + " " + (t.author || "")).toLowerCase();
@@ -510,6 +603,10 @@
       }
       return true;
     });
+  }
+
+  function renderTriage() {
+    var q = triageRows();
     var overdue = M.triage.filter(function (t) { return (t.overdue_by || 0) > 0; }).length;
     var crit = M.triage.filter(function (t) { return t.tier === "critical"; }).length;
     var oldest = M.triage.reduce(function (a, t) { return Math.max(a, t.age_days || 0); }, 0);
@@ -529,15 +626,26 @@
     $("triage-tag").textContent = q.length + " shown";
     $("triage-thread").innerHTML = q.length
       ? q.map(function (r) { return card(r, { tier: true }); }).join("")
-      : '<div class="empty">Nothing here. Everything matching these filters has a reply.</div>';
+      : emptyState("Nothing in the queue matches");
     wire($("triage-thread"), q);
+    wireEmptyClear();
   }
 
   /* ---------- render ---------------------------------------------------- */
+  var LAST = { tab: null, sig: null };
+
   function render() {
+    // Changing tab or filters replaces what's on screen. Keeping the old scroll offset
+    // drops the reader into the middle of a different list, above the band explaining
+    // why it changed — so send them back to the top when the result set changes.
+    var sig = [S.window, S.source, S.rating, S.theme, S.search, S.tier].join("|");
+    var jumped = LAST.tab !== null && (LAST.tab !== S.tab || LAST.sig !== sig);
+    LAST.tab = S.tab; LAST.sig = sig;
+
     renderTabs();
     renderFilters();
     renderBrief();
+    renderActiveBar();
 
     var shown = filtered().length;
     var bits = [shown + " of " + M.all_time.count];
@@ -552,6 +660,13 @@
     document.querySelectorAll("[data-tier]").forEach(function (b) {
       b.classList.toggle("active", b.dataset.tier === S.tier);
     });
+
+    if (jumped) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      ["thread", "triage-thread"].forEach(function (id) {
+        var el = $(id); if (el) el.scrollTop = 0;
+      });
+    }
   }
 
   /* ---------- boot ------------------------------------------------------ */
@@ -568,12 +683,15 @@
       $("freshness").textContent = "Updated " + M.generated;
       $("freshness-sub").textContent = M.all_time.count + " reviews · " +
         Object.keys(M.all_time.by_source).length + " sources";
+      var notes = ((M.briefs || {})["30"] || {}).notes || [];
       $("foot").innerHTML = "Built from public reviews on " +
         Object.keys(M.all_time.by_source).map(function (k) {
           return esc((M.sources[k] || {}).label || k);
         }).join(", ") +
         ". Review text is stored verbatim. " +
-        '<a href="https://github.com/Theodore-Roosevelt-Presidential-Library/Reviews">Source and data</a>.';
+        '<a href="https://github.com/Theodore-Roosevelt-Presidential-Library/Reviews">Source and data</a>.' +
+        (notes.length ? '<br><span class="foot-note">' +
+          notes.map(esc).join(" ") + "</span>" : "");
 
       $("f-search").oninput = function (e) {
         S.search = e.target.value;
@@ -581,6 +699,7 @@
         render();
         $("f-search").focus();
       };
+      $("clear-all").onclick = function () { $("f-reset").click(); };
       $("f-reset").onclick = function () {
         S.source = "all"; S.rating = "all"; S.theme = null; S.search = "";
         S.tier = "all"; $("f-search").value = ""; render();
