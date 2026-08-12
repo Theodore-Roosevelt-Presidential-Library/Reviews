@@ -31,6 +31,7 @@ def _load_dotenv() -> None:
 _load_dotenv()
 
 DATA = ROOT / "data"
+THEMES_PATH = ROOT / "data" / "themes.json"
 REVIEWS_PATH = DATA / "reviews.json"
 DERIVED = DATA / "derived"
 SNAPSHOTS = DATA / "snapshots"
@@ -135,3 +136,18 @@ def blank_record(**kwargs) -> dict:
     }
     record.update(kwargs)
     return record
+
+
+def load_vocabulary() -> dict:
+    """The theme vocabulary, as data.
+
+    It lives in data/themes.json rather than in code so that promote.py can extend it on a
+    scheduled run without a deploy, and so that every label carries a record of whether a
+    person wrote it or a machine proposed it. On a presidential library's public dashboard
+    a reader should be able to tell those apart.
+    """
+    return json.loads(THEMES_PATH.read_text())
+
+
+def theme_labels() -> list:
+    return [t["label"] for t in load_vocabulary()["themes"]]

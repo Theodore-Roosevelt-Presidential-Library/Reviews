@@ -176,7 +176,7 @@ back off, but individual reviews cannot be removed.
 
 | Piece | Where it comes from |
 |---|---|
-| Theme vocabulary (39 themes) | Hand-authored in `analyze.py`. Fixed — the model picks from it and *proposes* additions, but never adds one itself. See below. |
+| Theme vocabulary | `data/themes.json`. 39 hand-authored labels, plus any the pipeline promoted on its own. Fixed within a run; grows between runs. See below. |
 | Theme + sentiment + tone per review | The model. All 335 reviews carry `analysis_source: "model"`; check `classified_by` in `summary.json` for the split on any run. |
 | "What visitors are saying" narrative | The model, one per window (7/30/60/90). Shown with its provenance printed underneath. |
 | Executive brief wording | Hand-written sentence templates in `brief.py`. |
@@ -198,37 +198,65 @@ which would just be the star rating in disguise.
 |---|---|
 | Volume or rating shifts | Fully. Headline, deltas, every figure track automatically. |
 | More reviews about a theme it already knows | Fully. Ranking reorders, the lead complaint changes. |
-| A complaint it has no theme for | **Partly.** The list never grows on its own, but the review is surfaced under "Not in our vocabulary" with the sentence that raised it. |
+| A complaint it has no theme for | **Yes, over weeks.** It surfaces under "Not in our vocabulary" immediately, and becomes a real theme once enough visitors raise it. |
 | A complaint that matches the *wrong* theme | **No, and no warning.** Keyword rules cannot detect their own false positives. |
 
 That last row is the real limit. In testing, 30 reviews about a broken elevator matched the
 `architecture` regex on the word "building" — a wrong label with no signal that it was wrong.
 Reading low-rated reviews directly, weekly, is not optional.
 
-### Why the vocabulary is fixed, and how it grows anyway
+### How the theme vocabulary grows
 
-A list that grew on its own would destroy the thing it was built for. "Crowding up 19 points"
-only means something if `crowding` meant the same thing last month, and a model inventing
-labels produces `parking`, `car park`, and `parking lot` as three separate lines that each
-look small. Fixed labels are what make a trend line a trend line.
+The list has to be stable to be useful. "Crowding up 19 points" only means something if
+`crowding` meant the same thing last month, and a model inventing labels freely produces
+`parking`, `car park`, and `parking lot` as three lines that each look small. Stable labels
+are what make a trend line a trend line.
 
-But a fixed list also cannot discover the next problem. Two of the most-used themes here,
+But a frozen list cannot find the next problem. Two of the busiest themes here,
 `interpretation` (45 reviews) and `historical_balance` (17), exist only because they were
 guessed at the start. Had they not been, sixty-two reviews arguing about how the Library
 tells TR's story would have been invisible.
 
-So the model does both. It labels from the fixed list, and separately names anything
-substantive the list has no word for — stored as `unmatched`, aggregated into
-`proposed_themes`, and shown on the Overview tab under **Not in our vocabulary**, each with
-the sentence that raised it. Nothing there is counted, trended, or filtered on. Promoting one
-means editing `THEMES` in `analyze.py` and re-running `analyze.py --all`; that is a person's
-decision, made once, in a commit.
+So the vocabulary is fixed **within** a run and grows **between** runs, on evidence:
 
-Two things to know when reading that card. **Single mentions are noisy** — the wording varies
-between runs, and a one-off often reflects the model reaching. **Repeats are the signal**, and
-are marked with a red rule. Three separate reviews about shuttle service is a theme; one review
-labelled "inspiration" is not. Near-duplicate wordings ("winter weather" and "weather heat")
-will not cluster on their own, so read the card rather than sorting it.
+1. `analyze.py` labels each review from `data/themes.json` and separately names anything
+   substantive the list has no word for, stored as `unmatched`.
+2. `promote.py` clusters those suggestions and promotes one when it clears the bar in
+   `config.json > vocabulary` — currently **3 separate reviews spread over at least 14 days**,
+   at most **one promotion per run**.
+3. A promotion triggers `analyze.py --all`, re-labelling every review.
+4. The commit message names what was added.
+
+**Step 3 is the one that matters.** A theme applied only to reviews labelled from today
+onward would start at zero and show explosive growth in its first period — a trend that
+never happened. Re-labelling the whole corpus gives a new theme the same real history every
+other theme has. Past `reanalyse_max_reviews` (2,000) that re-label stops being cheap, so
+`promote.py` reports instead of acting and the promotion becomes a manual call.
+
+**Clustering, because the model does not repeat itself.** The same complaint came back as
+"explicit singing" one day and "explicit music" the next; counting raw strings would leave a
+real recurring subject at one mention forever. Labels join when they share a distinctive
+word, ignoring generic ones — so `dog policy` and `weapon policy` stay apart, while
+`shuttles` and `shuttle service` merge. It over-clusters occasionally: `winter weather` and
+`weather heat` both keep "weather" and merge, though they are opposite complaints. That is
+the cheaper error. A missed pattern is silent; a bad merge is on screen, records the phrases
+it was built from, and is undone by deleting a line from `themes.json`.
+
+**Everything auto-added says so.** Each carries `source: "auto"`, the date, the evidence
+review IDs, and the raw phrases behind it, and wears an `AUTO` badge on the dashboard. A
+label a machine coined should never be mistakable for one a person chose — the wording ends
+up in board reports.
+
+**The theme table caps at 20** for the selected period, with the rest one click away. The
+vocabulary has no ceiling now, and without a cap a long tail of two-mention themes would
+eventually own the page.
+
+**To undo one:** delete its entry from `data/themes.json` and run `analyze.py --all`. To turn
+the whole mechanism off: `vocabulary.auto_promote: false`.
+
+**A note on rate limits.** A promotion day costs a full re-classification — roughly 21 API
+requests on top of the usual handful. That fits inside OpenAI's 50-per-day free tier only
+just. Adding a payment method removes the risk of a re-label stopping halfway.
 
 **On providers.** This project ran on GitHub Models until that product was retired on
 July 30, 2026. The endpoint began returning `410 github_models_retirement_brownout`, the

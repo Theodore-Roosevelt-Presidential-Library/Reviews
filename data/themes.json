@@ -1,0 +1,161 @@
+{
+  "note": "The controlled theme vocabulary. Data, not code, so it can change without a deploy \u2014 and so every entry can say where it came from. 'authored' entries were written by hand at the start; 'auto' entries were promoted by collector/promote.py after visitors raised the subject repeatedly. See docs/SCHEMA.md.",
+  "themes": [
+    {
+      "label": "interactive_exhibits",
+      "source": "authored"
+    },
+    {
+      "label": "ai_criticism",
+      "source": "authored"
+    },
+    {
+      "label": "data_privacy",
+      "source": "authored"
+    },
+    {
+      "label": "interpretation",
+      "source": "authored"
+    },
+    {
+      "label": "historical_balance",
+      "source": "authored"
+    },
+    {
+      "label": "guided_tours",
+      "source": "authored"
+    },
+    {
+      "label": "visitor_flow",
+      "source": "authored"
+    },
+    {
+      "label": "dwell_time",
+      "source": "authored"
+    },
+    {
+      "label": "families",
+      "source": "authored"
+    },
+    {
+      "label": "peer_comparison",
+      "source": "authored"
+    },
+    {
+      "label": "conservation_message",
+      "source": "authored"
+    },
+    {
+      "label": "architecture",
+      "source": "authored"
+    },
+    {
+      "label": "landscape",
+      "source": "authored"
+    },
+    {
+      "label": "rooftop",
+      "source": "authored"
+    },
+    {
+      "label": "boardwalk_trails",
+      "source": "authored"
+    },
+    {
+      "label": "grounds_conduct",
+      "source": "authored"
+    },
+    {
+      "label": "crowding",
+      "source": "authored"
+    },
+    {
+      "label": "capacity",
+      "source": "authored"
+    },
+    {
+      "label": "queues",
+      "source": "authored"
+    },
+    {
+      "label": "timed_entry",
+      "source": "authored"
+    },
+    {
+      "label": "sellouts",
+      "source": "authored"
+    },
+    {
+      "label": "walkup_expectations",
+      "source": "authored"
+    },
+    {
+      "label": "parking",
+      "source": "authored"
+    },
+    {
+      "label": "wayfinding_signage",
+      "source": "authored"
+    },
+    {
+      "label": "accessibility",
+      "source": "authored"
+    },
+    {
+      "label": "security_screening",
+      "source": "authored"
+    },
+    {
+      "label": "restrooms",
+      "source": "authored"
+    },
+    {
+      "label": "water_availability",
+      "source": "authored"
+    },
+    {
+      "label": "staff",
+      "source": "authored"
+    },
+    {
+      "label": "staff_training",
+      "source": "authored"
+    },
+    {
+      "label": "ticket_pricing",
+      "source": "authored"
+    },
+    {
+      "label": "age_tiers",
+      "source": "authored"
+    },
+    {
+      "label": "value_for_money",
+      "source": "authored"
+    },
+    {
+      "label": "retail",
+      "source": "authored"
+    },
+    {
+      "label": "retail_pricing",
+      "source": "authored"
+    },
+    {
+      "label": "food_beverage",
+      "source": "authored"
+    },
+    {
+      "label": "drive_market",
+      "source": "authored"
+    },
+    {
+      "label": "international_visitor",
+      "source": "authored"
+    },
+    {
+      "label": "media_driven_awareness",
+      "source": "authored"
+    }
+  ]
+}

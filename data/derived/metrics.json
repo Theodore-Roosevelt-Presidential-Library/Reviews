@@ -256,7 +256,7 @@
           "change": 5.7
         },
         {
-          "theme": "timed_entry",
+          "theme": "families",
           "current": 1,
           "prior": 7,
           "current_share": 4.2,
@@ -264,7 +264,7 @@
           "change": -5.4
         },
         {
-          "theme": "families",
+          "theme": "timed_entry",
           "current": 1,
           "prior": 7,
           "current_share": 4.2,
@@ -288,7 +288,7 @@
           "change": 4.2
         },
         {
-          "theme": "parking",
+          "theme": "visitor_flow",
           "current": 0,
           "prior": 3,
           "current_share": 0.0,
@@ -296,7 +296,7 @@
           "change": -4.1
         },
         {
-          "theme": "visitor_flow",
+          "theme": "parking",
           "current": 0,
           "prior": 3,
           "current_share": 0.0,
@@ -320,7 +320,7 @@
           "change": 2.9
         },
         {
-          "theme": "ticket_pricing",
+          "theme": "grounds_conduct",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
@@ -328,7 +328,7 @@
           "change": -2.7
         },
         {
-          "theme": "grounds_conduct",
+          "theme": "ticket_pricing",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
@@ -542,20 +542,20 @@
           "change": 3.2
         },
         {
-          "theme": "queues",
-          "current": 7,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0.0,
-          "change": 3.0
-        },
-        {
           "theme": "dwell_time",
           "current": 13,
           "prior": 9,
           "current_share": 5.6,
           "prior_share": 8.7,
           "change": -3.0
+        },
+        {
+          "theme": "queues",
+          "current": 7,
+          "prior": 0,
+          "current_share": 3.0,
+          "prior_share": 0.0,
+          "change": 3.0
         },
         {
           "theme": "conservation_message",
@@ -574,20 +574,20 @@
           "change": -2.9
         },
         {
-          "theme": "visitor_flow",
-          "current": 7,
-          "prior": 1,
-          "current_share": 3.0,
-          "prior_share": 1.0,
-          "change": 2.1
-        },
-        {
           "theme": "interactive_exhibits",
           "current": 84,
           "prior": 40,
           "current_share": 36.4,
           "prior_share": 38.5,
           "change": -2.1
+        },
+        {
+          "theme": "visitor_flow",
+          "current": 7,
+          "prior": 1,
+          "current_share": 3.0,
+          "prior_share": 1.0,
+          "change": 2.1
         },
         {
           "theme": "boardwalk_trails",
@@ -598,20 +598,20 @@
           "change": -1.8
         },
         {
-          "theme": "retail_pricing",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.7,
-          "prior_share": 0.0,
-          "change": 1.7
-        },
-        {
           "theme": "families",
           "current": 25,
           "prior": 13,
           "current_share": 10.8,
           "prior_share": 12.5,
           "change": -1.7
+        },
+        {
+          "theme": "retail_pricing",
+          "current": 4,
+          "prior": 0,
+          "current_share": 1.7,
+          "prior_share": 0.0,
+          "change": 1.7
         },
         {
           "theme": "parking",
@@ -654,20 +654,20 @@
           "change": 1.2
         },
         {
-          "theme": "ai_criticism",
-          "current": 27,
-          "prior": 11,
-          "current_share": 11.7,
-          "prior_share": 10.6,
-          "change": 1.1
-        },
-        {
           "theme": "accessibility",
           "current": 2,
           "prior": 2,
           "current_share": 0.9,
           "prior_share": 1.9,
           "change": -1.1
+        },
+        {
+          "theme": "ai_criticism",
+          "current": 27,
+          "prior": 11,
+          "current_share": 11.7,
+          "prior_share": 10.6,
+          "change": 1.1
         },
         {
           "theme": "rooftop",
@@ -678,14 +678,6 @@
           "change": 1.1
         },
         {
-          "theme": "retail",
-          "current": 9,
-          "prior": 3,
-          "current_share": 3.9,
-          "prior_share": 2.9,
-          "change": 1.0
-        },
-        {
           "theme": "food_beverage",
           "current": 11,
           "prior": 6,
@@ -694,7 +686,15 @@
           "change": -1.0
         },
         {
-          "theme": "water_availability",
+          "theme": "retail",
+          "current": 9,
+          "prior": 3,
+          "current_share": 3.9,
+          "prior_share": 2.9,
+          "change": 1.0
+        },
+        {
+          "theme": "walkup_expectations",
           "current": 2,
           "prior": 0,
           "current_share": 0.9,
@@ -702,7 +702,7 @@
           "change": 0.9
         },
         {
-          "theme": "walkup_expectations",
+          "theme": "water_availability",
           "current": 2,
           "prior": 0,
           "current_share": 0.9,
@@ -726,7 +726,7 @@
           "change": -0.8
         },
         {
-          "theme": "ticket_pricing",
+          "theme": "grounds_conduct",
           "current": 8,
           "prior": 3,
           "current_share": 3.5,
@@ -734,7 +734,7 @@
           "change": 0.6
         },
         {
-          "theme": "grounds_conduct",
+          "theme": "ticket_pricing",
           "current": 8,
           "prior": 3,
           "current_share": 3.5,
@@ -883,7 +883,7 @@
           "change": 13.4
         },
         {
-          "theme": "ai_criticism",
+          "theme": "families",
           "current": 38,
           "prior": 0,
           "current_share": 11.3,
@@ -891,7 +891,7 @@
           "change": 11.3
         },
         {
-          "theme": "families",
+          "theme": "ai_criticism",
           "current": 38,
           "prior": 0,
           "current_share": 11.3,
@@ -915,7 +915,7 @@
           "change": 6.6
         },
         {
-          "theme": "timed_entry",
+          "theme": "food_beverage",
           "current": 17,
           "prior": 0,
           "current_share": 5.1,
@@ -923,7 +923,7 @@
           "change": 5.1
         },
         {
-          "theme": "food_beverage",
+          "theme": "timed_entry",
           "current": 17,
           "prior": 0,
           "current_share": 5.1,
@@ -947,6 +947,14 @@
           "change": 4.5
         },
         {
+          "theme": "boardwalk_trails",
+          "current": 12,
+          "prior": 0,
+          "current_share": 3.6,
+          "prior_share": 0,
+          "change": 3.6
+        },
+        {
           "theme": "crowding",
           "current": 12,
           "prior": 0,
@@ -963,12 +971,12 @@
           "change": 3.6
         },
         {
-          "theme": "boardwalk_trails",
-          "current": 12,
+          "theme": "grounds_conduct",
+          "current": 11,
           "prior": 0,
-          "current_share": 3.6,
+          "current_share": 3.3,
           "prior_share": 0,
-          "change": 3.6
+          "change": 3.3
         },
         {
           "theme": "historical_balance",
@@ -980,14 +988,6 @@
         },
         {
           "theme": "ticket_pricing",
-          "current": 11,
-          "prior": 0,
-          "current_share": 3.3,
-          "prior_share": 0,
-          "change": 3.3
-        },
-        {
-          "theme": "grounds_conduct",
           "current": 11,
           "prior": 0,
           "current_share": 3.3,
@@ -1027,7 +1027,7 @@
           "change": 2.1
         },
         {
-          "theme": "security_screening",
+          "theme": "guided_tours",
           "current": 6,
           "prior": 0,
           "current_share": 1.8,
@@ -1035,7 +1035,7 @@
           "change": 1.8
         },
         {
-          "theme": "guided_tours",
+          "theme": "security_screening",
           "current": 6,
           "prior": 0,
           "current_share": 1.8,
@@ -1059,14 +1059,6 @@
           "change": 1.5
         },
         {
-          "theme": "retail_pricing",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
           "theme": "accessibility",
           "current": 4,
           "prior": 0,
@@ -1075,12 +1067,12 @@
           "change": 1.2
         },
         {
-          "theme": "value_for_money",
-          "current": 3,
+          "theme": "retail_pricing",
+          "current": 4,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.2,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.2
         },
         {
           "theme": "restrooms",
@@ -1099,7 +1091,15 @@
           "change": 0.9
         },
         {
-          "theme": "water_availability",
+          "theme": "value_for_money",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "walkup_expectations",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1107,7 +1107,7 @@
           "change": 0.6
         },
         {
-          "theme": "walkup_expectations",
+          "theme": "water_availability",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1240,7 +1240,7 @@
           "change": 13.4
         },
         {
-          "theme": "ai_criticism",
+          "theme": "families",
           "current": 38,
           "prior": 0,
           "current_share": 11.3,
@@ -1248,7 +1248,7 @@
           "change": 11.3
         },
         {
-          "theme": "families",
+          "theme": "ai_criticism",
           "current": 38,
           "prior": 0,
           "current_share": 11.3,
@@ -1272,7 +1272,7 @@
           "change": 6.6
         },
         {
-          "theme": "timed_entry",
+          "theme": "food_beverage",
           "current": 17,
           "prior": 0,
           "current_share": 5.1,
@@ -1280,7 +1280,7 @@
           "change": 5.1
         },
         {
-          "theme": "food_beverage",
+          "theme": "timed_entry",
           "current": 17,
           "prior": 0,
           "current_share": 5.1,
@@ -1304,6 +1304,14 @@
           "change": 4.5
         },
         {
+          "theme": "boardwalk_trails",
+          "current": 12,
+          "prior": 0,
+          "current_share": 3.6,
+          "prior_share": 0,
+          "change": 3.6
+        },
+        {
           "theme": "crowding",
           "current": 12,
           "prior": 0,
@@ -1320,12 +1328,12 @@
           "change": 3.6
         },
         {
-          "theme": "boardwalk_trails",
-          "current": 12,
+          "theme": "grounds_conduct",
+          "current": 11,
           "prior": 0,
-          "current_share": 3.6,
+          "current_share": 3.3,
           "prior_share": 0,
-          "change": 3.6
+          "change": 3.3
         },
         {
           "theme": "historical_balance",
@@ -1337,14 +1345,6 @@
         },
         {
           "theme": "ticket_pricing",
-          "current": 11,
-          "prior": 0,
-          "current_share": 3.3,
-          "prior_share": 0,
-          "change": 3.3
-        },
-        {
-          "theme": "grounds_conduct",
           "current": 11,
           "prior": 0,
           "current_share": 3.3,
@@ -1384,7 +1384,7 @@
           "change": 2.1
         },
         {
-          "theme": "security_screening",
+          "theme": "guided_tours",
           "current": 6,
           "prior": 0,
           "current_share": 1.8,
@@ -1392,7 +1392,7 @@
           "change": 1.8
         },
         {
-          "theme": "guided_tours",
+          "theme": "security_screening",
           "current": 6,
           "prior": 0,
           "current_share": 1.8,
@@ -1416,14 +1416,6 @@
           "change": 1.5
         },
         {
-          "theme": "retail_pricing",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
           "theme": "accessibility",
           "current": 4,
           "prior": 0,
@@ -1432,12 +1424,12 @@
           "change": 1.2
         },
         {
-          "theme": "value_for_money",
-          "current": 3,
+          "theme": "retail_pricing",
+          "current": 4,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.2,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.2
         },
         {
           "theme": "restrooms",
@@ -1456,7 +1448,15 @@
           "change": 0.9
         },
         {
-          "theme": "water_availability",
+          "theme": "value_for_money",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "walkup_expectations",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1464,7 +1464,7 @@
           "change": 0.6
         },
         {
-          "theme": "walkup_expectations",
+          "theme": "water_availability",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -4056,6 +4056,11 @@
     "negative": 3,
     "positive_with_criticism": 7,
     "positive": 14
+  },
+  "vocabulary": {
+    "count": 39,
+    "authored": 39,
+    "auto": {}
   },
   "proposed_themes": [
     {

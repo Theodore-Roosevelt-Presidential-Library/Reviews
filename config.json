@@ -61,7 +61,7 @@
       },
       "incremental_field": null,
       "reply_url": "https://business.facebook.com",
-      "note": "Recommendations were switched on for the Page on 2026-08-12; before that the Page returned nothing at all. The tab starts empty and fills as visitors leave recommendations. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null — never convert one into a star count."
+      "note": "Recommendations were switched on for the Page on 2026-08-12; before that the Page returned nothing at all. The tab starts empty and fills as visitors leave recommendations. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null \u2014 never convert one into a star count."
     }
   },
   "analysis": {
@@ -93,5 +93,13 @@
     "every_days": 7,
     "lookback_days": 120,
     "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Once a week the collector reaches back this far so replies posted to older reviews are picked up and the response queue actually clears. Costs one deeper Apify pull per week."
+  },
+  "vocabulary": {
+    "auto_promote": true,
+    "min_reviews": 3,
+    "min_span_days": 14,
+    "max_per_run": 1,
+    "reanalyse_max_reviews": 2000,
+    "note": "How the theme list grows. A subject visitors raise in min_reviews separate reviews spread over min_span_days becomes a real theme automatically. Every promotion re-labels the whole corpus so the new theme's history is real rather than starting at zero and faking a spike. Past reanalyse_max_reviews that re-label gets expensive, so the script reports instead of acting."
   }
 }

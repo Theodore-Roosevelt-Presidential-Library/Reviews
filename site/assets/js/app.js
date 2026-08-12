@@ -18,8 +18,13 @@
     search: "",
     sort: "newest",
     tier: "all",
+    allThemes: false,
     expanded: {}
   };
+
+  // The theme table's ceiling. The vocabulary grows on its own now, so without a cap a long
+  // tail of two-mention themes would eventually own the page.
+  var THEME_LIMIT = 20;
 
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) {
@@ -407,6 +412,18 @@
     });
   }
 
+  // A theme the vocabulary grew into on its own is marked, always. The alternative is a
+  // machine-coined label sitting on a presidential library's public dashboard looking
+  // exactly like one a person chose.
+  function autoBadge(theme) {
+    var auto = (M.vocabulary && M.vocabulary.auto) || {};
+    var a = auto[theme];
+    if (!a) return "";
+    return '<span class="auto-badge" title="Added automatically on ' + esc(a.promoted_on) +
+      ' after visitors raised this ' + a.reviews_at_promotion +
+      ' times. Built from: ' + esc((a.promoted_from || []).join(", ")) + '">auto</span>';
+  }
+
   function renderThemes() {
     var moves = M.windows[S.window].theme_movement || [];
     if (!moves.length) {
@@ -416,17 +433,30 @@
     $("themes").innerHTML =
       "<thead><tr><th>Theme</th><th class='num'>Now</th><th class='num'>Prior</th>" +
       "<th class='num'>Share</th><th class='num'>Change</th></tr></thead><tbody>" +
-      moves.slice(0, 12).map(function (m) {
+      moves.slice(0, S.allThemes ? moves.length : THEME_LIMIT).map(function (m) {
         // More mentions of a theme is not inherently good or bad, but for complaint
         // themes a rise is worth noticing — colour by direction, not by judgement.
         var cls = m.change > 0 ? "neg" : m.change < 0 ? "pos" : "muted";
         return '<tr class="clickable' + (S.theme === m.theme ? " is-active" : "") +
           '" data-theme="' + esc(m.theme) + '"><td>' +
-          esc(titleCase(m.theme)) + '</td><td class="num">' + m.current +
+          esc(titleCase(m.theme)) + autoBadge(m.theme) + '</td><td class="num">' + m.current +
           '</td><td class="num muted">' + m.prior + '</td><td class="num">' +
           m.current_share + '%</td><td class="num ' + cls + '">' +
           (m.change > 0 ? "+" : "") + m.change + " pts</td></tr>";
       }).join("") + "</tbody>";
+
+    // The vocabulary grows on its own, so this table has no natural ceiling. Show the
+    // themes that matter this period and put the rest one click away, rather than letting
+    // a long tail of two-mention themes push the rest of the page off screen.
+    var more = $("themes-more");
+    if (more) {
+      more.hidden = moves.length <= THEME_LIMIT;
+      more.textContent = S.allThemes
+        ? "Show top " + THEME_LIMIT
+        : "Show all " + moves.length + " themes";
+      more.onclick = function () { S.allThemes = !S.allThemes; render(); };
+    }
+
     $("themes").querySelectorAll("tr.clickable").forEach(function (tr) {
       tr.onclick = function () {
         S.theme = S.theme === tr.dataset.theme ? null : tr.dataset.theme;

@@ -484,3 +484,14 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
 .gap-meta { color: var(--color-muted); font-size: .75rem; white-space: nowrap; }
 .gap-quote { margin: .35rem 0 0; font-size: .8125rem; color: var(--color-muted);
              font-style: italic; line-height: 1.5; }
+
+/* A theme the vocabulary grew into on its own. Marked wherever it appears. */
+.auto-badge { margin-left: .45rem; padding: .05rem .3rem; border-radius: 3px;
+  font-size: .625rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  vertical-align: middle; color: var(--color-brand);
+  background: rgba(139, 46, 31, .09); border: 1px solid rgba(139, 46, 31, .22); cursor: help; }
+.card-foot { padding: .6rem .9rem; border-top: 1px solid var(--color-line, #DDD3C4); }
+.linkbtn { background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+  font-size: .8125rem; color: var(--color-brand); text-decoration: underline;
+  text-underline-offset: 2px; }
+.linkbtn:hover { text-decoration: none; }

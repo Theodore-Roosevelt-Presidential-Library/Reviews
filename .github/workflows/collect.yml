@@ -60,6 +60,32 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 collector/analyze.py
 
+      # Grow the theme vocabulary when visitors keep raising something it has no word for.
+      # Exit 10 means a theme was promoted; anything else means no change. `|| true` would
+      # hide a real crash, so the exit code is checked explicitly.
+      - name: Promote recurring subjects into the vocabulary
+        id: promote
+        run: |
+          set +e
+          python3 collector/promote.py
+          CODE=$?
+          set -e
+          if [ "$CODE" -eq 10 ]; then
+            echo "promoted=true" >> "$GITHUB_OUTPUT"
+          elif [ "$CODE" -ne 0 ]; then
+            echo "promote.py failed with $CODE"; exit "$CODE"
+          fi
+
+      # A new theme that only applied to reviews labelled from today onward would start at
+      # zero and show explosive growth in its first period — a trend that never happened.
+      # Re-label everything so the new theme's history is as real as every other theme's.
+      - name: Re-label the corpus for the new vocabulary
+        if: steps.promote.outputs.promoted == 'true'
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 collector/analyze.py --all
+
       # Always regenerate derived files after a rebase. They are a pure function of
       # reviews.json, so this resolves any conflict in them without a manual merge.
       - name: Build derived metrics
@@ -70,12 +96,18 @@ jobs:
 
       - name: Commit changes
         run: |
+          rm -f data/.promoted
           git add data/
           if git diff --staged --quiet; then
             echo "No change in review data."
           else
             NEW=$(python3 -c "import json;print(len(json.load(open('data/reviews.json'))['reviews']))")
-            git commit -m "Reviews refresh $(date -u +%Y-%m-%d) — ${NEW} tracked"
+            MSG="Reviews refresh $(date -u +%Y-%m-%d) — ${NEW} tracked"
+            if [ "${{ steps.promote.outputs.promoted }}" = "true" ]; then
+              ADDED=$(python3 -c "import json;v=json.load(open('data/themes.json'))['themes'];print(', '.join(t['label'] for t in v if t.get('promoted_on')=='$(date -u +%Y-%m-%d)'))")
+              MSG="${MSG}; vocabulary grew: ${ADDED}"
+            fi
+            git commit -m "${MSG}"
             git push || (git pull --rebase origin main && python3 collector/derive.py \
                          && git add data/ && git commit --amend --no-edit && git push)
           fi

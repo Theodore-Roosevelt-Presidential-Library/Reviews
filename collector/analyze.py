@@ -26,21 +26,16 @@ import urllib.error
 import urllib.request
 
 import llm
-from common import CONFIG, DERIVED, load_reviews, save_reviews, today, write_json
+from common import (CONFIG, DERIVED, load_reviews, save_reviews, theme_labels,
+                    today, write_json)
 
 A = CONFIG["analysis"]
 
-THEMES = [
-    "interactive_exhibits", "ai_criticism", "data_privacy",
-    "interpretation", "historical_balance", "guided_tours",
-    "visitor_flow", "dwell_time", "families", "peer_comparison", "conservation_message",
-    "architecture", "landscape", "rooftop", "boardwalk_trails", "grounds_conduct",
-    "crowding", "capacity", "queues", "timed_entry", "sellouts", "walkup_expectations",
-    "parking", "wayfinding_signage", "accessibility", "security_screening", "restrooms",
-    "water_availability", "staff", "staff_training",
-    "ticket_pricing", "age_tiers", "value_for_money", "retail", "retail_pricing",
-    "food_beverage", "drive_market", "international_visitor", "media_driven_awareness",
-]
+# The vocabulary lives in data/themes.json, not here. Fixed within a run — the model picks
+# from it and never adds to it — but promote.py may extend it between runs when visitors
+# raise the same uncovered subject repeatedly. Any promotion re-labels the entire corpus,
+# so a new theme never starts life as a fake upward trend.
+THEMES = theme_labels()
 
 SENTIMENTS = ["positive", "positive_with_criticism", "mixed", "negative"]
 

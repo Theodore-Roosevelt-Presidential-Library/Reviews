@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+
+# Handshake between promote.py and the workflow; never committed.
+data/.promoted

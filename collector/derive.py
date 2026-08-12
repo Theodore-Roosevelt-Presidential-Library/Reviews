@@ -14,7 +14,7 @@ from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 
 from brief import build as build_brief
-from common import CONFIG, DERIVED, load_reviews, write_json
+from common import CONFIG, DERIVED, load_reviews, load_vocabulary, write_json
 
 TRIAGE = CONFIG["triage"]
 WINDOWS = CONFIG["windows"]
@@ -234,6 +234,17 @@ def main():
         "triage": (queue := triage(reviews, today_)),
         "series": daily_series(reviews),
         "sla": TRIAGE["response_sla_days"],
+    }
+
+    # Which labels a person wrote and which a machine promoted. On a public dashboard for a
+    # presidential library, a reader should be able to tell those apart without asking.
+    vocab = load_vocabulary()["themes"]
+    payload["vocabulary"] = {
+        "count": len(vocab),
+        "authored": sum(1 for t in vocab if t.get("source") != "auto"),
+        "auto": {t["label"]: {k: t.get(k) for k in
+                              ("promoted_on", "promoted_from", "reviews_at_promotion")}
+                 for t in vocab if t.get("source") == "auto"},
     }
 
     # Subjects visitors raised that the fixed vocabulary has no word for. Proposed by

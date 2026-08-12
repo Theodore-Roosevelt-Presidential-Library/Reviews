@@ -75,7 +75,21 @@ gets — the people who loved it and still told us what to fix.
 it was never taught.
 
 It is **not a theme**. It is never counted, never trended, never filterable, and never enters
-`themes`. `derive.py` groups these into `metrics.json > proposed_themes` for a human to read.
-Adding one to the real vocabulary means editing `THEMES` in `analyze.py` and re-running
-`analyze.py --all`, so the whole dataset is relabelled consistently rather than split across
-two eras of the list.
+`themes`. `derive.py` groups these into `metrics.json > proposed_themes`, and `promote.py` turns one
+into a real theme once enough separate reviews raise it over enough time. Promotion always
+re-labels the whole corpus, so the vocabulary is never split across two eras.
+
+## `data/themes.json`
+
+The controlled vocabulary, as data rather than code so it can change without a deploy.
+
+```json
+{"label": "parking", "source": "authored"}
+{"label": "shuttle_service", "source": "auto", "promoted_on": "2026-08-12",
+ "promoted_from": ["shuttle service", "shuttles"], "reviews_at_promotion": 3,
+ "span_days": 21, "evidence": ["google-2026-08-04-...", "..."]}
+```
+
+`source` is `authored` (written by a person) or `auto` (promoted by `promote.py`). Auto
+entries keep their evidence permanently: what was raised, when, how often, and in whose
+words. Removing one is deleting the object and re-running `analyze.py --all`.
