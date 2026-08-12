@@ -251,8 +251,11 @@
           esc(a.issue) + " <b>" + a.mentions + "</b></button>";
       }).join("") + "</div>";
     }
-    // BRIEF.notes is standing context, not news — it reads the same every day, so it
-    // lives in the footer rather than taking space at the top of every view.
+    // BRIEF.notes is standing context and lives in the footer. A coverage warning is
+    // the exception — it means the theme vocabulary has a gap right now, which is news.
+    if (BRIEF.coverage_warning) {
+      main += '<div class="brief-warn">' + esc(BRIEF.coverage_warning) + "</div>";
+    }
     main += "</div>";
 
     var st = BRIEF.stats || {};
@@ -683,7 +686,8 @@
       $("freshness").textContent = "Updated " + M.generated;
       $("freshness-sub").textContent = M.all_time.count + " reviews · " +
         Object.keys(M.all_time.by_source).length + " sources";
-      var notes = ((M.briefs || {})["30"] || {}).notes || [];
+      var b30 = (M.briefs || {})["30"] || {};
+      var notes = (b30.notes || []).filter(function (n) { return n !== b30.coverage_warning; });
       $("foot").innerHTML = "Built from public reviews on " +
         Object.keys(M.all_time.by_source).map(function (k) {
           return esc((M.sources[k] || {}).label || k);

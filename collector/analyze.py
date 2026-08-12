@@ -2,15 +2,19 @@
 """
 Classify unanalysed reviews (themes + sentiment) and write a narrative summary.
 
-Runs on GitHub Models, authenticated with the GITHUB_TOKEN already present in Actions.
-Free tier caps input at ~8K tokens per request, so reviews go up in small batches.
+The provider is configuration (see config.json > analysis), not code. Before any batch
+is sent, `probe()` confirms the endpoint answers and the configured model is in the
+catalogue — GitHub Models was retired underneath this project and the silent fallback hid
+it for days, so a dead provider now announces itself on the first run.
 
-If the model is unavailable, unreachable, or returns something unusable, the run falls
-back to keyword rules and keeps going. A broken model must never cost us a day of data.
+If the model is unavailable or returns something unusable, the run falls back to keyword
+rules and keeps going, but records that it did so. A broken model must not cost a day of
+data, and must not be able to masquerade as a working one.
 
     python3 collector/analyze.py              # only reviews missing analysis
     python3 collector/analyze.py --all        # re-analyse everything
     python3 collector/analyze.py --no-model   # rules only, no network
+    python3 collector/analyze.py --check      # preflight the provider and exit
 """
 
 import argparse
@@ -21,6 +25,7 @@ import sys
 import urllib.error
 import urllib.request
 
+import llm
 from common import CONFIG, DERIVED, load_reviews, save_reviews, today, write_json
 
 A = CONFIG["analysis"]
@@ -127,45 +132,44 @@ def rules_sentiment(rating, text, recommends=None):
     return "positive"
 
 
-def call_model(batch, token, model, endpoint):
-    payload = {
-        "model": model,
-        "temperature": 0,
-        "response_format": {"type": "json_object"},
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": json.dumps(
-                [{"id": r["id"], "rating": r.get("rating"),
-                  "text": (r.get("text") or "")[:1200]} for r in batch])},
-        ],
-    }
-    req = urllib.request.Request(
-        endpoint, data=json.dumps(payload).encode(),
-        headers={"Authorization": f"Bearer {token}",
-                 "Content-Type": "application/json",
-                 "Accept": "application/json"},
-        method="POST")
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        body = json.loads(resp.read().decode())
-    content = body["choices"][0]["message"]["content"]
+def call_model(batch, client):
+    """One classification batch. Returns {review_id: {themes, sentiment}}."""
+    user = json.dumps([{"id": r["id"], "rating": r.get("rating"),
+                        "text": (r.get("text") or "")[:1200]} for r in batch])
+    content = client.complete(SYSTEM_PROMPT, user, json_mode=True)
     parsed = json.loads(content)
     results = parsed.get("results", parsed if isinstance(parsed, list) else [])
     return {r["id"]: r for r in results if isinstance(r, dict) and r.get("id")}
 
 
-def apply_analysis(review, result):
-    """Accept only values that pass validation. Anything else falls back to rules."""
+def apply_analysis(review, result, answered=False):
+    """Apply a model result, falling back to rules only where the model gave nothing.
+
+    `answered` means the model returned a record for this review — which is different
+    from returning themes. The prompt explicitly permits an empty theme array when
+    nothing in the vocabulary fits, and that is a signal worth keeping: it is how a
+    genuinely new complaint becomes visible. Treating "no themes" as a failure and
+    overwriting it with keyword guesses destroys the only early warning we have that the
+    vocabulary has a gap.
+    """
     themes = [t for t in (result.get("themes") or []) if t in THEMES][:5]
     sentiment = result.get("sentiment")
     if sentiment not in SENTIMENTS:
         sentiment = None
+
+    if answered and sentiment:
+        review["themes"] = themes          # may legitimately be []
+        review["sentiment"] = sentiment
+        review["analysis_source"] = "model"
+        return
+
     review["themes"] = themes or rules_classify(review.get("text"))
     review["sentiment"] = sentiment or rules_sentiment(
         review.get("rating"), review.get("text"), review.get("recommends"))
-    review["analysis_source"] = "model" if (themes and sentiment) else "rules"
+    review["analysis_source"] = "rules"
 
 
-def summarise(reviews, token, model, endpoint):
+def summarise(reviews, client):
     """One short narrative paragraph over the last 30 days of reviews."""
     from common import days_ago
     recent = [r for r in reviews
@@ -198,67 +202,112 @@ def summarise(reviews, token, model, endpoint):
         "Write in plain prose, no headings or bullets.\n\n"
         f"Data:\n{json.dumps(facts, indent=1)}"
     )
-    payload = {"model": model, "temperature": 0.2,
-               "messages": [{"role": "user", "content": prompt}]}
-    req = urllib.request.Request(
-        endpoint, data=json.dumps(payload).encode(),
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
-        method="POST")
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        return json.loads(resp.read().decode())["choices"][0]["message"]["content"].strip()
+    return client.complete(None, prompt, temperature=0.2)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="re-analyse every review")
-    ap.add_argument("--no-model", action="store_true", help="rules only, no network calls")
+    ap.add_argument("--upgrade", action="store_true",
+                    help="re-analyse anything the model has not classified yet (resumable)")
+    ap.add_argument("--limit", type=int, help="stop after N reviews this run")
+    ap.add_argument("--no-model", action="store_true", help="rules only, no network")
+    ap.add_argument("--check", action="store_true",
+                    help="preflight the configured provider and exit")
+    ap.add_argument("--models", action="store_true",
+                    help="list model ids this project can actually call, and exit")
     args = ap.parse_args()
+
+    client, why = (None, "disabled by --no-model") if args.no_model else llm.build(A)
+
+    # Preflight. Cheap, and the only thing standing between a retired endpoint and weeks
+    # of regex output wearing a model's name.
+    status, reason = "used", None
+    if client:
+        ok, detail = client.probe()
+        print(f"provider: {A.get('provider')} · {A.get('model')} — {detail}", flush=True)
+        if not ok:
+            client, status, reason = None, "failed", detail
+    else:
+        status, reason = ("disabled" if args.no_model else "unavailable"), why
+        print(f"provider unavailable: {why}", flush=True)
+
+    if args.models:
+        target = client or llm.build(A)[0]
+        if not target or not hasattr(target, "list_models"):
+            print("no usable provider to query", file=sys.stderr)
+            return 1
+        for m in target.list_models():
+            print("  " + m)
+        return 0
+
+    if args.check:
+        return 0 if client else 1
 
     doc = load_reviews()
     reviews = doc["reviews"]
+    if args.all:
+        pending = list(reviews)
+    elif args.upgrade:
+        # Anything not already model-classified. Lets a long backfill run in slices —
+        # each invocation picks up where the last one stopped.
+        pending = [r for r in reviews if r.get("analysis_source") != "model"]
+    else:
+        pending = [r for r in reviews
+                   if not r.get("themes") or not r.get("sentiment")]
+    if args.limit:
+        pending = pending[:args.limit]
+    print(f"{len(pending)} review(s) to analyse", flush=True)
 
-    pending = reviews if args.all else [
-        r for r in reviews if not r.get("themes") or not r.get("sentiment")]
-    print(f"{len(pending)} review(s) to analyse")
-
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_MODELS_TOKEN")
-    use_model = bool(token) and not args.no_model
-    if not use_model and pending:
-        print("no model token available — using keyword rules")
-
-    model, endpoint, size = A["model"], A["endpoint"], A["batch_size"]
-    model_ok = use_model
-
+    size = A.get("batch_size", 8)
     for i in range(0, len(pending), size):
         batch = pending[i:i + size]
         results = {}
-        if model_ok:
+        if client:
             try:
-                results = call_model(batch, token, model, endpoint)
-            except (urllib.error.HTTPError, urllib.error.URLError,
-                    json.JSONDecodeError, KeyError, TimeoutError) as exc:
-                print(f"  model call failed ({exc}) — rules from here on", file=sys.stderr)
-                model_ok = False
+                results = call_model(batch, client)
+            except (llm.ProviderError, json.JSONDecodeError, KeyError, TimeoutError) as exc:
+                reason = str(exc)
+                print(f"  !! model call failed — {reason}", file=sys.stderr, flush=True)
+                client, status = None, "failed"
         for r in batch:
-            apply_analysis(r, results.get(r["id"], {}))
-        print(f"  {min(i + size, len(pending))}/{len(pending)}")
+            apply_analysis(r, results.get(r["id"], {}), answered=r["id"] in results)
+        # Save after every batch. A long backfill that dies at review 300 should not
+        # throw away the first 299.
+        save_reviews(doc)
+        print(f"  {min(i + size, len(pending))}/{len(pending)}", flush=True)
 
     save_reviews(doc)
 
     summary = None
-    if model_ok:
+    if client:
         try:
-            summary = summarise(reviews, token, model, endpoint)
+            summary = summarise(reviews, client)
         except Exception as exc:
-            print(f"  summary generation failed: {exc}", file=sys.stderr)
+            reason = reason or str(exc)
+            print(f"  summary generation failed: {exc}", file=sys.stderr, flush=True)
 
+    from collections import Counter
+    sources = Counter(r.get("analysis_source") for r in reviews)
     write_json(DERIVED / "summary.json", {
         "generated": today(),
         "text": summary,
-        "generated_by": "github_models" if summary else None,
+        "generated_by": f"{A.get('provider')}:{A.get('model')}" if summary else None,
+        "provider": A.get("provider"),
+        "model": A.get("model"),
+        "model_status": status,
+        "model_error": reason,
+        "classified_by": {k or "carried_over": v for k, v in sources.items()},
     })
-    print("done" + ("" if summary else " (no narrative summary this run)"))
+
+    print(f"\nanalysis source: {dict(sources)}")
+    if status != "used":
+        print(f"MODEL NOT USED — status={status}" + (f", reason={reason}" if reason else "")
+              + "\nThemes and sentiment came from keyword rules. Supported, but not the "
+                "model path — fix the provider or set analysis.provider to 'rules'.",
+              file=sys.stderr, flush=True)
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

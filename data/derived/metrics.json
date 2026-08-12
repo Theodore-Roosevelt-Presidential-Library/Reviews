@@ -111,23 +111,29 @@
           "google": 18
         },
         "sentiment": {
-          "positive": 20,
-          "positive_with_criticism": 4
+          "positive_with_criticism": 6,
+          "positive": 18
         },
         "themes": {
           "interactive_exhibits": 12,
-          "crowding": 4,
-          "retail": 4,
-          "architecture": 4,
+          "architecture": 5,
+          "crowding": 3,
           "restrooms": 3,
+          "ai_criticism": 3,
+          "age_tiers": 3,
           "landscape": 3,
-          "retail_pricing": 2,
           "food_beverage": 2,
+          "retail_pricing": 2,
           "queues": 2,
-          "boardwalk_trails": 2,
+          "interpretation": 2,
+          "drive_market": 1,
           "accessibility": 1,
+          "retail": 1,
+          "security_screening": 1,
+          "historical_balance": 1,
           "families": 1,
-          "conservation_message": 1,
+          "boardwalk_trails": 1,
+          "staff": 1,
           "timed_entry": 1,
           "rooftop": 1
         },
@@ -153,32 +159,36 @@
         },
         "sentiment": {
           "mixed": 3,
-          "positive": 59,
-          "negative": 2,
-          "positive_with_criticism": 9
+          "positive": 56,
+          "positive_with_criticism": 13,
+          "negative": 1
         },
         "themes": {
-          "interactive_exhibits": 28,
-          "architecture": 17,
-          "families": 8,
-          "landscape": 8,
-          "value_for_money": 7,
-          "crowding": 6,
+          "interactive_exhibits": 25,
+          "architecture": 15,
+          "interpretation": 14,
+          "ai_criticism": 8,
+          "timed_entry": 7,
+          "families": 6,
+          "landscape": 6,
           "dwell_time": 5,
-          "timed_entry": 5,
           "food_beverage": 4,
+          "visitor_flow": 4,
           "staff": 4,
+          "historical_balance": 4,
+          "crowding": 4,
           "parking": 3,
-          "queues": 2,
+          "accessibility": 3,
           "rooftop": 2,
-          "wayfinding_signage": 1,
-          "accessibility": 1,
-          "retail": 1,
-          "ticket_pricing": 1,
+          "boardwalk_trails": 2,
+          "ticket_pricing": 2,
+          "grounds_conduct": 2,
+          "queues": 2,
           "security_screening": 1,
-          "boardwalk_trails": 1,
+          "retail": 1,
           "guided_tours": 1,
-          "peer_comparison": 1
+          "conservation_message": 1,
+          "capacity": 1
         },
         "unanswered": 73
       },
@@ -190,12 +200,12 @@
       },
       "theme_movement": [
         {
-          "theme": "retail",
-          "current": 4,
-          "prior": 1,
-          "current_share": 16.7,
-          "prior_share": 1.4,
-          "change": 15.3
+          "theme": "interactive_exhibits",
+          "current": 12,
+          "prior": 25,
+          "current_share": 50.0,
+          "prior_share": 34.2,
+          "change": 15.8
         },
         {
           "theme": "restrooms",
@@ -206,28 +216,20 @@
           "change": 12.5
         },
         {
-          "theme": "interactive_exhibits",
-          "current": 12,
-          "prior": 28,
-          "current_share": 50.0,
-          "prior_share": 38.4,
-          "change": 11.6
+          "theme": "age_tiers",
+          "current": 3,
+          "prior": 0,
+          "current_share": 12.5,
+          "prior_share": 0.0,
+          "change": 12.5
         },
         {
-          "theme": "value_for_money",
-          "current": 0,
-          "prior": 7,
-          "current_share": 0.0,
-          "prior_share": 9.6,
-          "change": -9.6
-        },
-        {
-          "theme": "crowding",
-          "current": 4,
-          "prior": 6,
-          "current_share": 16.7,
-          "prior_share": 8.2,
-          "change": 8.4
+          "theme": "interpretation",
+          "current": 2,
+          "prior": 14,
+          "current_share": 8.3,
+          "prior_share": 19.2,
+          "change": -10.8
         },
         {
           "theme": "retail_pricing",
@@ -238,11 +240,11 @@
           "change": 8.3
         },
         {
-          "theme": "boardwalk_trails",
-          "current": 2,
-          "prior": 1,
-          "current_share": 8.3,
-          "prior_share": 1.4,
+          "theme": "crowding",
+          "current": 3,
+          "prior": 4,
+          "current_share": 12.5,
+          "prior_share": 5.5,
           "change": 7.0
         },
         {
@@ -254,22 +256,6 @@
           "change": -6.8
         },
         {
-          "theme": "families",
-          "current": 1,
-          "prior": 8,
-          "current_share": 4.2,
-          "prior_share": 11.0,
-          "change": -6.8
-        },
-        {
-          "theme": "architecture",
-          "current": 4,
-          "prior": 17,
-          "current_share": 16.7,
-          "prior_share": 23.3,
-          "change": -6.6
-        },
-        {
           "theme": "queues",
           "current": 2,
           "prior": 2,
@@ -278,7 +264,7 @@
           "change": 5.6
         },
         {
-          "theme": "staff",
+          "theme": "visitor_flow",
           "current": 0,
           "prior": 4,
           "current_share": 0.0,
@@ -286,11 +272,35 @@
           "change": -5.5
         },
         {
+          "theme": "timed_entry",
+          "current": 1,
+          "prior": 7,
+          "current_share": 4.2,
+          "prior_share": 9.6,
+          "change": -5.4
+        },
+        {
+          "theme": "landscape",
+          "current": 3,
+          "prior": 6,
+          "current_share": 12.5,
+          "prior_share": 8.2,
+          "change": 4.3
+        },
+        {
           "theme": "parking",
           "current": 0,
           "prior": 3,
           "current_share": 0.0,
           "prior_share": 4.1,
+          "change": -4.1
+        },
+        {
+          "theme": "families",
+          "current": 1,
+          "prior": 6,
+          "current_share": 4.2,
+          "prior_share": 8.2,
           "change": -4.1
         },
         {
@@ -302,15 +312,23 @@
           "change": 2.9
         },
         {
-          "theme": "timed_entry",
-          "current": 1,
-          "prior": 5,
-          "current_share": 4.2,
-          "prior_share": 6.8,
+          "theme": "grounds_conduct",
+          "current": 0,
+          "prior": 2,
+          "current_share": 0.0,
+          "prior_share": 2.7,
           "change": -2.7
         },
         {
-          "theme": "landscape",
+          "theme": "ticket_pricing",
+          "current": 0,
+          "prior": 2,
+          "current_share": 0.0,
+          "prior_share": 2.7,
+          "change": -2.7
+        },
+        {
+          "theme": "ai_criticism",
           "current": 3,
           "prior": 8,
           "current_share": 12.5,
@@ -324,6 +342,46 @@
           "current_share": 4.2,
           "prior_share": 2.7,
           "change": 1.4
+        },
+        {
+          "theme": "boardwalk_trails",
+          "current": 1,
+          "prior": 2,
+          "current_share": 4.2,
+          "prior_share": 2.7,
+          "change": 1.4
+        },
+        {
+          "theme": "staff",
+          "current": 1,
+          "prior": 4,
+          "current_share": 4.2,
+          "prior_share": 5.5,
+          "change": -1.3
+        },
+        {
+          "theme": "historical_balance",
+          "current": 1,
+          "prior": 4,
+          "current_share": 4.2,
+          "prior_share": 5.5,
+          "change": -1.3
+        },
+        {
+          "theme": "architecture",
+          "current": 5,
+          "prior": 15,
+          "current_share": 20.8,
+          "prior_share": 20.5,
+          "change": 0.3
+        },
+        {
+          "theme": "accessibility",
+          "current": 1,
+          "prior": 3,
+          "current_share": 4.2,
+          "prior_share": 4.1,
+          "change": 0.1
         }
       ]
     },
@@ -356,40 +414,47 @@
           "google": 210
         },
         "sentiment": {
-          "positive": 180,
-          "positive_with_criticism": 38,
-          "mixed": 8,
-          "negative": 5
+          "positive_with_criticism": 44,
+          "positive": 176,
+          "mixed": 7,
+          "negative": 4
         },
         "themes": {
-          "interactive_exhibits": 87,
+          "interactive_exhibits": 84,
           "architecture": 43,
-          "families": 29,
-          "landscape": 26,
-          "crowding": 15,
-          "dwell_time": 15,
-          "food_beverage": 14,
-          "retail": 12,
-          "value_for_money": 12,
-          "timed_entry": 11,
+          "interpretation": 38,
+          "families": 28,
+          "ai_criticism": 27,
+          "landscape": 27,
+          "timed_entry": 15,
+          "historical_balance": 12,
+          "crowding": 11,
+          "food_beverage": 11,
           "staff": 10,
+          "dwell_time": 10,
           "boardwalk_trails": 8,
-          "parking": 8,
-          "restrooms": 7,
-          "queues": 6,
+          "visitor_flow": 8,
+          "ticket_pricing": 7,
+          "retail": 6,
           "rooftop": 6,
-          "conservation_message": 5,
-          "guided_tours": 5,
-          "water_availability": 4,
-          "retail_pricing": 3,
-          "sellouts": 3,
-          "accessibility": 2,
-          "wayfinding_signage": 2,
-          "security_screening": 2,
-          "peer_comparison": 2,
-          "data_privacy": 2,
-          "ticket_pricing": 1,
-          "ai_criticism": 1
+          "parking": 6,
+          "grounds_conduct": 6,
+          "accessibility": 5,
+          "queues": 5,
+          "security_screening": 5,
+          "retail_pricing": 4,
+          "age_tiers": 4,
+          "restrooms": 3,
+          "guided_tours": 3,
+          "data_privacy": 3,
+          "drive_market": 2,
+          "conservation_message": 2,
+          "water_availability": 2,
+          "capacity": 1,
+          "sellouts": 1,
+          "peer_comparison": 1,
+          "value_for_money": 1,
+          "wayfinding_signage": 1
         },
         "unanswered": 230
       },
@@ -411,34 +476,36 @@
           "google": 96
         },
         "sentiment": {
-          "positive": 87,
-          "mixed": 2,
-          "negative": 6,
-          "positive_with_criticism": 9
+          "positive": 92,
+          "positive_with_criticism": 7,
+          "negative": 5
         },
         "themes": {
-          "interactive_exhibits": 36,
-          "architecture": 17,
-          "families": 13,
-          "landscape": 13,
-          "dwell_time": 10,
+          "interactive_exhibits": 39,
+          "landscape": 20,
+          "architecture": 16,
+          "families": 15,
+          "age_tiers": 9,
+          "ai_criticism": 8,
+          "dwell_time": 7,
+          "interpretation": 7,
+          "food_beverage": 7,
+          "grounds_conduct": 6,
+          "historical_balance": 5,
           "conservation_message": 5,
-          "food_beverage": 5,
           "staff": 5,
-          "value_for_money": 4,
-          "queues": 4,
-          "ai_criticism": 3,
           "timed_entry": 3,
-          "retail": 3,
           "boardwalk_trails": 3,
-          "rooftop": 3,
-          "ticket_pricing": 2,
-          "guided_tours": 2,
-          "parking": 2,
+          "rooftop": 2,
+          "retail": 2,
+          "security_screening": 2,
+          "value_for_money": 1,
           "wayfinding_signage": 1,
+          "guided_tours": 1,
+          "ticket_pricing": 1,
+          "staff_training": 1,
           "accessibility": 1,
-          "crowding": 1,
-          "security_screening": 1
+          "parking": 1
         },
         "unanswered": 104
       },
@@ -450,79 +517,127 @@
       },
       "theme_movement": [
         {
+          "theme": "interpretation",
+          "current": 38,
+          "prior": 7,
+          "current_share": 16.5,
+          "prior_share": 6.7,
+          "change": 9.7
+        },
+        {
+          "theme": "landscape",
+          "current": 27,
+          "prior": 20,
+          "current_share": 11.7,
+          "prior_share": 19.2,
+          "change": -7.5
+        },
+        {
+          "theme": "age_tiers",
+          "current": 4,
+          "prior": 9,
+          "current_share": 1.7,
+          "prior_share": 8.7,
+          "change": -6.9
+        },
+        {
           "theme": "crowding",
-          "current": 15,
-          "prior": 1,
-          "current_share": 6.5,
-          "prior_share": 1.0,
-          "change": 5.5
-        },
-        {
-          "theme": "dwell_time",
-          "current": 15,
-          "prior": 10,
-          "current_share": 6.5,
-          "prior_share": 9.6,
-          "change": -3.1
-        },
-        {
-          "theme": "restrooms",
-          "current": 7,
+          "current": 11,
           "prior": 0,
-          "current_share": 3.0,
+          "current_share": 4.8,
           "prior_share": 0.0,
-          "change": 3.0
-        },
-        {
-          "theme": "interactive_exhibits",
-          "current": 87,
-          "prior": 36,
-          "current_share": 37.7,
-          "prior_share": 34.6,
-          "change": 3.0
-        },
-        {
-          "theme": "conservation_message",
-          "current": 5,
-          "prior": 5,
-          "current_share": 2.2,
-          "prior_share": 4.8,
-          "change": -2.6
+          "change": 4.8
         },
         {
           "theme": "ai_criticism",
-          "current": 1,
+          "current": 27,
+          "prior": 8,
+          "current_share": 11.7,
+          "prior_share": 7.7,
+          "change": 4.0
+        },
+        {
+          "theme": "conservation_message",
+          "current": 2,
+          "prior": 5,
+          "current_share": 0.9,
+          "prior_share": 4.8,
+          "change": -3.9
+        },
+        {
+          "theme": "timed_entry",
+          "current": 15,
           "prior": 3,
-          "current_share": 0.4,
+          "current_share": 6.5,
           "prior_share": 2.9,
-          "change": -2.5
+          "change": 3.6
+        },
+        {
+          "theme": "visitor_flow",
+          "current": 8,
+          "prior": 0,
+          "current_share": 3.5,
+          "prior_share": 0.0,
+          "change": 3.5
+        },
+        {
+          "theme": "grounds_conduct",
+          "current": 6,
+          "prior": 6,
+          "current_share": 2.6,
+          "prior_share": 5.8,
+          "change": -3.2
         },
         {
           "theme": "architecture",
           "current": 43,
-          "prior": 17,
+          "prior": 16,
           "current_share": 18.6,
-          "prior_share": 16.3,
-          "change": 2.3
+          "prior_share": 15.4,
+          "change": 3.2
         },
         {
-          "theme": "retail",
-          "current": 12,
-          "prior": 3,
-          "current_share": 5.2,
-          "prior_share": 2.9,
-          "change": 2.3
+          "theme": "dwell_time",
+          "current": 10,
+          "prior": 7,
+          "current_share": 4.3,
+          "prior_share": 6.7,
+          "change": -2.4
         },
         {
-          "theme": "timed_entry",
+          "theme": "families",
+          "current": 28,
+          "prior": 15,
+          "current_share": 12.1,
+          "prior_share": 14.4,
+          "change": -2.3
+        },
+        {
+          "theme": "queues",
+          "current": 5,
+          "prior": 0,
+          "current_share": 2.2,
+          "prior_share": 0.0,
+          "change": 2.2
+        },
+        {
+          "theme": "ticket_pricing",
+          "current": 7,
+          "prior": 1,
+          "current_share": 3.0,
+          "prior_share": 1.0,
+          "change": 2.1
+        },
+        {
+          "theme": "food_beverage",
           "current": 11,
-          "prior": 3,
+          "prior": 7,
           "current_share": 4.8,
-          "prior_share": 2.9,
-          "change": 1.9
+          "prior_share": 6.7,
+          "change": -2.0
         },
         {
-          "theme": "water_availability",
+          "theme": "retail_pricing",
           "current": 4,
           "prior": 0,
           "current_share": 1.7,
@@ -531,83 +646,75 @@
         },
         {
           "theme": "parking",
-          "current": 8,
-          "prior": 2,
-          "current_share": 3.5,
-          "prior_share": 1.9,
-          "change": 1.5
-        },
-        {
-          "theme": "ticket_pricing",
-          "current": 1,
-          "prior": 2,
-          "current_share": 0.4,
-          "prior_share": 1.9,
-          "change": -1.5
-        },
-        {
-          "theme": "food_beverage",
-          "current": 14,
-          "prior": 5,
-          "current_share": 6.1,
-          "prior_share": 4.8,
-          "change": 1.3
-        },
-        {
-          "theme": "sellouts",
-          "current": 3,
-          "prior": 0,
-          "current_share": 1.3,
-          "prior_share": 0.0,
-          "change": 1.3
-        },
-        {
-          "theme": "retail_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 1.3,
-          "prior_share": 0.0,
-          "change": 1.3
-        },
-        {
-          "theme": "value_for_money",
-          "current": 12,
-          "prior": 4,
-          "current_share": 5.2,
-          "prior_share": 3.8,
-          "change": 1.3
-        },
-        {
-          "theme": "landscape",
-          "current": 26,
-          "prior": 13,
-          "current_share": 11.3,
-          "prior_share": 12.5,
-          "change": -1.2
-        },
-        {
-          "theme": "queues",
           "current": 6,
-          "prior": 4,
+          "prior": 1,
           "current_share": 2.6,
-          "prior_share": 3.8,
-          "change": -1.2
+          "prior_share": 1.0,
+          "change": 1.6
         },
         {
-          "theme": "peer_comparison",
-          "current": 2,
+          "theme": "restrooms",
+          "current": 3,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.3,
           "prior_share": 0.0,
-          "change": 0.9
+          "change": 1.3
         },
         {
           "theme": "data_privacy",
+          "current": 3,
+          "prior": 0,
+          "current_share": 1.3,
+          "prior_share": 0.0,
+          "change": 1.3
+        },
+        {
+          "theme": "accessibility",
+          "current": 5,
+          "prior": 1,
+          "current_share": 2.2,
+          "prior_share": 1.0,
+          "change": 1.2
+        },
+        {
+          "theme": "interactive_exhibits",
+          "current": 84,
+          "prior": 39,
+          "current_share": 36.4,
+          "prior_share": 37.5,
+          "change": -1.1
+        },
+        {
+          "theme": "drive_market",
           "current": 2,
           "prior": 0,
           "current_share": 0.9,
           "prior_share": 0.0,
           "change": 0.9
+        },
+        {
+          "theme": "water_availability",
+          "current": 2,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0.0,
+          "change": 0.9
+        },
+        {
+          "theme": "rooftop",
+          "current": 6,
+          "prior": 2,
+          "current_share": 2.6,
+          "prior_share": 1.9,
+          "change": 0.7
+        },
+        {
+          "theme": "retail",
+          "current": 6,
+          "prior": 2,
+          "current_share": 2.6,
+          "prior_share": 1.9,
+          "change": 0.7
         },
         {
           "theme": "boardwalk_trails",
@@ -626,52 +733,28 @@
           "change": -0.5
         },
         {
-          "theme": "rooftop",
-          "current": 6,
-          "prior": 3,
-          "current_share": 2.6,
-          "prior_share": 2.9,
-          "change": -0.3
+          "theme": "historical_balance",
+          "current": 12,
+          "prior": 5,
+          "current_share": 5.2,
+          "prior_share": 4.8,
+          "change": 0.4
         },
         {
           "theme": "guided_tours",
+          "current": 3,
+          "prior": 1,
+          "current_share": 1.3,
+          "prior_share": 1.0,
+          "change": 0.3
+        },
+        {
+          "theme": "security_screening",
           "current": 5,
           "prior": 2,
           "current_share": 2.2,
           "prior_share": 1.9,
           "change": 0.2
-        },
-        {
-          "theme": "security_screening",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
-          "theme": "accessibility",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
-          "theme": "wayfinding_signage",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
-          "theme": "families",
-          "current": 29,
-          "prior": 13,
-          "current_share": 12.6,
-          "prior_share": 12.5,
-          "change": 0.1
         }
       ]
     },
@@ -704,40 +787,48 @@
           "google": 306
         },
         "sentiment": {
-          "positive": 267,
-          "positive_with_criticism": 47,
-          "mixed": 10,
-          "negative": 11
+          "positive_with_criticism": 51,
+          "positive": 268,
+          "mixed": 7,
+          "negative": 9
         },
         "themes": {
           "interactive_exhibits": 123,
-          "architecture": 60,
-          "families": 42,
-          "landscape": 39,
-          "dwell_time": 25,
-          "food_beverage": 19,
-          "crowding": 16,
-          "value_for_money": 16,
-          "retail": 15,
+          "architecture": 59,
+          "landscape": 47,
+          "interpretation": 45,
+          "families": 43,
+          "ai_criticism": 35,
+          "food_beverage": 18,
+          "timed_entry": 18,
+          "historical_balance": 17,
+          "dwell_time": 17,
           "staff": 15,
-          "timed_entry": 14,
+          "age_tiers": 13,
+          "grounds_conduct": 12,
+          "crowding": 11,
           "boardwalk_trails": 11,
-          "queues": 10,
-          "conservation_message": 10,
-          "parking": 10,
-          "rooftop": 9,
-          "restrooms": 7,
-          "guided_tours": 7,
-          "water_availability": 4,
-          "ai_criticism": 4,
-          "retail_pricing": 3,
-          "accessibility": 3,
-          "wayfinding_signage": 3,
-          "ticket_pricing": 3,
-          "security_screening": 3,
-          "sellouts": 3,
-          "peer_comparison": 2,
-          "data_privacy": 2
+          "retail": 8,
+          "rooftop": 8,
+          "visitor_flow": 8,
+          "ticket_pricing": 8,
+          "security_screening": 7,
+          "parking": 7,
+          "conservation_message": 7,
+          "accessibility": 6,
+          "queues": 5,
+          "retail_pricing": 4,
+          "guided_tours": 4,
+          "restrooms": 3,
+          "data_privacy": 3,
+          "drive_market": 2,
+          "water_availability": 2,
+          "value_for_money": 2,
+          "wayfinding_signage": 2,
+          "capacity": 1,
+          "sellouts": 1,
+          "peer_comparison": 1,
+          "staff_training": 1
         },
         "unanswered": 334
       },
@@ -776,59 +867,75 @@
         },
         {
           "theme": "architecture",
-          "current": 60,
+          "current": 59,
           "prior": 0,
-          "current_share": 17.9,
+          "current_share": 17.6,
           "prior_share": 0,
-          "change": 17.9
-        },
-        {
-          "theme": "families",
-          "current": 42,
-          "prior": 0,
-          "current_share": 12.5,
-          "prior_share": 0,
-          "change": 12.5
+          "change": 17.6
         },
         {
           "theme": "landscape",
-          "current": 39,
+          "current": 47,
           "prior": 0,
-          "current_share": 11.6,
+          "current_share": 14.0,
           "prior_share": 0,
-          "change": 11.6
+          "change": 14.0
         },
         {
-          "theme": "dwell_time",
-          "current": 25,
+          "theme": "interpretation",
+          "current": 45,
           "prior": 0,
-          "current_share": 7.5,
+          "current_share": 13.4,
           "prior_share": 0,
-          "change": 7.5
+          "change": 13.4
+        },
+        {
+          "theme": "families",
+          "current": 43,
+          "prior": 0,
+          "current_share": 12.8,
+          "prior_share": 0,
+          "change": 12.8
+        },
+        {
+          "theme": "ai_criticism",
+          "current": 35,
+          "prior": 0,
+          "current_share": 10.4,
+          "prior_share": 0,
+          "change": 10.4
+        },
+        {
+          "theme": "timed_entry",
+          "current": 18,
+          "prior": 0,
+          "current_share": 5.4,
+          "prior_share": 0,
+          "change": 5.4
         },
         {
           "theme": "food_beverage",
-          "current": 19,
+          "current": 18,
           "prior": 0,
-          "current_share": 5.7,
+          "current_share": 5.4,
           "prior_share": 0,
-          "change": 5.7
+          "change": 5.4
         },
         {
-          "theme": "value_for_money",
-          "current": 16,
+          "theme": "dwell_time",
+          "current": 17,
           "prior": 0,
-          "current_share": 4.8,
+          "current_share": 5.1,
           "prior_share": 0,
-          "change": 4.8
+          "change": 5.1
         },
         {
-          "theme": "crowding",
-          "current": 16,
+          "theme": "historical_balance",
+          "current": 17,
           "prior": 0,
-          "current_share": 4.8,
+          "current_share": 5.1,
           "prior_share": 0,
-          "change": 4.8
+          "change": 5.1
         },
         {
           "theme": "staff",
@@ -839,20 +946,28 @@
           "change": 4.5
         },
         {
-          "theme": "retail",
-          "current": 15,
+          "theme": "age_tiers",
+          "current": 13,
           "prior": 0,
-          "current_share": 4.5,
+          "current_share": 3.9,
           "prior_share": 0,
-          "change": 4.5
+          "change": 3.9
         },
         {
-          "theme": "timed_entry",
-          "current": 14,
+          "theme": "grounds_conduct",
+          "current": 12,
           "prior": 0,
-          "current_share": 4.2,
+          "current_share": 3.6,
           "prior_share": 0,
-          "change": 4.2
+          "change": 3.6
+        },
+        {
+          "theme": "crowding",
+          "current": 11,
+          "prior": 0,
+          "current_share": 3.3,
+          "prior_share": 0,
+          "change": 3.3
         },
         {
           "theme": "boardwalk_trails",
@@ -863,111 +978,95 @@
           "change": 3.3
         },
         {
-          "theme": "queues",
-          "current": 10,
+          "theme": "visitor_flow",
+          "current": 8,
           "prior": 0,
-          "current_share": 3.0,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "parking",
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "conservation_message",
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
+          "change": 2.4
         },
         {
           "theme": "rooftop",
-          "current": 9,
+          "current": 8,
           "prior": 0,
-          "current_share": 2.7,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 2.7
-        },
-        {
-          "theme": "guided_tours",
-          "current": 7,
-          "prior": 0,
-          "current_share": 2.1,
-          "prior_share": 0,
-          "change": 2.1
-        },
-        {
-          "theme": "restrooms",
-          "current": 7,
-          "prior": 0,
-          "current_share": 2.1,
-          "prior_share": 0,
-          "change": 2.1
-        },
-        {
-          "theme": "water_availability",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
-          "theme": "ai_criticism",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
-          "theme": "security_screening",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
+          "change": 2.4
         },
         {
           "theme": "ticket_pricing",
-          "current": 3,
+          "current": 8,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 0.9
+          "change": 2.4
+        },
+        {
+          "theme": "retail",
+          "current": 8,
+          "prior": 0,
+          "current_share": 2.4,
+          "prior_share": 0,
+          "change": 2.4
+        },
+        {
+          "theme": "parking",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
+        },
+        {
+          "theme": "security_screening",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
+        },
+        {
+          "theme": "conservation_message",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
         },
         {
           "theme": "accessibility",
-          "current": 3,
+          "current": 6,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.8,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.8
         },
         {
-          "theme": "sellouts",
-          "current": 3,
+          "theme": "queues",
+          "current": 5,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.5,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.5
+        },
+        {
+          "theme": "guided_tours",
+          "current": 4,
+          "prior": 0,
+          "current_share": 1.2,
+          "prior_share": 0,
+          "change": 1.2
         },
         {
           "theme": "retail_pricing",
-          "current": 3,
+          "current": 4,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.2,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.2
         },
         {
-          "theme": "wayfinding_signage",
+          "theme": "restrooms",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -976,6 +1075,14 @@
         },
         {
           "theme": "data_privacy",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "value_for_money",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -983,7 +1090,23 @@
           "change": 0.6
         },
         {
-          "theme": "peer_comparison",
+          "theme": "wayfinding_signage",
+          "current": 2,
+          "prior": 0,
+          "current_share": 0.6,
+          "prior_share": 0,
+          "change": 0.6
+        },
+        {
+          "theme": "drive_market",
+          "current": 2,
+          "prior": 0,
+          "current_share": 0.6,
+          "prior_share": 0,
+          "change": 0.6
+        },
+        {
+          "theme": "water_availability",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1021,40 +1144,48 @@
           "google": 306
         },
         "sentiment": {
-          "positive": 267,
-          "positive_with_criticism": 47,
-          "mixed": 10,
-          "negative": 11
+          "positive_with_criticism": 51,
+          "positive": 268,
+          "mixed": 7,
+          "negative": 9
         },
         "themes": {
           "interactive_exhibits": 123,
-          "architecture": 60,
-          "families": 42,
-          "landscape": 39,
-          "dwell_time": 25,
-          "food_beverage": 19,
-          "crowding": 16,
-          "value_for_money": 16,
-          "retail": 15,
+          "architecture": 59,
+          "landscape": 47,
+          "interpretation": 45,
+          "families": 43,
+          "ai_criticism": 35,
+          "food_beverage": 18,
+          "timed_entry": 18,
+          "historical_balance": 17,
+          "dwell_time": 17,
           "staff": 15,
-          "timed_entry": 14,
+          "age_tiers": 13,
+          "grounds_conduct": 12,
+          "crowding": 11,
           "boardwalk_trails": 11,
-          "queues": 10,
-          "conservation_message": 10,
-          "parking": 10,
-          "rooftop": 9,
-          "restrooms": 7,
-          "guided_tours": 7,
-          "water_availability": 4,
-          "ai_criticism": 4,
-          "retail_pricing": 3,
-          "accessibility": 3,
-          "wayfinding_signage": 3,
-          "ticket_pricing": 3,
-          "security_screening": 3,
-          "sellouts": 3,
-          "peer_comparison": 2,
-          "data_privacy": 2
+          "retail": 8,
+          "rooftop": 8,
+          "visitor_flow": 8,
+          "ticket_pricing": 8,
+          "security_screening": 7,
+          "parking": 7,
+          "conservation_message": 7,
+          "accessibility": 6,
+          "queues": 5,
+          "retail_pricing": 4,
+          "guided_tours": 4,
+          "restrooms": 3,
+          "data_privacy": 3,
+          "drive_market": 2,
+          "water_availability": 2,
+          "value_for_money": 2,
+          "wayfinding_signage": 2,
+          "capacity": 1,
+          "sellouts": 1,
+          "peer_comparison": 1,
+          "staff_training": 1
         },
         "unanswered": 334
       },
@@ -1093,59 +1224,75 @@
         },
         {
           "theme": "architecture",
-          "current": 60,
+          "current": 59,
           "prior": 0,
-          "current_share": 17.9,
+          "current_share": 17.6,
           "prior_share": 0,
-          "change": 17.9
-        },
-        {
-          "theme": "families",
-          "current": 42,
-          "prior": 0,
-          "current_share": 12.5,
-          "prior_share": 0,
-          "change": 12.5
+          "change": 17.6
         },
         {
           "theme": "landscape",
-          "current": 39,
+          "current": 47,
           "prior": 0,
-          "current_share": 11.6,
+          "current_share": 14.0,
           "prior_share": 0,
-          "change": 11.6
+          "change": 14.0
         },
         {
-          "theme": "dwell_time",
-          "current": 25,
+          "theme": "interpretation",
+          "current": 45,
           "prior": 0,
-          "current_share": 7.5,
+          "current_share": 13.4,
           "prior_share": 0,
-          "change": 7.5
+          "change": 13.4
+        },
+        {
+          "theme": "families",
+          "current": 43,
+          "prior": 0,
+          "current_share": 12.8,
+          "prior_share": 0,
+          "change": 12.8
+        },
+        {
+          "theme": "ai_criticism",
+          "current": 35,
+          "prior": 0,
+          "current_share": 10.4,
+          "prior_share": 0,
+          "change": 10.4
+        },
+        {
+          "theme": "timed_entry",
+          "current": 18,
+          "prior": 0,
+          "current_share": 5.4,
+          "prior_share": 0,
+          "change": 5.4
         },
         {
           "theme": "food_beverage",
-          "current": 19,
+          "current": 18,
           "prior": 0,
-          "current_share": 5.7,
+          "current_share": 5.4,
           "prior_share": 0,
-          "change": 5.7
+          "change": 5.4
         },
         {
-          "theme": "value_for_money",
-          "current": 16,
+          "theme": "dwell_time",
+          "current": 17,
           "prior": 0,
-          "current_share": 4.8,
+          "current_share": 5.1,
           "prior_share": 0,
-          "change": 4.8
+          "change": 5.1
         },
         {
-          "theme": "crowding",
-          "current": 16,
+          "theme": "historical_balance",
+          "current": 17,
           "prior": 0,
-          "current_share": 4.8,
+          "current_share": 5.1,
           "prior_share": 0,
-          "change": 4.8
+          "change": 5.1
         },
         {
           "theme": "staff",
@@ -1156,20 +1303,28 @@
           "change": 4.5
         },
         {
-          "theme": "retail",
-          "current": 15,
+          "theme": "age_tiers",
+          "current": 13,
           "prior": 0,
-          "current_share": 4.5,
+          "current_share": 3.9,
           "prior_share": 0,
-          "change": 4.5
+          "change": 3.9
         },
         {
-          "theme": "timed_entry",
-          "current": 14,
+          "theme": "grounds_conduct",
+          "current": 12,
           "prior": 0,
-          "current_share": 4.2,
+          "current_share": 3.6,
           "prior_share": 0,
-          "change": 4.2
+          "change": 3.6
+        },
+        {
+          "theme": "crowding",
+          "current": 11,
+          "prior": 0,
+          "current_share": 3.3,
+          "prior_share": 0,
+          "change": 3.3
         },
         {
           "theme": "boardwalk_trails",
@@ -1180,111 +1335,95 @@
           "change": 3.3
         },
         {
-          "theme": "queues",
-          "current": 10,
+          "theme": "visitor_flow",
+          "current": 8,
           "prior": 0,
-          "current_share": 3.0,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "parking",
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "conservation_message",
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
+          "change": 2.4
         },
         {
           "theme": "rooftop",
-          "current": 9,
+          "current": 8,
           "prior": 0,
-          "current_share": 2.7,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 2.7
-        },
-        {
-          "theme": "guided_tours",
-          "current": 7,
-          "prior": 0,
-          "current_share": 2.1,
-          "prior_share": 0,
-          "change": 2.1
-        },
-        {
-          "theme": "restrooms",
-          "current": 7,
-          "prior": 0,
-          "current_share": 2.1,
-          "prior_share": 0,
-          "change": 2.1
-        },
-        {
-          "theme": "water_availability",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
-          "theme": "ai_criticism",
-          "current": 4,
-          "prior": 0,
-          "current_share": 1.2,
-          "prior_share": 0,
-          "change": 1.2
-        },
-        {
-          "theme": "security_screening",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
+          "change": 2.4
         },
         {
           "theme": "ticket_pricing",
-          "current": 3,
+          "current": 8,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 2.4,
           "prior_share": 0,
-          "change": 0.9
+          "change": 2.4
+        },
+        {
+          "theme": "retail",
+          "current": 8,
+          "prior": 0,
+          "current_share": 2.4,
+          "prior_share": 0,
+          "change": 2.4
+        },
+        {
+          "theme": "parking",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
+        },
+        {
+          "theme": "security_screening",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
+        },
+        {
+          "theme": "conservation_message",
+          "current": 7,
+          "prior": 0,
+          "current_share": 2.1,
+          "prior_share": 0,
+          "change": 2.1
         },
         {
           "theme": "accessibility",
-          "current": 3,
+          "current": 6,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.8,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.8
         },
         {
-          "theme": "sellouts",
-          "current": 3,
+          "theme": "queues",
+          "current": 5,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.5,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.5
+        },
+        {
+          "theme": "guided_tours",
+          "current": 4,
+          "prior": 0,
+          "current_share": 1.2,
+          "prior_share": 0,
+          "change": 1.2
         },
         {
           "theme": "retail_pricing",
-          "current": 3,
+          "current": 4,
           "prior": 0,
-          "current_share": 0.9,
+          "current_share": 1.2,
           "prior_share": 0,
-          "change": 0.9
+          "change": 1.2
         },
         {
-          "theme": "wayfinding_signage",
+          "theme": "restrooms",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1293,6 +1432,14 @@
         },
         {
           "theme": "data_privacy",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "value_for_money",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1300,7 +1447,23 @@
           "change": 0.6
         },
         {
-          "theme": "peer_comparison",
+          "theme": "wayfinding_signage",
+          "current": 2,
+          "prior": 0,
+          "current_share": 0.6,
+          "prior_share": 0,
+          "change": 0.6
+        },
+        {
+          "theme": "drive_market",
+          "current": 2,
+          "prior": 0,
+          "current_share": 0.6,
+          "prior_share": 0,
+          "change": 0.6
+        },
+        {
+          "theme": "water_availability",
           "current": 2,
           "prior": 0,
           "current_share": 0.6,
@@ -1321,12 +1484,13 @@
       "title": null,
       "text": "Somewhat disappointed by my experience. Heavy use of AI and an over-reliance on interactive features for kids. At times, it felt more like a Disney World attraction made to entertain, as opposed to an educational experience.\n\nOk, first, the positives:  the narrative of Theodore’s presidency was pretty well-balanced, and some of the video exhibits (especially the narrations) were excellent. The facility itself and the surrounding landscape are absolutely stunning and are reason enough to visit the library.\n\nThe negatives: the pacing of the museum isn’t always coherent, as highly important moments of Theodore’s life, political rise, and presidency are condensed down to a sentence or two on signage.  The AI component is also jarring. In one exhibit featuring an AI enhanced image of Theodore and the Rough Riders, one of the soldiers’ faces appears twice in the image. This is especially odd given that the actual image is rather well-known and could’ve been displayed without alteration.\n\nI was excited to go, and believe that the place has great potential, but I don’t think I’d recommend it at this point. Hopefully they figure out a way to incorporate the AI in a way that is less obnoxious!",
       "themes": [
-        "wayfinding_signage",
-        "interactive_exhibits",
+        "ai_criticism",
+        "interpretation",
+        "architecture",
         "landscape",
-        "families"
+        "interactive_exhibits"
       ],
-      "sentiment": "negative",
+      "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pacVFsVm1URzFSV0VkRVNYSkplSE10T0daaFVtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjZqQlVmTG1RWEdESXJJeHMtOGZhUmc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
@@ -1343,7 +1507,6 @@
       "title": null,
       "text": "AI slop, I'm going back to Japan",
       "themes": [
-        "interactive_exhibits",
         "ai_criticism"
       ],
       "sentiment": "negative",
@@ -1363,7 +1526,6 @@
       "title": null,
       "text": "Learning the history and seeing the artifacts was great, but the amount of AI stained my experience drastically. Honoring the life of a dead man who advocated for conservation with something that is actively destroying the environment he cared for is beyond crazy to me. And honestly, it just made things seem significantly lazier. After all the things I learned about Teddy in the exhibit, I can confidently say he would be so disappointed in the reliance on AI. Do better and put our money towards something original.",
       "themes": [
-        "interactive_exhibits",
         "ai_criticism",
         "conservation_message"
       ],
@@ -1384,7 +1546,8 @@
       "title": null,
       "text": "Two hour wait to get into the library. That suck so we went home.",
       "themes": [
-        "queues"
+        "queues",
+        "timed_entry"
       ],
       "sentiment": "negative",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2kxb1JYZHJlR2hGWldkelluUkZVblkyY0hCNlZYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOi1oRXdreGhFZWdzYnRFUnY2cHB6VXc%7C%7C?hl=en",
@@ -1437,7 +1600,9 @@
       "title": null,
       "text": "Very disappointed... drove all the way there only to find out we need to buy tickets in advance. They only allowed so many people in at a time, 9:20 now, can't get in till 12:00. Maybe we'll go another time...",
       "themes": [
-        "timed_entry"
+        "timed_entry",
+        "capacity",
+        "queues"
       ],
       "sentiment": "negative",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tsNVdGOUdZMVZtY0dZNFVUTlVVVko2WkdONUxXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkl5WF9GY1VmcGY4UTNUUVJ6ZGN5LWc%7C%7C?hl=en",
@@ -1456,10 +1621,11 @@
       "title": null,
       "text": "The building is incredibly thoughtful & mimics the rock that TR looked so fondly of during his time in ND. However the AI usage (especially the video of the Rough Riders) was extremely disappointing and badly executed. Further, it seemed like 75% of the items on display were replicas. If you are a child, an elderly adult, or someone who hasn’t read a book since high school you would absolutely LOVE this exhibit.",
       "themes": [
-        "interactive_exhibits",
-        "architecture"
+        "architecture",
+        "ai_criticism",
+        "interpretation"
       ],
-      "sentiment": "negative",
+      "sentiment": "mixed",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2twWVJqTjRXSEp5UkZOZlJtSlBOa05YWW5CYVMzYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkpYRjN4WHJyRFNfRmJPNkNXYnBaS3c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
@@ -1476,7 +1642,7 @@
       "title": null,
       "text": "",
       "themes": [],
-      "sentiment": "mixed",
+      "sentiment": "positive",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pWdU9GbFVUVFpPYVVWR1lsOVRWazR5ZVdSb2NtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjVuOFlUTTZOaUVGYl9TVk4yeWRocmc%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 3,
@@ -1493,11 +1659,13 @@
       "title": null,
       "text": "I really hurts me to give this only three stars. While I did learn quite a bit here, and some exhibits are very well done and informational, I do have one (strong) gripe. I believe Teddy to be one of our greatest presidents and I love nearly everything he stood for, especially conservation of our gorgeous land. That said, I find it not only ironic but utterly appalling how much AI slop is implemented here. Data centers are actively harming our ecosystem and being constructed on protected land. Not only that, it comes across as very cheap.  TR would never support this. I am disappointed to say the least.\nBesides the AI, I think the TR Presidential Library is actually pretty great. Very structurally beautiful, with creative and visually engaging exhibits for people of all ages. It covers every era of Teddy’s life with great detail and respect. Again, I just wish it wasn’t catering so much to AI loving boomers.",
       "themes": [
-        "interactive_exhibits",
         "ai_criticism",
-        "conservation_message"
+        "conservation_message",
+        "architecture",
+        "interactive_exhibits",
+        "interpretation"
       ],
-      "sentiment": "mixed",
+      "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25ocU9YVmtaRzlvZEhKeldUVkJVa0pCTFZRMk5sRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnhqOXVkZG9odHJzWTVBUkJBLVQ2NlE%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 3,
@@ -1514,12 +1682,11 @@
       "title": null,
       "text": "Beautiful building! Many interactive displays geared to kids. Cramped viewing spaces to see displays. If you didn't slowly follow the crowd and read every word, you lost your turn to see many displays. Disappointing",
       "themes": [
-        "crowding",
-        "interactive_exhibits",
         "architecture",
-        "families"
+        "visitor_flow",
+        "crowding"
       ],
-      "sentiment": "mixed",
+      "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsdFVFMU5SaTAyTjNwUU5reE1NbXBVTldKQlMwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlltUE1NRi02N3pQNkxMMmpUNWJBS0E%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 3,
@@ -1536,10 +1703,9 @@
       "title": null,
       "text": "Mixed feelings about it.  I learned a few things. I noticed some of the object labels had text that sounded rather 'woke', not necessarily a quote from TR but rather someone's thoughts on what he said.  A lot of messaging about 'how you should be'.\n\nThis is not a museum with 1000's and 1000's of artifacts. Some good tech but generally speaking this place did not exude warmth - instead it was bright, with a lot of tech which came off as cold and many times shallow. It seems out of balance at many points, providing space & over-the-top presentation for something that would be better served up in a simple, direct way. Did I learn more about him, yes. Do I feel more connected to TR, taking pride in him as a man - no. So the info was there but the meaning wasn't.\n\nNo printed receipt. You have to provide your email address if you want a receipt. A place this large, with so many attendees does not provide a printed receipt. You can provide your email, plus you can get your photo taken of your face so the AI programs can photoshop you into a different outfit. What do they do with all the facial images they collect from visitors?\n\nIt received a lot of hype when Trump was there the week of July 4th, 2026 - but I don't think it lived up to the hype.  I thought it was over priced but if you are going to be in Medora anyways (for the musical) then it is reasonable to go here too. But I wouldn't drive out of my way to see it.\n\nBTW, security wasn't particularly on point.",
       "themes": [
-        "interactive_exhibits",
-        "data_privacy",
-        "value_for_money",
-        "security_screening"
+        "interpretation",
+        "ai_criticism",
+        "data_privacy"
       ],
       "sentiment": "mixed",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2trdGJuRklVRGhHTmxSb2RsTnpkMnhMYUhWRFZtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkktbnFIUDhGNlRodlNzd2xLaHVDVmc%7C%7C?hl=en",
@@ -1558,11 +1724,9 @@
       "title": null,
       "text": "Unfortunately, we were not able to even visit the library, because, apparently, you had to buy tickets in advance. \nWe had parked our car, and went through security, then come to find out that you need to buy tickets to visit a library. I had no idea, no libraries near us do that. Nor do any libraries I've ever been to. Apparently all of the reviews that I read online did not mention that you had to purchase a ticket. I asked, how much it was, and one of the security girls had to ask the other one, who said it was $26 (check online if you want to confirm). I figured since we already drove up here,  I would buy them,  so I told her that I would be purchasing them for my family, and she said that they already had sold out yesterday. So that was a letdown. \n\nThe outdoor of the library was beautiful. You could tell that everything looks brand new. There were people singing near the rocking chairs, although they were singing pretty explicit things with families around. I'm not sure how it is with those people, but had my parents been with me, like theirs were with them, it would make me really uncomfortable to be with my parents and hear those songs. \nI would have given them five stars even if I wasn't able to go into the library if workers do not have to ask each other how much the price of the tickets are, and those explicit songs. On the plus side, the bathrooms were clean.  They also had a water bottle refill fountain right by the bathrooms.",
       "themes": [
-        "parking",
         "timed_entry",
-        "sellouts",
-        "water_availability",
-        "restrooms"
+        "security_screening",
+        "grounds_conduct"
       ],
       "sentiment": "mixed",
       "url": null,
@@ -1581,11 +1745,9 @@
       "title": null,
       "text": "Unfortunately, we were not able to even visit the library, because, apparently, you had to buy tickets in advance.\nWe had parked our car, and went through security, then come to find out that you need to buy tickets to visit a library. I had no idea, no libraries near us do that. Nor do any libraries I've ever been to. Apparently all of the reviews that I read online did not mention that you had to purchase a ticket. I asked, how much it was, and one of the security girls had to ask the other one, who said it was $26 (check online if you want to confirm). I figured since we already drove up here,  I would buy them,  so I told her that I would be purchasing them for my family, and she said that they already had sold out yesterday. So that was a letdown.\n\nThe outdoor of the library was beautiful. You could tell that everything looks brand new. There were people singing near the rocking chairs, although they were singing pretty explicit things with families around. I'm not sure how it is with those people, but had my parents been with me, like theirs were with them, it would make me really uncomfortable to be with my parents and hear those songs.\nI would have given them five stars even if I wasn't able to go into the library if workers do not have to ask each other how much the price of the tickets are, and those explicit songs. On the plus side, the bathrooms were clean.  They also had a water bottle refill fountain right by the bathrooms.",
       "themes": [
-        "parking",
         "timed_entry",
-        "sellouts",
-        "water_availability",
-        "restrooms"
+        "security_screening",
+        "grounds_conduct"
       ],
       "sentiment": "mixed",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xoUVEyTk9VSHBOTm01WVVFeG9OMjVGYmxWR1ZsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlhQQ2NOUHpNNm5YUExoN25FblVGVlE%7C%7C?hl=en",
@@ -1604,9 +1766,10 @@
       "title": null,
       "text": "So it wasn't as amazing as they made it out to be. I was disappointed in lack of things to truely look at. The AI things were fun however it was disappointing the train photo op wasnt working which is disappointing especially since this place is new and the price one pays to go. Shouldn't be having these issues already. The AI videos where okay some were highly distorted which made it hard to watch. It will take u 3-4 hrs to get through do to waiting in lines, waiting for shows to start etc. Food choices in cafe were disappointing, we were very hungry and nothing really good there. Over all id say was just OK.",
       "themes": [
+        "ai_criticism",
         "queues",
         "food_beverage",
-        "interactive_exhibits"
+        "ticket_pricing"
       ],
       "sentiment": "mixed",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKUlJtWTRZakpWUzJaRVMyeHVaak4wUkhOVlVVRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkJRRmY4YjJVS2ZES2xuZjN0RHNVUUE%7C%7C?hl=en",
@@ -1625,10 +1788,11 @@
       "title": null,
       "text": "Very informative library.    Lots to see, we didn’t see everything!   But loved it.   The rocking chairs was great!    A suggestion,,,,One thing is a shuttle should be used for those elderly persons, like myself and my disabled husband to get from the parking lot to the building and back.  Just a thought.",
       "themes": [
+        "dwell_time",
         "parking",
-        "architecture"
+        "accessibility"
       ],
-      "sentiment": "mixed",
+      "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kWWRqSlhlR2syTW14eVVXZEZRa3RLY1VWSGMwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndYdjJXeGk2MmxyUWdFQktKcUVHc0E%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 3,
@@ -1646,10 +1810,9 @@
       "text": "The library is beautiful. The problem is getting to the library because the signage is so poorly done. Our friend requires a handicap parking space for which there was absolutely zero signs to indicate how to get there. We asked one of the employees where those parking spaces were and she said that the pavement is marked, but when people parked over them, no one else even realizes that they are there. Once you park, it is still quite a hike to get up to the entrance to the library. I only saw one or two shuttles that were available to take people who needed additional assistance to get from the limited parking area up to the entrance. After you get to the entrance you get in a line and wait to be sent through a freestanding scanner. The scanner later blew over & broke when a wind storm blew through. Once you’re cleared to go in, there’s another line to get in to go through to get your ticket scanned. Then you’re given the opportunity to sign up with your wristband to be able to take pictures of yourself throughout the library. If you decide to go, I recommend planning a full day in order to stop and read every single display that they have. It’s very interesting & educational but it’s also very time-consuming and daunting, especially if there’s large crowds. The observation of the four of us in our group decided that we much more enjoyed the Bush library we have been through in Texas.",
       "themes": [
         "parking",
-        "wayfinding_signage",
         "accessibility",
-        "crowding",
-        "queues"
+        "security_screening",
+        "timed_entry"
       ],
       "sentiment": "mixed",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1071686829-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
@@ -1659,25 +1822,26 @@
       "overdue_by": 4
     },
     {
-      "id": "tripadvisor-2026-07-06-039ec2d0",
-      "source": "tripadvisor",
-      "date": "2026-07-06",
+      "id": "google-2026-07-04-559d29d1",
+      "source": "google",
+      "date": "2026-07-04",
       "rating": 5,
       "recommends": null,
-      "author": "mrc282",
-      "title": "cowboy turn president 1901-1909",
-      "text": "Theodore Roosevelt is a multifaceted figure: soldier, peacemaker, hunter, conservationist, diplomat, opportunist. \n\nI havent been to many presidential libraries, but this one stands out due to its interactive and AI-powered feature. Despite being the 26th president, his library was just officially completed and inaugurated on 4 July 2026 in conjunction with 250th anniversary of US's independence. \n\nWhen you enter, you are first given a wrist band that is linked to your name / email / photo. later, within the museum, you will be able to see yourself depicted as various figures during the TR era and interact with TR (or at least its lifelike representation) by scanning against a compass icon. \n\nAs the museum just opened, entry is enforced by time slot. There is security check but bottled water/camera/mobile phones/small bag are fine. Make sure you book well in advance online if you are on a tight schedule",
+      "author": "Drew Schimelpfenig",
+      "title": null,
+      "text": "Don't walk, Charge to TRPL!  Whether you know nothing or everything about Teddy Roosevelt there is something for everyone of all ages, affiliations and perspectives.\nInteractive, engaging, thought-provoking, moving, inspiring. Go for the Architecture.  Go for the history.  Go for the views and vistas.  Will have to come back soon to try the food!",
       "themes": [
-        "timed_entry",
         "interactive_exhibits",
-        "security_screening"
+        "architecture",
+        "landscape",
+        "food_beverage"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1067120798-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21FeVoweDFRVGhtTW1RdExVUlZZVFF6VW1kTGRsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmEyZ0x1QThmMmQtLURVYTQzUmdLdlE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 37,
-      "overdue_by": 30
+      "age_days": 39,
+      "overdue_by": 32
     },
     {
       "id": "google-2026-07-07-2fc1734d",
@@ -1689,8 +1853,7 @@
       "title": null,
       "text": "One of the nicest Presidential Libraries I've been to.  Staff is still working out some kinks on the admission side so plan to have a slow entrance process but once inside it was a fantastic experience.",
       "themes": [
-        "staff",
-        "ticket_pricing"
+        "staff"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t3emFqSk9jV2RIY0ZwclpEVjFaV2h0WTBKaldHYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkwzajJOcWdHcFprZDV1ZWhtY0JjWGc%7C%7C?hl=en",
@@ -1698,44 +1861,6 @@
       "sla_days": 7,
       "age_days": 36,
       "overdue_by": 29
-    },
-    {
-      "id": "tripadvisor-2026-07-08-89acd689",
-      "source": "tripadvisor",
-      "date": "2026-07-08",
-      "rating": 5,
-      "recommends": null,
-      "author": "Nicole A",
-      "title": "Absolutely worth the trip!",
-      "text": "Now THIS is a presidential library! The views are spectacular. Not only is it a sight to see in the Badlands, but the technology inside is great for all ages! They did a fabulous job building this and telling his life story. We spent 4 hours there!",
-      "themes": [
-        "architecture",
-        "landscape",
-        "dwell_time"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1067443626-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 35,
-      "overdue_by": 28
-    },
-    {
-      "id": "google-2026-07-08-c5031cb8",
-      "source": "google",
-      "date": "2026-07-08",
-      "rating": 5,
-      "recommends": null,
-      "author": "janus_ai_mapmedia",
-      "title": null,
-      "text": "Please do not walk off the approved path onto the preserved \"prairie biome\" . They did alot of preservation work. This is not scraped off discard dirt with random growth but rather chosen plantings.",
-      "themes": [],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Wd1NYVmZiVVExVVRSUE0yVlJhWEJNUjFVeFZuYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnVwSXVfbUQ1UTRPM2VRaXBMR1UxVnc%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 35,
-      "overdue_by": 28
     },
     {
       "id": "google-2026-07-08-9d836fe6",
@@ -1747,10 +1872,10 @@
       "title": null,
       "text": "Tl;dr: For the sake of fairness, I will try to ignore my tremendous bias, as I am an ardent admirer of Theodore Roosevelt (henceforth referred to as TR). That being said, the Theodore Roosevelt Presidential Library is an experience unparalleled. “It was here that the romance of my life began” - TR\n\nService and Price: Memberships at the library cover admission, and regular tickets can be had at different price points for military, students, seniors, and children. All the staff, from the cafe to the janitors to the curators, were second to none! Friendly, passionate, and professional from start to finish.\n\nExperience: Depending on how fast you want to go and how many things you want to do, it will take 2-4 hours to get through the whole exhibit. The first thing you are prompted to do is take a photo at one of their photo stations. Part of the museum experience is interactive, and they take your photo and show you what you would look like if you were part of TR’s entourage throughout significant events of his life, which is tracked via a bracelet given to you at the beginning of the self guided tour. The museum takes you through the life of TR, starting as a child. You journey through his childhood home, his time in the Badlands, his return to politics, his career in government service, and what he did after his career. Each portion of his life is prefaced in the main hall, off which the immersive exhibits all branch. There are numerous items from his life that are on display, and it is all expertly curated. Of course, they do have everything to keep adults engaged, but they also have a good number of activities to keep the kids engaged as well. I would jump at the opportunity to go again, and fully intend to return upon my next journey to Medora.\n\nLocation: The TR Presidential Library is located in the North Dakota Badlands, in the town of Medora. It is up a very steep hill, so walking to it would be very difficult, but they share a parking lot with the Medora Musical, so once you get up the hill, parking is plentiful and the walk into and around the building is flat and easy. And for those wondering, Theodore Roosevelt spent a few years ranching around Medora, after his mother and wife passed away on the same day, the latter of whom had just given birth to this daughter. He chose to come to Medora because he appreciated the desolate and haunting beauty of the land, but also the simplicity and honest nature of the work and lifestyle. By his own admission, his experiences here were what helped shape him into the incredible leader he became.\n\nGrounds and Interior: The first thing you see as you crest the hill is how the museum rises gracefully from the earth, while still being part of it like a natural hill. Native plants decorate the rooftop, which you can walk onto via a meandering walking path on one side, and staircase on the other. Another walking path about half a mile long takes you on a large flat loop in front of the museum to showcase some of the quiet beauty the badlands offer.  All parts of the grounds are wheelchair accessible. To enter the museum, you walk through a massive breezeway, which offers rocking chairs and a view overlooking the town below. The whole building extensively includes natural materials throughout, including wood flooring and rammed earth walls. The massive windows really open up the space, and bring the outdoors into your experience.\n\nOverall: As a true Theodore Roosevelt fan, this is as pure of an experience as you can have. You get to experience all of the highs and lows and adventures of TR’s life. It does an excellent job at not only showing you what his life was like, but immersing you into each part of his journey. The Theodore Roosevelt Presidential Library is an absolute must see, even if you are only driving through. Your time will be well rewarded with incredible history at a world class facility.",
       "themes": [
-        "parking",
-        "accessibility",
-        "food_beverage",
         "staff",
+        "ticket_pricing",
+        "age_tiers",
+        "dwell_time",
         "interactive_exhibits"
       ],
       "sentiment": "positive_with_criticism",
@@ -1759,69 +1884,6 @@
       "sla_days": 7,
       "age_days": 35,
       "overdue_by": 28
-    },
-    {
-      "id": "google-2026-07-08-198fc99a",
-      "source": "google",
-      "date": "2026-07-08",
-      "rating": 5,
-      "recommends": null,
-      "author": "John Weatherford",
-      "title": null,
-      "text": "The best presidential library I've been too, so far I've been to 5, you should set about 4 to 5 hours aside to fully enjoy the library. The team did a killer job, well thought out and executed and lots of stuff for kids.",
-      "themes": [
-        "families",
-        "dwell_time"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xORFVGOTZSVk15T0ZoNmFIZERhbEpJYmxkNmJrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlNDUF96RVMyOFh6aHdDalJIbld6bkE%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 35,
-      "overdue_by": 28
-    },
-    {
-      "id": "google-2026-07-09-d7d6471d",
-      "source": "google",
-      "date": "2026-07-09",
-      "rating": 5,
-      "recommends": null,
-      "author": "Megan Fast",
-      "title": null,
-      "text": "What a capital experience! Fun for the whole family- like Disney World for history nerds. From the artifacts to the interactive exhibits, we gained a greater appreciation for TR. I wish I lived closer so I could visit often. Get out there and roam!",
-      "themes": [
-        "interactive_exhibits",
-        "families"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT20xMkxXRkhPRmhsVkdSUE4ySkJjVk5GYTI1cFMwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOm12LWFHOFhlVGRPN2JBcVNFa25pS0E%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 34,
-      "overdue_by": 27
-    },
-    {
-      "id": "tripadvisor-2026-07-10-ab3d7bd6",
-      "source": "tripadvisor",
-      "date": "2026-07-10",
-      "rating": 5,
-      "recommends": null,
-      "author": "LaVia M",
-      "title": "Worth coming back!",
-      "text": "The interactive exhibits are wonderful. Teens were interested as well. We had a 45 minute tour but one needn’t have done it…the displays are instructive enough. We ate lunch (egg salad+)  there, as we were there 5 hours in total. [Not bad for two duffers.]\nWe are planning a return trip.",
-      "themes": [
-        "food_beverage",
-        "interactive_exhibits",
-        "families",
-        "dwell_time",
-        "guided_tours"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1067719083-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 33,
-      "overdue_by": 26
     },
     {
       "id": "tripadvisor-2026-07-11-21f5cc6c",
@@ -1833,9 +1895,9 @@
       "title": "Great time and fascinating.",
       "text": "This presidential library was absolutely incredible! We visited with four adults and three kids, ages 6, 8, and 12, and every one of us was completely captivated. There was something to see, learn, and interact with around every corner, making it enjoyable for visitors of all ages.\nThe exhibits are thoughtfully designed with fascinating displays and hands-on experiences that kept everyone engaged. We found ourselves wanting to stop and explore every room, but unfortunately we had to leave sooner than we wanted because we had other plans in Medora.\nThis was easily one of the highlights of our trip, and it's one of those places you could visit more than once and still discover something new. We’re already looking forward to coming back so we can spend more time taking it all in! My only negative is the fact that adults are ages 13 on up. Where in this world is a 13 yr old an adult? Kind of crappy or them to charge this much for. a 13 yr old.",
       "themes": [
-        "interactive_exhibits",
-        "architecture",
-        "families"
+        "families",
+        "age_tiers",
+        "interactive_exhibits"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1067927390-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
@@ -1845,86 +1907,49 @@
       "overdue_by": 25
     },
     {
-      "id": "tripadvisor-2026-07-14-0f3ed8da",
-      "source": "tripadvisor",
+      "id": "google-2026-07-14-d5d47784",
+      "source": "google",
       "date": "2026-07-14",
-      "rating": 5,
+      "rating": 4,
       "recommends": null,
-      "author": "derickson74",
-      "title": "Theodore Roosevelt Presidential Library is a Must See for everyone!",
-      "text": "This is a beautiful area of North Dakota to explore.  Admission was reasonable for the experience.  They give you a bracelet that can activate displays to interact with.  you can also get your photo taken at the beginning so you can use your bracelet to insert your photo in different displays.  There was a seek and find game too that looked like a lot of fun.  We were there for a couple of hours and could have easily stayed much longer.  There was so much to see and look at.  The displays were great.  They have hands-on experience.  There's a giftshop and small restaurant.  The view from outside the building is amazing.  Staff was very friendly.  The person that sold us our tickets was a lot of fun.  There were quite a few people there but it wasn't crowded.   It's suitable for all ages.  I think everyone would have a fun time learning about President Roosevelt and history of the area.",
+      "author": "Jodi F",
+      "title": null,
+      "text": "It was interesting.  Enjoyed the AI pictures. I was disappointed in the gift shop. Very little to look at or buy. The outside walking path was very nice.  Its too bad there is t more color with plants outside.",
       "themes": [
-        "crowding",
+        "ai_criticism",
         "retail",
-        "food_beverage",
-        "staff",
-        "interactive_exhibits"
+        "boardwalk_trails",
+        "landscape"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1068302965-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25RNU1sRldaMmx0ZUVSbE1sUmlXVE0yUlZGekxVRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnQ5MlFWZ2lteERlMlRiWTM2RVFzLUE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 29,
       "overdue_by": 22
     },
     {
-      "id": "google-2026-07-14-489f95a9",
+      "id": "google-2026-07-14-b3d90952",
       "source": "google",
       "date": "2026-07-14",
       "rating": 5,
       "recommends": null,
-      "author": "Keaton Maybaum",
+      "author": "Brad Andresen",
       "title": null,
-      "text": "Amazing! Like Yellowstone but less crowded.",
+      "text": "Stunning setting, landscape, architecture, and exhibits. As a fan of TR, we had to stop here in our family road trip and it did not disappoint. Spent 4 hours in the museum, my daughters loved all of the interactive exhibits. They were so well done and told the story of Teddy Roosevelt well.\n\nOnce we were done, we walked the roof and the grounds, albeit quickly since it was 100 degrees outside.",
       "themes": [
-        "crowding"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xjdFNHcFpRVkZtVERKeGMza3diSEF0UmpOMExXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlctSGpZQVFmTDJxc3kwbHAtRjN0LWc%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 29,
-      "overdue_by": 22
-    },
-    {
-      "id": "google-2026-07-14-460f980c",
-      "source": "google",
-      "date": "2026-07-14",
-      "rating": 5,
-      "recommends": null,
-      "author": "Alfonso Hernandez",
-      "title": null,
-      "text": "This library is transformative.   Every American needs to visit the Teddy Presidential Library.  This place is a wonder.  A true heroes journey.  I",
-      "themes": [],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21sWWJWUlFiV2RqTlVWeVVtcEVNMGh1TmxRdE5XYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmlYbVRQbWdjNUVyUmpEM0huNlQtNWc%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 29,
-      "overdue_by": 22
-    },
-    {
-      "id": "google-2026-07-15-f78b64f7",
-      "source": "google",
-      "date": "2026-07-15",
-      "rating": 5,
-      "recommends": null,
-      "author": "Dean",
-      "title": null,
-      "text": "I expected it to be interesting, but found it to be way more than that. They've made it both informative, and very interactive. The modern technology used was great. The staff was super friendly. It really immerses you in the man, his character, his values, and his life history. Everything about the buiding itself reflects some part of TR, or some part of the ND Badlands. I spent 5 hours, and skipped some things. Suggest doing the free highlights tour. Get in the arena!",
-      "themes": [
-        "staff",
-        "interactive_exhibits",
+        "architecture",
         "landscape",
-        "dwell_time",
-        "guided_tours"
+        "interactive_exhibits",
+        "families",
+        "rooftop"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pNdFNGY3hPRUpvYWxWV05EZHFjRVI1UmpoVVkxRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjMtSFcxOEJoalVWNDdqcER5RjhUY1E%7C%7C?hl=en",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2sxVU9HODVaeTE0TFd0cWNHODFkVEJVV0VKMGMxRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOk1UOG85Zy14LWtqcG81dTBUWEJ0c1E%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 28,
-      "overdue_by": 21
+      "age_days": 29,
+      "overdue_by": 22
     },
     {
       "id": "google-2026-07-16-ca7ebc5f",
@@ -1936,10 +1961,11 @@
       "title": null,
       "text": "This was INCREDIBLE! It was really interactive and every single exhibit was wonderful! The only downside was the restaurant, which was very overpriced. However, the gift shop was great! We could have stayed at the museum the whole day, it was so amazing and we had so much fun! We definitely recommend this- it's a great place for all ages to have fun and learn more about Theodore Roosevelt!",
       "themes": [
+        "interactive_exhibits",
         "retail_pricing",
         "retail",
         "food_beverage",
-        "interactive_exhibits"
+        "families"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GWVdEaEZkVWxQV0dSNWJreGxURFJ5VDFjd1FrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnFYWDhFdUlPWGR5bkxlTDRyT1cwQkE%7C%7C?hl=en",
@@ -1958,11 +1984,11 @@
       "title": null,
       "text": "This is the first presidential library that I have visited, and it has set the bar incredibly high for an future presidential library visits!\n\nThis library is visually stunning, thoughtfully arranged, and extremely interactive and informative.  I was a little worried about how well our kids (ages 7, 11, and 14) would do at something like this, but we spent between 4-5 hours there without a single complaint.\n\nI'd recommend buying tickets ahead of time to reserve a spot and save a few minutes on your way in.  When you arrive, there is free parking and then you head to the breezeway between the two buildings (library on one side and event and office space on the other).  You'll go through a security point before you enter and they do not allow any guns or knives of any sort in the building so I'd leave them in your car if you have them.\n\nOnce you enter you will get a bracelet to wear that has a chip in it that will give you access to all of the interactive parts of the library.  Then you'll register your bracelet with your name, email, and photo and head into the exhibits.  (The photo is for some some of the AI generated images. See pics below. But if you're worried big brother is watching, you can probably skip it if you want, but I'd highly recommend it.  Our kids thought it was awesome and hilarious.) You will get an email with your photos and also other parts of the experience that are a part of your \"journal\".\n\nThe exhibits walk through different phases of TR's life and experiences and lets you join in the experience in almost every area of the library.\n\nTR and his family loved animals, so throughout the museum exhibits are animals you can try and find and scan with your bracelet to collect them all.  Our younger two had fun trying to find them all and it got them excited to travel from room to room.  Our 14 year old enjoyed the different interactive pieces of different exhibits too.\n\nYou can also do some walks outside and on the roof of the building!  Very fun and unique experience with incredible views.\n\nIf you're in the area, I can't recommend this place enough for you (and your family)! We did the library from 9-1:30, TR National Park from 2-5 (ate picnic lunch in the car), dinner from 5:30-6:30, and the Medora Musical to cap our day.  Great family trip! Hope you have as much fun as we did!",
       "themes": [
+        "ticket_pricing",
         "parking",
-        "timed_entry",
-        "food_beverage",
+        "security_screening",
         "interactive_exhibits",
-        "architecture"
+        "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkTkxVeHplVUk0TjBwWlVYQk9ibVpZY1ZadU0xRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOldNLUxzeUI4N0pZUXBObmZYcVZuM1E%7C%7C?hl=en",
@@ -1972,86 +1998,47 @@
       "overdue_by": 20
     },
     {
-      "id": "google-2026-07-16-088e6cd2",
-      "source": "google",
-      "date": "2026-07-16",
-      "rating": 5,
-      "recommends": null,
-      "author": "Abbey&Max Oeser",
-      "title": null,
-      "text": "Extremely well done, and the absolute gold standard for how all educational exhibits should be. The interactive experience is top tier and optional with the bracelets. You are able to “keep a journal” as you proceed and it will track all the fun exhibits you take part in.\n\nIt was by luck we ended up in Medora on July 8th 2026, and got to be some of the first to experience this absolute national treasure. If you are in the area, highly recommend you come and get the library experience.\n\nI’m partially biased as I am a huge fan girl of Teddy, but this place is by far the most family friendly and interactive learning experience I’ve ever had the opportunity to partake in. There is so much beyond just reading and viewing exhibits. As you make your way through the library, you start to develop a sense of relationship with exactly who our 26th President was. It’s a really magically energy I can’t explain, you just need to go experience it yourself!\n\nThe price was reasonable for the experience, we spent about 3 hours in the library and I noted that I honestly would have paid double what we did, and could have doubled the time we spent inside.\n\nWe will be returning one day with our future (fingers crossed) kiddos to see how they let the land evolve around the building (it’s built INTO the landscape and has some amazing outdoor qualities to enjoy as well). A must see when experiencing the lands that made Teddy the man of conservation we know him to be.",
-      "themes": [
-        "staff",
-        "interactive_exhibits",
-        "architecture",
-        "landscape",
-        "families"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKYWNIRTVWMHQwTFRVd2NrY3RTMVZCUjJjME5rRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkJacHE5V0t0LTUwckctS1VBR2c0NkE%7C%7C?hl=en",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 27,
-      "overdue_by": 20
-    },
-    {
-      "id": "google-2026-07-17-380b1339",
+      "id": "google-2026-07-17-3c1c2a13",
       "source": "google",
       "date": "2026-07-17",
-      "rating": 5,
+      "rating": 4,
       "recommends": null,
-      "author": "Larae Ketcham",
+      "author": "Linnea C",
       "title": null,
-      "text": "Amazing experience! Follow the arrows on the map and take the picture at the beginning but don’t worry too much about how you look in it! lol. We spent over 3 hours and still didn’t see everything. We all agreed we could have stayed longer.",
+      "text": "This was a beautiful new library, here are my pros and cons:\n\nPros:\n- Lovely exhibits and easy to walk through Teddy’s whole life. Great tribute to such an important historical figure\n- Beautiful outdoor area to explore/cafe with nice options\n- Sustainability as a priority with the building being in nature\n\nCons:\n- They do not make it clear that if you get your photo taken before entering for their “interactive journal” that you’re essentially consenting to your face being entered in Google Gemini’s AI model. That felt weird, even if the stops in the museum to “make old timey pictures of yourself” seemed fun.\n- Different lines for walk-in tickets and the interactive bracelet. We could have saved 30 minutes by not getting the bracelet for the interactive parts… (if you have the ticket and don’t want the wristband, you can walk directly to the entrance on the left side)\n- Since it’s privately funded and not public, every donor gets a room or wing or area named after them so it doesn’t feel as “communal” as your average national park or monument",
       "themes": [
-        "dwell_time"
+        "ai_criticism",
+        "visitor_flow",
+        "interpretation"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2paTVZHRkhTMHgyYUU1ME1HWkhhamRyTTFCSWNFRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjZMVGFHS0x2aE50MGZHajdrM1BIcEE%7C%7C?hl=en",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkNWJtaHdTV0UxVFhjNFgySlpNa2Q1YXpjNFluYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjd5bmhwSWE1TXc4X2JZMkd5azc4Ync%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 26,
       "overdue_by": 19
     },
     {
-      "id": "tripadvisor-2026-07-18-b0f08507",
-      "source": "tripadvisor",
-      "date": "2026-07-18",
+      "id": "google-2026-07-17-39a51824",
+      "source": "google",
+      "date": "2026-07-17",
       "rating": 5,
       "recommends": null,
-      "author": "R B",
-      "title": "Theodore Roosevelt Presidental Library. Great experience",
-      "text": "The library is worth th3 visit. Make a day of it. We were there a few hours and still did could have stayed longer, but it was very busy.  Staff is amazing.  Great historical esperience.",
-      "themes": [
-        "crowding",
-        "staff"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1068866280-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 25,
-      "overdue_by": 18
-    },
-    {
-      "id": "tripadvisor-2026-07-19-7cd643c7",
-      "source": "tripadvisor",
-      "date": "2026-07-19",
-      "rating": 5,
-      "recommends": null,
-      "author": "Melodycthomas",
-      "title": "What a phenomenal experience!!",
-      "text": "This newly opened presidential museum makes full use of A.I.  You get a wrist band with a chip in it. You  check in at a station, enter your information and get a picture taken. Then as you go through the museum, you check in at different stations using your wrist band. At each of the different phases of Theodore Roosevelt’s life (Navy, politics, police, explorer, etc.), a sepia colored picture is produced of you in period costume. Not only do you learn all about this most famous president, but you interact with systems that make your tour that much more interesting. After you leave the museum, you get a personal letter from TR and all your pictures. We have been to many presidential museums. This is, by far, the best yet. Don’t miss it!!",
+      "author": "Kelli W",
+      "title": null,
+      "text": "The Roosevelt Library is truly a bucket list experience!! It is engaging for all ages and very educational. The interactive exhibits truly make you think and reflect. I left feeling inspired. The building itself and surrounding area is stunning and thoughtfully designed. May want to consider having arrows on the floor or signage to ensure guests follow the exhibits in chronological order. Overall, it was a wonderful experience!!",
       "themes": [
         "interactive_exhibits",
-        "guided_tours"
+        "wayfinding_signage",
+        "architecture",
+        "landscape"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1069130121-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25nd2RuUTRMWHBwVm5wRGNWZGpjM0owWDI5a2VGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOngwdnQ4LXppVnpDcVdjc3J0X29keFE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 24,
-      "overdue_by": 17
+      "age_days": 26,
+      "overdue_by": 19
     },
     {
       "id": "google-2026-07-19-cd0965d0",
@@ -2062,7 +2049,9 @@
       "author": "Sara Darby",
       "title": null,
       "text": "Absolutely loved this experience little overcrowded, but it was a great experience!",
-      "themes": [],
+      "themes": [
+        "crowding"
+      ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Ob2JGZEtNVkJoZDFaNFdubGxNa1pvTkdRNVIwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnNobFdKMVBhd1Z4WnllMkZoNGQ5R0E%7C%7C?hl=en",
       "tier": "positive_with_criticism",
@@ -2071,22 +2060,21 @@
       "overdue_by": 17
     },
     {
-      "id": "tripadvisor-2026-07-20-75cdb712",
-      "source": "tripadvisor",
+      "id": "google-2026-07-20-dd4cf1fd",
+      "source": "google",
       "date": "2026-07-20",
       "rating": 5,
       "recommends": null,
-      "author": "Carmen T",
-      "title": "Put on the top of your bucket list!",
-      "text": "I learned about the opening of the library on tv as part of a 250th celebration special. It looked very interesting but we were totally blown away!! We reserved tickets for 12 pm and a 1 pm Deep Dive Specialty tour. We ended up closing the place at 6 pm with so much to see and experience. It had lots of interactive features like designing your own cattle brand, campaign slogan, trivia, find different animals and imax like cozy theater experiences. When you arrive, you take your picture ( I wish I would have smiled) and get a wrist band with a wooden medallion. Any place you see the medallion symbol, you tap on it to interact or display your picture in various scenes associated with TR’s life. At the end you get a video that describes you based on your interactions. I was part of the wolf clan and a guide. So magical and moving. Hands down the best museum I have been to here and abroad!!",
+      "author": "Shelly Bailey",
+      "title": null,
+      "text": "I would give more than 5 stars if I could. This facility was beyond amazing in the layout and systems used to present the life of TR. The scavenger hunt to find hidden animals and items throughout the museum was a fun add-on for people (even though I did not participate). It was great to see people’s reactions to their faces in the interactive displays too. Getting those photos at the end via email was nice, so definitely register your information at the beginning.\n\nWe spent 2 hours there which included our walk along the path. We could have spent 3 hours there though if I didn’t have other things planned for the day. Definitely recommend getting your tickets ahead of time - we did that and saw people getting turned away.  This is well worth the cost of a ticket.",
       "themes": [
-        "timed_entry",
         "interactive_exhibits",
-        "guided_tours",
-        "peer_comparison"
+        "timed_entry",
+        "ticket_pricing"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1069271381-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pCalFYbENjMDgzUVdaMFdsWlVRbXA1VkhCQ1NsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjBjQXlCc083QWZ0WlZUQmp5VHBCSlE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 23,
@@ -2102,11 +2090,11 @@
       "title": null,
       "text": "This is an amazing place for every age and political view unless you're anti-AI or surveillance state. There are interactive activities tied to a personal token throughout the displays, from creating AI gen items through TRs life, to finding hidden animals through out.\n\nThe amount of artifact and history contained is amazing and will require multiple visits. I can see people being concerned regarding the amount of data collected from each visitor,  but it's nothing unique if you have any app on your smart phone. At least here they are connecting it to something educational and creating a unique experience for each individual.\n\nThe outside is amazing too, there is a boardwalk providing great views of the library and surroundings, not to mention a walkway on the roof.\n\nThe food and gift shop are the areas that could use some work but outside the main purpose of the building.\n\nThis is a type of place you go out of your way to go to,  even if it's in rural North Dakota and live on a coast.",
       "themes": [
-        "retail",
-        "food_beverage",
         "interactive_exhibits",
+        "data_privacy",
         "architecture",
-        "landscape"
+        "boardwalk_trails",
+        "rooftop"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xWVFNucFlTV0poV0Y4emFGbGhhblpXZEhWVU5YYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlVTSnpYSWJhWF8zaFlhanZWdHVUNXc%7C%7C?hl=en",
@@ -2125,12 +2113,12 @@
       "title": "The building steals the show",
       "text": "An architectural and landscape architectural masterpiece that beautifully complements the Badlands. \n\nThe place is a shrine to TR, and exhibits gloss over some of his shortcomings (racism, imperialism) while underplaying some of his greatest achievements (trust busting, labor rights, land conservation, national parks). The building is all about the conservation ethos while exhibits dwell more on conquering Cuba, playing cowboy, adventuring in the Amazon—the Disney version of TR. But it’s all pretty fun and engaging.",
       "themes": [
-        "interactive_exhibits",
         "architecture",
         "landscape",
-        "conservation_message"
+        "historical_balance",
+        "interpretation"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "mixed",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1069321020-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
       "tier": "positive_with_criticism",
       "sla_days": 7,
@@ -2147,11 +2135,11 @@
       "title": null,
       "text": "Absolutely incredible experience. Each exhibit is set up with interactive displays that make the experience incredibly immersive. You become part of the story itself. Yes, AI generation is relied on, heavily, but it's used in a very cool way. As you enter, you are given a compass wrist band and your photo is taken. The wristband becomes your \"check-in\" device for each exhibit. A log is kept of the exhibits you have attended. Each check-in puts you into a different part of TR's story and AI images are created in your likeness as part of the story. The wristband also activates different AI displays, such as animals moving from a book display onto a screen behind it. Without giving away too much, there is also an exhibit where you can feel actual movement. There are some neat projects on the campaign trail and during the presidential years. The choices you make in these activities come together in the end (my favorite part). The architecture is absolutely stunning and the views are incredible.  The staff was wonderful. The site is ADA compliant, including the rooftop trail. I was also informed that staff are available to assist in pushing wheelchairs (although I'm not certain that is guarantee based on staffing).",
       "themes": [
-        "staff",
         "interactive_exhibits",
+        "ai_criticism",
         "architecture",
-        "landscape",
-        "boardwalk_trails"
+        "accessibility",
+        "staff"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21GMWFuRllXbGhxVHkxcE5WWnhkbWxRUVhaMVMyYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmF1anFYWlhqTy1pNVZxdmlQQXZ1S2c%7C%7C?hl=en",
@@ -2159,6 +2147,26 @@
       "sla_days": 7,
       "age_days": 22,
       "overdue_by": 15
+    },
+    {
+      "id": "google-2026-07-23-6b13adb6",
+      "source": "google",
+      "date": "2026-07-23",
+      "rating": 5,
+      "recommends": null,
+      "author": "Mark Deschamp",
+      "title": null,
+      "text": "Very neat place!  Lots of history and interesting building, although the setting high on the bluff in the winter I wouldn't want to visit.",
+      "themes": [
+        "architecture",
+        "landscape"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkUFZEbDNWMTlvUlVsc0xVeHdZMnBHYTJaQ1pGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOldPVDl3V19oRUlsLUxwY2pGa2ZCZFE%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 20,
+      "overdue_by": 13
     },
     {
       "id": "google-2026-07-23-48c0ab30",
@@ -2170,11 +2178,11 @@
       "title": null,
       "text": "Really great experience here, they've done a fantastic job. You could easily spend a day here exploring both the museum and the walking paths outside but maybe not in the middle of summer when it's close to 100 degrees. The museum itself is a beautiful building with many artifacts and interactive parts. We have 2 young kids and they both enjoyed it. They did a good job of incorporating AI into the experience and you can get Gen AI pictures of yourself at various stages of TR's life. You can also interact with a hologram of TR and ask him questions. It's not an easy place to get to due to where it is located but it is worth it. We went on a Monday in July and while it was busy, we didn't have an issue getting tickets to go in.",
       "themes": [
-        "crowding",
         "interactive_exhibits",
+        "ai_criticism",
+        "families",
         "architecture",
-        "boardwalk_trails",
-        "families"
+        "crowding"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21WbE5ta3pNMjlXY2tvMWNXcDNXVTl1TjBNdExVRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmVlNmkzM29Wcko1cWp3WU9uN0MtLUE%7C%7C?hl=en",
@@ -2193,8 +2201,10 @@
       "title": null,
       "text": "Beautiful building that blends into the prairie environment. Would recommend walking outside and on top of the building. Not much of a library, but more of a Teddy Roosevelt museum. The old visitors seemed to love the AI photo booths (thanks Google Gemini)",
       "themes": [
+        "architecture",
+        "landscape",
         "interactive_exhibits",
-        "architecture"
+        "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psdldEVk1jRjlaVFRWclQzWlFka2t5Ymw5TGFWRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjlvWDVMcF9ZTTVrT3ZQdkkybl9LaVE%7C%7C?hl=en",
@@ -2204,23 +2214,22 @@
       "overdue_by": 13
     },
     {
-      "id": "google-2026-07-23-1954bd12",
+      "id": "google-2026-07-23-1627fcbe",
       "source": "google",
       "date": "2026-07-23",
       "rating": 5,
       "recommends": null,
-      "author": "Nicole Angerhofer",
+      "author": "Lynn Schloesser",
       "title": null,
-      "text": "I went today and it was absolutely incredible!! 10/10 recommend.  We spent 3 1/2 hours there. If I didn’t have 2 tired teenagers (who also loved it) I could have easily spent 5+ hours there alone.  It’s immersive, interactive , inspiring , thoughtful . Many near tear moments listening to such inspiring words from an inspiring man.  I liked how they did not glaze over the fact that he was not perfect and honored native Americans by acknowledging his early racist views .   Aside from the exhibits inside the museum/library the architecture is like none I’ve ever seen and blends in seamlessly to the surrounding badlands.  I live in Oregon and not easily impressed because I live in one of the countries most beautiful states but this landscape,  museum and experience is definitely worth a trip to come see.",
+      "text": "The Library is a Great addition to the presentation of US history and a statement that in effect explains TRs presence on Mt. Rushmore. So glad this library is located in Medora ND where solitude and desolation can be briefly sampled, especially in Winter.   Look forward to comparisons with the Obama Presidential library that also opened this year.  The TR Library location and its story is epic.  Look forward to display of the equestrian statue now on site in storage on long term loan from the New York Natural History Museum. Look forward to a contextual display of the statue rooted in history, the TR ideal of constructive citizenship, without apology to public enthusiasms du jour.",
       "themes": [
-        "interactive_exhibits",
-        "architecture",
-        "landscape",
-        "families",
-        "dwell_time"
+        "historical_balance",
+        "peer_comparison",
+        "interpretation",
+        "landscape"
       ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pGd2VtUjNTMG8xU21kbVNHTkhVWGN3YzJaS1VYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjFwemR3S0o1SmdmSGNHUXcwc2ZKUXc%7C%7C?hl=en",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pRNFpVUlRUblZZWDBKMFkyNDBNMk52Vm5Fd2EwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjQ4ZURTTnVYX0J0Y240M2NvVnEwa0E%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 20,
@@ -2236,11 +2245,11 @@
       "title": "A true National treasure!",
       "text": "Awesome! Just plain awesome. Know when you go to go through the museum in order, it mimics his life story. I think the premise was to get people to wind through a certain way, but the big gallery room kinda confuses the flow. You will move front to back, and side to side as you progress. I think everyone is just so new they are figuring out things. \n\nIn addition, the restaurant was closed for an event, and the gift shop only had $12 Cokes. There was one water fountain near the restrooms. They really need to rethink the needs of the customers when they are spending 3+ hours in the museum. Having water readily available, even if it is for purchase, is a must when you are in the Badlands. \n\nThere is ample outside space to explore, great walking paths, and rocking chairs to enjoy the view (just need more). Parking filled up really fast, I hope they will develop more, and a shuttle from the far lots. \n\nAll in all, this experience is fantastic, it is terrific for kids, take your time, enjoy the story!",
       "themes": [
-        "parking",
-        "retail",
+        "visitor_flow",
         "food_beverage",
         "water_availability",
-        "restrooms"
+        "parking",
+        "boardwalk_trails"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1069845208-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
@@ -2259,11 +2268,11 @@
       "title": null,
       "text": "Awesome! Just plain awesome. Know when you go to go through the museum in order, it mimics his life story. I think the premise was to get people to wind through a certain way, but the big gallery room kinda confuses the flow. You will move front to back, and side to side as you progress. I think everyone is just so new they are figuring out things.\n\nIn addition, the restaurant was closed for an event, and the gift shop only had $12 Cokes. There was one water fountain near the restrooms. They really need to rethink the needs of the customers when they are spending 3+ hours in the museum. Having water readily available, even if it is for purchase, is a must when you are in the Badlands.\n\nThere is ample outside space to explore, great walking paths, and rocking chairs to enjoy the view (just need more). Parking filled up really fast, I hope they will develop more, and a shuttle from the far lots.\n\nAll in all, this experience is fantastic, it is terrific for kids, take your time, enjoy the story!",
       "themes": [
-        "parking",
-        "retail",
+        "visitor_flow",
         "food_beverage",
         "water_availability",
-        "restrooms"
+        "parking",
+        "boardwalk_trails"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25BMmEzY3hObWhpVkhKa1YwVnJOSFJzUVdGdk1uYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnA2a3cxNmhiVHJkV0VrNHRsQWFvMnc%7C%7C?hl=en",
@@ -2273,21 +2282,41 @@
       "overdue_by": 12
     },
     {
-      "id": "google-2026-07-25-4f85d767",
+      "id": "google-2026-07-25-461292b6",
       "source": "google",
       "date": "2026-07-25",
-      "rating": 5,
+      "rating": 4,
       "recommends": null,
-      "author": "Cheryl Behrend",
+      "author": "Karina Frausto",
       "title": null,
-      "text": "Not much on his presidency, but explains the man who became president.",
+      "text": "",
       "themes": [],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2twc2IyUkpVRTlWUVROdVowZGlOWEpsZDB4RVgzYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkpsb2RJUE9VQTNuZ0diNXJld0xEX3c%7C%7C?hl=en",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t4SFNWVmFOblpwU1c1ek56ZHFTR000UmtOak9FRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkxHSVVaNnZpSW5zNzdqSGM4RkNjOEE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 18,
       "overdue_by": 11
+    },
+    {
+      "id": "google-2026-07-26-e0dc6789",
+      "source": "google",
+      "date": "2026-07-26",
+      "rating": 5,
+      "recommends": null,
+      "author": "G Pedro Kinner",
+      "title": null,
+      "text": "OMG, you will not believe how all the interactive learning activities make you want to do it all over again. Purchase your tickets online and the time you will arrive early, very important.",
+      "themes": [
+        "interactive_exhibits",
+        "timed_entry"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tkbVZtUjJSbmRSZERreE5YTk1NMGMyUzNScmJYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkdmVmR2RndRdDkxNXNMM0c2S3RrbXc%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 17,
+      "overdue_by": 10
     },
     {
       "id": "google-2026-07-26-c890dac2",
@@ -2299,10 +2328,11 @@
       "title": null,
       "text": "An amazing museum with a comprehensive portrait of the man and his times. They did a good job of presenting the complexity and historical context. The exhibits were interesting, though they didn't actually have a lot of Roosevelt items; most of the documents and items they present are replicas of items that you can see in the original at Oyster Bay or (for the documents) at Harvard. I didn't do the interactive features but young people who were using them seemed to be amused; if I was there with kids I would certainly have participated. The architecture and grounds are fantastic! You get a good sense of the place and what it must have felt like to live here more than a century ago. What this is not is a library - Roosevelt's papers are at Harvard and even the tchotchke shop was very light on books. I was actually looking for Darren Lunde's The Naturalist, on Roosevelt's environmental initiatives, and didn't find it. The 25 bucks to get in was somewhat of a surprise but this is a private foundation, not the Park Service or the Archives, so be warned. Nevertheless, I recommend a visit to flesh out your experience in the stunning National Park next door.",
       "themes": [
-        "interactive_exhibits",
+        "interpretation",
+        "historical_balance",
         "architecture",
-        "families",
-        "conservation_message"
+        "ticket_pricing",
+        "interactive_exhibits"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2taQ1RVdEdTSGx4ZGpCVlFWQjROMUJXY1ZSd2IwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkZCTUtGSHlxdjBVQVB4N1BWcVRwb0E%7C%7C?hl=en",
@@ -2312,21 +2342,44 @@
       "overdue_by": 10
     },
     {
-      "id": "google-2026-07-26-6022b7c0",
+      "id": "google-2026-07-28-d8c70ac5",
       "source": "google",
-      "date": "2026-07-26",
+      "date": "2026-07-28",
       "rating": 5,
       "recommends": null,
-      "author": "Thelma Benson",
+      "author": "Jon Larson",
       "title": null,
-      "text": "You need more time there.",
-      "themes": [],
+      "text": "TR would be thrilled!  Amazing facility in one of his favorite places.  The area is a must see, if only to appreciate the remoteness, solitude and sparcity the pioneers experienced.   The museum requires reservations.",
+      "themes": [
+        "timed_entry"
+      ],
       "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2taRVZGaHliM1p6WVZoWkxWSlphbEE1YWxkR1MwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkZEVFhyb3ZzYVhZLVJZalA5aldGS0E%7C%7C?hl=en",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkcU5HUlFaRmxGTkRWbmFGbEpNMnB3TkRocE5sRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOldqNGRQZFlFNDVnaFlJM2pwNDhpNlE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 17,
-      "overdue_by": 10
+      "age_days": 15,
+      "overdue_by": 8
+    },
+    {
+      "id": "google-2026-07-28-c40c187d",
+      "source": "google",
+      "date": "2026-07-28",
+      "rating": 5,
+      "recommends": null,
+      "author": "Patsy Aiken",
+      "title": null,
+      "text": "Absolutely amazing place. Fantastic for kids and adults alike. Get your tickets ahead of time online. They sell out everyday",
+      "themes": [
+        "families",
+        "timed_entry",
+        "sellouts"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tsMlQwVkphVEY2V0hoRWFYVjNMVU5rZEU5cFdsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkl2T0VJaTF6WHhEaXV3LUNkdE9pWlE%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 15,
+      "overdue_by": 8
     },
     {
       "id": "google-2026-07-28-367abe79",
@@ -2338,11 +2391,10 @@
       "title": null,
       "text": "Amazing place!!! My very active 11,9&6 year old boys really liked it and never were bored (just hungry at the end) for 2.5 hours. Walk the roof and the grounds in the morning before the summer noon temperatures. Inside, the kids can find hidden animals in about seven of the rooms while the adults read all the materials in the room (and the adults can look for the animals too). In the middle is the White House gang, which is very fun information but is actually a play area for kids with rubber building blocks and rope bridges. A little ways before that there is digital cow hearding and an electric shooting game that four people can play -- this is in the area you learn about TR as a cowboy. Follow the map of the museum and use your wrist band at the progress check kiosks to make sure you haven't missed anything. You also get to see yourself in seven different scenes, make an election poster and campaign for yourself, and a fee other activities-- ALL of which are emailed to the email you provided at check in when you get your wristband and take your photo before the tour.\nSo much to see, my wife and I will definitely be back to see what all we missed.",
       "themes": [
+        "families",
         "interactive_exhibits",
         "architecture",
-        "rooftop",
-        "families",
-        "dwell_time"
+        "grounds_conduct"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25sYWRUVmZPSFE0UnpGek16VkRXRXhHZEhaSVNHYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnladTVfOHQ4RzFzMzVDWExGdHZISGc%7C%7C?hl=en",
@@ -2361,7 +2413,8 @@
       "title": null,
       "text": "Though more like a museum than a library, this was a fantastic experience! My wife and I loved the AI photos they made of us as well as the really cool mini-theaters detailing TR's Rough Riders and Brazilian river expedition. The AI conversation with the hologram was a bit glitchy but a cool concept overall.",
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25SRlVHWmhUemhJWWxwSVRsWnlTelowVVhwRFJIYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnRFUGZhTzhIYlpITlZySzZ0UXpDRHc%7C%7C?hl=en",
@@ -2380,11 +2433,11 @@
       "title": null,
       "text": "The cost of admission here is worth every single penny. The building is beautiful, and it's unlike any museum I've ever experienced - top 5 for sure. There are so many interactive experiences throughout!! I don't want to spoil any fun, but there's a bracelet you wear with an RFID tag (think Disney magic band) that allows for activations throughout the exhibits. There's immersive videos, too, as well as an AI Teddy Roosevelt you can ask questions to (a partnership with Microsoft). It's genuinely just as fun as it is educational. I left with a new appreciation for what he did for conservation in the USA and a deeper understanding of his presidency and his life. The staff members were friendly if not a tad frazzled, given the heavy crowds. I'm not a history person but this was a highlight of my trip to North Dakota for sure.",
       "themes": [
-        "crowding",
-        "staff",
-        "interactive_exhibits",
         "architecture",
-        "value_for_money"
+        "interactive_exhibits",
+        "staff",
+        "crowding",
+        "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
       "url": null,
@@ -2404,9 +2457,10 @@
       "text": "Truly INCREDIBLE. Not only the best presidential library I have ever been to, but the best museum I have ever been to as well. The exhibits were so interactive and so much fun. The curators remembered that adults like to play and have fun too:). But truly so much fun for all ages. The AI photos were so amusing, as well as the games throughout and the immersive Amazon expedition. Very inspiring quote room and videos. And getting to actually ask a Teddy Roosevelt avatar questions??? So cool. My family and I had a blast. We all left truly feeling inspired to be better citizens and to do more and be better. So thoughtfully curated…the themes and interactive components all throughout. And Teddy’s real diary?? Insane. I loved the architecture and the obvious connection to nature. As the museum continues to refine its flow, I might recommend making it more clear to follow the timeline path of Teddy’s life. I also would have liked to see more about Alice Roosevelt and wondered why many pieces were not the originals, but replicas. Overall though, I will be highly recommending all to travel to Medora ND and experience the beautiful and inspiring Teddy Roosevelt Presidential Library and Museum.",
       "themes": [
         "interactive_exhibits",
+        "ai_criticism",
         "architecture",
-        "families",
-        "peer_comparison"
+        "visitor_flow",
+        "interpretation"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kb05FaG9NM2xuVkdwalRuTmtRVkZWZGxGQmNIYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndoNEhoM3lnVGpjTnNkQVFVdlFBcHc%7C%7C?hl=en",
@@ -2425,9 +2479,10 @@
       "title": null,
       "text": "Nice library with good exhibits. Great job giving the history of president Roosevelt. Managed to make it interesting for adults and young kids. Timed tickets but I wish they'd reduce the number of people allowed in at a time as it was crowded and many people can't seem to figure out how to follow the flow of the exhibits making it more annoying.",
       "themes": [
+        "historical_balance",
         "crowding",
-        "interactive_exhibits",
-        "families"
+        "visitor_flow",
+        "timed_entry"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21VMlpqQnNORUpOWDAwM1psVkhRWE5NVlZWZk5FRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmU2ZjBsNEJNX003ZlVHQXNMVVVfNEE%7C%7C?hl=en",
@@ -2446,9 +2501,9 @@
       "title": null,
       "text": "Incredibly engaging and fun. The exhibits and videos are really good. I think the interactive TR was neat too. I appreciate the timed entry although it's not really enforced. It was busy but not too bad. I highly recommend!",
       "themes": [
-        "crowding",
+        "interactive_exhibits",
         "timed_entry",
-        "interactive_exhibits"
+        "crowding"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21SNFJtaGpUVmg2YVZoM1FYazBRV2h4Y1VaclNGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmR4RmhjTVh6aVh3QXk0QWhxcUZrSFE%7C%7C?hl=en",
@@ -2467,32 +2522,13 @@
       "title": "Don't pass it by",
       "text": "The very model of a modern presidential museum (not really a library). Probably the best single attraction in North Dakota....the state should promote it heavily. Building, exhibits and connection to the landscape are outstanding, even if I might have a few quibbles with the museum's interpretations of TR's career. And who doesn't love those AI-generated photos they send you!",
       "themes": [
-        "interactive_exhibits",
         "architecture",
-        "landscape"
+        "landscape",
+        "interpretation",
+        "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1071041490-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 11,
-      "overdue_by": 4
-    },
-    {
-      "id": "google-2026-08-01-aaf36d54",
-      "source": "google",
-      "date": "2026-08-01",
-      "rating": 5,
-      "recommends": null,
-      "author": "Gayle Birkenheier",
-      "title": null,
-      "text": "Recently opened on July 4 this year it is a beautiful display of architecture that meets nature and its surrounding area. We did not go inside as we had dogs but I hear it is beautiful. Landscape is amazing",
-      "themes": [
-        "architecture",
-        "landscape"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWak1WTTNZbTlJUjI5UmMzbE5NVXhTTkZGd1JXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkVjMVM3Ym9IR29Rc3lNMUxSNFFwRWc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 11,
@@ -2508,6 +2544,7 @@
       "title": null,
       "text": "What an excellent experience. There's so much to see and learn.  Unfortunately some of it gets lost with patrons seeing themselves in vintage photos that are posted throughout the venue.  I would not recommend it for very young children.",
       "themes": [
+        "interpretation",
         "families"
       ],
       "sentiment": "positive_with_criticism",
@@ -2537,6 +2574,72 @@
       "overdue_by": 3
     },
     {
+      "id": "google-2026-08-02-30adaa99",
+      "source": "google",
+      "date": "2026-08-02",
+      "rating": 4,
+      "recommends": null,
+      "author": "Jesse",
+      "title": null,
+      "text": "This is a well constructed museum experience, though I don't know enough to know if it constitutes a \"Presidential Library\". Some of the experiences and moments of Theodore Roosevelt's life are very well orchestrated, such as the presentation of his tragic loss and the diary entry after. Some of the experiences felt less than they could have been with the computer generated/AI elements. I did not interact with the AI Teddy because it feels hollow and not worth the time, with all the other moments being more impactful.\n\nThere is some sad irony in the trust-busting and monopoly-fighting that TR did alongside the nature of how this place came together, as well as the current push to take, end, or sell public lands to the highest bidders which Teddy probably would be turning in his grave over.\n\nThe (literal) windows to the Badlands sprinkled throughout  the walking experience were well architected and planned.  The walk along the roof and the building melding into the Badlands is well done.",
+      "themes": [
+        "interactive_exhibits",
+        "ai_criticism",
+        "architecture",
+        "landscape",
+        "interpretation"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s1b2FEUkVjelJpVFdFMVZUTmxPVkU1YldGVk1WRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOk5oaDREczRiTWE1VTNlOVE5bWFVMVE%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 10,
+      "overdue_by": 3
+    },
+    {
+      "id": "google-2026-08-04-8b88644d",
+      "source": "google",
+      "date": "2026-08-04",
+      "rating": 5,
+      "recommends": null,
+      "author": "WJ C",
+      "title": null,
+      "text": "Opened July 4th, 2026. Buy tickets online in advance. This museum blends into the landscape and the exhibits are breathtaking, as the fusion of the 21st, 20th, and 19th Centuries gives the visitor an experience of how Roosevelt impacted the United States and makes him the Founding Father of Conservation. The walkway is 1 mile in diameter. Each exhibit gives you a glimpse of Teddy's life. This is worth the visit and stick with the tour guide, as they will give you insights into his life. The Library is completely self-sustaining, as Teddy would have wanted, and he would be \"Delighted\" if you saw his Library.",
+      "themes": [
+        "interpretation",
+        "guided_tours",
+        "landscape",
+        "conservation_message"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGMFgySlNUVGxuVFdwYVVuY3lUemQ1YmtKdk5uYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkF0X2JSTTlnTWpaUncyTzd5bkJvNnc%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 8,
+      "overdue_by": 1
+    },
+    {
+      "id": "google-2026-08-05-176a619d",
+      "source": "google",
+      "date": "2026-08-05",
+      "rating": 4,
+      "recommends": null,
+      "author": "Andreas Obrecht",
+      "title": null,
+      "text": "The library is great, we enjoyed the architecture and the exhibition. The only downside was the the on-site restaurant was closed (no accurate info on website!) and the interactive journal was never sent.",
+      "themes": [
+        "architecture",
+        "food_beverage",
+        "interactive_exhibits"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkTlUweFdNRFpKUmxGcU4xRm1Ta05QWVROMVgyYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjdNU0xWMDZJRlFqN1FmSkNPYTN1X2c%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 7,
+      "overdue_by": 0
+    },
+    {
       "id": "google-2026-08-05-10ffa13d",
       "source": "google",
       "date": "2026-08-05",
@@ -2546,10 +2649,33 @@
       "title": null,
       "text": "Great historical contributions about the 26th president. The interactive items were pretty kool. But, there should be a shuttle system for those that have to park far away and are disabled.",
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "parking",
+        "accessibility"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkR2FDMUZWQzB6WWxCbmIzbFhPUzFXTW14NVZHYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjdGaC1FVC0zYlBnb3lXOS1WMmx5VGc%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 7,
+      "overdue_by": 0
+    },
+    {
+      "id": "google-2026-08-05-0e3acffc",
+      "source": "google",
+      "date": "2026-08-05",
+      "rating": 4,
+      "recommends": null,
+      "author": "Jamie H. Wellik",
+      "title": null,
+      "text": "Wow!  Impressive location, building, amenities and displays.  It’s been over a month and they are getting better handling large crowds, older visitors and ushering through the entire museum experience (admission, security, lockers, dining, etc.)\n\nI can’t remember last time I felt so moved- and impressed- by the displays in a museum- the curators did an excellent job incorporating modern historians and politicians into the legacy of Theodore Roosevelt.\n\nAnd the gift shop needs a huge book selection….",
+      "themes": [
+        "visitor_flow",
+        "staff",
+        "retail"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21KMVlVMWtlR1pSZURaaFJtdFNWRWR4Y2xkd2VIYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmJ1YU1keGZReDZhRmtSVEdxcldweHc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
       "age_days": 7,
@@ -2565,7 +2691,9 @@
       "title": null,
       "text": "I have edited and changed my review to 5 stars.  Although all that I said below was true. It appears their system did work eventually and\nI received my journal .  The library experience itself is definitely 5 star.\n\nI would dearly love to give 5 stars for this truly informative and unique place about my favorite president.  But I am greatly disappointed that all of the memories they promise to email to us failed to materialize.  All of the other members of our party received theirs and it is a nice memory.  Neither myself nor my wife received ours.  Furthermore we knew before we left the area so returned to the information desk.  They had a specific QR code to scan that allowed notification of this failure and supposedly retrieve your memory email.  So obviously this is not a new problem.\nNothing.\nI also left message at their phone number and sent message thru their website.\nAgain nothing.\nThey want to promote their AI experience which was pretty cool but then fail on the most important personal connection to the library.  I hope they figure this out so as to not disappoint other visitors.  Visitors should follow-up with them prior to departure so they can double check that their system is working .",
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "ai_criticism",
+        "staff"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xOTlNEWnhkSFpKTTA1NlFTMVBhMjg0YUdkYWFXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlNNSDZxdHZJM056QS1Pa284aGdaaWc%7C%7C?hl=en",
@@ -2603,11 +2731,11 @@
       "title": null,
       "text": "Can I give it 10 stars?\nWe road tripped out to ND for the Badlands and thought we'd stop in at the Presidential Library because it was there. Good thing we were smart enough to buy tickets the night before!\nThe place was packed and I understand why!\nThe exhibits were fabulous!!! There were things to do and see for all ages. Museum artifacts, interactive exhibits, scavenger hunts, replicas, rooms designed to immerse you in different eras of TR's life... there was just so much. I do highly recommend the AI wristbands and interactive exhibits... which is saying something for me, because I'm normally not a fan of a lot of AI stuff.\nBottom line: I'm sad the Presidential Library is 13 hours from home because I would go often!\n\nMy only critique is there wasn't enough stuff in the gift shop. If you're looking to buy books written by Teddy Roosevelt, you're better off going to the national park gift shop.\n\nAlso, FYI, if someone in your party needs to use the restroom bad, the bathrooms are on the other side of the security line.",
       "themes": [
-        "crowding",
-        "queues",
+        "interactive_exhibits",
+        "ai_criticism",
         "retail",
         "restrooms",
-        "interactive_exhibits"
+        "security_screening"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT20xWlFtSm1jSGRwZWtGMmFVRXlZVFkzTVZCcGVsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOm1ZQmJmcHdpekF2aUEyYTY3MVBpelE%7C%7C?hl=en",
@@ -2627,10 +2755,9 @@
       "text": "The library is a 10/10 experience but they’re overselling the tickets for admission and the place is packed with bottlenecks at all of the interactive exhibits. \n\nIf you can come during “off season” it’ll be absolutely amazing. \n\nAlso the gift shop is brutally overpriced. And the bathrooms are too small for the crowds. Beware.",
       "themes": [
         "crowding",
+        "queues",
         "retail_pricing",
-        "retail",
-        "restrooms",
-        "interactive_exhibits"
+        "restrooms"
       ],
       "sentiment": "positive_with_criticism",
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1072379920-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
@@ -2638,6 +2765,52 @@
       "sla_days": 7,
       "age_days": 3,
       "overdue_by": -4
+    },
+    {
+      "id": "tripadvisor-2026-08-10-baf8260e",
+      "source": "tripadvisor",
+      "date": "2026-08-10",
+      "rating": 5,
+      "recommends": null,
+      "author": "SuburbanMomof2kids",
+      "title": "It’s more than a library",
+      "text": "Definitely a unique and fun experience. Once inside, the fresh wood furniture smell is evident. We got bracelets as part of the experience for interactive exploring. Make sure you use it to tap the many photo ops and seek and find animals to log your own personal online journal. Once you take your photo at the beginning, it’s used to create these Theodore Roosevelt period, black and white portraits. Pretty cool. Each exhibit is educational and entertaining. Lots to see and take in. Very awe inspiring and showcased Roosevelt’s accomplishments and contributions to America’s greatness. He had so many inspiring quotes that were used throughout the library. It took us 3 hours easily and we don’t think we covered all. Must visit before it gets too popular. It got very crowded as people came and stayed. Food wasn’t great, maybe they will improve. Souvenirs were pricey even for a postcard. Surrounding canyon sights were magnificent. Glad we drove 4 hours from Mt Rushmore to get there.",
+      "themes": [
+        "interactive_exhibits",
+        "crowding",
+        "food_beverage",
+        "retail_pricing",
+        "drive_market"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1072440638-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 2,
+      "overdue_by": -5
+    },
+    {
+      "id": "tripadvisor-2026-08-10-20f79889",
+      "source": "tripadvisor",
+      "date": "2026-08-10",
+      "rating": 5,
+      "recommends": null,
+      "author": "Abby H",
+      "title": "First Time Visitor",
+      "text": "Wow! What an experience. I was gifted tickets without any prior knowledge of what to expect. I have visited many museums, and this by far, exceeded my expectations. The interactive exhibits made it engaging for young children and an incredible educational experience. In no time, three hours had escaped us. If you have mobility issues, I highly recommend being dropped off at the front entrance and riding the golf cart to the front door. Most likely, there will be a line to stand in even if you have purchased tickets ahead of time. Once you make it through the first exhibit, there is adequate seating options to rest at before venturing to other exhibits. Try to bring as little as possible so your hands won’t be tied up and you can easily access the interactive exhibits. There are clean restrooms available upon walking in and within the main area. Food is available on site too. Plan in your budget to find something at the gift shop! A lot of great options to find a keepsake of your experience.",
+      "themes": [
+        "interactive_exhibits",
+        "accessibility",
+        "queues",
+        "restrooms",
+        "food_beverage"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1072569393-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 2,
+      "overdue_by": -5
     }
   ],
   "series": [
@@ -3921,9 +4094,10 @@
       "headline": "Ratings holding at 4.96 across 24 reviews",
       "paragraphs": [
         "24 reviews in the last 7 days, down 49 on the previous 7 days. The average is up 0.23. 0.0% rated three stars or below.",
-        "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience continues to divide a small minority: 4 reviews to date name it as the reason for a low rating, against heavy praise for the same feature. Low volume, but it is the most likely subject of a critical feature story.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 64 reviews are waiting on a reply and 59 are past our own service level."
+        "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience continues to divide a small minority: 35 reviews to date name it as the reason for a low rating, against heavy praise for the same feature. Low volume, but it is the most likely subject of a critical feature story.",
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 63 reviews are waiting on a reply and 54 are past our own service level."
       ],
+      "coverage_warning": null,
       "actions": [],
       "notes": [
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
@@ -3934,8 +4108,8 @@
         "count_delta": -49,
         "average_delta": 0.23,
         "pct_low": 0.0,
-        "unanswered": 64,
-        "overdue": 59
+        "unanswered": 63,
+        "overdue": 54
       }
     },
     "30": {
@@ -3943,25 +4117,26 @@
       "headline": "Ratings holding at 4.8 across 231 reviews",
       "paragraphs": [
         "231 reviews in the last 30 days, up 127 on the previous 30 days. The average is up 0.06. 5.6% rated three stars or below.",
-        "Visitors are consistently praising the interactive exhibits, the building and how well it works for families. The AI experience continues to divide a small minority: 4 reviews to date name it as the reason for a low rating, against heavy praise for the same feature. Low volume, but it is the most likely subject of a critical feature story.",
-        "The complaints that cost us stars cluster tightly. The most frequent is parking capacity (4 mentions), followed by queues at entry and confusion about timed entry. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 64 reviews are waiting on a reply and 59 are past our own service level."
+        "Visitors are consistently praising the interactive exhibits, the building and how well it works for families. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 4 low ratings in this window.",
+        "The complaints that cost us stars cluster tightly. The most frequent is confusion about timed entry (5 mentions), followed by the reaction against the AI experience and the screening process. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 63 reviews are waiting on a reply and 54 are past our own service level."
       ],
+      "coverage_warning": null,
       "actions": [
         {
-          "issue": "parking capacity",
+          "issue": "confusion about timed entry",
+          "mentions": 5
+        },
+        {
+          "issue": "the reaction against the AI experience",
           "mentions": 4
+        },
+        {
+          "issue": "the screening process",
+          "mentions": 3
         },
         {
           "issue": "queues at entry",
           "mentions": 3
-        },
-        {
-          "issue": "confusion about timed entry",
-          "mentions": 3
-        },
-        {
-          "issue": "crowding inside the galleries",
-          "mentions": 2
         }
       ],
       "notes": [
@@ -3973,8 +4148,8 @@
         "count_delta": 127,
         "average_delta": 0.06,
         "pct_low": 5.6,
-        "unanswered": 64,
-        "overdue": 59
+        "unanswered": 63,
+        "overdue": 54
       }
     },
     "60": {
@@ -3982,28 +4157,30 @@
       "headline": "Ratings holding at 4.78 across 335 reviews",
       "paragraphs": [
         "335 reviews in the last 60 days, up 335 on the previous 60 days. 6.3% rated three stars or below.",
-        "Visitors are consistently praising the interactive exhibits, the building and how well it works for families. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 4 low ratings in this window.",
-        "The complaints that cost us stars cluster tightly. The most frequent is parking capacity (4 mentions), followed by the reaction against the AI experience and queues at entry. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 64 reviews are waiting on a reply and 59 are past our own service level."
+        "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 8 low ratings in this window.",
+        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (8 mentions), followed by confusion about timed entry and the screening process. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 63 reviews are waiting on a reply and 54 are past our own service level."
       ],
+      "coverage_warning": "5 of 21 low-rated reviews in this period match no theme in our vocabulary. That usually means visitors are raising something we have not named yet — read those directly before trusting the ranking above.",
       "actions": [
         {
-          "issue": "parking capacity",
-          "mentions": 4
+          "issue": "the reaction against the AI experience",
+          "mentions": 8
         },
         {
-          "issue": "the reaction against the AI experience",
+          "issue": "confusion about timed entry",
+          "mentions": 5
+        },
+        {
+          "issue": "the screening process",
           "mentions": 4
         },
         {
           "issue": "queues at entry",
           "mentions": 3
-        },
-        {
-          "issue": "confusion about timed entry",
-          "mentions": 3
         }
       ],
       "notes": [
+        "5 of 21 low-rated reviews in this period match no theme in our vocabulary. That usually means visitors are raising something we have not named yet — read those directly before trusting the ranking above.",
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
@@ -4012,8 +4189,8 @@
         "count_delta": 335,
         "average_delta": null,
         "pct_low": 6.3,
-        "unanswered": 64,
-        "overdue": 59
+        "unanswered": 63,
+        "overdue": 54
       }
     },
     "90": {
@@ -4021,28 +4198,30 @@
       "headline": "Ratings holding at 4.78 across 335 reviews",
       "paragraphs": [
         "335 reviews in the last 90 days, up 335 on the previous 90 days. 6.3% rated three stars or below.",
-        "Visitors are consistently praising the interactive exhibits, the building and how well it works for families. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 4 low ratings in this window.",
-        "The complaints that cost us stars cluster tightly. The most frequent is parking capacity (4 mentions), followed by the reaction against the AI experience and queues at entry. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 64 reviews are waiting on a reply and 59 are past our own service level."
+        "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 8 low ratings in this window.",
+        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (8 mentions), followed by confusion about timed entry and the screening process. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 63 reviews are waiting on a reply and 54 are past our own service level."
       ],
+      "coverage_warning": "5 of 21 low-rated reviews in this period match no theme in our vocabulary. That usually means visitors are raising something we have not named yet — read those directly before trusting the ranking above.",
       "actions": [
         {
-          "issue": "parking capacity",
-          "mentions": 4
+          "issue": "the reaction against the AI experience",
+          "mentions": 8
         },
         {
-          "issue": "the reaction against the AI experience",
+          "issue": "confusion about timed entry",
+          "mentions": 5
+        },
+        {
+          "issue": "the screening process",
           "mentions": 4
         },
         {
           "issue": "queues at entry",
           "mentions": 3
-        },
-        {
-          "issue": "confusion about timed entry",
-          "mentions": 3
         }
       ],
       "notes": [
+        "5 of 21 low-rated reviews in this period match no theme in our vocabulary. That usually means visitors are raising something we have not named yet — read those directly before trusting the ranking above.",
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
@@ -4051,8 +4230,8 @@
         "count_delta": 335,
         "average_delta": null,
         "pct_low": 6.3,
-        "unanswered": 64,
-        "overdue": 59
+        "unanswered": 63,
+        "overdue": 54
       }
     }
   }

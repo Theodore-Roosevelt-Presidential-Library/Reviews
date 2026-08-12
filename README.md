@@ -17,7 +17,7 @@ verbatim, and nothing in this repo is ever fabricated — an unknown value is `n
    │
    ├─ git pull --rebase          never hand-merge generated files
    ├─ collect.py                 Apify → normalise → merge into data/reviews.json
-   ├─ analyze.py                 GitHub Models → themes + sentiment + summary
+   ├─ analyze.py                 themes + sentiment (model, or keyword rules)
    ├─ derive.py                  windows, deltas, theme movement, triage, brief
    ├─ validate.py                refuse to ship unparseable data
    └─ commit data/
@@ -46,12 +46,49 @@ already stored, with a three-day overlap so late or edited reviews aren't missed
 | Secret | Where to get it |
 |---|---|
 | `APIFY_TOKEN` | apify.com → Settings → Integrations → API token |
+| `GEMINI_API_KEY` | Google Cloud project `civic-depth-505307-c4` — see below |
 
 Apify's free tier includes $5/month in credits and needs no card. At roughly $0.60 per 1,000
 reviews, daily incremental runs cost a small fraction of that.
 
-`GITHUB_TOKEN` is provided automatically by Actions — GitHub Models needs no separate key.
-The workflow requests `models: read` permission for it.
+**Gemini key, one time. Create it in AI Studio, not the Cloud Console.**
+
+Google now requires an *authorization key* — an API key bound to a service account.
+Keys created in the Cloud Console are *standard* keys, and the API rejects them with
+"This API requires authentication with a service account-bound API key". Standard keys
+stop working entirely in September 2026. Only AI Studio mints auth keys.
+
+1. In [Cloud Console](https://console.cloud.google.com/apis/dashboard?project=civic-depth-505307-c4),
+   enable the **Generative Language API** on `civic-depth-505307-c4`.
+2. Go to [AI Studio](https://aistudio.google.com/api-keys) → **Dashboard** → **Projects**
+   → **Import projects** → pick `civic-depth-505307-c4`. AI Studio hides existing Cloud
+   projects until you import them, which is why the project may not appear at first.
+3. **API Keys** → **Create API key**, in that project. Every key AI Studio creates is an
+   auth key. Copy it.
+4. Add it as the `GEMINI_API_KEY` repository secret.
+
+If **Create API key** is greyed out with "You do not have permission to create a key in
+this project", you need `apikeys.keys.create`, `iam.serviceAccounts.create`, and
+`iam.serviceAccountApiKeyBindings.create` on the project — Project Editor or Owner covers
+all three. The key creation flow makes a service account behind the scenes, which is why
+it needs more than plain API-key permissions.
+
+The key is sent in the `x-goog-api-key` header, never a query string — a key in a URL
+leaks into proxy logs and CI output.
+
+Keep billing enabled on that project. The free tier exists but Google has cut its quotas
+twice, and a daily job should not depend on an allowance that can change without notice.
+At current volume this costs roughly **$1.40/year** — about 6K input and 800 output tokens
+a day against `gemini-2.5-flash` at $0.30/$2.50 per million.
+
+Verify before relying on it:
+
+```bash
+GEMINI_API_KEY=... python3 collector/analyze.py --check
+```
+
+That confirms the endpoint answers and the configured model is in your project's
+catalogue. The same check runs as its own workflow step on every collection.
 
 ### 2. Pages
 
@@ -129,6 +166,46 @@ and a "doesn't recommend" routes into the response queue as negative. And per Fa
 warning on that setting, **reviews are public, influence the Page rating, and cannot be
 deleted**. The rating and all existing reviews can be hidden again by switching the setting
 back off, but individual reviews cannot be removed.
+
+**What is generated vs. what is written.** Worth being precise, because "AI-powered" is
+doing no work here at present:
+
+| Piece | Where it comes from |
+|---|---|
+| Theme vocabulary (39 themes) | Hand-authored, `analyze.py`. Fixed list — the model chooses from it, never adds to it. |
+| Theme + sentiment per review | The configured model, falling back to keyword rules. Check `classified_by` in `summary.json` for the actual split on any given run. |
+| Executive brief wording | Hand-written sentence templates, `brief.py`. |
+| Which facts fill the brief, all figures, theme ranking | Computed from the data on every run. |
+| Narrative summary (`summary.json`) | Model only. Currently `null` — has never been produced. |
+
+**How much it adapts.** Tested by injecting synthetic reviews and re-running the pipeline:
+
+| Change | Does it adapt? |
+|---|---|
+| Volume or rating shifts | Fully. Headline, deltas, every figure track automatically. |
+| More reviews about a theme it already knows | Fully. Ranking reorders, the lead complaint changes. |
+| A complaint it has no theme for | **No.** The theme list never grows on its own. If nothing matches, the brief shows a coverage warning. |
+| A complaint that matches the *wrong* theme | **No, and no warning.** Keyword rules cannot detect their own false positives. |
+
+That last row is the real limit. In testing, 30 reviews about a broken elevator matched the
+`architecture` regex on the word "building" — a wrong label with no signal that it was wrong.
+Reading low-rated reviews directly, weekly, is not optional.
+
+**On providers.** This project ran on GitHub Models until that product was retired on
+July 30, 2026. The endpoint began returning `410 github_models_retirement_brownout`, the
+fallback swallowed it, and the pipeline produced pure regex output under a model's name
+for several days without complaint. Two guards came out of that:
+
+- `collector/llm.py` puts the provider behind an interface. Switching vendors is a
+  `config.json` edit, not a rewrite. An OpenAI-compatible client is already there for
+  OpenAI, Groq, or OpenRouter.
+- `analyze.py --check` probes the endpoint and confirms the model is in the catalogue,
+  and runs as its own workflow step. A dead provider now fails the run on day one.
+
+`summary.json` records `provider`, `model`, `model_status`, `model_error`, and a
+`classified_by` breakdown every run. If the model path is ever switched off deliberately,
+set `analysis.provider` to `"rules"` so the config says what is true — deterministic and
+auditable is a legitimate choice, silently pretending to be a model is not.
 
 **Google is on a bridge.** Apify is a stopgap while the Google Business Profile API access
 request is pending. That API is free, returns complete history, and — unlike any scraper —

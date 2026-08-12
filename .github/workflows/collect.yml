@@ -46,10 +46,18 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python3 collector/collect.py ${{ inputs.full && '--full' || '' }}
 
+      # Fail fast if the provider is gone or the model was renamed. This step is the
+      # reason a retired endpoint can't quietly turn the pipeline back into regex.
+      - name: Preflight the model provider
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 collector/analyze.py --check
+
       - name: Classify and summarise
         env:
-          # GitHub Models is authenticated with the built-in token — no extra secret.
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 collector/analyze.py
 
       # Always regenerate derived files after a rebase. They are a pure function of

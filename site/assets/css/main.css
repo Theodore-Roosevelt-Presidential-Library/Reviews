@@ -425,3 +425,10 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
 
 .foot-note { display: inline-block; margin-top: 6px; max-width: 90ch; line-height: 1.5; }
 .empty .btn { display: inline-block; }
+
+.brief-warn {
+  margin-top: 14px; padding: 11px 14px; border-radius: var(--radius-sm);
+  background: var(--color-warn-bg); border: 1px solid var(--color-warn);
+  color: #6d5210; font-size: 13.5px; line-height: 1.55; max-width: 90ch;
+}
+.brief-warn::before { content: '⚠ '; font-weight: 700; }

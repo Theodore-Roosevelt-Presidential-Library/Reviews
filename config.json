@@ -65,12 +65,13 @@
     }
   },
   "analysis": {
-    "provider": "github_models",
-    "model": "openai/gpt-4o-mini",
-    "endpoint": "https://models.github.ai/inference/chat/completions",
-    "batch_size": 8,
-    "max_input_tokens": 8000,
-    "fallback_to_rules": true
+    "provider": "openai",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "api_key_env": "OPENAI_KEY",
+    "batch_size": 20,
+    "fallback_to_rules": true,
+    "note": "Model is pinned to a dated snapshot so classification stays comparable month to month; the preflight catches the day it retires. gpt-4.1-mini is cheap and strong enough for fixed-vocabulary classification. gpt-5-mini is the upgrade if nuance disappoints. The key env var is OPENAI_KEY, matching the existing .env. Set provider to 'rules' to turn the model off deliberately, or 'ollama' with base_url http://localhost:11434/v1 to run locally in Actions.",
+    "base_url": "https://api.openai.com/v1"
   },
   "triage": {
     "critical_rating_at_or_below": 2,

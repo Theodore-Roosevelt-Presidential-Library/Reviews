@@ -117,8 +117,16 @@ def build(reviews, windows, triage, pre_opening, window="30"):
     ).replace("  ", " ").strip()
 
     # ---- how people are reacting -----------------------------------------
-    themes = cur.get("themes", {}) or {}
-    praised = [(PRAISE[t], c) for t, c in themes.items() if t in PRAISE]
+    # Count praise themes only from reviews that were actually positive. Theme labels
+    # carry no sentiment of their own: a one-star review saying "half the building was
+    # unreachable" tags `architecture`, and reading that as praise inverts the meaning
+    # of the sentence. Attribution has to follow the reviewer, not the label.
+    lo, hi = (w.get("range") or ["", "9999"])[0], (w.get("range") or ["", "9999"])[1]
+    in_window = [r for r in reviews if lo <= (r.get("date") or "") <= hi]
+    positive = [r for r in in_window if (r.get("rating") or 0) >= 4]
+
+    praise_counts = Counter(t for r in positive for t in (r.get("themes") or []))
+    praised = [(PRAISE[t], c) for t, c in praise_counts.items() if t in PRAISE]
     praised.sort(key=lambda x: -x[1])
     top_praise = [p for p, _ in praised[:3]]
 
@@ -129,10 +137,7 @@ def build(reviews, windows, triage, pre_opening, window="30"):
     else:
         praise_str = "the visit overall"
 
-    # A theme is divisive when it shows up in both the praise and the complaints.
-    low_reviews = [r for r in reviews
-                   if r.get("rating") and r["rating"] <= 3
-                   and r.get("date", "") >= (w.get("range") or ["", ""])[0]]
+    low_reviews = [r for r in in_window if r.get("rating") and r["rating"] <= 3]
     low_themes = Counter(t for r in low_reviews for t in (r.get("themes") or []))
 
     para_reaction = f"Visitors are consistently praising {praise_str}."
@@ -172,13 +177,33 @@ def build(reviews, windows, triage, pre_opening, window="30"):
         )
         if rest:
             para_better += ", followed by " + " and ".join(rest)
-        para_better += (
-            ". These are operational and messaging fixes rather than problems with the "
-            "experience itself, which is the better problem to have."
-        )
+        # Only offer reassurance when the data supports it. Told unconditionally, this
+        # sentence would keep saying "the better problem to have" through a collapse.
+        if (low_pct or 0) <= 10:
+            para_better += (
+                ". These are operational and messaging fixes rather than problems with the "
+                "experience itself, which is the better problem to have."
+            )
+        else:
+            para_better += (
+                f". At {low_pct}% of reviews rated three stars or below, this is past the "
+                "point of being a handful of unlucky visits."
+            )
     else:
         para_better = ("No complaint appears often enough in this window to form a pattern "
                        "worth acting on.")
+
+    # If low-rated reviews are arriving that our vocabulary cannot describe, the themes
+    # are the thing that is wrong, not the visitors. This is the only signal that the
+    # fixed theme list has developed a blind spot, so it belongs in the brief.
+    unthemed = [r for r in low_reviews if not (r.get("themes") or [])]
+    coverage = None
+    if low_reviews and len(unthemed) / len(low_reviews) >= 0.15 and len(unthemed) >= 3:
+        coverage = (
+            f"{len(unthemed)} of {len(low_reviews)} low-rated reviews in this period match "
+            f"no theme in our vocabulary. That usually means visitors are raising something "
+            f"we have not named yet — read those directly before trusting the ranking above."
+        )
 
     if unanswered:
         para_better += (
@@ -189,6 +214,8 @@ def build(reviews, windows, triage, pre_opening, window="30"):
 
     # ---- context note, no names ------------------------------------------
     notes = []
+    if coverage:
+        notes.append(coverage)
     pre_n = (pre_opening or {}).get("count") or 0
     if pre_n:
         pre_avg = pre_opening.get("average")
@@ -202,6 +229,7 @@ def build(reviews, windows, triage, pre_opening, window="30"):
         "window": window,
         "headline": headline,
         "paragraphs": [para_happening, para_reaction, para_better],
+        "coverage_warning": coverage,
         "actions": actions,
         "notes": notes,
         "stats": {

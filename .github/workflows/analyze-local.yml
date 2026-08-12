@@ -1,0 +1,128 @@
+name: Analyse with a local model
+
+# Runs the classification step against Ollama inside the Actions runner instead of a
+# hosted API. No key, no quota, no vendor that can retire underneath us — the trade is
+# a slower run and a smaller model.
+#
+# Not wired into the daily collect workflow. Run it by hand, compare the output against
+# the keyword baseline, and only then decide whether to make it the default.
+#
+# Runner: 4 vCPU, 16 GB RAM, no GPU. Actions minutes are free and unlimited on public
+# repositories, so the compute costs nothing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Ollama model tag (qwen2.5:3b, llama3.2:3b, gemma3:4b, llama3.2:1b)"
+        type: string
+        default: "qwen2.5:3b"
+      all:
+        description: "Re-analyse every review, not just unclassified ones"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analyze-local
+  cancel-in-progress: false
+
+jobs:
+  analyse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      PYTHONUNBUFFERED: "1"
+      OLLAMA_MODEL: ${{ inputs.model }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # qwen2.5:3b weights are 1.93 GB; the Ollama binary is ~1.5 GB on top. Well inside
+      # the 10 GB per-repo Actions cache. Cached, a repeat run starts in about a minute;
+      # cold it is nearer five. The cache is evicted after 7 days unused.
+      - name: Cache Ollama models
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama
+          key: ollama-${{ inputs.model }}
+
+      # Third-party action, pinned to a commit SHA rather than a tag. A tag can be moved
+      # to point at new code; a SHA cannot. This workflow holds `contents: write`, so
+      # anything it runs could push to the repo — worth the extra care for 14 stars.
+      # Verify the SHA at github.com/ai-action/setup-ollama before bumping it.
+      - name: Install Ollama
+        uses: ai-action/setup-ollama@e6a343efd08305c798b8d272f986c070cf281795  # master as of 2026-08-12
+        with:
+          version: "0.32.9"
+
+      - run: ollama --version
+
+      - name: Start server and pull the model
+        run: |
+          ollama serve &
+          # Wait for the API rather than sleeping a fixed amount.
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:11434/api/version >/dev/null && break
+            sleep 2
+          done
+          curl -sf http://localhost:11434/api/version || { echo "ollama did not start"; exit 1; }
+          time ollama pull "$OLLAMA_MODEL"
+
+      # Point the analyser at the local server. Everything else is unchanged — Ollama
+      # serves the OpenAI chat-completions API, which collector/llm.py already speaks.
+      - name: Switch config to the local provider
+        run: |
+          python3 - <<'PY'
+          import json, os
+          c = json.load(open("config.json"))
+          c["analysis"].update({
+              "provider": "ollama",
+              "base_url": "http://localhost:11434/v1",
+              "model": os.environ["OLLAMA_MODEL"],
+              "api_key_env": "OLLAMA_API_KEY",
+              "batch_size": 6,
+          })
+          json.dump(c, open("config.json", "w"), indent=2, ensure_ascii=False)
+          PY
+
+      - name: Preflight
+        run: python3 collector/analyze.py --check
+
+      - name: Classify
+        run: python3 collector/analyze.py ${{ inputs.all && '--all' || '' }}
+
+      - name: Build derived metrics
+        run: python3 collector/derive.py
+
+      - name: Validate data
+        run: python3 collector/validate.py
+
+      # config.json was edited in-place to point at localhost. That must not be committed —
+      # the scheduled workflow has no Ollama server and would fall back to rules forever.
+      - name: Restore config and commit data only
+        run: |
+          git checkout -- config.json
+          git config user.name  "trpl-reviews-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No change."
+          else
+            git commit -m "Local-model analysis ($OLLAMA_MODEL) $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+  deploy:
+    needs: analyse
+    if: always() && needs.analyse.result == 'success'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
