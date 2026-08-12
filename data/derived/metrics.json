@@ -246,19 +246,19 @@
           "change": 7.0
         },
         {
-          "theme": "dwell_time",
-          "current": 0,
-          "prior": 5,
-          "current_share": 0.0,
-          "prior_share": 6.8,
-          "change": -6.8
-        },
-        {
           "theme": "families",
           "current": 1,
           "prior": 8,
           "current_share": 4.2,
           "prior_share": 11.0,
+          "change": -6.8
+        },
+        {
+          "theme": "dwell_time",
+          "current": 0,
+          "prior": 5,
+          "current_share": 0.0,
+          "prior_share": 6.8,
           "change": -6.8
         },
         {
@@ -466,19 +466,19 @@
           "change": -3.1
         },
         {
-          "theme": "interactive_exhibits",
-          "current": 87,
-          "prior": 36,
-          "current_share": 37.7,
-          "prior_share": 34.6,
-          "change": 3.0
-        },
-        {
           "theme": "restrooms",
           "current": 7,
           "prior": 0,
           "current_share": 3.0,
           "prior_share": 0.0,
+          "change": 3.0
+        },
+        {
+          "theme": "interactive_exhibits",
+          "current": 87,
+          "prior": 36,
+          "current_share": 37.7,
+          "prior_share": 34.6,
           "change": 3.0
         },
         {
@@ -554,14 +554,6 @@
           "change": 1.3
         },
         {
-          "theme": "food_beverage",
-          "current": 14,
-          "prior": 5,
-          "current_share": 6.1,
-          "prior_share": 4.8,
-          "change": 1.3
-        },
-        {
           "theme": "retail_pricing",
           "current": 3,
           "prior": 0,
@@ -575,6 +567,14 @@
           "prior": 0,
           "current_share": 1.3,
           "prior_share": 0.0,
+          "change": 1.3
+        },
+        {
+          "theme": "food_beverage",
+          "current": 14,
+          "prior": 5,
+          "current_share": 6.1,
+          "prior_share": 4.8,
           "change": 1.3
         },
         {
@@ -650,14 +650,6 @@
           "change": -0.1
         },
         {
-          "theme": "accessibility",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
           "theme": "families",
           "current": 29,
           "prior": 13,
@@ -667,6 +659,14 @@
         },
         {
           "theme": "security_screening",
+          "current": 2,
+          "prior": 1,
+          "current_share": 0.9,
+          "prior_share": 1.0,
+          "change": -0.1
+        },
+        {
+          "theme": "accessibility",
           "current": 2,
           "prior": 1,
           "current_share": 0.9,
@@ -815,14 +815,6 @@
           "change": 5.7
         },
         {
-          "theme": "crowding",
-          "current": 16,
-          "prior": 0,
-          "current_share": 4.8,
-          "prior_share": 0,
-          "change": 4.8
-        },
-        {
           "theme": "value_for_money",
           "current": 16,
           "prior": 0,
@@ -831,7 +823,15 @@
           "change": 4.8
         },
         {
-          "theme": "staff",
+          "theme": "crowding",
+          "current": 16,
+          "prior": 0,
+          "current_share": 4.8,
+          "prior_share": 0,
+          "change": 4.8
+        },
+        {
+          "theme": "retail",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -839,7 +839,7 @@
           "change": 4.5
         },
         {
-          "theme": "retail",
+          "theme": "staff",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -863,7 +863,7 @@
           "change": 3.3
         },
         {
-          "theme": "parking",
+          "theme": "conservation_message",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -879,7 +879,7 @@
           "change": 3.0
         },
         {
-          "theme": "conservation_message",
+          "theme": "parking",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -935,15 +935,7 @@
           "change": 0.9
         },
         {
-          "theme": "accessibility",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "ticket_pricing",
+          "theme": "retail_pricing",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -959,7 +951,7 @@
           "change": 0.9
         },
         {
-          "theme": "retail_pricing",
+          "theme": "security_screening",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -967,7 +959,15 @@
           "change": 0.9
         },
         {
-          "theme": "security_screening",
+          "theme": "ticket_pricing",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "accessibility",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1132,14 +1132,6 @@
           "change": 5.7
         },
         {
-          "theme": "crowding",
-          "current": 16,
-          "prior": 0,
-          "current_share": 4.8,
-          "prior_share": 0,
-          "change": 4.8
-        },
-        {
           "theme": "value_for_money",
           "current": 16,
           "prior": 0,
@@ -1148,7 +1140,15 @@
           "change": 4.8
         },
         {
-          "theme": "staff",
+          "theme": "crowding",
+          "current": 16,
+          "prior": 0,
+          "current_share": 4.8,
+          "prior_share": 0,
+          "change": 4.8
+        },
+        {
+          "theme": "retail",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -1156,7 +1156,7 @@
           "change": 4.5
         },
         {
-          "theme": "retail",
+          "theme": "staff",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -1180,7 +1180,7 @@
           "change": 3.3
         },
         {
-          "theme": "parking",
+          "theme": "conservation_message",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -1196,7 +1196,7 @@
           "change": 3.0
         },
         {
-          "theme": "conservation_message",
+          "theme": "parking",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -1252,15 +1252,7 @@
           "change": 0.9
         },
         {
-          "theme": "accessibility",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "ticket_pricing",
+          "theme": "retail_pricing",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1276,7 +1268,7 @@
           "change": 0.9
         },
         {
-          "theme": "retail_pricing",
+          "theme": "security_screening",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1284,7 +1276,15 @@
           "change": 0.9
         },
         {
-          "theme": "security_screening",
+          "theme": "ticket_pricing",
+          "current": 3,
+          "prior": 0,
+          "current_share": 0.9,
+          "prior_share": 0,
+          "change": 0.9
+        },
+        {
+          "theme": "accessibility",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
