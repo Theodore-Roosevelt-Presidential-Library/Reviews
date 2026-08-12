@@ -109,7 +109,10 @@ def triage(reviews, today_):
             continue
         rating = r.get("rating")
         sentiment = r.get("sentiment")
-        if rating is not None and rating <= TRIAGE["critical_rating_at_or_below"]:
+        if rating is None and r.get("recommends") is False:
+            # A "doesn't recommend" carries no stars but is unambiguously negative.
+            tier, due = "negative", sla["negative"]
+        elif rating is not None and rating <= TRIAGE["critical_rating_at_or_below"]:
             tier, due = "critical", sla["critical"]
         elif rating is not None and rating <= TRIAGE["needs_response_at_or_below"]:
             tier, due = "negative", sla["negative"]
@@ -122,7 +125,8 @@ def triage(reviews, today_):
         age = (today_ - d).days if d else None
         queue.append({
             "id": r["id"], "source": r["source"], "date": r.get("date"),
-            "rating": rating, "author": r.get("author"), "title": r.get("title"),
+            "rating": rating, "recommends": r.get("recommends"),
+            "author": r.get("author"), "title": r.get("title"),
             "text": r.get("text"), "themes": r.get("themes") or [],
             "sentiment": sentiment, "url": r.get("url"),
             "tier": tier, "sla_days": due, "age_days": age,

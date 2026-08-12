@@ -52,12 +52,14 @@
     "facebook": {
       "enabled": false,
       "label": "Facebook",
-      "apify_actor": null,
-      "listing_url": "https://www.facebook.com/TRPresidentialLibrary/reviews",
-      "input": {},
+      "apify_actor": "apify~facebook-reviews-scraper",
+      "listing_url": "https://www.facebook.com/TRPresidentialLibrary",
+      "input": {
+        "resultsLimit": 500
+      },
       "incremental_field": null,
       "reply_url": "https://business.facebook.com",
-      "note": "Manual entry only. Facebook recommendations are binary, not starred."
+      "note": "Collection is wired and tested — the actor works, verified against other museum pages. It returns nothing for TRPL because Recommendations are switched off on the Page. Turn them on in Page Settings, confirm reviews appear publicly, then set enabled to true. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null."
     }
   },
   "analysis": {

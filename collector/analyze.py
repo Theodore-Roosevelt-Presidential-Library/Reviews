@@ -107,8 +107,14 @@ def rules_classify(text):
     return themes[:5]
 
 
-def rules_sentiment(rating, text):
+def rules_sentiment(rating, text, recommends=None):
     if rating is None:
+        # Facebook Recommendations are yes/no. Without this, every Facebook record
+        # would come back with no sentiment and quietly vanish from the queue.
+        if recommends is True:
+            return "positive"
+        if recommends is False:
+            return "negative"
         return None
     if rating <= 2:
         return "negative"
@@ -154,7 +160,8 @@ def apply_analysis(review, result):
     if sentiment not in SENTIMENTS:
         sentiment = None
     review["themes"] = themes or rules_classify(review.get("text"))
-    review["sentiment"] = sentiment or rules_sentiment(review.get("rating"), review.get("text"))
+    review["sentiment"] = sentiment or rules_sentiment(
+        review.get("rating"), review.get("text"), review.get("recommends"))
     review["analysis_source"] = "model" if (themes and sentiment) else "rules"
 
 

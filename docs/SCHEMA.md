@@ -12,7 +12,7 @@
 | `date_precision` | string | no | Only when `date` is approximate, e.g. `relative_a_month_ago` |
 | `visit_period` | string | no | `YYYY-MM` of the visit, when the platform reports it |
 | `rating` | number\|null | yes | 1–5. `null` for Facebook recommendations. |
-| `recommends` | boolean | no | Facebook only |
+| `recommends` | boolean\|null | no | Facebook only. `rating` stays `null` — a Recommendation is not a star count and must never be converted into one. |
 | `author` | string | yes | As displayed. Public display names only — no emails, no attempts to identify people. |
 | `author_location` | string\|null | yes | As displayed |
 | `trip_type` | string\|null | no | `family` \| `couples` \| `friends` \| `solo` \| `business` |

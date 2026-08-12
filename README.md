@@ -94,17 +94,22 @@ cd site && python3 -m http.server 8000     # needs data/ copied in, see pages.ym
 | Source | Method | Status |
 |---|---|---|
 | Google | Apify `compass/google-maps-reviews-scraper` | Active |
-| TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | **Blocked** — needs one-time permission approval, see below |
+| TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | Active |
 | Yelp | Apify `tri_angle/yelp-review-scraper` | Active |
-| Facebook | — | Disabled. Manual entry only. |
+| Facebook | Apify `apify/facebook-reviews-scraper` | Wired but off — Recommendations disabled on the Page |
 
-**TripAdvisor needs a one-time approval.** That actor requests full access to the Apify
-account, which Apify requires an account owner to approve by hand. Until then every run
-returns `403 full-permission-actor-not-approved`. Approve or decline at
-https://console.apify.com/actors/Hvp4YfFGyLM635Q2F?approvePermissions=true — and note that
-"full access" means the actor can read and write everything in the Apify account, so this is
-a real consent decision, not a formality. TripAdvisor is 24 of 335 reviews; declining costs
-little.
+**TripAdvisor required a one-time approval**, granted August 12, 2026. That actor requests
+full read/write access to the Apify account and Apify makes an account owner approve it by
+hand. If the account is ever rotated or recreated, this must be re-approved or every run
+returns `403 full-permission-actor-not-approved`.
+
+**Facebook is wired but disabled.** The actor works — verified against the Rock and Roll Hall
+of Fame and Field Museum pages, both of which return reviews with an `isRecommended` boolean.
+It returns nothing for TRPL because **Recommendations are switched off on the Page**. Turn
+them on in Page Settings, confirm reviews render publicly, then flip `enabled` to `true` in
+`config.json`. Nothing else needs to change: Facebook records store `recommends` (true/false)
+and leave `rating` null, so they never pollute the star distribution, and a
+"doesn't recommend" still routes into the response queue as negative.
 
 **Google is on a bridge.** Apify is a stopgap while the Google Business Profile API access
 request is pending. That API is free, returns complete history, and — unlike any scraper —

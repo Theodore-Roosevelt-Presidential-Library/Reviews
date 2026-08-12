@@ -126,7 +126,7 @@ def blank_record(**kwargs) -> dict:
     """A record with every required field present. Unknown means None, never a guess."""
     record = {
         "id": None, "source": None, "date": None, "visit_period": None,
-        "rating": None, "author": None, "author_location": None,
+        "rating": None, "recommends": None, "author": None, "author_location": None,
         "trip_type": None, "title": None, "text": "", "text_complete": True,
         "themes": [], "sentiment": None, "responded": False, "response_text": None,
         "url": None, "collected_at": today(),

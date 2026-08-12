@@ -141,6 +141,15 @@ def normalise(item, source):
         text = first_of(text, "text", "value") or ""
     text = str(text).strip()
 
+    # Facebook has no stars — a Recommendation is a yes/no. Keep rating null rather than
+    # inventing a 5 or a 1, and carry the boolean separately so the distribution charts
+    # aren't polluted with numbers nobody actually gave us.
+    recommends = item.get("isRecommended")
+    if isinstance(recommends, str):
+        recommends = {"true": True, "false": False}.get(recommends.lower())
+    if recommends is not None and rating is None:
+        pass  # rating stays None by design
+
     owner_reply = first_of(item, "responseFromOwnerText", "ownerResponse",
                            "responseFromOwner", "reply")
     if isinstance(owner_reply, dict):
@@ -166,6 +175,7 @@ def normalise(item, source):
         date=date_str,
         visit_period=(parse_date(first_of(item, "travelDate", "visitDate")) or "")[:7] or None,
         rating=rating,
+        recommends=recommends,
         author=author,
         author_location=str(location) if location else None,
         trip_type=(str(first_of(item, "tripType", "travelType") or "").lower() or None),
@@ -173,7 +183,7 @@ def normalise(item, source):
         text=text,
         responded=bool(owner_reply),
         response_text=str(owner_reply) if owner_reply else None,
-        url=first_of(item, "reviewUrl", "url", "directUrl"),
+        url=first_of(item, "reviewUrl", "url", "directUrl", "facebookUrl"),
     )
 
 
@@ -366,9 +376,13 @@ def main():
     save_reviews(doc)
     snapshot(merged)
 
-    if failures and not added:
-        # Nothing gained and something broke: make the run visibly red.
-        print(f"all collection failed for: {', '.join(failures)}", file=sys.stderr)
+    if failures:
+        print(f"failed source(s): {', '.join(failures)}", file=sys.stderr, flush=True)
+    # Only fail the run if every source we attempted broke. A source that succeeds with
+    # nothing new is the normal steady state — going red on it trains people to ignore
+    # the red, which is worse than no signal at all.
+    if failures and len(failures) == len(targets):
+        print("every configured source failed", file=sys.stderr, flush=True)
         return 1
     return 0
 
