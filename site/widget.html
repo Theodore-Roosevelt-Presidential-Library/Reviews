@@ -137,8 +137,12 @@
       <video autoplay muted loop playsinline aria-hidden="true"></video>
       <div data-trpl-quotes data-layout="banner"></div>
     </div>
-    <p class="note" style="margin-top:1rem">If a section is light enough that white text struggles,
-    force it: <code>data-theme="light"</code>. Detection is a default, not a lock.</p>
+    <p class="note" style="margin-top:1rem">Detection is a default, not a lock, and it can only
+    see what the page actually paints. On some Drupal sections nothing in the ancestor chain has
+    a background at all — the colour comes from somewhere the widget can't reach — so it falls
+    back to white and picks dark text. Say what you want instead:
+    <code>data-text="white"</code> or <code>data-text="dark"</code>. That attribute names the
+    text, so there is nothing to read backwards.</p>
   </section>
 
   <section>
@@ -147,7 +151,8 @@
       <thead><tr><th>Attribute</th><th>Values</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td><code>data-layout</code></td><td><code>banner</code> <code>card</code> <code>wall</code> <code>inline</code></td><td>Which of the four above. Default <code>banner</code>.</td></tr>
-        <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Override the background detection. Default <code>auto</code>: light or dark text chosen from the background's luminance, and white text over any photo, video or gradient, where the colour can't be measured.</td></tr>
+        <tr><td><code>data-text</code></td><td><code>white</code> <code>dark</code></td><td><strong>The clearest way to force a text colour.</strong> <code>white</code> gives white text and gold stars; <code>dark</code> gives near-black. Overrides everything below.</td></tr>
+        <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Names the <em>background</em>, not the text — <code>dark</code> means a dark block and therefore white text. Easy to read backwards, which is why <code>data-text</code> exists. Default <code>auto</code>: chosen from the background's luminance, and white over any photo, video or gradient where the colour can't be measured.</td></tr>
         <tr><td><code>data-accent</code></td><td>any CSS colour</td><td>Quote mark, stars and active dot. Defaults to brand red, or clay on dark.</td></tr>
         <tr><td><code>data-align</code></td><td><code>left</code> <code>center</code></td><td>Banner and card only. Default centre.</td></tr>
         <tr><td><code>data-count</code></td><td>a number</td><td>Wall only — how many quotes. Default 3.</td></tr>

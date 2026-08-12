@@ -7,7 +7,9 @@
  *
  * Options, all optional, set as data- attributes on the container:
  *   data-layout   banner | card | wall | inline      (default banner)
- *   data-theme    auto | light | dark                (default auto)
+ *   data-theme    auto | light | dark                (default auto) — names the BACKGROUND:
+ *                 "dark" = dark block, white text. If that reads backwards to you, use:
+ *   data-text     white | dark                       — names the TEXT. Wins over data-theme.
  *   data-accent   any CSS colour                     (default TRPL red)
  *   data-count    how many to show in wall layout    (default 3)
  *   data-interval seconds between rotations, 0 = off (default 8)
@@ -144,8 +146,14 @@
     // gold — brand red on a red block was both invisible and unfamiliar. Deepened on light
     // backgrounds, where bright gold falls under 3:1 against white.
     var star = dark ? "#FFC24A" : "#B8860B";
-    // Text on an image needs a shadow or it dissolves wherever the picture goes pale.
-    var shadow = media ? "0 1px 12px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.45)" : "none";
+    // Text on an image needs a halo or it dissolves wherever the picture works against it.
+    // The halo has to follow the text colour, not merely the presence of an image: keying it
+    // to `media` alone put a black glow behind near-black text whenever someone forced
+    // data-theme="light" over a photo, which is precisely when they would — on a pale image.
+    // Dark text gets a white halo, which is the same trick inverted.
+    var shadow = !media ? "none"
+      : dark ? "0 1px 12px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.45)"
+             : "0 1px 10px rgba(255,255,255,.9),0 1px 3px rgba(255,255,255,.75)";
     return [
       ':host{all:initial;display:block;contain:content}',
       '*{box-sizing:border-box;margin:0;padding:0}',
@@ -286,7 +294,20 @@
 
   function mount(host) {
     var layout = (host.getAttribute("data-layout") || "banner").toLowerCase();
+    // data-theme names the BACKGROUND: "dark" means a dark block, therefore white text.
+    // That reads backwards to most people — it was set to "light" on trlibrary.com by
+    // someone who wanted light-coloured text and got near-black on a dark section. So
+    // data-text is accepted as an unambiguous alias and wins when both are present:
+    // data-text="white" says what you actually want to see.
     var themeAttr = (host.getAttribute("data-theme") || "auto").toLowerCase();
+    var textAttr = (host.getAttribute("data-text") || "").toLowerCase();
+    if (textAttr) {
+      themeAttr = /^(white|light)$/.test(textAttr) ? "dark"
+                : /^(black|dark|ink)$/.test(textAttr) ? "light" : themeAttr;
+    }
+    // Spell it out the other way too, for anyone who finds these clearer.
+    if (themeAttr === "on-dark") themeAttr = "dark";
+    if (themeAttr === "on-light") themeAttr = "light";
     var accent = host.getAttribute("data-accent") || "";
     var align = (host.getAttribute("data-align") || "").toLowerCase();
     var count = Math.max(1, parseInt(host.getAttribute("data-count") || "3", 10));

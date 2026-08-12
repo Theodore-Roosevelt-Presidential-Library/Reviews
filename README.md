@@ -316,6 +316,19 @@ on white, cream, brand red or near-black. The accent is contrast-checked against
 background and falls back to the text colour if it would drop below 3:1, which is what the
 brand-red block needs.
 
+**Forcing a text colour: use `data-text`.** `data-text="white"` gives white text and gold
+stars; `data-text="dark"` gives near-black. It names the text, so there is nothing to get
+backwards. `data-theme` still works but names the *background* — `data-theme="dark"` means a
+dark block and therefore white text. That got read the other way round on the homepage, where
+`data-theme="light"` was set by someone wanting light-coloured text and produced near-black on
+a dark section.
+
+Worth knowing why detection didn't catch it: on that section **no ancestor within fourteen
+levels paints a background at all** — not a colour, not an image. Whatever makes the area dark
+sits somewhere the widget can't reach from its own subtree, so it falls through to white and
+chooses dark text. Auto-detection handles colour blocks and photo backgrounds; it cannot
+handle a background that isn't on an ancestor. When in doubt, state it.
+
 **Rotating layouts reserve a fixed height.** On load the widget renders every quote into a
 hidden probe inside the same container, takes the tallest, and pins the stage to it — so a
 one-line quote and a five-line quote occupy the same box and the rotation never moves the
