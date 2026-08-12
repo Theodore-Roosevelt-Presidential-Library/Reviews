@@ -203,8 +203,27 @@ def normalise(item, source):
         text=text,
         responded=bool(owner_reply),
         response_text=str(owner_reply) if owner_reply else None,
-        url=first_of(item, "reviewUrl", "url", "directUrl", "facebookUrl"),
+        url=review_url(item, source),
     )
+
+
+def review_url(item, source_key):
+    """A link to the individual review, not the listing.
+
+    Google and TripAdvisor hand one back directly and both are true deep links — the Google
+    `/maps/reviews/data=...` form opens that single review on its own. Yelp's actor returns
+    no URL at all, but Yelp permalinks are just the listing plus `?hrid=<review id>`, so one
+    can be built whenever the actor gives us an id under any of its several names.
+    """
+    direct = first_of(item, "reviewUrl", "url", "directUrl", "facebookUrl")
+    if direct:
+        return str(direct)
+    if source_key == "yelp":
+        hrid = first_of(item, "hrid", "reviewId", "id", "reviewID")
+        listing = (CONFIG["sources"].get("yelp") or {}).get("listing_url")
+        if hrid and listing:
+            return f"{listing}?hrid={hrid}"
+    return None
 
 
 def newest_stored_date(reviews, source):

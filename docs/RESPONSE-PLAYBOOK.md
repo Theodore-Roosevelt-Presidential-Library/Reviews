@@ -181,6 +181,24 @@ until the next deep refresh. And a reply left from a personal account rather tha
 Page or Business Profile will not be detected at all, because the platform does not
 attach it to the listing as an owner response.
 
+## Getting to a review from the queue
+
+Each item in the queue has two links, and they go to different places.
+
+**Open this review** is a deep link to that single review on the platform. Use it to read the
+review in context and see anything the queue truncated. Google's version opens that one review
+on its own — it is not the listing.
+
+**Reply on Google / TripAdvisor / Yelp** opens the owner tools, which is where a reply is
+actually posted. The platforms do not offer a link that opens a specific review *with the reply
+box already on it*, so this is one step short of that: open the owner tools, then find the
+review by the reviewer's name and date.
+
+**Yelp is the exception.** The scraper returns no per-review link, so those items show
+**Find on Yelp**, which opens the listing. As of the next collection run the collector will
+build a Yelp permalink whenever the actor supplies a review id, and the button will change on
+its own. There are currently five Yelp reviews in total, so this is small.
+
 ## Reviewing this policy
 
 Revisit quarterly, and immediately if any of these happen:

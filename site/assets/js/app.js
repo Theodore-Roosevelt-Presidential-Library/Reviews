@@ -592,11 +592,25 @@
     }
 
     if (opts.tier) {
+      // Two links that go to genuinely different places, and the old labels hid that.
+      // "Open Google" sounded like the main action but went to the Business Profile inbox,
+      // so it looked like the deep link was broken when it was sitting right next to it.
+      // Name the destination: one opens this review, the other opens the reply tool.
       h += '<div class="rev-tools">' +
         '<button class="btn" data-draft="' + esc(r.id) + '">Draft a reply</button>' +
+        (r.url
+          ? '<a class="btn" href="' + esc(r.url) + '" target="_blank" rel="noopener">' +
+            'Open this review ↗</a>'
+          : (src.listing_url
+              ? '<a class="btn" href="' + esc(src.listing_url) + '" target="_blank" ' +
+                'rel="noopener" title="' + esc(src.label) + ' gives us no link to the ' +
+                'individual review, so this opens the listing — find it by the reviewer\u2019s ' +
+                'name and date.">Find on ' + esc(src.label) + ' ↗</a>'
+              : "")) +
         (src.reply_url ? '<a class="btn" href="' + esc(src.reply_url) +
-          '" target="_blank" rel="noopener">Open ' + esc(src.label) + " ↗</a>" : "") +
-        (r.url ? '<a class="btn" href="' + esc(r.url) + '" target="_blank" rel="noopener">View review ↗</a>' : "") +
+          '" target="_blank" rel="noopener" title="Opens the ' + esc(src.label) +
+          ' owner tools, where replies are posted.">Reply on ' + esc(src.label) +
+          " ↗</a>" : "") +
         "</div>" +
         '<div class="draft" id="draft-' + esc(r.id) + '"><textarea id="ta-' + esc(r.id) + '"></textarea>' +
         '<div class="rev-tools"><button class="btn primary" data-copy="' + esc(r.id) + '">Copy</button></div>' +

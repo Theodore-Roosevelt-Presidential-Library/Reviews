@@ -415,6 +415,13 @@ as the analysable set — `data/snapshots/` keeps both.
 visits and legitimate; the dashboard reports them separately and only flags the low-rated
 ones. They are excluded from the response queue but counted everywhere else.
 
+**Review links are per-review, not per-listing.** Google's `/maps/reviews/data=...` URL is a
+true deep link — it opens that one review by itself, verified in a browser. TripAdvisor's
+`-r<id>-` URL is the same. Yelp's actor returns no URL, so `review_url()` builds one from the
+listing plus `?hrid=<id>` when the actor supplies an id, and falls back to the listing when it
+doesn't. Neither platform offers a link that opens a review *with the reply box on it*, so the
+queue also carries a separate link to the owner tools.
+
 **Google reviews have no titles.** The Maps actor returns the *place* name in a `title`
 field, which if taken at face value stamps "Theodore Roosevelt Presidential Library" across
 every Google review. The normaliser rejects any title matching the entity name.
