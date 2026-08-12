@@ -41,54 +41,49 @@ already stored, with a three-day overlap so late or edited reviews aren't missed
 
 ## Setup
 
-### 1. Repository secret
+### 1. Repository secrets
 
-| Secret | Where to get it |
-|---|---|
-| `APIFY_TOKEN` | apify.com → Settings → Integrations → API token |
-| `GEMINI_API_KEY` | Google Cloud project `civic-depth-505307-c4` — see below |
+Settings → Secrets and variables → Actions → New repository secret. A local `.env` is for
+your machine only — Actions cannot see it, so every key must exist in both places.
+
+| Secret | Required | Where to get it |
+|---|---|---|
+| `APIFY_TOKEN` | yes | apify.com → Settings → Integrations → API token |
+| `OPENAI_KEY` | yes | platform.openai.com → API keys. Name matches the local `.env`. |
+| `GEMINI_API_KEY` | no | Only if `analysis.provider` is switched back to `gemini` |
 
 Apify's free tier includes $5/month in credits and needs no card. At roughly $0.60 per 1,000
 reviews, daily incremental runs cost a small fraction of that.
 
-**Gemini key, one time. Create it in AI Studio, not the Cloud Console.**
+**The model provider is OpenAI**, pinned to `gpt-4.1-mini-2025-04-14`. Classification is
+about 6K input tokens a day, so ongoing cost is a couple of dollars a year. Reclassifying
+all 335 reviews from scratch cost a few cents.
 
-Google now requires an *authorization key* — an API key bound to a service account.
-Keys created in the Cloud Console are *standard* keys, and the API rejects them with
-"This API requires authentication with a service account-bound API key". Standard keys
-stop working entirely in September 2026. Only AI Studio mints auth keys.
-
-1. In [Cloud Console](https://console.cloud.google.com/apis/dashboard?project=civic-depth-505307-c4),
-   enable the **Generative Language API** on `civic-depth-505307-c4`.
-2. Go to [AI Studio](https://aistudio.google.com/api-keys) → **Dashboard** → **Projects**
-   → **Import projects** → pick `civic-depth-505307-c4`. AI Studio hides existing Cloud
-   projects until you import them, which is why the project may not appear at first.
-3. **API Keys** → **Create API key**, in that project. Every key AI Studio creates is an
-   auth key. Copy it.
-4. Add it as the `GEMINI_API_KEY` repository secret.
-
-If **Create API key** is greyed out with "You do not have permission to create a key in
-this project", you need `apikeys.keys.create`, `iam.serviceAccounts.create`, and
-`iam.serviceAccountApiKeyBindings.create` on the project — Project Editor or Owner covers
-all three. The key creation flow makes a service account behind the scenes, which is why
-it needs more than plain API-key permissions.
-
-The key is sent in the `x-goog-api-key` header, never a query string — a key in a URL
-leaks into proxy logs and CI output.
-
-Keep billing enabled on that project. The free tier exists but Google has cut its quotas
-twice, and a daily job should not depend on an allowance that can change without notice.
-At current volume this costs roughly **$1.40/year** — about 6K input and 800 output tokens
-a day against `gemini-2.5-flash` at $0.30/$2.50 per million.
+**Add a payment method, not just credit.** Credit alone leaves the account on free-tier
+rate limits — 50 requests per day, which the initial backfill exhausted. Daily incremental
+runs need only one or two requests so this does not bite in normal operation, but a full
+re-classification will stop halfway. `--upgrade` makes that resumable; a payment method
+makes it unnecessary.
 
 Verify before relying on it:
 
 ```bash
-GEMINI_API_KEY=... python3 collector/analyze.py --check
+OPENAI_KEY=... python3 collector/analyze.py --check
 ```
 
-That confirms the endpoint answers and the configured model is in your project's
-catalogue. The same check runs as its own workflow step on every collection.
+That sends a real one-word completion — not a catalogue lookup, which passed for a retired
+Gemini model that then 404'd on every batch. The same check runs as its own workflow step
+before any classification.
+
+**Switching provider** is a `config.json` edit under `analysis`, no code change:
+
+| Provider | Settings |
+|---|---|
+| OpenAI | `provider: openai`, `base_url: https://api.openai.com/v1`, `api_key_env: OPENAI_KEY` |
+| Gemini | `provider: gemini`, `api_key_env: GEMINI_API_KEY` — auth key from AI Studio, not the Cloud Console |
+| Groq / OpenRouter | `provider: openai_compatible` plus that vendor's `base_url` |
+| Ollama, in Actions | `provider: ollama`, `base_url: http://localhost:11434/v1` — see the "Analyse with a local model" workflow |
+| Off | `provider: rules` — deterministic keyword classification, honestly labelled |
 
 ### 2. Pages
 

@@ -20,9 +20,12 @@ permissions:
   pages: write
   id-token: write
 
+# One deployment at a time, but never cancel one that is already running — a half-finished
+# Pages deployment is how you end up serving a partial site. Queued runs are superseded;
+# in-flight ones are allowed to finish. This matches GitHub's own Pages template.
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -54,8 +57,18 @@ jobs:
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
 
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+
+      # Artifacts belong to the workflow *run*, not the attempt. Re-running just the
+      # deploy job therefore leaves the previous attempt's artifact in place and
+      # deploy-pages fails with "Multiple artifacts named github-pages were unexpectedly
+      # found". Naming it per attempt makes a re-run produce a fresh, unambiguous artifact.
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+
+      # v5 runs on node24; v4 runs on node20, which GitHub is deprecating.
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
