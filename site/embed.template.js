@@ -176,7 +176,11 @@
       '.probe{position:absolute;left:0;top:0;width:100%;visibility:hidden;',
       '  pointer-events:none;z-index:-1}',
       '.stage-host{position:relative}',
-      '.slide{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}',
+      // Centred in the reserved box, not pinned to its top. Reserving the tallest quote's
+      // height means a short one would otherwise sit high with a hole beneath it, which
+      // looks like a rendering fault rather than a deliberate space.
+      '.slide{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease;',
+      '  display:flex;flex-direction:column;justify-content:center}',
       '.slide.out{opacity:0;transform:translateY(-6px)}',
       '@media (prefers-reduced-motion:reduce){.slide{transition:none}}',
       // wall

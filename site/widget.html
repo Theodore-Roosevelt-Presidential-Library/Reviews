@@ -63,7 +63,10 @@
   <section>
     <h2>Banner</h2>
     <p class="note">One quote at a time, centred, rotating every eight seconds. For a full-width
-    band between page sections — the most common use, and the one with the most breathing room.</p>
+    band between page sections — the most common use, and the one with the most breathing room.
+    The block measures every quote on load and reserves the height of the tallest, so rotation
+    never nudges the rest of the page; short quotes sit centred in that space rather than pinned
+    to the top of it.</p>
     <div class="demo bg-cream">
       <div data-trpl-quotes data-layout="banner"></div>
     </div>
@@ -148,6 +151,7 @@
         <tr><td><code>data-accent</code></td><td>any CSS colour</td><td>Quote mark, stars and active dot. Defaults to brand red, or clay on dark.</td></tr>
         <tr><td><code>data-align</code></td><td><code>left</code> <code>center</code></td><td>Banner and card only. Default centre.</td></tr>
         <tr><td><code>data-count</code></td><td>a number</td><td>Wall only — how many quotes. Default 3.</td></tr>
+        <tr><td><code>data-height</code></td><td><code>fixed</code> <code>auto</code></td><td>Default <code>fixed</code>: the block reserves the height of its tallest quote, so rotating never moves the page. <code>auto</code> lets it hug each quote.</td></tr>
         <tr><td><code>data-interval</code></td><td>seconds, <code>0</code> to stop</td><td>Rotation speed. Default 8. <code>0</code> shows one fixed quote.</td></tr>
       </tbody>
     </table>

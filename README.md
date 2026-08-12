@@ -316,6 +316,15 @@ on white, cream, brand red or near-black. The accent is contrast-checked against
 background and falls back to the text colour if it would drop below 3:1, which is what the
 brand-red block needs.
 
+**Rotating layouts reserve a fixed height.** On load the widget renders every quote into a
+hidden probe inside the same container, takes the tallest, and pins the stage to it — so a
+one-line quote and a five-line quote occupy the same box and the rotation never moves the
+page. Measured rather than estimated from character counts, because the answer changes with
+the font, the column width and the viewport; it re-measures on resize and again once
+Source Serif 4 has actually loaded, since measuring in the fallback font comes up short by a
+line on narrow screens. Verified at 0.00 cumulative layout shift across a full rotation
+cycle. Short quotes are centred in the reserved space. Opt out with `data-height="auto"`.
+
 **The quotes are compiled into `embed.js`, not fetched.** A script tag has no same-origin
 restriction, so there are no CORS headers to configure between the two domains, no fetch to
 fail, and no state where the block renders empty. One request.
