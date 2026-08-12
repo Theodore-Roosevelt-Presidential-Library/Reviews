@@ -1,0 +1,2433 @@
+{
+  "generated": "2026-08-12",
+  "entity": "Theodore Roosevelt Presidential Library",
+  "excluded_from_windows": {
+    "count": 3,
+    "reason": "date is not day-precision, so the review cannot be placed in a window",
+    "reviews": [
+      {
+        "id": "google-2026-07-nm",
+        "source": "google",
+        "date": "2026-07"
+      },
+      {
+        "id": "google-2026-07-mariaelwan",
+        "source": "google",
+        "date": "2026-07"
+      },
+      {
+        "id": "google-2026-07-brentclair",
+        "source": "google",
+        "date": "2026-07"
+      }
+    ]
+  },
+  "all_time": {
+    "count": 32,
+    "rated_count": 32,
+    "average": 4.81,
+    "distribution": {
+      "1": 0,
+      "2": 0,
+      "3": 2,
+      "4": 2,
+      "5": 28
+    },
+    "by_source": {
+      "tripadvisor": 24,
+      "yelp": 5,
+      "google": 3
+    },
+    "unanswered": 32
+  },
+  "sources": {
+    "google": {
+      "label": "Google",
+      "reply_url": "https://business.google.com/reviews",
+      "listing_url": "https://www.google.com/maps/place/Theodore+Roosevelt+Presidential+Library/@46.9167713,-103.5486042,17z/data=!3m1!4b1!4m6!3m5!1s0x5325eb007ad0296f:0x588995e798312048!8m2!3d46.9167713!4d-103.5486042!16s%2Fg%2F11zc421vls"
+    },
+    "tripadvisor": {
+      "label": "TripAdvisor",
+      "reply_url": "https://www.tripadvisor.com/Owners",
+      "listing_url": "https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html"
+    },
+    "yelp": {
+      "label": "Yelp",
+      "reply_url": "https://biz.yelp.com",
+      "listing_url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "reply_url": "https://business.facebook.com",
+      "listing_url": "https://www.facebook.com/TRPresidentialLibrary/reviews"
+    }
+  },
+  "windows": {
+    "7": {
+      "days": 7,
+      "range": [
+        "2026-08-06",
+        "2026-08-12"
+      ],
+      "prior_range": [
+        "2026-07-30",
+        "2026-08-05"
+      ],
+      "current": {
+        "count": 6,
+        "rated_count": 6,
+        "average": 4.83,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 5
+        },
+        "pct_5_star": 83.3,
+        "pct_low": 0.0,
+        "by_source": {
+          "tripadvisor": 5,
+          "yelp": 1
+        },
+        "sentiment": {
+          "positive_with_criticism": 1,
+          "positive": 4,
+          "mixed": 1
+        },
+        "themes": {
+          "interactive_exhibits": 5,
+          "crowding": 2,
+          "food_beverage": 2,
+          "retail_pricing": 2,
+          "architecture": 2,
+          "accessibility": 1,
+          "queues": 1,
+          "retail": 1,
+          "capacity": 1,
+          "restrooms": 1,
+          "landscape": 1,
+          "boardwalk_trails": 1,
+          "families": 1
+        },
+        "unanswered": 6
+      },
+      "prior": {
+        "count": 4,
+        "rated_count": 4,
+        "average": 4.5,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 3
+        },
+        "pct_5_star": 75.0,
+        "pct_low": 25.0,
+        "by_source": {
+          "tripadvisor": 4
+        },
+        "sentiment": {
+          "positive": 3,
+          "negative": 1
+        },
+        "themes": {
+          "interactive_exhibits": 3,
+          "wayfinding_signage": 1,
+          "accessibility": 1,
+          "parking": 1,
+          "queues": 1,
+          "security_screening": 1,
+          "architecture": 1,
+          "landscape": 1,
+          "interpretation": 1,
+          "food_beverage": 1,
+          "dwell_time": 1
+        },
+        "unanswered": 4
+      },
+      "delta": {
+        "count": 2,
+        "average": 0.33,
+        "pct_5_star": 8.3,
+        "pct_low": -25.0
+      },
+      "theme_movement": [
+        {
+          "theme": "retail_pricing",
+          "current": 2,
+          "prior": 0,
+          "current_share": 33.3,
+          "prior_share": 0.0,
+          "change": 33.3
+        },
+        {
+          "theme": "crowding",
+          "current": 2,
+          "prior": 0,
+          "current_share": 33.3,
+          "prior_share": 0.0,
+          "change": 33.3
+        },
+        {
+          "theme": "food_beverage",
+          "current": 2,
+          "prior": 1,
+          "current_share": 33.3,
+          "prior_share": 25.0,
+          "change": 8.3
+        },
+        {
+          "theme": "architecture",
+          "current": 2,
+          "prior": 1,
+          "current_share": 33.3,
+          "prior_share": 25.0,
+          "change": 8.3
+        },
+        {
+          "theme": "interactive_exhibits",
+          "current": 5,
+          "prior": 3,
+          "current_share": 83.3,
+          "prior_share": 75.0,
+          "change": 8.3
+        }
+      ]
+    },
+    "30": {
+      "days": 30,
+      "range": [
+        "2026-07-14",
+        "2026-08-12"
+      ],
+      "prior_range": [
+        "2026-06-14",
+        "2026-07-13"
+      ],
+      "current": {
+        "count": 21,
+        "rated_count": 21,
+        "average": 4.71,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 17
+        },
+        "pct_5_star": 81.0,
+        "pct_low": 9.5,
+        "by_source": {
+          "tripadvisor": 16,
+          "yelp": 5
+        },
+        "sentiment": {
+          "positive_with_criticism": 2,
+          "positive": 15,
+          "mixed": 2,
+          "negative": 2
+        },
+        "themes": {
+          "interactive_exhibits": 14,
+          "food_beverage": 5,
+          "architecture": 5,
+          "crowding": 4,
+          "landscape": 4,
+          "dwell_time": 4,
+          "retail_pricing": 3,
+          "staff": 3,
+          "accessibility": 2,
+          "queues": 2,
+          "retail": 2,
+          "boardwalk_trails": 2,
+          "families": 2,
+          "parking": 2,
+          "interpretation": 2,
+          "value_for_money": 2,
+          "conservation_message": 2,
+          "timed_entry": 2,
+          "peer_comparison": 2,
+          "capacity": 1,
+          "restrooms": 1,
+          "wayfinding_signage": 1,
+          "security_screening": 1,
+          "walkup_expectations": 1,
+          "staff_training": 1,
+          "grounds_conduct": 1,
+          "sellouts": 1,
+          "visitor_flow": 1,
+          "water_availability": 1,
+          "historical_balance": 1,
+          "guided_tours": 1,
+          "media_driven_awareness": 1
+        },
+        "unanswered": 21
+      },
+      "prior": {
+        "count": 8,
+        "rated_count": 8,
+        "average": 5.0,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 8
+        },
+        "pct_5_star": 100.0,
+        "pct_low": 0.0,
+        "by_source": {
+          "tripadvisor": 8
+        },
+        "sentiment": {
+          "positive": 7,
+          "positive_with_criticism": 1
+        },
+        "themes": {
+          "interactive_exhibits": 8,
+          "dwell_time": 3,
+          "landscape": 3,
+          "value_for_money": 2,
+          "architecture": 2,
+          "families": 2,
+          "timed_entry": 2,
+          "ticket_pricing": 1,
+          "age_tiers": 1,
+          "guided_tours": 1,
+          "food_beverage": 1,
+          "boardwalk_trails": 1,
+          "drive_market": 1,
+          "security_screening": 1,
+          "international_visitor": 1
+        },
+        "unanswered": 8
+      },
+      "delta": {
+        "count": 13,
+        "average": -0.29,
+        "pct_5_star": -19.0,
+        "pct_low": 9.5
+      },
+      "theme_movement": [
+        {
+          "theme": "interactive_exhibits",
+          "current": 14,
+          "prior": 8,
+          "current_share": 66.7,
+          "prior_share": 100.0,
+          "change": -33.3
+        },
+        {
+          "theme": "crowding",
+          "current": 4,
+          "prior": 0,
+          "current_share": 19.0,
+          "prior_share": 0.0,
+          "change": 19.0
+        },
+        {
+          "theme": "landscape",
+          "current": 4,
+          "prior": 3,
+          "current_share": 19.0,
+          "prior_share": 37.5,
+          "change": -18.5
+        },
+        {
+          "theme": "dwell_time",
+          "current": 4,
+          "prior": 3,
+          "current_share": 19.0,
+          "prior_share": 37.5,
+          "change": -18.5
+        },
+        {
+          "theme": "timed_entry",
+          "current": 2,
+          "prior": 2,
+          "current_share": 9.5,
+          "prior_share": 25.0,
+          "change": -15.5
+        },
+        {
+          "theme": "value_for_money",
+          "current": 2,
+          "prior": 2,
+          "current_share": 9.5,
+          "prior_share": 25.0,
+          "change": -15.5
+        },
+        {
+          "theme": "families",
+          "current": 2,
+          "prior": 2,
+          "current_share": 9.5,
+          "prior_share": 25.0,
+          "change": -15.5
+        },
+        {
+          "theme": "retail_pricing",
+          "current": 3,
+          "prior": 0,
+          "current_share": 14.3,
+          "prior_share": 0.0,
+          "change": 14.3
+        },
+        {
+          "theme": "staff",
+          "current": 3,
+          "prior": 0,
+          "current_share": 14.3,
+          "prior_share": 0.0,
+          "change": 14.3
+        },
+        {
+          "theme": "food_beverage",
+          "current": 5,
+          "prior": 1,
+          "current_share": 23.8,
+          "prior_share": 12.5,
+          "change": 11.3
+        },
+        {
+          "theme": "peer_comparison",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "queues",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "accessibility",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "interpretation",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "parking",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "retail",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "conservation_message",
+          "current": 2,
+          "prior": 0,
+          "current_share": 9.5,
+          "prior_share": 0.0,
+          "change": 9.5
+        },
+        {
+          "theme": "boardwalk_trails",
+          "current": 2,
+          "prior": 1,
+          "current_share": 9.5,
+          "prior_share": 12.5,
+          "change": -3.0
+        },
+        {
+          "theme": "architecture",
+          "current": 5,
+          "prior": 2,
+          "current_share": 23.8,
+          "prior_share": 25.0,
+          "change": -1.2
+        }
+      ]
+    },
+    "60": {
+      "days": 60,
+      "range": [
+        "2026-06-14",
+        "2026-08-12"
+      ],
+      "prior_range": [
+        "2026-04-15",
+        "2026-06-13"
+      ],
+      "current": {
+        "count": 29,
+        "rated_count": 29,
+        "average": 4.79,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 25
+        },
+        "pct_5_star": 86.2,
+        "pct_low": 6.9,
+        "by_source": {
+          "tripadvisor": 24,
+          "yelp": 5
+        },
+        "sentiment": {
+          "positive_with_criticism": 3,
+          "positive": 22,
+          "mixed": 2,
+          "negative": 2
+        },
+        "themes": {
+          "interactive_exhibits": 22,
+          "architecture": 7,
+          "landscape": 7,
+          "dwell_time": 7,
+          "food_beverage": 6,
+          "crowding": 4,
+          "families": 4,
+          "value_for_money": 4,
+          "timed_entry": 4,
+          "retail_pricing": 3,
+          "boardwalk_trails": 3,
+          "staff": 3,
+          "accessibility": 2,
+          "queues": 2,
+          "retail": 2,
+          "parking": 2,
+          "security_screening": 2,
+          "interpretation": 2,
+          "conservation_message": 2,
+          "guided_tours": 2,
+          "peer_comparison": 2,
+          "capacity": 1,
+          "restrooms": 1,
+          "wayfinding_signage": 1,
+          "walkup_expectations": 1,
+          "staff_training": 1,
+          "grounds_conduct": 1,
+          "sellouts": 1,
+          "visitor_flow": 1,
+          "water_availability": 1,
+          "historical_balance": 1,
+          "media_driven_awareness": 1,
+          "ticket_pricing": 1,
+          "age_tiers": 1,
+          "drive_market": 1,
+          "international_visitor": 1
+        },
+        "unanswered": 29
+      },
+      "prior": {
+        "count": 0,
+        "rated_count": 0,
+        "average": null,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "pct_5_star": null,
+        "pct_low": null,
+        "by_source": {},
+        "sentiment": {},
+        "themes": {},
+        "unanswered": 0
+      },
+      "delta": {
+        "count": 29,
+        "average": null,
+        "pct_5_star": null,
+        "pct_low": null
+      },
+      "theme_movement": [
+        {
+          "theme": "interactive_exhibits",
+          "current": 22,
+          "prior": 0,
+          "current_share": 75.9,
+          "prior_share": 0,
+          "change": 75.9
+        },
+        {
+          "theme": "landscape",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "architecture",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "dwell_time",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "food_beverage",
+          "current": 6,
+          "prior": 0,
+          "current_share": 20.7,
+          "prior_share": 0,
+          "change": 20.7
+        },
+        {
+          "theme": "timed_entry",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "value_for_money",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "crowding",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "families",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "retail_pricing",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "staff",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "boardwalk_trails",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "guided_tours",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "security_screening",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "peer_comparison",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "queues",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "accessibility",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "interpretation",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "parking",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "retail",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "conservation_message",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        }
+      ]
+    },
+    "90": {
+      "days": 90,
+      "range": [
+        "2026-05-15",
+        "2026-08-12"
+      ],
+      "prior_range": [
+        "2026-02-14",
+        "2026-05-14"
+      ],
+      "current": {
+        "count": 29,
+        "rated_count": 29,
+        "average": 4.79,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 25
+        },
+        "pct_5_star": 86.2,
+        "pct_low": 6.9,
+        "by_source": {
+          "tripadvisor": 24,
+          "yelp": 5
+        },
+        "sentiment": {
+          "positive_with_criticism": 3,
+          "positive": 22,
+          "mixed": 2,
+          "negative": 2
+        },
+        "themes": {
+          "interactive_exhibits": 22,
+          "architecture": 7,
+          "landscape": 7,
+          "dwell_time": 7,
+          "food_beverage": 6,
+          "crowding": 4,
+          "families": 4,
+          "value_for_money": 4,
+          "timed_entry": 4,
+          "retail_pricing": 3,
+          "boardwalk_trails": 3,
+          "staff": 3,
+          "accessibility": 2,
+          "queues": 2,
+          "retail": 2,
+          "parking": 2,
+          "security_screening": 2,
+          "interpretation": 2,
+          "conservation_message": 2,
+          "guided_tours": 2,
+          "peer_comparison": 2,
+          "capacity": 1,
+          "restrooms": 1,
+          "wayfinding_signage": 1,
+          "walkup_expectations": 1,
+          "staff_training": 1,
+          "grounds_conduct": 1,
+          "sellouts": 1,
+          "visitor_flow": 1,
+          "water_availability": 1,
+          "historical_balance": 1,
+          "media_driven_awareness": 1,
+          "ticket_pricing": 1,
+          "age_tiers": 1,
+          "drive_market": 1,
+          "international_visitor": 1
+        },
+        "unanswered": 29
+      },
+      "prior": {
+        "count": 0,
+        "rated_count": 0,
+        "average": null,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "pct_5_star": null,
+        "pct_low": null,
+        "by_source": {},
+        "sentiment": {},
+        "themes": {},
+        "unanswered": 0
+      },
+      "delta": {
+        "count": 29,
+        "average": null,
+        "pct_5_star": null,
+        "pct_low": null
+      },
+      "theme_movement": [
+        {
+          "theme": "interactive_exhibits",
+          "current": 22,
+          "prior": 0,
+          "current_share": 75.9,
+          "prior_share": 0,
+          "change": 75.9
+        },
+        {
+          "theme": "landscape",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "architecture",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "dwell_time",
+          "current": 7,
+          "prior": 0,
+          "current_share": 24.1,
+          "prior_share": 0,
+          "change": 24.1
+        },
+        {
+          "theme": "food_beverage",
+          "current": 6,
+          "prior": 0,
+          "current_share": 20.7,
+          "prior_share": 0,
+          "change": 20.7
+        },
+        {
+          "theme": "timed_entry",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "value_for_money",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "crowding",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "families",
+          "current": 4,
+          "prior": 0,
+          "current_share": 13.8,
+          "prior_share": 0,
+          "change": 13.8
+        },
+        {
+          "theme": "retail_pricing",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "staff",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "boardwalk_trails",
+          "current": 3,
+          "prior": 0,
+          "current_share": 10.3,
+          "prior_share": 0,
+          "change": 10.3
+        },
+        {
+          "theme": "guided_tours",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "security_screening",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "peer_comparison",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "queues",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "accessibility",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "interpretation",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "parking",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "retail",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        },
+        {
+          "theme": "conservation_message",
+          "current": 2,
+          "prior": 0,
+          "current_share": 6.9,
+          "prior_share": 0,
+          "change": 6.9
+        }
+      ]
+    }
+  },
+  "triage": [
+    {
+      "id": "yelp-2026-07-26-mariaaimenj",
+      "source": "yelp",
+      "date": "2026-07-26",
+      "rating": 3,
+      "author": "Maria Aimen J.",
+      "title": null,
+      "text": "Unfortunately, we were not able to even visit the library, because, apparently, you had to buy tickets in advance.\nWe had parked our car, and went through security, then come to find out that you need to buy tickets to visit a library. I had no idea, no libraries near us do that. Nor do any libraries I've ever been to. Apparently all of the reviews that I read online did not mention that you had to purchase a ticket. I asked, how much it was, and one of the security girls had to ask the other one, who said it was $26 (check online if you want to confirm). I figured since we already drove up here, I would buy them, so I told her that I would be purchasing them for my family, and she said that they already had sold out yesterday. So that was a letdown.\n\nThe outdoor of the library was beautiful. You could tell that everything looks brand new. There were people singing near the rocking chairs, although they were singing pretty explicit things with families around. I'm not sure how it is with those people, but had my parents been with me, like theirs were with them, it would make me really uncomfortable to be with my parents and hear those songs.\nI would have given them five stars even if I wasn't able to go into the library if workers do not have to ask each other how much the price of the tickets are, and those explicit songs. On the plus side, the bathrooms were clean. They also had a water bottle refill fountain right by the bathrooms.\n\nBeautiful architecture but apparently all AI in there.",
+      "themes": [
+        "timed_entry",
+        "walkup_expectations",
+        "staff_training",
+        "grounds_conduct",
+        "sellouts"
+      ],
+      "sentiment": "negative",
+      "url": null,
+      "tier": "negative",
+      "sla_days": 3,
+      "age_days": 17,
+      "overdue_by": 14
+    },
+    {
+      "id": "ta-2026-08-05-luv2sing4u",
+      "source": "tripadvisor",
+      "date": "2026-08-05",
+      "rating": 3,
+      "author": "Luv2sing4U",
+      "title": "Educational experience but they're still working on some issues.",
+      "text": "The library is beautiful. The problem is getting to the library because the signage is so poorly done. Our friend requires a handicap parking space for which there was absolutely zero signs to indicate how to get there. We asked one of the employees where those parking spaces were and she said that the pavement is marked, but when people parked over them, no one else even realizes that they are there. Once you park, it is still quite a hike to get up to the entrance to the library. I only saw one or two shuttles that were available to take people who needed additional assistance to get from the limited parking area up to the entrance. After you get to the entrance you get in a line and wait to be sent through a freestanding scanner. The scanner later blew over & broke when a wind storm blew through. Once you're cleared to go in, there's another line to get in to go through to get your ticket scanned. Then you're given the opportunity to sign up with your wristband to be able to take pictures of yourself throughout the library. If you decide to go, I recommend planning a full day in order to stop and read every single display that they have. It's very interesting & educational but it's also very time-consuming and daunting, especially if there's large crowds. The observation of the four of us in our group decided that we much more enjoyed the Bush library we have been through in Texas.",
+      "themes": [
+        "wayfinding_signage",
+        "accessibility",
+        "parking",
+        "queues",
+        "security_screening"
+      ],
+      "sentiment": "negative",
+      "url": null,
+      "tier": "negative",
+      "sla_days": 3,
+      "age_days": 7,
+      "overdue_by": 4
+    },
+    {
+      "id": "ta-2026-07-11-davek",
+      "source": "tripadvisor",
+      "date": "2026-07-11",
+      "rating": 5,
+      "author": "Dave K",
+      "title": "Great time and fascinating.",
+      "text": "This presidential library was absolutely incredible! We visited with four adults and three kids, ages 6, 8, and 12, and every one of us was completely captivated. There was something to see, learn, and interact with around every corner, making it enjoyable for visitors of all ages. The exhibits are thoughtfully designed with fascinating displays and hands-on experiences that kept everyone engaged. We found ourselves wanting to stop and explore every room, but unfortunately we had to leave sooner than we wanted because we had other plans in Medora. This was easily one of the highlights of our trip, and it's one of those places you could visit more than once and still discover something new. We're already looking forward to coming back so we can spend more time taking it all in! My only negative is the fact that adults are ages 13 on up. Where in this world is a 13 yr old an adult? Kind of crappy or them to charge this much for. a 13 yr old.",
+      "themes": [
+        "interactive_exhibits",
+        "families",
+        "ticket_pricing",
+        "age_tiers"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": null,
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 32,
+      "overdue_by": 25
+    },
+    {
+      "id": "ta-2026-07-21-spokanic",
+      "source": "tripadvisor",
+      "date": "2026-07-21",
+      "rating": 4,
+      "author": "Spokanic",
+      "title": "The building steals the show",
+      "text": "An architectural and landscape architectural masterpiece that beautifully complements the Badlands.\n\nThe place is a shrine to TR, and exhibits gloss over some of his shortcomings (racism, imperialism) while underplaying some of his greatest achievements (trust busting, labor rights, land conservation, national parks). The building is all about the conservation ethos while exhibits dwell more on conquering Cuba, playing cowboy, adventuring in the Amazon—the Disney version of TR. But it's all pretty fun and engaging.",
+      "themes": [
+        "architecture",
+        "landscape",
+        "interpretation",
+        "historical_balance"
+      ],
+      "sentiment": "mixed",
+      "url": null,
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 22,
+      "overdue_by": 15
+    },
+    {
+      "id": "ta-2026-07-24-melpink5",
+      "source": "tripadvisor",
+      "date": "2026-07-24",
+      "rating": 5,
+      "author": "mel_pink5",
+      "title": "A true National treasure!",
+      "text": "Awesome! Just plain awesome. Know when you go to go through the museum in order, it mimics his life story. I think the premise was to get people to wind through a certain way, but the big gallery room kinda confuses the flow. You will move front to back, and side to side as you progress. I think everyone is just so new they are figuring out things.\n\nIn addition, the restaurant was closed for an event, and the gift shop only had $12 Cokes. There was one water fountain near the restrooms. They really need to rethink the needs of the customers when they are spending 3+ hours in the museum. Having water readily available, even if it is for purchase, is a must when you are in the Badlands.\n\nThere is ample outside space to explore, great walking paths, and rocking chairs to enjoy the view (just need more).\n\nParking filled up really fast, I hope they will develop more, and a shuttle from the far lots.\n\nAll in all, this experience is fantastic, it is terrific for kids, take your time, enjoy the story!",
+      "themes": [
+        "visitor_flow",
+        "food_beverage",
+        "water_availability",
+        "retail_pricing",
+        "parking",
+        "boardwalk_trails"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": null,
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 19,
+      "overdue_by": 12
+    },
+    {
+      "id": "ta-2026-08-09-phillipabukowski",
+      "source": "tripadvisor",
+      "date": "2026-08-09",
+      "rating": 4,
+      "author": "PhillipABukowski",
+      "title": "Overcrowded during peak season",
+      "text": "The library is a 10/10 experience but they're overselling the tickets for admission and the place is packed with bottlenecks at all of the interactive exhibits.\n\nIf you can come during \"off season\" it'll be absolutely amazing.\n\nAlso the gift shop is brutally overpriced. And the bathrooms are too small for the crowds. Beware.",
+      "themes": [
+        "crowding",
+        "capacity",
+        "retail_pricing",
+        "restrooms"
+      ],
+      "sentiment": "mixed",
+      "url": null,
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 3,
+      "overdue_by": -4
+    },
+    {
+      "id": "ta-2026-08-10-suburbanmom",
+      "source": "tripadvisor",
+      "date": "2026-08-10",
+      "rating": 5,
+      "author": "SuburbanMomof2kids",
+      "title": "It's more than a library",
+      "text": "Definitely a unique and fun experience. Once inside, the fresh wood furniture smell is evident. We got bracelets as part of the experience for interactive exploring. Make sure you use it to tap the many photo ops and seek and find animals to log your own personal online journal. Once you take your photo at the beginning, it's used to create these Theodore Roosevelt period, black and white portraits. Pretty cool. Each exhibit is educational and entertaining. Lots to see and take in. Very awe inspiring and showcased Roosevelt's accomplishments and contributions to America's greatness. He had so many inspiring quotes that were used throughout the library. It took us 3 hours easily and we don't think we covered all. Must visit before it gets too popular. It got very crowded as people came and stayed. Food wasn't great, maybe they will improve. Souvenirs were pricey even for a postcard. Surrounding canyon sights were magnificent. Glad we drove 4 hours from Mt Rushmore to get there.",
+      "themes": [
+        "interactive_exhibits",
+        "crowding",
+        "food_beverage",
+        "retail_pricing"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": null,
+      "tier": "positive_with_criticism",
+      "sla_days": 7,
+      "age_days": 2,
+      "overdue_by": -5
+    }
+  ],
+  "series": [
+    {
+      "date": "2026-02-13",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-14",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-19",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-20",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-21",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-24",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-26",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-02-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-01",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-05",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-06",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-08",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-09",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-10",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-11",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-13",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-14",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-19",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-20",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-21",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-24",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-26",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-29",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-30",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-03-31",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-01",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-05",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-06",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-08",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-09",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-10",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-11",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-13",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-14",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-19",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-20",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-21",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-24",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-26",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-29",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-04-30",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-01",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-05",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-06",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-08",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-09",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-10",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-11",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-13",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-14",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-19",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-20",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-21",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-24",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-26",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-29",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-30",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-05-31",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-01",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-05",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-06",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-08",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-09",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-10",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-11",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-13",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-14",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-19",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-20",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-21",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-24",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-26",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-29",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-06-30",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-01",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-05",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": null,
+      "trailing_30_count": 0
+    },
+    {
+      "date": "2026-07-06",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 1
+    },
+    {
+      "date": "2026-07-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 1
+    },
+    {
+      "date": "2026-07-08",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 2
+    },
+    {
+      "date": "2026-07-09",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 4
+    },
+    {
+      "date": "2026-07-10",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 5
+    },
+    {
+      "date": "2026-07-11",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 6
+    },
+    {
+      "date": "2026-07-12",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 7
+    },
+    {
+      "date": "2026-07-13",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 8
+    },
+    {
+      "date": "2026-07-14",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 10
+    },
+    {
+      "date": "2026-07-15",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 10
+    },
+    {
+      "date": "2026-07-16",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 10
+    },
+    {
+      "date": "2026-07-17",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 10
+    },
+    {
+      "date": "2026-07-18",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 12
+    },
+    {
+      "date": "2026-07-19",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 13
+    },
+    {
+      "date": "2026-07-20",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 15
+    },
+    {
+      "date": "2026-07-21",
+      "count": 1,
+      "average": 4.0,
+      "trailing_30_average": 4.94,
+      "trailing_30_count": 16
+    },
+    {
+      "date": "2026-07-22",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.94,
+      "trailing_30_count": 16
+    },
+    {
+      "date": "2026-07-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.94,
+      "trailing_30_count": 16
+    },
+    {
+      "date": "2026-07-24",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.94,
+      "trailing_30_count": 17
+    },
+    {
+      "date": "2026-07-25",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.94,
+      "trailing_30_count": 17
+    },
+    {
+      "date": "2026-07-26",
+      "count": 1,
+      "average": 3.0,
+      "trailing_30_average": 4.83,
+      "trailing_30_count": 18
+    },
+    {
+      "date": "2026-07-27",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.83,
+      "trailing_30_count": 18
+    },
+    {
+      "date": "2026-07-28",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.83,
+      "trailing_30_count": 18
+    },
+    {
+      "date": "2026-07-29",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.84,
+      "trailing_30_count": 19
+    },
+    {
+      "date": "2026-07-30",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.85,
+      "trailing_30_count": 20
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.85,
+      "trailing_30_count": 20
+    },
+    {
+      "date": "2026-08-01",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.86,
+      "trailing_30_count": 21
+    },
+    {
+      "date": "2026-08-02",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.86,
+      "trailing_30_count": 21
+    },
+    {
+      "date": "2026-08-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.86,
+      "trailing_30_count": 21
+    },
+    {
+      "date": "2026-08-04",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.86,
+      "trailing_30_count": 21
+    },
+    {
+      "date": "2026-08-05",
+      "count": 2,
+      "average": 4.0,
+      "trailing_30_average": 4.78,
+      "trailing_30_count": 23
+    },
+    {
+      "date": "2026-08-06",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 4.79,
+      "trailing_30_count": 24
+    },
+    {
+      "date": "2026-08-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.79,
+      "trailing_30_count": 24
+    },
+    {
+      "date": "2026-08-08",
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.79,
+      "trailing_30_count": 24
+    },
+    {
+      "date": "2026-08-09",
+      "count": 1,
+      "average": 4.0,
+      "trailing_30_average": 4.74,
+      "trailing_30_count": 23
+    },
+    {
+      "date": "2026-08-10",
+      "count": 2,
+      "average": 5.0,
+      "trailing_30_average": 4.75,
+      "trailing_30_count": 24
+    },
+    {
+      "date": "2026-08-11",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.74,
+      "trailing_30_count": 23
+    },
+    {
+      "date": "2026-08-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.73,
+      "trailing_30_count": 22
+    }
+  ],
+  "sla": {
+    "critical": 1,
+    "negative": 3,
+    "positive_with_criticism": 7,
+    "positive": 14
+  }
+}

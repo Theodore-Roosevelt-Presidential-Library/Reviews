@@ -1,2 +1,124 @@
-# Reviews
-Capture and analyze reviews on different platforms
+# TRPL Visitor Reviews
+
+Monitoring, sentiment tracking, and response triage for public reviews of the Theodore
+Roosevelt Presidential Library.
+
+**Dashboard:** https://reviews.labs.trlibrary.com
+
+Everything here is built from reviews that are already public. Review text is stored
+verbatim, and nothing in this repo is ever fabricated — an unknown value is `null`.
+
+---
+
+## How it works
+
+```
+ GitHub Actions (daily, 6am Central)
+   │
+   ├─ collect.py   Apify → normalise → merge into data/reviews.json
+   ├─ analyze.py   GitHub Models → themes + sentiment + narrative summary
+   └─ derive.py    rolling windows, deltas, theme movement, triage queue
+   │
+   └─→ commits data/  ──→  Pages deploy  ──→  static dashboard
+```
+
+No server and no database. The dashboard is one HTML file that reads generated JSON, so
+every number on screen is also a line in git history — you can diff any two days.
+
+Collection is incremental. Each source is asked only for reviews newer than the newest one
+already stored, with a three-day overlap so late or edited reviews aren't missed.
+
+---
+
+## Setup
+
+### 1. Repository secret
+
+| Secret | Where to get it |
+|---|---|
+| `APIFY_TOKEN` | apify.com → Settings → Integrations → API token |
+
+Apify's free tier includes $5/month in credits and needs no card. At roughly $0.60 per 1,000
+reviews, daily incremental runs cost a small fraction of that.
+
+`GITHUB_TOKEN` is provided automatically by Actions — GitHub Models needs no separate key.
+The workflow requests `models: read` permission for it.
+
+### 2. Pages
+
+Settings → Pages → Source: **GitHub Actions**. The custom domain comes from `CNAME`.
+Add a DNS `CNAME` record pointing `reviews.labs.trlibrary.com` at the Pages host.
+
+### 3. First run
+
+Actions → **Collect reviews** → Run workflow → check **full** to pull complete history.
+Subsequent scheduled runs are incremental.
+
+---
+
+## Layout
+
+```
+config.json                    sources, actor IDs, SLAs, window sizes
+collector/
+  common.py                    paths, config, the record contract
+  collect.py                   Apify fetch + normalise + merge
+  analyze.py                   themes/sentiment/summary, rules fallback
+  derive.py                    windows, deltas, triage, chart series
+data/
+  reviews.json                 the dataset
+  derived/metrics.json         everything the dashboard reads
+  derived/summary.json         narrative summary
+  snapshots/                   dated aggregates, one per run
+site/index.html                the dashboard
+docs/
+  RESPONSE-PLAYBOOK.md         tiers, SLAs, voice, templates
+  SCHEMA.md                    record format and theme vocabulary
+```
+
+## Running locally
+
+```bash
+export APIFY_TOKEN=...
+python3 collector/collect.py --dry-run     # fetch and report, write nothing
+python3 collector/analyze.py --no-model    # keyword rules, no network
+python3 collector/derive.py
+
+cd site && python3 -m http.server 8000     # needs data/ copied in, see pages.yml
+```
+
+---
+
+## Sources
+
+| Source | Method | Status |
+|---|---|---|
+| Google | Apify `compass/google-maps-reviews-scraper` | Active |
+| TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | Active |
+| Yelp | Apify `tri_angle/yelp-scraper` | Active |
+| Facebook | — | Disabled. Manual entry only. |
+
+**Google is on a bridge.** Apify is a stopgap while the Google Business Profile API access
+request is pending. That API is free, returns complete history, and — unlike any scraper —
+can post replies. Swapping to it is a change to `collect.py` and `config.json`, nothing more.
+Setup steps are in the TRPL working folder under `reviews/HOW-TO-COLLECT.md`.
+
+---
+
+## Known limits
+
+**Relative dates.** Google returns "a month ago" rather than a date for older reviews. Those
+records are stored with month precision and are deliberately excluded from every rolling
+window — a review that can't be placed on a timeline shouldn't sit on one. The dashboard
+shows the excluded count rather than hiding the discrepancy. The GBP API returns exact
+timestamps and resolves this.
+
+**Actor output drift.** Apify actors change their output shape without notice. The normaliser
+checks several plausible key names per field and falls back to `null`, so a rename degrades a
+field rather than corrupting the dataset. If a field goes empty across a whole run, that's the
+first thing to check.
+
+**This site is public.** The repo is public and GitHub Pages serves everything in it, so the
+triage queue and negative reviews are publicly visible. That was a deliberate call — the
+underlying reviews are public already. `robots.txt` disallows crawling and the page is marked
+`noindex`, which discourages search engines but stops nobody who has the URL.

@@ -1,0 +1,58 @@
+name: Collect reviews
+
+on:
+  schedule:
+    # 11:00 UTC = 6:00 AM Central. Runs before the team's day starts.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Ignore stored dates and re-pull every review"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect from sources
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          python3 collector/collect.py ${{ inputs.full && '--full' || '' }}
+
+      - name: Classify and summarise
+        env:
+          # GitHub Models is authenticated with the built-in token — no extra secret.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 collector/analyze.py
+
+      - name: Build derived metrics
+        run: python3 collector/derive.py
+
+      - name: Commit changes
+        run: |
+          git config user.name  "trpl-reviews-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No change in review data."
+          else
+            NEW=$(python3 -c "import json;print(len(json.load(open('data/reviews.json'))['reviews']))")
+            git commit -m "Reviews refresh $(date -u +%Y-%m-%d) — ${NEW} tracked"
+            git push
+          fi

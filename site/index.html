@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Visitor Reviews — Theodore Roosevelt Presidential Library</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#1c1a17; --muted:#6b645b; --faint:#98908480;
+    --paper:#faf8f4; --card:#fffefb; --line:#e4ded4;
+    --accent:#7a3e1d; --good:#4a6b3a; --warn:#b8860b; --bad:#9c3327;
+    --radius:10px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  a{color:var(--accent)}
+  header{border-bottom:1px solid var(--line);background:var(--card);padding:20px 24px}
+  .wrap{max-width:1180px;margin:0 auto}
+  h1{margin:0;font-size:19px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:13px;margin-top:3px}
+  main{padding:24px}
+  section{margin-bottom:32px}
+  h2{font-size:14px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);
+    margin:0 0 12px;font-weight:600}
+  .tabs{display:flex;gap:6px;margin:16px 0 0;flex-wrap:wrap}
+  .tab{padding:6px 14px;border:1px solid var(--line);background:var(--card);
+    border-radius:99px;cursor:pointer;font-size:13px;color:var(--muted)}
+  .tab[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .metric{font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+  .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .delta{font-size:12px;margin-top:5px}
+  .up{color:var(--good)} .down{color:var(--bad)} .flat{color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:600}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  .bar{height:7px;background:var(--accent);border-radius:99px;display:inline-block;min-width:2px}
+  .rev{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);
+    padding:16px;margin-bottom:12px}
+  .rev.critical{border-left:4px solid var(--bad)}
+  .rev.negative{border-left:4px solid var(--bad)}
+  .rev.positive_with_criticism{border-left:4px solid var(--warn)}
+  .rev-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .who{font-weight:600}
+  .meta{font-size:12px;color:var(--muted)}
+  .stars{color:var(--warn);letter-spacing:1px}
+  .body{margin:10px 0;white-space:pre-wrap}
+  .chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+  .chip{font-size:11px;background:var(--paper);border:1px solid var(--line);
+    border-radius:99px;padding:2px 9px;color:var(--muted)}
+  .chip.overdue{background:#fdeceb;border-color:#f0c6c2;color:var(--bad);font-weight:600}
+  .chip.due{background:#fdf6e3;border-color:#eddfae;color:#8a6d1f}
+  button.act{font-size:13px;padding:6px 12px;border:1px solid var(--line);background:var(--paper);
+    border-radius:6px;cursor:pointer;color:var(--ink)}
+  button.act:hover{background:var(--line)}
+  .drafts{margin-top:12px;border-top:1px dashed var(--line);padding-top:12px;display:none}
+  .drafts.open{display:block}
+  textarea{width:100%;min-height:110px;font:inherit;font-size:14px;padding:10px;
+    border:1px solid var(--line);border-radius:6px;background:var(--paper);resize:vertical}
+  .note{font-size:12px;color:var(--muted);margin-top:6px}
+  .banner{background:#fdf6e3;border:1px solid #eddfae;border-radius:var(--radius);
+    padding:12px 14px;font-size:13px;margin-bottom:20px}
+  .summary{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:var(--radius);padding:16px;line-height:1.65}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:18px 24px;
+    font-size:12px;color:var(--muted)}
+  .chartbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px;height:280px}
+  .empty{color:var(--muted);font-style:italic;padding:12px 0}
+  @media (max-width:640px){ .metric{font-size:24px} main{padding:16px} }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Visitor Reviews</h1>
+  <div class="sub" id="subtitle">Loading…</div>
+  <div class="tabs" id="windowTabs"></div>
+</div></header>
+
+<main class="wrap">
+  <div id="banner"></div>
+
+  <section>
+    <h2>Headline</h2>
+    <div class="grid" id="headline"></div>
+  </section>
+
+  <section id="summarySection" hidden>
+    <h2>What's happening</h2>
+    <div class="summary" id="summary"></div>
+  </section>
+
+  <section>
+    <h2>Rating trend — 30-day trailing average</h2>
+    <div class="chartbox"><canvas id="trendChart"></canvas></div>
+  </section>
+
+  <section>
+    <h2>Rating mix</h2>
+    <div class="card"><table id="distTable"></table></div>
+  </section>
+
+  <section>
+    <h2>Themes — movement vs the previous period</h2>
+    <div class="card"><table id="themeTable"></table></div>
+  </section>
+
+  <section>
+    <h2>Needs a response</h2>
+    <div id="triage"></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span id="footerNote"></span>
+</footer>
+
+<script>
+const STARS = n => n ? "★".repeat(n) + "☆".repeat(5 - n) : "—";
+const $ = id => document.getElementById(id);
+const esc = s => (s ?? "").toString()
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+let M = null, SUMMARY = null, WINDOW = "30", chart = null;
+
+// ---- Reply drafting -------------------------------------------------------
+// Deliberately a template, not generated prose. Anything published in the
+// Library's voice gets written by a person; this just removes the blank page.
+const OPENERS = {
+  critical: "Thank you for telling us about this — we're sorry your visit fell short.",
+  negative: "Thank you for the honest feedback, and we're sorry about",
+  positive_with_criticism: "Thank you for the kind words, and for flagging"
+};
+// Several themes describe the same underlying issue. Grouping them means a draft never
+// says the same thing twice in different words — at most one line per concept.
+const THEME_BUCKET = {
+  timed_entry:"ticketing", sellouts:"ticketing", walkup_expectations:"ticketing",
+  parking:"arrival", wayfinding_signage:"arrival", accessibility:"arrival",
+  crowding:"flow", queues:"flow", security_screening:"flow",
+  retail_pricing:"amenities", food_beverage:"amenities",
+  water_availability:"amenities", restrooms:"amenities",
+  staff_training:"staff"
+};
+const THEME_LINES = {
+  parking: "We're actively working on parking capacity and circulation on the site.",
+  wayfinding_signage: "Additional wayfinding signage is in progress.",
+  accessibility: "Accessible parking and drop-off are a priority fix for us, and we're addressing the signage that made them hard to find.",
+  crowding: "Summer has been busier than we projected. We're adjusting how we release timed-entry slots.",
+  queues: "We're working on entry flow to reduce the wait at the door.",
+  timed_entry: "All admission is timed-entry and dates do sell out — booking ahead at trlibrary.com/tickets is the surest way in.",
+  sellouts: "Dates are selling out well in advance. Booking ahead at trlibrary.com/tickets is the surest way in.",
+  walkup_expectations: "Admission is timed-entry and walk-up tickets often aren't available — we're making that clearer up front so no one makes the drive for nothing.",
+  retail_pricing: "We've shared your note on museum store pricing with that team.",
+  food_beverage: "We've passed your note along to the Salt + Scoria team.",
+  water_availability: "You're right that water needs to be easier to find — we're adding stations.",
+  restrooms: "We've noted the restroom capacity issue for our facilities team.",
+  staff_training: "We're tightening front-line training so staff can answer ticketing questions confidently.",
+  security_screening: "We're working to speed up the screening process at entry."
+};
+
+function draftReply(r){
+  const lines = [];
+  const themes = r.themes || [];
+  if (r.tier === "critical" || r.tier === "negative") {
+    lines.push(OPENERS[r.tier].endsWith("about")
+      ? OPENERS[r.tier] + " the trouble you ran into."
+      : OPENERS[r.tier]);
+  } else {
+    lines.push(OPENERS.positive_with_criticism + " what didn't work.");
+  }
+  const seen = new Set(), specific = [];
+  for (const t of themes){
+    const line = THEME_LINES[t];
+    if (!line) continue;
+    const bucket = THEME_BUCKET[t] || t;
+    if (seen.has(bucket)) continue;
+    seen.add(bucket);
+    specific.push(line);
+    if (specific.length === 2) break;
+  }
+  if (specific.length) lines.push(specific.join(" "));
+  lines.push("We'd genuinely like another chance to get it right — if you're back in the Badlands, please come see us.");
+  return lines.join("\n\n") + "\n\n— The team at the Theodore Roosevelt Presidential Library";
+}
+
+// ---- Rendering ------------------------------------------------------------
+function deltaHtml(value, {invert=false, suffix=""} = {}){
+  if (value === null || value === undefined) return `<div class="delta flat">no prior period</div>`;
+  if (Math.abs(value) < 0.005) return `<div class="delta flat">unchanged</div>`;
+  const good = invert ? value < 0 : value > 0;
+  const arrow = value > 0 ? "▲" : "▼";
+  return `<div class="delta ${good ? "up" : "down"}">${arrow} ${Math.abs(value)}${suffix} vs prior ${WINDOW} days</div>`;
+}
+
+function renderHeadline(){
+  const w = M.windows[WINDOW], c = w.current, d = w.delta, all = M.all_time;
+  const overdue = M.triage.filter(t => (t.overdue_by ?? 0) > 0).length;
+  $("headline").innerHTML = `
+    <div class="card">
+      <div class="label">Average — last ${WINDOW} days</div>
+      <div class="metric">${c.average ?? "—"}</div>
+      ${deltaHtml(d.average)}
+    </div>
+    <div class="card">
+      <div class="label">Reviews — last ${WINDOW} days</div>
+      <div class="metric">${c.count}</div>
+      ${deltaHtml(d.count)}
+    </div>
+    <div class="card">
+      <div class="label">5-star share</div>
+      <div class="metric">${c.pct_5_star !== null ? c.pct_5_star + "%" : "—"}</div>
+      ${deltaHtml(d.pct_5_star, {suffix:" pts"})}
+    </div>
+    <div class="card">
+      <div class="label">3-star or below</div>
+      <div class="metric">${c.pct_low !== null ? c.pct_low + "%" : "—"}</div>
+      ${deltaHtml(d.pct_low, {invert:true, suffix:" pts"})}
+    </div>
+    <div class="card">
+      <div class="label">Awaiting a reply</div>
+      <div class="metric" style="color:${overdue ? "var(--bad)" : "inherit"}">${M.triage.length}</div>
+      <div class="delta ${overdue ? "down" : "flat"}">${overdue} past our own SLA</div>
+    </div>
+    <div class="card">
+      <div class="label">All time</div>
+      <div class="metric">${all.average ?? "—"}</div>
+      <div class="delta flat">${all.count} reviews, all sources</div>
+    </div>`;
+}
+
+function renderDist(){
+  const c = M.windows[WINDOW].current, total = c.rated_count;
+  const rows = [5,4,3,2,1].map(s => {
+    const n = c.distribution[s] || 0;
+    const pct = total ? (100*n/total) : 0;
+    return `<tr>
+      <td style="width:70px">${STARS(s)}</td>
+      <td><span class="bar" style="width:${Math.max(pct*2.4, n?2:0)}px"></span></td>
+      <td class="num" style="width:60px">${n}</td>
+      <td class="num" style="width:70px;color:var(--muted)">${total ? pct.toFixed(0)+"%" : "—"}</td>
+    </tr>`;
+  }).join("");
+  const bySource = Object.entries(c.by_source)
+    .map(([k,v]) => `${M.sources[k]?.label ?? k} ${v}`).join(" · ") || "none";
+  $("distTable").innerHTML = `<tbody>${rows}</tbody>` +
+    `<tfoot><tr><td colspan="4" style="border:0;padding-top:12px;color:var(--muted);font-size:13px">
+      By source: ${esc(bySource)}</td></tr></tfoot>`;
+}
+
+function renderThemes(){
+  const moves = M.windows[WINDOW].theme_movement;
+  if (!moves.length){
+    $("themeTable").innerHTML = `<tbody><tr><td class="empty">Not enough reviews in this window to show movement.</td></tr></tbody>`;
+    return;
+  }
+  const rows = moves.slice(0, 14).map(m => {
+    const cls = m.change > 0 ? "down" : m.change < 0 ? "up" : "flat"; // more mentions = more noise
+    const sign = m.change > 0 ? "+" : "";
+    return `<tr>
+      <td>${esc(m.theme.replace(/_/g," "))}</td>
+      <td class="num">${m.current}</td>
+      <td class="num" style="color:var(--muted)">${m.prior}</td>
+      <td class="num">${m.current_share}%</td>
+      <td class="num ${cls}">${sign}${m.change} pts</td>
+    </tr>`;
+  }).join("");
+  $("themeTable").innerHTML = `
+    <thead><tr><th>Theme</th><th class="num">Now</th><th class="num">Prior</th>
+    <th class="num">Share</th><th class="num">Change</th></tr></thead><tbody>${rows}</tbody>`;
+}
+
+function renderTriage(){
+  const q = M.triage;
+  if (!q.length){ $("triage").innerHTML = `<div class="empty">Nothing waiting. Everything that needed a reply has one.</div>`; return; }
+  $("triage").innerHTML = q.map(r => {
+    const overdue = (r.overdue_by ?? 0) > 0;
+    const src = M.sources[r.source] || {};
+    return `<div class="rev ${r.tier}">
+      <div class="rev-head">
+        <div><span class="who">${esc(r.author ?? "Anonymous")}</span>
+          <span class="stars"> ${STARS(r.rating)}</span></div>
+        <div class="meta">${esc(src.label ?? r.source)} · ${esc(r.date ?? "undated")}</div>
+      </div>
+      ${r.title ? `<div class="meta" style="margin-top:4px"><em>${esc(r.title)}</em></div>` : ""}
+      <div class="body">${esc(r.text)}</div>
+      <div class="chips">
+        <span class="chip ${overdue ? "overdue" : "due"}">
+          ${overdue ? `${r.overdue_by}d overdue` : `due within ${r.sla_days}d`}</span>
+        ${(r.themes||[]).map(t => `<span class="chip">${esc(t.replace(/_/g," "))}</span>`).join("")}
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <button class="act" data-draft="${esc(r.id)}">Draft a reply</button>
+        ${src.reply_url ? `<a class="act" style="text-decoration:none;display:inline-block"
+          href="${esc(src.reply_url)}" target="_blank" rel="noopener">Open ${esc(src.label)} →</a>` : ""}
+      </div>
+      <div class="drafts" id="draft-${esc(r.id)}">
+        <textarea id="ta-${esc(r.id)}"></textarea>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <button class="act" data-copy="${esc(r.id)}">Copy</button>
+        </div>
+        <div class="note">A starting point, not a finished reply. Edit it before it goes out —
+          this is published in the Library's voice.</div>
+      </div>
+    </div>`;
+  }).join("");
+
+  $("triage").querySelectorAll("[data-draft]").forEach(b => b.onclick = () => {
+    const id = b.dataset.draft, box = $(`draft-${id}`), ta = $(`ta-${id}`);
+    if (!box.classList.contains("open")) ta.value = draftReply(M.triage.find(x => x.id === id));
+    box.classList.toggle("open");
+  });
+  $("triage").querySelectorAll("[data-copy]").forEach(b => b.onclick = async () => {
+    await navigator.clipboard.writeText($(`ta-${b.dataset.copy}`).value);
+    const t = b.textContent; b.textContent = "Copied"; setTimeout(() => b.textContent = t, 1400);
+  });
+}
+
+function renderChart(){
+  const days = parseInt(WINDOW, 10);
+  // Show roughly three windows of context so the selected period has something to sit against.
+  const pts = M.series.filter(p => p.trailing_30_count > 0).slice(-Math.max(days * 3, 60));
+  const ctx = $("trendChart");
+  if (chart) chart.destroy();
+  if (!pts.length){ ctx.parentElement.innerHTML = `<div class="empty">Not enough dated reviews yet to plot a trend.</div>`; return; }
+  chart = new Chart(ctx, {
+    type: "line",
+    data: { labels: pts.map(p => p.date), datasets: [
+      { label: "30-day trailing average", data: pts.map(p => p.trailing_30_average),
+        borderColor: "#7a3e1d", backgroundColor: "rgba(122,62,29,.07)",
+        fill: true, tension: .3, pointRadius: 0, borderWidth: 2, yAxisID: "y" },
+      { label: "Reviews per day", data: pts.map(p => p.count), type: "bar",
+        backgroundColor: "rgba(107,100,91,.22)", yAxisID: "y1" }
+    ]},
+    options: { responsive: true, maintainAspectRatio: false, interaction:{mode:"index",intersect:false},
+      scales: {
+        y:  { min: 3, max: 5, position: "left", title:{display:true,text:"Avg rating"},
+              grid:{color:"#e4ded4"} },
+        y1: { beginAtZero: true, position: "right", title:{display:true,text:"Reviews"},
+              grid:{display:false} },
+        x:  { ticks:{maxTicksLimit:8}, grid:{display:false} }
+      },
+      plugins: { legend: { labels:{boxWidth:12,font:{size:11}} } } }
+  });
+}
+
+function renderBanner(){
+  const parts = [];
+  const ex = M.excluded_from_windows;
+  if (ex && ex.count) parts.push(
+    `<strong>${ex.count} review${ex.count>1?"s":""} excluded from all windows.</strong>
+     ${esc(ex.reason)}. They still count toward the all-time figures.`);
+  const unanalysed = null;
+  if (!parts.length) { $("banner").innerHTML = ""; return; }
+  $("banner").innerHTML = `<div class="banner">${parts.join("<br>")}</div>`;
+}
+
+function render(){
+  renderBanner(); renderHeadline(); renderDist(); renderThemes(); renderTriage(); renderChart();
+  document.querySelectorAll("#windowTabs .tab")
+    .forEach(t => t.setAttribute("aria-pressed", String(t.dataset.w === WINDOW)));
+}
+
+async function boot(){
+  try {
+    const bust = `?v=${Date.now()}`;
+    M = await (await fetch(`./data/derived/metrics.json${bust}`)).json();
+    try { SUMMARY = await (await fetch(`./data/derived/summary.json${bust}`)).json(); } catch {}
+  } catch (e) {
+    $("subtitle").textContent = "Could not load data. Has the collector run yet?";
+    return;
+  }
+  $("subtitle").innerHTML =
+    `${esc(M.entity)} · data through ${esc(M.generated)} · ${M.all_time.count} reviews tracked`;
+  $("windowTabs").innerHTML = Object.keys(M.windows)
+    .sort((a,b) => a-b)
+    .map(w => `<button class="tab" data-w="${w}">Last ${w} days</button>`).join("");
+  $("windowTabs").querySelectorAll(".tab").forEach(t =>
+    t.onclick = () => { WINDOW = t.dataset.w; render(); });
+
+  if (SUMMARY && SUMMARY.text){
+    $("summarySection").hidden = false;
+    $("summary").textContent = SUMMARY.text;
+  }
+  // Only credit sources we actually hold reviews from.
+  const live = Object.keys(M.all_time.by_source)
+    .map(k => esc(M.sources[k]?.label ?? k));
+  $("footerNote").innerHTML =
+    `Generated ${esc(M.generated)} from public reviews on ${live.join(", ")}` +
+    `. Review text is stored verbatim. <a href="https://github.com/Theodore-Roosevelt-Presidential-Library/Reviews">Source and data</a>.`;
+  render();
+}
+boot();
+</script>
+</body>
+</html>

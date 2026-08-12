@@ -1,0 +1,81 @@
+{
+  "entity": {
+    "name": "Theodore Roosevelt Presidential Library",
+    "short_name": "TRPL",
+    "address": "3410 Chateau Rd, Medora, ND 58645",
+    "opened": "2026-07-04"
+  },
+  "site": {
+    "url": "https://reviews.labs.trlibrary.com",
+    "title": "Visitor Reviews"
+  },
+  "sources": {
+    "google": {
+      "enabled": true,
+      "label": "Google",
+      "apify_actor": "compass~google-maps-reviews-scraper",
+      "listing_url": "https://www.google.com/maps/place/Theodore+Roosevelt+Presidential+Library/@46.9167713,-103.5486042,17z/data=!3m1!4b1!4m6!3m5!1s0x5325eb007ad0296f:0x588995e798312048!8m2!3d46.9167713!4d-103.5486042!16s%2Fg%2F11zc421vls",
+      "input": {
+        "maxReviews": 2000,
+        "reviewsSort": "newest",
+        "language": "en",
+        "personalData": true
+      },
+      "incremental_field": "reviewsStartDate",
+      "reply_url": "https://business.google.com/reviews"
+    },
+    "tripadvisor": {
+      "enabled": true,
+      "label": "TripAdvisor",
+      "apify_actor": "maxcopell~tripadvisor-reviews",
+      "listing_url": "https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "input": {
+        "maxItemsPerQuery": 2000,
+        "scrapeReviewerInfo": true,
+        "reviewsLanguages": ["en"]
+      },
+      "incremental_field": "lastReviewDate",
+      "reply_url": "https://www.tripadvisor.com/Owners"
+    },
+    "yelp": {
+      "enabled": true,
+      "label": "Yelp",
+      "apify_actor": "tri_angle~yelp-scraper",
+      "listing_url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2",
+      "input": {
+        "maxImages": 0
+      },
+      "incremental_field": null,
+      "reply_url": "https://biz.yelp.com"
+    },
+    "facebook": {
+      "enabled": false,
+      "label": "Facebook",
+      "apify_actor": null,
+      "listing_url": "https://www.facebook.com/TRPresidentialLibrary/reviews",
+      "input": {},
+      "incremental_field": null,
+      "reply_url": "https://business.facebook.com",
+      "note": "Manual entry only. Facebook recommendations are binary, not starred."
+    }
+  },
+  "analysis": {
+    "provider": "github_models",
+    "model": "openai/gpt-4o-mini",
+    "endpoint": "https://models.github.ai/inference/chat/completions",
+    "batch_size": 8,
+    "max_input_tokens": 8000,
+    "fallback_to_rules": true
+  },
+  "triage": {
+    "critical_rating_at_or_below": 2,
+    "needs_response_at_or_below": 3,
+    "response_sla_days": {
+      "critical": 1,
+      "negative": 3,
+      "positive_with_criticism": 7,
+      "positive": 14
+    }
+  },
+  "windows": [7, 30, 60, 90]
+}

@@ -1,0 +1,61 @@
+{
+  "snapshot_date": "2026-08-11",
+  "collected_by": "Cowork (browser-assisted)",
+  "note": "Aggregate figures read directly off each platform's public listing on the snapshot date. These are the authoritative headline numbers; per-review detail lives in data/reviews.json.",
+  "platforms": {
+    "google": {
+      "listing_name": "Theodore Roosevelt Presidential Library",
+      "rating_displayed": 4.8,
+      "rating_computed": 4.78,
+      "review_count": 307,
+      "distribution": { "5": 274, "4": 14, "3": 8, "2": 6, "1": 5 },
+      "pct_5_star": 89.3,
+      "pct_1_or_2_star": 3.6,
+      "profile_views_lifetime": "150K",
+      "reviews_captured_full_text": 3,
+      "capture_complete": false,
+      "capture_note": "Google Maps blocks automated pagination of the review feed. Only the 3 reviews rendered by default were captured. Full history requires the Google Business Profile API or a manual export."
+    },
+    "tripadvisor": {
+      "listing_name": "Theodore Roosevelt Presidential Library",
+      "rating_displayed_header": 4.9,
+      "rating_displayed_review_panel": 4.8,
+      "rating_computed": 4.83,
+      "review_count": 24,
+      "review_count_header": 23,
+      "distribution": { "5": 21, "4": 2, "3": 1, "2": 0, "1": 0 },
+      "pct_5_star": 87.5,
+      "ranking": "#6 of 19 things to do in Medora",
+      "traveler_photos": 40,
+      "reviews_captured_full_text": 24,
+      "capture_complete": true,
+      "capture_note": "Header shows 4.9 (23 reviews) while the review panel shows 4.8 (24 reviews). TripAdvisor's header caches; the panel is current."
+    },
+    "yelp": {
+      "listing_name": "Theodore Roosevelt Presidential Library",
+      "rating_displayed": 4.6,
+      "rating_computed": 4.6,
+      "review_count": 5,
+      "distribution": { "5": 4, "4": 0, "3": 1, "2": 0, "1": 0 },
+      "pct_5_star": 80.0,
+      "photos": 15,
+      "reviews_captured_full_text": 5,
+      "capture_complete": true,
+      "capture_note": "Hours listed on Yelp show Fri 9:00 AM - 5:00 PM, which conflicts with the canonical Peak Summer schedule of Daily 9-6. Needs correction."
+    },
+    "facebook": {
+      "listing_name": "Theodore Roosevelt Presidential Library",
+      "page_url": "https://www.facebook.com/TRPresidentialLibrary",
+      "rating_displayed": null,
+      "review_count": null,
+      "reviews_captured_full_text": 0,
+      "capture_complete": false,
+      "capture_note": "Not collected. Cowork cannot access facebook.com. Recommendations/reviews must be read manually in Meta Business Suite and entered by hand."
+    }
+  },
+  "totals": {
+    "reviews_across_platforms": 336,
+    "reviews_with_full_text_captured": 32,
+    "blended_rating_estimate": 4.78
+  }
+}
