@@ -125,9 +125,13 @@ data/
   snapshots/                   dated aggregates, one per run
 site/
   index.html                   the dashboard shell
+  embed.template.js            source of the public quote widget
+  embed.js                     generated — quotes baked in, do not edit
+  widget.html                  layout preview and copy-paste snippets
   assets/css/main.css          TRPL tokens, shared with the Marketing Dashboard
   assets/js/app.js             tabs, filters, thread, reply drafting
   assets/img/logo.png          brand mark (from the Dashboard repo)
+  pullquotes.py                chooses the public quote excerpts, builds embed.js
 docs/
   RESPONSE-PLAYBOOK.md         tiers, SLAs, voice, templates
   SCHEMA.md                    record format and theme vocabulary
@@ -293,6 +297,65 @@ auditable is a legitimate choice, silently pretending to be a model is not.
 request is pending. That API is free, returns complete history, and — unlike any scraper —
 can post replies. Swapping to it is a change to `collect.py` and `config.json`, nothing more.
 Setup steps are in the TRPL working folder under `reviews/HOW-TO-COLLECT.md`.
+
+---
+
+## The public quote widget
+
+A rotating block of visitor quotes for **www.trlibrary.com**. Preview every layout at
+[/widget.html](https://reviews.labs.trlibrary.com/widget.html).
+
+```html
+<div data-trpl-quotes data-layout="banner"></div>
+<script src="https://reviews.labs.trlibrary.com/embed.js" async></script>
+```
+
+Four layouts — `banner`, `card`, `wall`, `inline` — each reading the background it was
+dropped onto and choosing light or dark text from its luminance, so the same snippet works
+on white, cream, brand red or near-black. The accent is contrast-checked against that
+background and falls back to the text colour if it would drop below 3:1, which is what the
+brand-red block needs.
+
+**The quotes are compiled into `embed.js`, not fetched.** A script tag has no same-origin
+restriction, so there are no CORS headers to configure between the two domains, no fetch to
+fail, and no state where the block renders empty. One request.
+
+**Three gates stand between a review and the homepage.** Selection is a model call, and a
+model asked politely not to pick something will sometimes pick it anyway — so the rules that
+matter are enforced in code:
+
+1. **Verbatim check.** Every excerpt must appear character-for-character in its source
+   review after whitespace normalisation. Anything that doesn't is discarded and logged,
+   never repaired. The model chooses where a quote starts and stops; it never writes one.
+2. **Deterministic screen.** Regex rejection for concessions and hedges (`even if`,
+   `although`, `only issue`, `would have liked`) and for off-limits subjects — registration,
+   email, photographs of visitors, prices, opening dates. Testing produced
+   *"outstanding, even if I might have a few quibbles with the museum's interpretations of
+   TR's career"* as a promotional quote: a criticism, on the subject the response playbook
+   routes to Tier 1, headed for the Library's own homepage. **A five-star rating does not
+   mean five-star sentences.**
+3. **Adversarial critic.** A second model pass instructed to reject on any criticism, typo,
+   or generic praise. It catches what regex can't — it cut *"Great used of historical
+   artifacts"* and *"The building is vet cool architecture"* for spelling. If the critic is
+   unreachable, its batch is held back rather than waved through.
+
+Of 60 candidates, 15 failed screening and 12 more were cut by the critic, leaving 18. That
+ratio is intentional. Rejecting a usable quote costs nothing.
+
+`data/pullquotes.json` is the pool, and it records what was rejected and why on the last run.
+To remove a quote, delete its object and run `pullquotes.py --rebuild`. Quotes are capped at
+three per `draw` so the rotation shows the range of reasons people are glad they came rather
+than the same reason eight times.
+
+Only five-star reviews dated after public opening are eligible; preview-visit reviews
+describe a building that wasn't finished. Attribution is first name plus last initial and the
+platform — these are people who wrote a review, not testimonial subjects who agreed to be
+quoted in marketing.
+
+**Before this goes live on www.trlibrary.com**, confirm that excerpting review text is
+consistent with each platform's current terms. I was unable to verify Google's, TripAdvisor's
+or Yelp's terms in this session and will not guess at them. Yelp is historically the most
+restrictive and contributes one quote; dropping it is a one-line filter in `eligible()`.
 
 ---
 

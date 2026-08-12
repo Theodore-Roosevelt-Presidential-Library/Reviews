@@ -86,6 +86,16 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 collector/analyze.py --all
 
+      # Refresh the public quote widget. Only considers reviews not already assessed, so a
+      # normal day is a couple of API calls. Failure here must not fail the run: the widget
+      # is already built and embedded, and yesterday's quotes are perfectly good.
+      - name: Refresh the public quote widget
+        continue-on-error: true
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 collector/pullquotes.py
+
       # Always regenerate derived files after a rebase. They are a pure function of
       # reviews.json, so this resolves any conflict in them without a manual merge.
       - name: Build derived metrics
@@ -97,7 +107,7 @@ jobs:
       - name: Commit changes
         run: |
           rm -f data/.promoted
-          git add data/
+          git add data/ site/embed.js
           if git diff --staged --quiet; then
             echo "No change in review data."
           else

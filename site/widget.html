@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Visitor quotes widget — TRPL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brand:#8B2E1F; --cream:#FAF7F2; --ink:#241C17; --line:#DDD3C4;
+    --sand:#EFE7DA; --deep:#1E1A17;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);
+       font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  header{padding:2.5rem 1.5rem 1rem;max-width:1100px;margin:0 auto}
+  h1{font-family:"Source Serif 4",Georgia,serif;font-size:1.9rem;margin:0 0 .4rem;font-weight:600}
+  .lede{color:#6B5D52;max-width:62ch;line-height:1.6;margin:0}
+  main{max-width:1100px;margin:0 auto;padding:0 1.5rem 5rem}
+  section{margin-top:3rem}
+  h2{font-family:"Source Serif 4",Georgia,serif;font-size:1.2rem;margin:0 0 .3rem;font-weight:600}
+  .note{color:#6B5D52;font-size:.875rem;margin:0 0 1rem;max-width:70ch;line-height:1.55}
+  .demo{padding:2.75rem 2rem;border-radius:8px;border:1px solid transparent}
+  .bg-white{background:#fff;border-color:var(--line)}
+  .bg-cream{background:var(--cream)}
+  .bg-sand{background:var(--sand)}
+  .bg-brand{background:var(--brand)}
+  .bg-deep{background:var(--deep)}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1rem}
+  .swatches .demo{padding:1.75rem 1.25rem}
+  .tag{display:inline-block;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;
+       color:#8A7A6C;margin-bottom:.5rem}
+  pre{background:#F5F1EA;border:1px solid var(--line);border-radius:6px;padding:.85rem 1rem;
+      overflow:auto;font-size:.78rem;line-height:1.55;margin:1rem 0 0}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  table{border-collapse:collapse;width:100%;font-size:.85rem;margin-top:.75rem}
+  th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:#8A7A6C;font-weight:600}
+  td code{background:#F5F1EA;padding:.1rem .3rem;border-radius:3px;font-size:.8em}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Visitor quotes widget</h1>
+  <p class="lede">Four layouts, each adapting to whatever background it lands on. Every quote is a
+  verbatim excerpt from a five-star review posted after opening day, chosen for whether it would
+  persuade someone to make the drive. Pick a layout, copy the snippet.</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Banner</h2>
+    <p class="note">One quote at a time, centred, rotating every eight seconds. For a full-width
+    band between page sections — the most common use, and the one with the most breathing room.</p>
+    <div class="demo bg-cream">
+      <div data-trpl-quotes data-layout="banner"></div>
+    </div>
+<pre><code>&lt;div data-trpl-quotes data-layout="banner"&gt;&lt;/div&gt;
+&lt;script src="https://reviews.labs.trlibrary.com/embed.js" async&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Card</h2>
+    <p class="note">The same rotation inside a bordered panel. Sits in a sidebar or a column
+    without needing a background block of its own.</p>
+    <div class="demo bg-white">
+      <div data-trpl-quotes data-layout="card" data-align="left"></div>
+    </div>
+<pre><code>&lt;div data-trpl-quotes data-layout="card" data-align="left"&gt;&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Wall</h2>
+    <p class="note">Three quotes at once, no rotation — motion in a grid is just noise. For a
+    "what visitors say" section on the Visit or Plan Your Trip pages. Set <code>data-count</code>
+    to change how many.</p>
+    <div class="demo bg-sand">
+      <div data-trpl-quotes data-layout="wall" data-count="3"></div>
+    </div>
+<pre><code>&lt;div data-trpl-quotes data-layout="wall" data-count="3"&gt;&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>Inline</h2>
+    <p class="note">A quiet rule-left quote for the flow of a page — a press page, a donor appeal,
+    an itinerary. Smallest footprint of the four.</p>
+    <div class="demo bg-white">
+      <div data-trpl-quotes data-layout="inline"></div>
+    </div>
+<pre><code>&lt;div data-trpl-quotes data-layout="inline"&gt;&lt;/div&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>On any colour block</h2>
+    <p class="note">The widget reads the background it was dropped onto and picks light or dark
+    text from its luminance. On dark blocks the accent lightens to a clay tone so it keeps
+    contrast without leaving the brand family. Nothing below is configured differently — all four
+    are the same snippet.</p>
+    <div class="swatches">
+      <div class="demo bg-white"><span class="tag">White</span>
+        <div data-trpl-quotes data-layout="inline"></div></div>
+      <div class="demo bg-cream"><span class="tag">Cream</span>
+        <div data-trpl-quotes data-layout="inline"></div></div>
+      <div class="demo bg-brand"><span class="tag" style="color:rgba(255,255,255,.6)">Brand red</span>
+        <div data-trpl-quotes data-layout="inline"></div></div>
+      <div class="demo bg-deep"><span class="tag" style="color:rgba(255,255,255,.5)">Near-black</span>
+        <div data-trpl-quotes data-layout="inline"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Options</h2>
+    <table>
+      <thead><tr><th>Attribute</th><th>Values</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><code>data-layout</code></td><td><code>banner</code> <code>card</code> <code>wall</code> <code>inline</code></td><td>Which of the four above. Default <code>banner</code>.</td></tr>
+        <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Override the background detection. Default <code>auto</code>, which is right almost always.</td></tr>
+        <tr><td><code>data-accent</code></td><td>any CSS colour</td><td>Quote mark, stars and active dot. Defaults to brand red, or clay on dark.</td></tr>
+        <tr><td><code>data-align</code></td><td><code>left</code> <code>center</code></td><td>Banner and card only. Default centre.</td></tr>
+        <tr><td><code>data-count</code></td><td>a number</td><td>Wall only — how many quotes. Default 3.</td></tr>
+        <tr><td><code>data-interval</code></td><td>seconds, <code>0</code> to stop</td><td>Rotation speed. Default 8. <code>0</code> shows one fixed quote.</td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:1.25rem">Several blocks can sit on one page; the script only
+    needs including once. Rotation pauses on hover, on keyboard focus, when the tab is hidden, when
+    the block scrolls out of view, and entirely for visitors who have asked for reduced motion.</p>
+  </section>
+
+</main>
+
+<script src="embed.js" async></script>
+</body>
+</html>

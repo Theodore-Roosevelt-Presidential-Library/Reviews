@@ -101,5 +101,12 @@
     "max_per_run": 1,
     "reanalyse_max_reviews": 2000,
     "note": "How the theme list grows. A subject visitors raise in min_reviews separate reviews spread over min_span_days becomes a real theme automatically. Every promotion re-labels the whole corpus so the new theme's history is real rather than starting at zero and faking a spike. Past reanalyse_max_reviews that re-label gets expensive, so the script reports instead of acting."
+  },
+  "pullquotes": {
+    "consider": 60,
+    "pool_size": 40,
+    "max_age_days": 540,
+    "note": "The public quote widget. Only 5-star reviews dated after opening are eligible. Every excerpt is verified as a verbatim substring of its review before it ships; anything that isn't is discarded and reported, never repaired.",
+    "max_per_draw": 3
   }
 }
