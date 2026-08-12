@@ -16,7 +16,7 @@
 | `author` | string | yes | As displayed. Public display names only — no emails, no attempts to identify people. |
 | `author_location` | string\|null | yes | As displayed |
 | `trip_type` | string\|null | no | `family` \| `couples` \| `friends` \| `solo` \| `business` |
-| `title` | string\|null | yes | TripAdvisor has titles; Google and Yelp do not |
+| `title` | string\|null | yes | TripAdvisor only. Google and Yelp reviews have no titles — if a source returns the venue name here, it is discarded. |
 | `text` | string | yes | **Verbatim.** No cleanup of spelling or grammar. |
 | `text_complete` | boolean | no | `false` when the platform truncated the visible text |
 | `themes` | array | yes | Controlled vocabulary below |

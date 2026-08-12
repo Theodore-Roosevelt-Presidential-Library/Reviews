@@ -32,7 +32,9 @@
       "input": {
         "maxItemsPerQuery": 2000,
         "scrapeReviewerInfo": true,
-        "reviewsLanguages": ["en"]
+        "reviewsLanguages": [
+          "en"
+        ]
       },
       "incremental_field": "lastReviewDate",
       "reply_url": "https://www.tripadvisor.com/Owners"
@@ -50,7 +52,7 @@
       "reply_url": "https://biz.yelp.com"
     },
     "facebook": {
-      "enabled": false,
+      "enabled": true,
       "label": "Facebook",
       "apify_actor": "apify~facebook-reviews-scraper",
       "listing_url": "https://www.facebook.com/TRPresidentialLibrary",
@@ -59,7 +61,7 @@
       },
       "incremental_field": null,
       "reply_url": "https://business.facebook.com",
-      "note": "Collection is wired and tested — the actor works, verified against other museum pages. It returns nothing for TRPL because Recommendations are switched off on the Page. Turn them on in Page Settings, confirm reviews appear publicly, then set enabled to true. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null."
+      "note": "Recommendations were switched on for the Page on 2026-08-12; before that the Page returned nothing at all. The tab starts empty and fills as visitors leave recommendations. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null — never convert one into a star count."
     }
   },
   "analysis": {
@@ -80,5 +82,10 @@
       "positive": 14
     }
   },
-  "windows": [7, 30, 60, 90]
+  "windows": [
+    7,
+    30,
+    60,
+    90
+  ]
 }

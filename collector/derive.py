@@ -12,6 +12,7 @@ numbers in git history — every run leaves an auditable record of what we belie
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 
+from brief import build as build_brief
 from common import CONFIG, DERIVED, load_reviews, write_json
 
 TRIAGE = CONFIG["triage"]
@@ -229,9 +230,15 @@ def main():
                                              key=lambda x: x.get("date") or "")],
         },
         "windows": windows,
-        "triage": triage(reviews, today_),
+        "triage": (queue := triage(reviews, today_)),
         "series": daily_series(reviews),
         "sla": TRIAGE["response_sla_days"],
+    }
+
+    # One brief per window, so switching the window switches the narrative with it.
+    payload["briefs"] = {
+        str(nn): build_brief(reviews, windows, queue, payload["pre_opening"], str(nn))
+        for nn in WINDOWS
     }
 
     write_json(DERIVED / "metrics.json", payload)

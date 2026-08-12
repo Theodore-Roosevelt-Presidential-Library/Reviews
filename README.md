@@ -65,12 +65,17 @@ collector/
   collect.py                   Apify fetch + normalise + merge
   analyze.py                   themes/sentiment/summary, rules fallback
   derive.py                    windows, deltas, triage, chart series
+  brief.py                     the executive summary shown at the top of the dashboard
 data/
   reviews.json                 the dataset
   derived/metrics.json         everything the dashboard reads
   derived/summary.json         narrative summary
   snapshots/                   dated aggregates, one per run
-site/index.html                the dashboard
+site/
+  index.html                   the dashboard shell
+  assets/css/main.css          TRPL tokens, shared with the Marketing Dashboard
+  assets/js/app.js             tabs, filters, thread, reply drafting
+  assets/img/logo.png          brand mark (from the Dashboard repo)
 docs/
   RESPONSE-PLAYBOOK.md         tiers, SLAs, voice, templates
   SCHEMA.md                    record format and theme vocabulary
@@ -96,20 +101,24 @@ cd site && python3 -m http.server 8000     # needs data/ copied in, see pages.ym
 | Google | Apify `compass/google-maps-reviews-scraper` | Active |
 | TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | Active |
 | Yelp | Apify `tri_angle/yelp-review-scraper` | Active |
-| Facebook | Apify `apify/facebook-reviews-scraper` | Wired but off — Recommendations disabled on the Page |
+| Facebook | Apify `apify/facebook-reviews-scraper` | Active — empty until visitors leave recommendations |
 
 **TripAdvisor required a one-time approval**, granted August 12, 2026. That actor requests
 full read/write access to the Apify account and Apify makes an account owner approve it by
 hand. If the account is ever rotated or recreated, this must be re-approved or every run
 returns `403 full-permission-actor-not-approved`.
 
-**Facebook is wired but disabled.** The actor works — verified against the Rock and Roll Hall
-of Fame and Field Museum pages, both of which return reviews with an `isRecommended` boolean.
-It returns nothing for TRPL because **Recommendations are switched off on the Page**. Turn
-them on in Page Settings, confirm reviews render publicly, then flip `enabled` to `true` in
-`config.json`. Nothing else needs to change: Facebook records store `recommends` (true/false)
-and leave `rating` null, so they never pollute the star distribution, and a
-"doesn't recommend" still routes into the response queue as negative.
+**Facebook Recommendations were switched on 2026-08-12.** Before that the Page setting
+"Allow others to view and leave reviews on your Page?" was off, and the Page returned nothing
+to any scraper — the Reviews tab did not exist. It is now live and empty, and will fill as
+visitors leave recommendations.
+
+Two things to know about the data. Recommendations are yes/no, not stars, so records carry
+`recommends` (true/false) and leave `rating` null — they never enter the star distribution,
+and a "doesn't recommend" routes into the response queue as negative. And per Facebook's own
+warning on that setting, **reviews are public, influence the Page rating, and cannot be
+deleted**. The rating and all existing reviews can be hidden again by switching the setting
+back off, but individual reviews cannot be removed.
 
 **Google is on a bridge.** Apify is a stopgap while the Google Business Profile API access
 request is pending. That API is free, returns complete history, and — unlike any scraper —
@@ -128,6 +137,10 @@ as the analysable set — `data/snapshots/` keeps both.
 **Pre-opening reviews.** Twenty reviews predate the July 4 public opening. Most are preview
 visits and legitimate; the dashboard reports them separately and only flags the low-rated
 ones. They are excluded from the response queue but counted everywhere else.
+
+**Google reviews have no titles.** The Maps actor returns the *place* name in a `title`
+field, which if taken at face value stamps "Theodore Roosevelt Presidential Library" across
+every Google review. The normaliser rejects any title matching the entity name.
 
 **Actor output drift.** Apify actors change their output shape without notice. The normaliser
 checks several plausible key names per field and falls back to `null`, so a rename degrades a

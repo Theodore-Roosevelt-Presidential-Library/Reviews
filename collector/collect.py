@@ -109,6 +109,26 @@ def first_of(item, *keys):
     return None
 
 
+ENTITY_NAME = (CONFIG["entity"]["name"] or "").strip().lower()
+
+
+def review_title(item):
+    """A review's own title, or None.
+
+    Google reviews have no titles, but the Maps actor puts the *place* name in a `title`
+    field. Taken at face value that stamps "Theodore Roosevelt Presidential Library" on
+    the top of all 306 Google reviews, which is noise dressed up as data. Only accept a
+    title that is actually distinct from the place we are collecting.
+    """
+    value = first_of(item, "reviewTitle", "title")
+    if not value:
+        return None
+    value = str(value).strip()
+    if not value or value.lower() == ENTITY_NAME:
+        return None
+    return value
+
+
 def normalise(item, source):
     """Map one Apify item onto the stored review contract.
 
@@ -179,7 +199,7 @@ def normalise(item, source):
         author=author,
         author_location=str(location) if location else None,
         trip_type=(str(first_of(item, "tripType", "travelType") or "").lower() or None),
-        title=first_of(item, "title", "reviewTitle"),
+        title=review_title(item),
         text=text,
         responded=bool(owner_reply),
         response_text=str(owner_reply) if owner_reply else None,
@@ -238,6 +258,16 @@ def collect_source(source_key, cfg, existing, token, full=False):
     payload = build_input(source_key, cfg, since)
     items = run_actor(cfg["apify_actor"], payload, token)
 
+    # Some actors report "nothing found" as a single sentinel object rather than an empty
+    # list. Treat those as no data, not as a review — otherwise an empty source looks
+    # like a source returning one unparseable row.
+    sentinels = [i for i in items if i.get("error") and not i.get("text")]
+    if sentinels:
+        for s in sentinels:
+            print(f"    actor reported: {s.get('error')} — {s.get('errorDescription')}",
+                  flush=True)
+        items = [i for i in items if i not in sentinels]
+
     records, skipped = [], 0
     for item in items:
         rec = normalise(item, source_key)
@@ -248,10 +278,17 @@ def collect_source(source_key, cfg, existing, token, full=False):
         records.append(rec)
 
     if not items:
-        # A clean run that returns nothing is not success — it usually means the input
-        # was shaped wrong. Say so loudly instead of reporting "0 new" and moving on.
-        print(f"  !! {cfg['label']}: actor succeeded but returned 0 items. "
-              f"Input sent: {json.dumps(payload)}", file=sys.stderr, flush=True)
+        has_history = any(r.get("source") == source_key for r in existing)
+        if has_history:
+            # We have stored reviews for this source, so an empty return means the input
+            # is probably shaped wrong. Say so loudly rather than reporting "0 new".
+            print(f"  !! {cfg['label']}: actor succeeded but returned 0 items, and we "
+                  f"hold prior reviews for this source. Input sent: {json.dumps(payload)}",
+                  file=sys.stderr, flush=True)
+        else:
+            # A source with no reviews yet is a normal state, not a fault. Facebook
+            # Recommendations were only switched on 2026-08-12 and start empty.
+            print(f"    no reviews yet on {cfg['label']} — nothing to collect", flush=True)
     elif skipped:
         print(f"    {skipped} item(s) skipped as empty", flush=True)
     return records

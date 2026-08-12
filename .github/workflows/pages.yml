@@ -31,7 +31,7 @@ jobs:
       - name: Assemble the site
         run: |
           mkdir -p _site
-          cp -r site/* _site/
+          cp -r site/. _site/
           # The dashboard reads its data from a path relative to itself.
           mkdir -p _site/data
           cp -r data/derived _site/data/
