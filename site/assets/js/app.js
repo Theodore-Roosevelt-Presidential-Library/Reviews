@@ -28,6 +28,22 @@
       .replace(/"/g, "&quot;");
   };
   var stars = function (n) { return n ? "★".repeat(n) + "☆".repeat(5 - n) : ""; };
+
+  /* Tone: -2..+2, read from the review text. Shown as a position on a track rather than
+     a number, because the useful information is "which way and how far", not the digit. */
+  var TONE_LABEL = { "-2": "Strongly negative", "-1": "Negative", "0": "Neutral",
+                     "1": "Positive", "2": "Strongly positive" };
+  function toneBar(t) {
+    if (t === null || t === undefined) return "";
+    var pct = ((t + 2) / 4) * 100;
+    var cls = t < 0 ? "t-neg" + Math.abs(t) : t > 0 ? "t-pos" + t : "t-0";
+    return '<div class="tone" title="Tone of the review text, judged separately from the star rating">' +
+      '<span class="tone-label">' + esc(TONE_LABEL[String(t)]) + "</span>" +
+      '<span class="tone-track" role="img" aria-label="Text tone: ' +
+        esc(TONE_LABEL[String(t)]) + '">' +
+      '<i class="tone-mid"></i>' +
+      '<i class="tone-dot ' + cls + '" style="left:' + pct + '%"></i></span></div>';
+  }
   var titleCase = function (t) { return t.replace(/_/g, " "); };
 
   // Highlight search hits. Runs on already-escaped text, and escapes the needle too, so
@@ -473,6 +489,8 @@
         (t === S.theme ? " ×" : "") + "</button>";
     });
     h += "</div>";
+
+    h += toneBar(r.tone);
 
     if (r.responded && r.response_text) {
       h += '<div class="rev-reply"><b>Our reply</b>' + esc(r.response_text) + "</div>";

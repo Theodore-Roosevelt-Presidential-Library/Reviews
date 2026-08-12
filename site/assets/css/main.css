@@ -433,16 +433,40 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
 }
 .brief-warn::before { content: '⚠ '; font-weight: 700; }
 
-/* The narrative uses the full card width. At 1600px a single column would be an
-   unreadable 200-character line, so it flows into columns instead — same height saved,
-   line length still readable. */
 .narrative {
   margin: 0; font-size: 15px; line-height: 1.7; color: var(--color-ink);
-  columns: 2; column-gap: 40px; column-rule: 1px solid var(--color-line);
   text-wrap: pretty;
 }
-@media (max-width: 1100px) { .narrative { columns: 1; } }
 .narrative-source {
   margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--color-line);
   font-size: 11.5px; color: var(--color-muted);
+}
+
+/* -------- Tone indicator --------
+   How the writing reads, negative to positive, independent of the star rating. Five
+   steps only — a finer scale would imply precision the model does not have. Display
+   only: it is not a filter and it never feeds a headline number. */
+.tone { display: flex; align-items: center; gap: 8px; margin-top: 9px; }
+.tone-label {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--color-muted); white-space: nowrap; min-width: 96px;
+}
+.tone-track {
+  position: relative; width: 132px; height: 5px; border-radius: 999px;
+  background: linear-gradient(to right, var(--color-bad) 0%, var(--color-line) 50%, var(--color-good) 100%);
+  opacity: .55;
+}
+.tone-dot {
+  position: absolute; top: 50%; width: 11px; height: 11px; border-radius: 50%;
+  transform: translate(-50%, -50%); border: 2px solid var(--color-bg-card);
+  box-shadow: 0 0 0 1px rgba(31,42,48,.18);
+}
+.tone-dot.t-neg2 { background: var(--color-bad); }
+.tone-dot.t-neg1 { background: var(--color-brand-soft); }
+.tone-dot.t-0    { background: var(--color-muted); }
+.tone-dot.t-pos1 { background: var(--color-sage); }
+.tone-dot.t-pos2 { background: var(--color-good); }
+.tone-mid {
+  position: absolute; left: 50%; top: -3px; width: 1px; height: 11px;
+  background: var(--color-line);
 }

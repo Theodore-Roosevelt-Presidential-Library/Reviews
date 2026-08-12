@@ -44,6 +44,13 @@ THEMES = [
 
 SENTIMENTS = ["positive", "positive_with_criticism", "mixed", "negative"]
 
+# How the writing reads, on a five-point scale. Deliberately coarse integers: a model
+# distinguishing 7.3 from 6.8 is inventing precision it does not have, and a decimal on a
+# dashboard invites people to trust it. Five steps is as fine as this can honestly go.
+TONE_MIN, TONE_MAX = -2, 2
+TONE_LABEL = {-2: "Strongly negative", -1: "Negative", 0: "Neutral",
+              1: "Positive", 2: "Strongly positive"}
+
 # Keyword fallback. Deliberately conservative — it is better to miss a theme than to
 # assert one that isn't there.
 RULES = {
@@ -93,6 +100,9 @@ SYSTEM_PROMPT = f"""You label visitor reviews for a presidential library.
 For each review return:
 - "themes": 1-5 values chosen ONLY from this list: {", ".join(THEMES)}
 - "sentiment": exactly one of {", ".join(SENTIMENTS)}
+- "tone": an integer from -2 to 2 for how the *writing* reads, independent of any star
+  rating: -2 strongly negative, -1 negative, 0 neutral or evenly balanced, 1 positive,
+  2 strongly positive. Judge the words the visitor chose, not the score they gave.
 
 Sentiment definitions:
 - positive: praise, no meaningful complaint
@@ -101,7 +111,7 @@ Sentiment definitions:
 - negative: dissatisfied overall
 
 Never invent a theme that is not in the list. If nothing fits, return an empty theme array.
-Reply with a JSON object: {{"results": [{{"id": "...", "themes": [...], "sentiment": "..."}}]}}
+Reply with a JSON object: {{"results": [{{"id": "...", "themes": [...], "sentiment": "...", "tone": 0}}]}}
 Return one entry per review, in the order given."""
 
 
@@ -157,15 +167,25 @@ def apply_analysis(review, result, answered=False):
     if sentiment not in SENTIMENTS:
         sentiment = None
 
+    tone = result.get("tone")
+    try:
+        tone = max(TONE_MIN, min(TONE_MAX, int(round(float(tone)))))
+    except (TypeError, ValueError):
+        tone = None
+
     if answered and sentiment:
         review["themes"] = themes          # may legitimately be []
         review["sentiment"] = sentiment
+        review["tone"] = tone
         review["analysis_source"] = "model"
         return
 
     review["themes"] = themes or rules_classify(review.get("text"))
     review["sentiment"] = sentiment or rules_sentiment(
         review.get("rating"), review.get("text"), review.get("recommends"))
+    # Rules cannot read tone from prose. Leave it null rather than deriving it from the
+    # star rating, which would just be the star rating wearing a different hat.
+    review["tone"] = tone
     review["analysis_source"] = "rules"
 
 
@@ -260,7 +280,7 @@ def main():
         pending = [r for r in reviews if r.get("analysis_source") != "model"]
     else:
         pending = [r for r in reviews
-                   if not r.get("themes") or not r.get("sentiment")]
+                   if not r.get("sentiment") or "tone" not in r]
     if args.limit:
         pending = pending[:args.limit]
     print(f"{len(pending)} review(s) to analyse", flush=True)
