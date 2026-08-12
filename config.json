@@ -40,12 +40,13 @@
     "yelp": {
       "enabled": true,
       "label": "Yelp",
-      "apify_actor": "tri_angle~yelp-scraper",
+      "apify_actor": "tri_angle~yelp-review-scraper",
       "listing_url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2",
       "input": {
-        "maxImages": 0
+        "maxReviewsPerUrl": 500,
+        "language": "en"
       },
-      "incremental_field": null,
+      "incremental_field": "dateFrom",
       "reply_url": "https://biz.yelp.com"
     },
     "facebook": {

@@ -94,9 +94,17 @@ cd site && python3 -m http.server 8000     # needs data/ copied in, see pages.ym
 | Source | Method | Status |
 |---|---|---|
 | Google | Apify `compass/google-maps-reviews-scraper` | Active |
-| TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | Active |
-| Yelp | Apify `tri_angle/yelp-scraper` | Active |
+| TripAdvisor | Apify `maxcopell/tripadvisor-reviews` | **Blocked** — needs one-time permission approval, see below |
+| Yelp | Apify `tri_angle/yelp-review-scraper` | Active |
 | Facebook | — | Disabled. Manual entry only. |
+
+**TripAdvisor needs a one-time approval.** That actor requests full access to the Apify
+account, which Apify requires an account owner to approve by hand. Until then every run
+returns `403 full-permission-actor-not-approved`. Approve or decline at
+https://console.apify.com/actors/Hvp4YfFGyLM635Q2F?approvePermissions=true — and note that
+"full access" means the actor can read and write everything in the Apify account, so this is
+a real consent decision, not a formality. TripAdvisor is 24 of 335 reviews; declining costs
+little.
 
 **Google is on a bridge.** Apify is a stopgap while the Google Business Profile API access
 request is pending. That API is free, returns complete history, and — unlike any scraper —
@@ -107,11 +115,14 @@ Setup steps are in the TRPL working folder under `reviews/HOW-TO-COLLECT.md`.
 
 ## Known limits
 
-**Relative dates.** Google returns "a month ago" rather than a date for older reviews. Those
-records are stored with month precision and are deliberately excluded from every rolling
-window — a review that can't be placed on a timeline shouldn't sit on one. The dashboard
-shows the excluded count rather than hiding the discrepancy. The GBP API returns exact
-timestamps and resolves this.
+**Review counts drift by one or two.** Google's listing showed 307 reviews; the actor
+returns 306. Platform-displayed totals include ratings the review feed doesn't always
+surface, and reviews get deleted. Treat the platform's own number as the headline and ours
+as the analysable set — `data/snapshots/` keeps both.
+
+**Pre-opening reviews.** Twenty reviews predate the July 4 public opening. Most are preview
+visits and legitimate; the dashboard reports them separately and only flags the low-rated
+ones. They are excluded from the response queue but counted everywhere else.
 
 **Actor output drift.** Apify actors change their output shape without notice. The normaliser
 checks several plausible key names per field and falls back to `null`, so a rename degrades a

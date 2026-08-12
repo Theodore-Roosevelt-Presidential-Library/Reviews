@@ -178,11 +178,51 @@ The dashboard surfaces the first two automatically.
 
 ---
 
+## The AI question
+
+This needs its own section because it is the most polarising thing in the building.
+
+The wristband, the AI-generated period portraits, and the AI Roosevelt are the single most
+praised feature in our reviews — and the single most common reason someone gives us one or
+two stars. A small, articulate minority finds it cheapening. The phrase "AI slop" appears in
+our reviews more than once. A related objection is about **data**: visitors are asked for a
+name, an email, and a photograph at entry, and some are uncomfortable with that.
+
+**How to respond**
+
+- Do not defend the technology or explain how it works. They understood it; they disliked it.
+- Say plainly that the AI stations are optional, that the original TR objects, films, and
+  traditional displays stand on their own, and that a visitor can skip registration entirely
+  and still see everything. This is true and it is the single most useful thing we can say.
+- On the data question, state what actually happens to a visitor's photo and email, and how
+  long it is kept. **Confirm the current retention policy before answering — do not guess.**
+- Never say "most visitors love it." It reads as dismissal.
+- Do not treat this as a tier-4 nuisance. It is the most likely subject of a critical
+  feature story about the Library, and our replies are the public record of how seriously
+  we took it.
+
+There is already a good reply on file — a July response to a three-star review that led with
+the stations being optional. That's the model. Reuse its logic, not its wording.
+
+---
+
 ## Where we're starting from
 
-As of the August 11, 2026 baseline: **336 reviews, 4.78 blended, and not one of them has a
-reply.** Both three-star reviews we've received describe fixable operational problems rather
-than the experience itself — signage and accessible parking in one, walk-up ticket
-expectations in the other. That is about the best possible position to start responding from.
+From the full dataset as of August 12, 2026: **335 reviews, 4.78 blended, one of which has a
+reply.** Sixty-four are in the response queue and fifty-nine of those are past the SLAs above.
 
-The first task under this policy is clearing that backlog.
+The critical set clusters into exactly three stories, which is unusually tractable:
+
+1. **Timed entry and walk-ups** — visitors driving long distances, arriving without tickets,
+   and being turned away or facing multi-hour waits. This produces our worst reviews and it
+   is a messaging problem more than an operations one.
+2. **The AI experience** — see the section above.
+3. **Crowding** — the only theme whose share is rising.
+
+Twenty reviews predate the July 4 public opening, averaging 4.4. Most are press, donor, and
+Founding Member preview visits and are entirely legitimate. Three low-rated ones from July
+1–2 are worth a look, but do not assume bad faith — check whether they attended a preview
+before treating them as anything else.
+
+The first task under this policy is clearing the backlog, starting with the eight critical
+items that have been waiting between six and thirty-two days.

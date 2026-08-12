@@ -83,12 +83,29 @@ def theme_movement(current, prior, min_mentions=2):
     return moves
 
 
+OPENED = CONFIG["entity"].get("opened")
+
+
+def is_pre_opening(r):
+    """True if the review predates public opening day.
+
+    Not the same as illegitimate. The Library ran press, donor, and Founding Member
+    previews before July 4, and most of these reviews describe real visits. Only the
+    low-rated ones are worth a human look, and even then the question is 'did this
+    person actually come to a preview?' — not an automatic removal request.
+    """
+    if not OPENED:
+        return False
+    d = to_date(r.get("date"))
+    return bool(d and d < date.fromisoformat(OPENED))
+
+
 def triage(reviews, today_):
     """Anything needing a human, ordered by how overdue it is."""
     sla = TRIAGE["response_sla_days"]
     queue = []
     for r in reviews:
-        if r.get("responded"):
+        if r.get("responded") or is_pre_opening(r):
             continue
         rating = r.get("rating")
         sentiment = r.get("sentiment")
@@ -192,6 +209,21 @@ def main():
         "sources": {k: {"label": v["label"], "reply_url": v.get("reply_url"),
                         "listing_url": v.get("listing_url")}
                     for k, v in CONFIG["sources"].items()},
+        "pre_opening": {
+            "opened": OPENED,
+            "note": "Dated before public opening. Most are press, donor, and Founding "
+                    "Member preview visits and are entirely legitimate. Only the "
+                    "low-rated ones below are worth a human look.",
+            "count": sum(1 for r in reviews if is_pre_opening(r)),
+            "average": (lambda rs: round(sum(rs) / len(rs), 2) if rs else None)(
+                [r["rating"] for r in reviews if is_pre_opening(r) and r.get("rating")]),
+            "needs_review": [{"id": r["id"], "source": r["source"], "date": r.get("date"),
+                              "rating": r.get("rating"), "author": r.get("author"),
+                              "text": r.get("text"), "url": r.get("url")}
+                             for r in sorted((x for x in reviews if is_pre_opening(x)
+                                              and (x.get("rating") or 5) <= 3),
+                                             key=lambda x: x.get("date") or "")],
+        },
         "windows": windows,
         "triage": triage(reviews, today_),
         "series": daily_series(reviews),

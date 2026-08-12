@@ -354,7 +354,17 @@ function renderBanner(){
   if (ex && ex.count) parts.push(
     `<strong>${ex.count} review${ex.count>1?"s":""} excluded from all windows.</strong>
      ${esc(ex.reason)}. They still count toward the all-time figures.`);
-  const unanalysed = null;
+  const pre = M.pre_opening;
+  if (pre && pre.count) {
+    const flagged = pre.needs_review || [];
+    let line = `<strong>${pre.count} reviews predate public opening (${esc(pre.opened)}),
+      averaging ${pre.average ?? "—"}.</strong> Mostly press, donor, and Founding Member previews.`;
+    if (flagged.length) line += ` ${flagged.length} of them ${flagged.length===1?"is":"are"}
+      rated 3 or below and worth a human look: ` +
+      flagged.map(r => esc(r.author ?? "Anonymous") + " (" + (r.rating ?? "—") + "★, " +
+                        esc(r.date) + ")").join("; ") + ".";
+    parts.push(line);
+  }
   if (!parts.length) { $("banner").innerHTML = ""; return; }
   $("banner").innerHTML = `<div class="banner">${parts.join("<br>")}</div>`;
 }

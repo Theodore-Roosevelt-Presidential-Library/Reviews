@@ -26,7 +26,8 @@ from common import CONFIG, DERIVED, load_reviews, save_reviews, today, write_jso
 A = CONFIG["analysis"]
 
 THEMES = [
-    "interactive_exhibits", "interpretation", "historical_balance", "guided_tours",
+    "interactive_exhibits", "ai_criticism", "data_privacy",
+    "interpretation", "historical_balance", "guided_tours",
     "visitor_flow", "dwell_time", "families", "peer_comparison", "conservation_message",
     "architecture", "landscape", "rooftop", "boardwalk_trails", "grounds_conduct",
     "crowding", "capacity", "queues", "timed_entry", "sellouts", "walkup_expectations",
@@ -58,6 +59,16 @@ RULES = {
     "staff": [r"\bstaff\b", r"\bemployee", r"\bfriendly\b"],
     "interactive_exhibits": [r"\binteractive\b", r"\bexhibit", r"\bwrist ?band\b",
                              r"\bbracelet\b", r"\bA\.?I\.?\b", r"\bhands.on\b"],
+    # The AI experience is the most polarising thing in the building. Praise for it lands
+    # under interactive_exhibits; this catches the objections, which are a distinct signal
+    # and were previously invisible in the theme counts.
+    "ai_criticism": [r"\bai slop\b", r"\bslop\b", r"\bgenerated\b.{0,25}\b(fake|creepy|cheap)\b",
+                     r"\b(too much|overuse|over-use|overly reliant|reliance on)\b.{0,15}\bai\b",
+                     r"\bai\b.{0,25}\b(disappointing|unnecessary|gimmick|off.?putting|cheapen)",
+                     r"\bnot\b.{0,15}\breal artifacts?\b"],
+    "data_privacy": [r"\bpersonal info", r"\bprivacy\b", r"\bmy (photo|picture|face)\b.{0,40}\b(taken|stored|used)\b",
+                     r"\b(entering|give|provide|hand over)\b.{0,20}\b(email|personal information)\b",
+                     r"\bfacial recognition\b", r"\bdata\b.{0,20}\b(collect|kept|stored)\b"],
     "architecture": [r"\barchitect", r"\bbuilding\b", r"\bdesign(ed)?\b"],
     "landscape": [r"\bbadlands\b", r"\bviews?\b", r"\blandscape\b", r"\bscenery\b"],
     "boardwalk_trails": [r"\bwalking paths?\b", r"\btrails?\b", r"\bboardwalk\b"],

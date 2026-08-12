@@ -9,6 +9,27 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((ROOT / "config.json").read_text())
 
+
+def _load_dotenv() -> None:
+    """Read KEY=VALUE pairs from a local .env for development runs.
+
+    .env is gitignored — never commit it. In Actions the values come from repository
+    secrets instead, and anything already in the environment wins over the file.
+    """
+    import os
+    path = ROOT / ".env"
+    if not path.exists():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        os.environ.setdefault(key.strip(), value.strip().strip("'\""))
+
+
+_load_dotenv()
+
 DATA = ROOT / "data"
 REVIEWS_PATH = DATA / "reviews.json"
 DERIVED = DATA / "derived"

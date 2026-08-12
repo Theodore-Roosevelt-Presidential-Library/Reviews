@@ -29,7 +29,7 @@
 Keep this list tight. A theme earns its place when it could drive a decision.
 
 **Experience**
-`interactive_exhibits` · `interpretation` · `historical_balance` · `guided_tours` ·
+`interactive_exhibits` · `ai_criticism` · `data_privacy` · `interpretation` · `historical_balance` · `guided_tours` ·
 `visitor_flow` · `dwell_time` · `families` · `peer_comparison` · `conservation_message`
 
 **Building and grounds**
