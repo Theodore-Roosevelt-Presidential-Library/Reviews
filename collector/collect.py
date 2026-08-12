@@ -22,7 +22,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 
 from common import (CONFIG, SNAPSHOTS, blank_record, load_reviews, make_id,
                     parse_date, save_reviews, today, write_json)
@@ -239,13 +239,21 @@ def build_input(source_key, cfg, since):
     return payload
 
 
-def collect_source(source_key, cfg, existing, token, full=False):
+def collect_source(source_key, cfg, existing, token, full=False, lookback=None):
     supports_incremental = bool(cfg.get("incremental_field"))
     since = None
     if not full and supports_incremental:
         newest = newest_stored_date(existing, source_key)
         if newest:
             since = (date.fromisoformat(newest) - timedelta(days=OVERLAP_DAYS)).isoformat()
+        # An owner reply is only visible by re-reading the review it sits on. A strictly
+        # incremental pull never revisits older reviews, so a reply posted today to a
+        # review from three weeks ago would never be seen and the response queue would
+        # nag the team about work they had already done. Periodically reach further back.
+        if lookback:
+            floor = (datetime.now(timezone.utc).date()
+                     - timedelta(days=lookback)).isoformat()
+            since = min(since, floor) if since else floor
 
     if since:
         mode = f"incremental since {since}"
@@ -377,6 +385,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", help="collect a single source key")
     ap.add_argument("--full", action="store_true", help="ignore stored dates")
+    ap.add_argument("--refresh-replies", action="store_true",
+                    help="force the deep look-back that picks up new owner replies")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -386,6 +396,27 @@ def main():
 
     doc = load_reviews()
     existing = doc["reviews"]
+
+    # Decide whether this run reaches back far enough to notice new owner replies.
+    # Cheap to do, and skipping it silently breaks the response queue.
+    cadence = CONFIG.get("reply_refresh", {})
+    lookback = None
+    if not args.full:
+        every = cadence.get("every_days", 7)
+        window = cadence.get("lookback_days", 120)
+        last = doc.get("last_reply_refresh")
+        due = args.refresh_replies or not last
+        if not due and last:
+            try:
+                due = (datetime.now(timezone.utc).date()
+                       - date.fromisoformat(last)).days >= every
+            except ValueError:
+                due = True
+        if due:
+            lookback = window
+            doc["last_reply_refresh"] = today()
+            print(f"reply refresh: re-reading the last {window} days to catch new "
+                  f"owner replies (runs every {every} days)", flush=True)
 
     targets = {k: v for k, v in CONFIG["sources"].items()
                if v.get("enabled") and v.get("apify_actor")}
@@ -397,7 +428,8 @@ def main():
     incoming, failures = [], []
     for key, cfg in targets.items():
         try:
-            incoming.extend(collect_source(key, cfg, existing, token, args.full))
+            incoming.extend(collect_source(key, cfg, existing, token,
+                                           args.full, lookback))
         except Exception as exc:  # one bad source must not lose the others
             print(f"  !! {cfg['label']} failed: {exc}", file=sys.stderr)
             failures.append(key)

@@ -37,6 +37,15 @@ every number on screen is also a line in git history — you can diff any two da
 Collection is incremental. Each source is asked only for reviews newer than the newest one
 already stored, with a three-day overlap so late or edited reviews aren't missed.
 
+**Replies are detected by re-reading, not by marking.** When someone replies on Google or
+TripAdvisor, the scraper returns that reply alongside the review and `responded` flips on
+the stored record. Nobody has to tick a box. But a strictly incremental pull never
+revisits older reviews, so a reply posted today to a three-week-old review would never be
+seen — and the response queue would keep nagging the team about work they had already
+done. Once every 7 days the collector therefore reaches back 120 days (`reply_refresh` in
+`config.json`) purely to catch those. Force it any time with
+`python3 collector/collect.py --refresh-replies`.
+
 ---
 
 ## Setup
@@ -108,6 +117,7 @@ collector/
   derive.py                    windows, deltas, triage, chart series
   brief.py                     the executive summary shown at the top of the dashboard
   validate.py                  pre-commit gate: parseable JSON, no conflict markers
+  llm.py                       model providers behind one interface, with preflight
 data/
   reviews.json                 the dataset
   derived/metrics.json         everything the dashboard reads

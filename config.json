@@ -88,5 +88,10 @@
     30,
     60,
     90
-  ]
+  ],
+  "reply_refresh": {
+    "every_days": 7,
+    "lookback_days": 120,
+    "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Once a week the collector reaches back this far so replies posted to older reviews are picked up and the response queue actually clears. Costs one deeper Apify pull per week."
+  }
 }

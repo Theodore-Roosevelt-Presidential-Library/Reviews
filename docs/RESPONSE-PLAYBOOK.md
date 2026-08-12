@@ -165,6 +165,22 @@ the scholarly team before we say a word.
 
 ---
 
+## How the dashboard knows you replied
+
+It re-reads the review. Google, TripAdvisor and Yelp all return the owner's response
+alongside the review text, so posting a reply on the platform is enough — there is no
+box to tick here, and no second system to keep in sync.
+
+The queue clears on the next collection: within a day for a recent review, within a week
+for an older one, because reply detection on older reviews rides on the weekly deep
+refresh. If you reply to something from a month ago and it is still showing in the queue
+tomorrow, that is expected — not a bug.
+
+Two consequences worth knowing. A reply posted and then deleted will show as answered
+until the next deep refresh. And a reply left from a personal account rather than the
+Page or Business Profile will not be detected at all, because the platform does not
+attach it to the listing as an owner response.
+
 ## Reviewing this policy
 
 Revisit quarterly, and immediately if any of these happen:
