@@ -246,19 +246,19 @@
           "change": 7.0
         },
         {
-          "theme": "families",
-          "current": 1,
-          "prior": 8,
-          "current_share": 4.2,
-          "prior_share": 11.0,
-          "change": -6.8
-        },
-        {
           "theme": "dwell_time",
           "current": 0,
           "prior": 5,
           "current_share": 0.0,
           "prior_share": 6.8,
+          "change": -6.8
+        },
+        {
+          "theme": "families",
+          "current": 1,
+          "prior": 8,
+          "current_share": 4.2,
+          "prior_share": 11.0,
           "change": -6.8
         },
         {
@@ -498,19 +498,19 @@
           "change": -2.5
         },
         {
-          "theme": "retail",
-          "current": 12,
-          "prior": 3,
-          "current_share": 5.2,
-          "prior_share": 2.9,
-          "change": 2.3
-        },
-        {
           "theme": "architecture",
           "current": 43,
           "prior": 17,
           "current_share": 18.6,
           "prior_share": 16.3,
+          "change": 2.3
+        },
+        {
+          "theme": "retail",
+          "current": 12,
+          "prior": 3,
+          "current_share": 5.2,
+          "prior_share": 2.9,
           "change": 2.3
         },
         {
@@ -546,27 +546,11 @@
           "change": -1.5
         },
         {
-<<<<<<< HEAD
           "theme": "food_beverage",
           "current": 14,
           "prior": 5,
           "current_share": 6.1,
           "prior_share": 4.8,
-=======
-          "theme": "value_for_money",
-          "current": 12,
-          "prior": 4,
-          "current_share": 5.2,
-          "prior_share": 3.8,
-          "change": 1.3
-        },
-        {
-          "theme": "retail_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 1.3,
-          "prior_share": 0.0,
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
           "change": 1.3
         },
         {
@@ -578,9 +562,6 @@
           "change": 1.3
         },
         {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
           "theme": "retail_pricing",
           "current": 3,
           "prior": 0,
@@ -595,14 +576,6 @@
           "current_share": 5.2,
           "prior_share": 3.8,
           "change": 1.3
-=======
->>>>>>> Stashed changes
-          "theme": "food_beverage",
-          "current": 14,
-          "prior": 5,
-          "current_share": 6.1,
-          "prior_share": 4.8,
-          "change": 1.3
         },
         {
           "theme": "landscape",
@@ -611,7 +584,6 @@
           "current_share": 11.3,
           "prior_share": 12.5,
           "change": -1.2
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
         },
         {
           "theme": "queues",
@@ -622,15 +594,7 @@
           "change": -1.2
         },
         {
-          "theme": "landscape",
-          "current": 26,
-          "prior": 13,
-          "current_share": 11.3,
-          "prior_share": 12.5,
-          "change": -1.2
-        },
-        {
-          "theme": "data_privacy",
+          "theme": "peer_comparison",
           "current": 2,
           "prior": 0,
           "current_share": 0.9,
@@ -638,7 +602,7 @@
           "change": 0.9
         },
         {
-          "theme": "peer_comparison",
+          "theme": "data_privacy",
           "current": 2,
           "prior": 0,
           "current_share": 0.9,
@@ -678,15 +642,6 @@
           "change": 0.2
         },
         {
-          "theme": "accessibility",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
-<<<<<<< HEAD
           "theme": "security_screening",
           "current": 2,
           "prior": 1,
@@ -695,14 +650,12 @@
           "change": -0.1
         },
         {
-=======
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
-          "theme": "families",
-          "current": 29,
-          "prior": 13,
-          "current_share": 12.6,
-          "prior_share": 12.5,
-          "change": 0.1
+          "theme": "accessibility",
+          "current": 2,
+          "prior": 1,
+          "current_share": 0.9,
+          "prior_share": 1.0,
+          "change": -0.1
         },
         {
           "theme": "wayfinding_signage",
@@ -713,31 +666,12 @@
           "change": -0.1
         },
         {
-<<<<<<< Updated upstream
           "theme": "families",
           "current": 29,
           "prior": 13,
           "current_share": 12.6,
           "prior_share": 12.5,
           "change": 0.1
-        },
-        {
-          "theme": "security_screening",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
-        },
-        {
-=======
->>>>>>> Stashed changes
-          "theme": "accessibility",
-          "current": 2,
-          "prior": 1,
-          "current_share": 0.9,
-          "prior_share": 1.0,
-          "change": -0.1
         }
       ]
     },
@@ -897,7 +831,7 @@
           "change": 4.8
         },
         {
-          "theme": "retail",
+          "theme": "staff",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -905,7 +839,7 @@
           "change": 4.5
         },
         {
-          "theme": "staff",
+          "theme": "retail",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -929,31 +863,6 @@
           "change": 3.3
         },
         {
-<<<<<<< Updated upstream
-          "theme": "conservation_message",
-=======
-<<<<<<< HEAD
-          "theme": "queues",
-=======
-          "theme": "conservation_message",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "parking",
->>>>>>> Stashed changes
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-<<<<<<< Updated upstream
           "theme": "queues",
           "current": 10,
           "prior": 0,
@@ -962,9 +871,15 @@
           "change": 3.0
         },
         {
-=======
->>>>>>> Stashed changes
           "theme": "parking",
+          "current": 10,
+          "prior": 0,
+          "current_share": 3.0,
+          "prior_share": 0,
+          "change": 3.0
+        },
+        {
+          "theme": "conservation_message",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -1012,8 +927,7 @@
           "change": 1.2
         },
         {
-<<<<<<< Updated upstream
-          "theme": "wayfinding_signage",
+          "theme": "security_screening",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1021,10 +935,7 @@
           "change": 0.9
         },
         {
-          "theme": "retail_pricing",
-=======
           "theme": "ticket_pricing",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1032,11 +943,7 @@
           "change": 0.9
         },
         {
-<<<<<<< HEAD
           "theme": "accessibility",
-=======
-          "theme": "retail_pricing",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1052,37 +959,7 @@
           "change": 0.9
         },
         {
-          "theme": "security_screening",
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "ticket_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "accessibility",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
           "theme": "retail_pricing",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1090,19 +967,7 @@
           "change": 0.9
         },
         {
-<<<<<<< Updated upstream
-          "theme": "ticket_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "accessibility",
-=======
           "theme": "wayfinding_signage",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1283,7 +1148,7 @@
           "change": 4.8
         },
         {
-          "theme": "retail",
+          "theme": "staff",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -1291,7 +1156,7 @@
           "change": 4.5
         },
         {
-          "theme": "staff",
+          "theme": "retail",
           "current": 15,
           "prior": 0,
           "current_share": 4.5,
@@ -1315,31 +1180,6 @@
           "change": 3.3
         },
         {
-<<<<<<< Updated upstream
-          "theme": "conservation_message",
-=======
-<<<<<<< HEAD
-          "theme": "queues",
-=======
-          "theme": "conservation_message",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-          "theme": "parking",
->>>>>>> Stashed changes
-          "current": 10,
-          "prior": 0,
-          "current_share": 3.0,
-          "prior_share": 0,
-          "change": 3.0
-        },
-        {
-<<<<<<< Updated upstream
           "theme": "queues",
           "current": 10,
           "prior": 0,
@@ -1348,9 +1188,15 @@
           "change": 3.0
         },
         {
-=======
->>>>>>> Stashed changes
           "theme": "parking",
+          "current": 10,
+          "prior": 0,
+          "current_share": 3.0,
+          "prior_share": 0,
+          "change": 3.0
+        },
+        {
+          "theme": "conservation_message",
           "current": 10,
           "prior": 0,
           "current_share": 3.0,
@@ -1398,8 +1244,7 @@
           "change": 1.2
         },
         {
-<<<<<<< Updated upstream
-          "theme": "wayfinding_signage",
+          "theme": "security_screening",
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1407,10 +1252,7 @@
           "change": 0.9
         },
         {
-          "theme": "retail_pricing",
-=======
           "theme": "ticket_pricing",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1418,11 +1260,7 @@
           "change": 0.9
         },
         {
-<<<<<<< HEAD
           "theme": "accessibility",
-=======
-          "theme": "retail_pricing",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1438,37 +1276,7 @@
           "change": 0.9
         },
         {
-          "theme": "security_screening",
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-=======
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "ticket_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "accessibility",
->>>>>>> 466b17ed2ad275e97dc857e9d563a8d209a07366
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
           "theme": "retail_pricing",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
@@ -1476,19 +1284,7 @@
           "change": 0.9
         },
         {
-<<<<<<< Updated upstream
-          "theme": "ticket_pricing",
-          "current": 3,
-          "prior": 0,
-          "current_share": 0.9,
-          "prior_share": 0,
-          "change": 0.9
-        },
-        {
-          "theme": "accessibility",
-=======
           "theme": "wayfinding_signage",
->>>>>>> Stashed changes
           "current": 3,
           "prior": 0,
           "current_share": 0.9,
