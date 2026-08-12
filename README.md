@@ -162,16 +162,25 @@ warning on that setting, **reviews are public, influence the Page rating, and ca
 deleted**. The rating and all existing reviews can be hidden again by switching the setting
 back off, but individual reviews cannot be removed.
 
-**What is generated vs. what is written.** Worth being precise, because "AI-powered" is
-doing no work here at present:
+**What is generated vs. what is written.**
 
 | Piece | Where it comes from |
 |---|---|
-| Theme vocabulary (39 themes) | Hand-authored, `analyze.py`. Fixed list — the model chooses from it, never adds to it. |
-| Theme + sentiment per review | The configured model, falling back to keyword rules. Check `classified_by` in `summary.json` for the actual split on any given run. |
-| Executive brief wording | Hand-written sentence templates, `brief.py`. |
-| Which facts fill the brief, all figures, theme ranking | Computed from the data on every run. |
-| Narrative summary (`summary.json`) | Model only. Currently `null` — has never been produced. |
+| Theme vocabulary (39 themes) | Hand-authored in `analyze.py`. Fixed — the model picks from it, never adds to it. |
+| Theme + sentiment + tone per review | The model. All 335 reviews carry `analysis_source: "model"`; check `classified_by` in `summary.json` for the split on any run. |
+| "What visitors are saying" narrative | The model, one per window (7/30/60/90). Shown with its provenance printed underneath. |
+| Executive brief wording | Hand-written sentence templates in `brief.py`. |
+| Every figure — counts, averages, deltas, rankings | Counted from the data. Never generated. |
+
+The dashboard states this distinction on the page itself, under the narrative. On a
+presidential library's site a reader should be able to tell which sentences a machine
+wrote and which came from counting.
+
+**Tone** is a −2..+2 integer read from the review text, independent of the star rating.
+Five steps only, displayed as a position on a track with a word — never a number. It is
+display-only: not a filter, and it feeds no headline figure or the response queue. Where
+the model is unavailable, tone stays `null` rather than being derived from the stars,
+which would just be the star rating in disguise.
 
 **How much it adapts.** Tested by injecting synthetic reviews and re-running the pipeline:
 

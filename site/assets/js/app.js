@@ -82,8 +82,12 @@
   }
 
   function renderActiveBar() {
-    var items = activeFilters();
     var bar = $("activebar");
+    // Filters are preserved when you visit Overview but do not apply there, so the
+    // band would claim a narrowing that isn't happening. It reappears, intact, on
+    // returning to a list tab.
+    if (S.tab === "overview") { bar.hidden = true; return; }
+    var items = activeFilters();
     if (!items.length) { bar.hidden = true; return; }
     bar.hidden = false;
 
@@ -224,9 +228,23 @@
   }
 
   function renderFilters() {
+    // Period applies everywhere. Source, rating and search only narrow a list of
+    // reviews — on Overview the figures come from precomputed window aggregates, so
+    // those controls would sit there looking live while changing nothing. Hide them
+    // rather than let the interface lie about what it does.
+    var listTab = S.tab !== "overview";
+    ["f-source", "f-rating"].forEach(function (id) {
+      var el = $(id); if (el) el.hidden = !listTab;
+    });
+    var searchWrap = $("f-searchgroup");
+    if (searchWrap) searchWrap.hidden = !listTab;
+    $("f-reset").hidden = !listTab;
+
     pills($("f-window"), Object.keys(M.windows).sort(function (a, b) { return a - b; })
       .map(function (w) { return { value: w, label: w + "d" }; }), S.window,
       function (v) { S.window = v; render(); });
+
+    if (!listTab) return;   // nothing else to draw
 
     var srcs = [{ value: "all", label: "All" }].concat(
       Object.keys(M.all_time.by_source).map(function (k) {
@@ -694,11 +712,17 @@
     renderBrief();
     renderActiveBar();
 
-    var shown = filtered().length;
-    var bits = [shown + " of " + M.all_time.count];
-    if (S.theme) bits.push("theme: " + titleCase(S.theme));
-    if (S.source !== "all") bits.push((M.sources[S.source] || {}).label || S.source);
-    $("f-count").textContent = bits.join(" · ");
+    if (S.tab === "overview") {
+      $("f-count").textContent =
+        M.windows[S.window].current.count + " reviews in this period";
+    } else {
+      var shown = S.tab === "triage" ? triageRows().length : filtered().length;
+      var total = S.tab === "triage" ? M.triage.length : M.all_time.count;
+      var bits = [shown + " of " + total];
+      if (S.theme) bits.push("theme: " + titleCase(S.theme));
+      if (S.source !== "all") bits.push((M.sources[S.source] || {}).label || S.source);
+      $("f-count").textContent = bits.join(" · ");
+    }
 
     if (S.tab === "overview") {
       renderKpis(); renderNarrative(); renderMix(); renderThemes(); renderSources(); renderChart();

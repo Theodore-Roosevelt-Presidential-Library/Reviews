@@ -470,3 +470,5 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
   position: absolute; left: 50%; top: -3px; width: 1px; height: 11px;
   background: var(--color-line);
 }
+
+.fgroup[hidden], .freset[hidden] { display: none; }
