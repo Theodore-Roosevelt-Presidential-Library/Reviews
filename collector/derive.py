@@ -9,6 +9,7 @@ numbers in git history — every run leaves an auditable record of what we belie
     python3 collector/derive.py
 """
 
+import re
 from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 
@@ -234,6 +235,61 @@ def main():
         "series": daily_series(reviews),
         "sla": TRIAGE["response_sla_days"],
     }
+
+    # Subjects visitors raised that the fixed vocabulary has no word for. Proposed by
+    # the model, never adopted automatically: auto-adding would fragment the counts
+    # ("parking" vs "car park") and break month-to-month comparability, which is the
+    # entire reason the list is fixed. A human promotes them into THEMES in analyze.py.
+    def gap_excerpt(text, label, width=220):
+        """The part of the review the label is actually about.
+
+        Showing the first 260 characters made the card look wrong: a review labelled
+        "weapon policy" opened with a paragraph about earth tones, so the evidence on
+        screen contradicted the label. Centre the window on the label's own words, and
+        fall back to the opening only when none of them appear.
+        """
+        text = (text or "").strip()
+        if len(text) <= width:
+            return text
+        words = [w for w in re.findall(r"[a-z]{4,}", (label or "").lower())]
+        best, best_hits = None, 0
+        for w in words:
+            for m in re.finditer(re.escape(w), text, re.I):
+                hits = sum(1 for x in words
+                           if re.search(re.escape(x),
+                                        text[max(0, m.start() - width): m.start() + width], re.I))
+                if hits > best_hits:
+                    best, best_hits = m.start(), hits
+        if best is None:
+            return text[:width].rstrip() + "\u2026"
+        start = max(0, best - width // 2)
+        # Snap to a word boundary so the quote doesn't open mid-word.
+        if start:
+            sp = text.find(" ", start)
+            start = sp + 1 if 0 <= sp < start + 30 else start
+        end = min(len(text), start + width)
+        return ("\u2026" if start else "") + text[start:end].strip() + ("\u2026" if end < len(text) else "")
+
+    proposed = defaultdict(list)
+    for r in reviews:
+        u = r.get("unmatched")
+        if u:
+            proposed[u].append(r)
+    payload["proposed_themes"] = [
+        {
+            "label": label,
+            "count": len(rows),
+            "first_seen": min((x.get("date") or "") for x in rows),
+            "last_seen": max((x.get("date") or "") for x in rows),
+            "avg_rating": round(sum(x["rating"] for x in rows if x.get("rating"))
+                                / max(1, sum(1 for x in rows if x.get("rating"))), 2)
+                          if any(x.get("rating") for x in rows) else None,
+            "examples": [{"id": x["id"], "source": x["source"], "date": x.get("date"),
+                          "rating": x.get("rating"),
+                          "text": gap_excerpt(x.get("text"), label)} for x in rows[:3]],
+        }
+        for label, rows in sorted(proposed.items(), key=lambda kv: -len(kv[1]))
+    ]
 
     # One brief per window, so switching the window switches the narrative with it.
     payload["briefs"] = {

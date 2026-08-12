@@ -351,6 +351,28 @@
       ", from the reviews in this period. Every figure elsewhere on this page is counted, not generated.";
   }
 
+  // Gaps in the theme vocabulary. All-time, not windowed: a subject raised three times
+  // across three months is exactly the signal worth acting on, and a 7-day view would
+  // hide it. Deliberately shown as raw text, not a count — the point is to read them.
+  function renderGaps() {
+    var card = $("gaps-card");
+    if (!card) return;
+    var rows = M.proposed_themes || [];
+    if (!rows.length) { card.hidden = true; return; }
+    card.hidden = false;
+    $("gaps-tag").textContent = rows.length + " suggested · all time";
+    $("gaps").innerHTML = rows.map(function (g) {
+      var meta = [g.count + (g.count === 1 ? " review" : " reviews")];
+      if (g.avg_rating != null) meta.push("avg " + g.avg_rating + "\u2605");
+      meta.push(g.first_seen === g.last_seen ? g.first_seen
+                                             : g.first_seen + " \u2013 " + g.last_seen);
+      return '<div class="gap' + (g.count > 1 ? ' gap-repeat' : '') + '">' +
+        '<div class="gap-head"><span class="gap-label">' + esc(g.label) + '</span>' +
+        '<span class="gap-meta">' + esc(meta.join(" \u00b7 ")) + '</span></div>' +
+        '<p class="gap-quote">\u201c' + esc(g.examples[0].text) + '\u201d</p></div>';
+    }).join("");
+  }
+
   function renderKpis() {
     var w = M.windows[S.window], c = w.current, d = w.delta;
     var overdue = M.triage.filter(function (t) { return (t.overdue_by || 0) > 0; }).length;
@@ -726,6 +748,7 @@
 
     if (S.tab === "overview") {
       renderKpis(); renderNarrative(); renderMix(); renderThemes(); renderSources(); renderChart();
+      renderGaps();
     }
     if (S.tab === "reviews") renderThread();
     if (S.tab === "triage") renderTriage();

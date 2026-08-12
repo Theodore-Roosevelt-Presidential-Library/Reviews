@@ -30,7 +30,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1072440638",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": "photo journal"
     },
     {
       "id": "tripadvisor-2026-08-10-20f79889",
@@ -58,7 +59,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1072569393",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-08-09-dd95e35b",
@@ -85,7 +87,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1072379920",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "yelp-2026-08-08-5e8c096c",
@@ -100,8 +103,7 @@
       "text": "An absolute must see. Richly preserved history and interactive AI exhibits. Excellent way to instill a love for learning and history.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits",
-        "ai_criticism"
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -110,7 +112,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "NKBAVIv2rv_2GMNC2VHLkw",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-f8162ba8",
@@ -135,7 +138,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psWmQwbFpNbXRyZFRZelkwRmZaMHhuZERGb1ZrRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-8ef58c89",
@@ -149,7 +153,9 @@
       "title": null,
       "text": "Great experience\nThey did a wonderful job making an interesting museum and library.",
       "text_complete": true,
-      "themes": [],
+      "themes": [
+        "interpretation"
+      ],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -157,7 +163,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psRE1sSlNibXBJVFZkR1dEUkxiVlJyTkZGd2RYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-8d5cada3",
@@ -182,7 +189,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT214UkxVUnVjRU5qU0V4MmJqRldaakp4Vlc5SmEwRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-803a1a97",
@@ -204,7 +212,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWNFVHNXdOa3BPVWtsSFJtaFBTalI0YlZGU1FWRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-63e74833",
@@ -222,7 +231,8 @@
         "interactive_exhibits",
         "ai_criticism",
         "retail",
-        "restrooms"
+        "restrooms",
+        "security_screening"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -231,7 +241,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xWlFtSm1jSGRwZWtGMmFVRXlZVFkzTVZCcGVsRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-39308120",
@@ -248,8 +259,8 @@
       "themes": [
         "architecture",
         "landscape",
-        "interactive_exhibits",
-        "historical_balance"
+        "interpretation",
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -258,7 +269,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kweFdHOXZTM1pJY1VwSVoySkhTamw0TVVGbmJYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-07-37e46fb3",
@@ -280,7 +292,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWcU1HTmpUelZZYVZJMVpHYzJjV2x5WTBjM2IzYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-08-06-6e226cef",
@@ -306,7 +319,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1071737934",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-08-06-256e808b",
@@ -333,7 +347,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1071880432",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-e312f942",
@@ -349,8 +364,7 @@
       "text_complete": true,
       "themes": [
         "architecture",
-        "landscape",
-        "drive_market"
+        "landscape"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -359,7 +373,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWWlJFbzJiMHRwZUhWbE5EVmZiamxtWDB0dlVrRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-ddc53a18",
@@ -385,7 +400,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xOTlNEWnhkSFpKTTA1NlFTMVBhMjg0YUdkYWFXYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-d6d6665d",
@@ -407,7 +423,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xaSGFFbFpabkE1ZW5SeWRHOXFNbWg1U0hKNk1uYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-be889fd0",
@@ -429,7 +446,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25SWlRWVjBNM1pHVEd0Q1NVMXVaMDF0VG10MFRXYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-9eac3d67",
@@ -444,8 +462,7 @@
       "text": "We did not reserve tickets ahead of the day we attended.\nFortunately, we were able to get tickets for the next hour.  Amazing place!",
       "text_complete": true,
       "themes": [
-        "timed_entry",
-        "queues"
+        "timed_entry"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -454,7 +471,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2w4Mk0wbHpZM28xUlRreGQwSjRSelZmVTNkd1RXYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-8e7d1f42",
@@ -476,7 +494,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tJNVYzWXhaek5LUm10ZlRUa3lSR3hVYTFCMVZtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-67b1e822",
@@ -501,7 +520,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xsclYxTXpXRzlLTVZadlJ5MWhhMHRKWVhBNE5VRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-4937baa9",
@@ -525,7 +545,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2w4dFduVXlNWFpDUzFOUFlXVm9MVmhsUlZOTmMxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-43c0cd43",
@@ -540,7 +561,6 @@
       "text": "Spectacular.This is the newest high tech and immersive Presidential Library yet.\n\nDisplay are cool and lots of AI enhance to help you heel you are in the room.\n\nThere is a really good press briefing where you can ask any question and probably answer correctly.\n\nAlso, the building is vet cool architecture that perfectly complements the bad lands. The trail on the roof is amust",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits",
         "ai_criticism",
         "architecture",
         "rooftop"
@@ -552,7 +572,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xNVpEZHJPRkpQTVV4dloxQm9NR1ZDWkZKUVVIYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-4351a759",
@@ -574,7 +595,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25WRFNVWjVhbEJITlVwbmRuQTNjRmxXYVV0VWEyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-06-08f38b53",
@@ -598,7 +620,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t3eFFrSkhhRGR4TjFCWkxTMXBXR2RrT0RrMFpFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-08-05-7a5fd3c1",
@@ -614,10 +637,10 @@
       "text_complete": true,
       "themes": [
         "parking",
-        "accessibility",
-        "security_screening",
         "queues",
-        "timed_entry"
+        "security_screening",
+        "timed_entry",
+        "dwell_time"
       ],
       "sentiment": "mixed",
       "responded": false,
@@ -626,7 +649,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1071686829",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": "shuttle service"
     },
     {
       "id": "tripadvisor-2026-08-05-58e31359",
@@ -650,7 +674,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1071585022",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-d6cc3ac3",
@@ -674,7 +699,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SUWNVUTRkSFJDV0dsVU4zTjRWWFU0UjNKSGVGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-a9eb07fb",
@@ -701,7 +727,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twWVJqTjRXSEp5UkZOZlJtSlBOa05YWW5CYVMzYxAB",
       "analysis_source": "model",
-      "tone": -1
+      "tone": -1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-7ac229fb",
@@ -726,7 +753,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWUWNGaHZMVEZaYjAxemFuTklVakZuVkZwc04yYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-75605a1f",
@@ -741,7 +769,8 @@
       "text": "Great interactive displays. A lot of information to see for one visit.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -750,7 +779,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25nMVdWOHlSV3RGV1d3MWJGbHBlalZ1TVhwR1RsRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-6bac6510",
@@ -765,7 +795,8 @@
       "text": "We spent almost 3 hours there and my kids didn’t get bored. TR lived an amazing life!",
       "text_complete": true,
       "themes": [
-        "families"
+        "families",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -774,7 +805,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tGclVERkVTbWRvYkZKc2NXMW9iVFZFTVdKRE4xRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-689a4a98",
@@ -796,7 +828,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kUFltOXdjMDR5WVhCQlEzQnFWbGd0UTFRM2VVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-3f1ec148",
@@ -818,7 +851,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25sVFkxZEdZV1Z5VFRseFNIZ3hNbnB4YUUwd1ZGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-2917a75c",
@@ -840,7 +874,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21jeGEwTkVaM1F6WlVSclRUVndRMEpYTWs5ZlUzYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-176a619d",
@@ -857,7 +892,7 @@
       "themes": [
         "architecture",
         "food_beverage",
-        "interactive_exhibits"
+        "retail"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -866,7 +901,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pkTlUweFdNRFpKUmxGcU4xRm1Ta05QWVROMVgyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-05-10ffa13d",
@@ -881,9 +917,8 @@
       "text": "Great historical contributions about the 26th president. The interactive items were pretty kool. But, there should be a shuttle system for those that have to park far away and are disabled.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits",
-        "parking",
-        "accessibility"
+        "interpretation",
+        "parking"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -892,7 +927,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pkR2FDMUZWQzB6WWxCbmIzbFhPUzFXTW14NVZHYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 1,
+      "unmatched": "shuttle service"
     },
     {
       "id": "google-2026-08-05-0e3acffc",
@@ -907,7 +943,7 @@
       "text": "Wow!  Impressive location, building, amenities and displays.  It’s been over a month and they are getting better handling large crowds, older visitors and ushering through the entire museum experience (admission, security, lockers, dining, etc.)\n\nI can’t remember last time I felt so moved- and impressed- by the displays in a museum- the curators did an excellent job incorporating modern historians and politicians into the legacy of Theodore Roosevelt.\n\nAnd the gift shop needs a huge book selection….",
       "text_complete": true,
       "themes": [
-        "visitor_flow",
+        "crowding",
         "staff",
         "interpretation",
         "retail"
@@ -919,7 +955,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21KMVlVMWtlR1pSZURaaFJtdFNWRWR4Y2xkd2VIYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-fbe9c34f",
@@ -944,7 +981,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s0dGVHNUpaSEJJTVRSbGFsSnZZMjkxWW14blpIYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-f62a035c",
@@ -960,8 +998,7 @@
       "text_complete": true,
       "themes": [
         "dwell_time",
-        "parking",
-        "accessibility"
+        "parking"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -970,7 +1007,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kWWRqSlhlR2syTW14eVVXZEZRa3RLY1VWSGMwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 1,
+      "unmatched": "shuttle service"
     },
     {
       "id": "google-2026-08-04-db36b0e9",
@@ -992,7 +1030,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21selJsSXdkVTlxVDFOSmRHWmZaVlp0TVdzM1UyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-da601b87",
@@ -1016,7 +1055,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s5T2FqbG5PUzEwT1cxSmVuZERkbGhzYlRkQ2VHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-b8467b29",
@@ -1038,7 +1078,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2paQlZtbHFja1JEUVdkcWFVaHllVEpyZDBSTmJVRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-ab4bd281",
@@ -1064,7 +1105,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kQlR6QlZZbVIwT1VvNWMyZERjbWRzTVU1bGRXYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-8b88644d",
@@ -1079,9 +1121,9 @@
       "text": "Opened July 4th, 2026. Buy tickets online in advance. This museum blends into the landscape and the exhibits are breathtaking, as the fusion of the 21st, 20th, and 19th Centuries gives the visitor an experience of how Roosevelt impacted the United States and makes him the Founding Father of Conservation. The walkway is 1 mile in diameter. Each exhibit gives you a glimpse of Teddy's life. This is worth the visit and stick with the tour guide, as they will give you insights into his life. The Library is completely self-sustaining, as Teddy would have wanted, and he would be \"Delighted\" if you saw his Library.",
       "text_complete": true,
       "themes": [
+        "interpretation",
         "guided_tours",
-        "landscape",
-        "conservation_message"
+        "landscape"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -1090,7 +1132,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tGMFgySlNUVGxuVFdwYVVuY3lUemQ1YmtKdk5uYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-83a64718",
@@ -1117,7 +1160,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21wUVRsRmpMV3QxUVhSSFgxUlhabGRvTjJKWmVGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-6a2e54f1",
@@ -1141,7 +1185,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kSWRtNHdjM0pZU2xGUlpIRTFablJrV0RKRk0yYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-3868bc90",
@@ -1165,7 +1210,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21aNlFtOTVkWGRaVjAxdFlUTkpWQzB0VG13dFgxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-289c44d2",
@@ -1193,7 +1239,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoNkxXWnRla1ZDUkVWWVJGcE5UazltUkMxd1FsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-14b9496e",
@@ -1215,7 +1262,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xOSlpFRXlhbDkwTUhob2RreEZUbWRwVlMwM1pWRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-04-07ed6495",
@@ -1237,7 +1285,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21FNFJXdDZkVWRWZDJreWMwY3pVMmxXWTNodlltYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-d5951bfc",
@@ -1264,7 +1313,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kNWJqZDVSVXMzYTFSVVduWktiRW8xUmpCNlRtYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-aa05d33f",
@@ -1286,7 +1336,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21oS1dETXlTbDlHYzFCbU0wRnRURXRzT0RkS2VsRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-97eceea8",
@@ -1300,7 +1351,9 @@
       "title": null,
       "text": "Awesome museum about one of our best presidents",
       "text_complete": true,
-      "themes": [],
+      "themes": [
+        "interpretation"
+      ],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -1308,7 +1361,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tSUlJWWmlhalJaYUVGWGIwSktRblJIWlhoMmNHYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-485c713e",
@@ -1330,7 +1384,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25sbWFIRmpka2xvTTFNMWVGQkphWFJrVkdWU1dYYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-3dd256e3",
@@ -1352,7 +1407,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21GbGIyaExaemh2WmtGRlNrUnplVU5PWlVSUmFFRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-365f7a17",
@@ -1374,7 +1430,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21Sd2RXWjZSVjh6ZVc1bmFVUkViRGwzZWtGdFIyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-2cf5f1a6",
@@ -1402,7 +1459,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0MU1HeDZaR05OYTJkalVEQTJSRXhOVjFWVGVIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-03-0ccb0c8d",
@@ -1424,7 +1482,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25oTmEwcHpNM3BSYWs1blFYZFZORVZQVjFscmVtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-fde0b3fa",
@@ -1449,7 +1508,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkbVoxSk9UMlo0T0U5cE4xaFpYMWcxT1ZjNE5sRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-f82532e3",
@@ -1465,6 +1525,7 @@
       "text_complete": true,
       "themes": [
         "interpretation",
+        "interactive_exhibits",
         "families"
       ],
       "sentiment": "positive_with_criticism",
@@ -1474,7 +1535,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25oWU5HZzNjRFZUYVRoVVEwa3RNazloZVRsd2JuYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-e480a56e",
@@ -1496,7 +1558,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25BM2NFMTVVMU51YTFaeGVETmtjMlpPTjJoV2FuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-b735f7c8",
@@ -1520,7 +1583,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xGV1kwWTFjRlpLWW5ORmRXZGljSGxsTmtSdFVuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-8222474a",
@@ -1547,7 +1611,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tRNFUyTjBRbHB5VjJORWNXWmhSRmxSV2toSU9GRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-5f302a1f",
@@ -1569,7 +1634,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSVVRtdEVUMFY2WkU4ek5UaE1VbUkzUlU1RE5XYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-3c491f99",
@@ -1593,7 +1659,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT214amR6ZFpkR1Z3WldobVFXMDBaa1ZCUlhGM1pWRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": "weather heat"
     },
     {
       "id": "google-2026-08-02-384d296f",
@@ -1615,7 +1682,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tOdllXRnpiRkpoYjFkNloyb3lWWGc1YWpReVIyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-02-30adaa99",
@@ -1632,9 +1700,9 @@
       "themes": [
         "interactive_exhibits",
         "ai_criticism",
+        "interpretation",
         "architecture",
-        "landscape",
-        "interpretation"
+        "landscape"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -1643,7 +1711,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s1b2FEUkVjelJpVFdFMVZUTmxPVkU1YldGVk1WRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-08-01-7d5ae4bf",
@@ -1658,9 +1727,9 @@
       "text": "The very model of a modern presidential museum (not really a library). Probably the best single attraction in North Dakota....the state should promote it heavily. Building, exhibits and connection to the landscape are outstanding, even if I might have a few quibbles with the museum's interpretations of TR's career. And who doesn't love those AI-generated photos they send you!",
       "text_complete": true,
       "themes": [
+        "interpretation",
         "architecture",
         "landscape",
-        "interpretation",
         "ai_criticism"
       ],
       "sentiment": "positive_with_criticism",
@@ -1670,7 +1739,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1071041490",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-e062c5da",
@@ -1692,7 +1762,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25oMFRrRmlaVlpNUkVaUk5XWlZZVzUxYjFOSE0wRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-dc637cc9",
@@ -1719,7 +1790,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kbFRFWkpRMGRXU21VMFRWWndNalpZY1hOWmFYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-c75382db",
@@ -1743,7 +1815,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s1eFptdG1MVWQwWlVzek0xQTFNREZtU0hCRFUzYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-bf2e5791",
@@ -1765,7 +1838,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pObGNVUkhOblZMTVdkemExaFdSVVl4VWs5cVRFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-b9022af5",
@@ -1787,7 +1861,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tZNFRtOW5jRE4xZWtVMFkyTndOWFpGWTFGaE9HYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-aaf36d54",
@@ -1805,14 +1880,15 @@
         "architecture",
         "landscape"
       ],
-      "sentiment": "positive",
+      "sentiment": "positive_with_criticism",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tWak1WTTNZbTlJUjI5UmMzbE5NVXhTTkZGd1JXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkVjMVM3Ym9IR29Rc3lNMUxSNFFwRWc%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWak1WTTNZbTlJUjI5UmMzbE5NVXhTTkZGd1JXYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": "dog policy"
     },
     {
       "id": "google-2026-08-01-4d6ea530",
@@ -1827,7 +1903,8 @@
       "text": "It is an inspiring place for its architecture and high tech show. Roosevelt really changed and influenced the course of this nation history. I would go back again at another opportunity.",
       "text_complete": true,
       "themes": [
-        "architecture"
+        "architecture",
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -1836,7 +1913,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pkWGJFODNTbGxxVFhka1VEUlFSalo0WkhkUGFXYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-402df59c",
@@ -1858,7 +1936,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xJekxYWnBhVzlSV1hZeGJtUXhMVkp5VFVnNWRGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-08-01-4006511f",
@@ -1880,7 +1959,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twelpUaHdTR0ZVYW01eVRVOUxjR0ZqUnpsWlQwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-d370fd20",
@@ -1898,7 +1978,7 @@
         "ai_criticism",
         "queues",
         "food_beverage",
-        "timed_entry"
+        "ticket_pricing"
       ],
       "sentiment": "mixed",
       "responded": false,
@@ -1907,7 +1987,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tKUlJtWTRZakpWUzJaRVMyeHVaak4wUkhOVlVVRRAB",
       "analysis_source": "model",
-      "tone": -1
+      "tone": -1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-b841724f",
@@ -1923,9 +2004,10 @@
       "text_complete": true,
       "themes": [
         "interpretation",
+        "families",
+        "timed_entry",
         "crowding",
-        "visitor_flow",
-        "timed_entry"
+        "visitor_flow"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -1934,7 +2016,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21VMlpqQnNORUpOWDAwM1psVkhRWE5NVlZWZk5FRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-a4ee0b12",
@@ -1958,7 +2041,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tGT1RXMUVhelZXVjJKblQxWkxkemxQWjBSbk4xRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-a47b082c",
@@ -1984,7 +2068,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2poV1owRnNVR2wzUlhGVFYzVlVZbTFvZUhnemFWRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-a431cbec",
@@ -2008,7 +2093,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tSbVlUaHlMV3h6V0MwNGIyaEZRa3QxUkhaSlNGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-74100b92",
@@ -2034,7 +2120,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SNFJtaGpUVmg2YVZoM1FYazBRV2h4Y1VaclNGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-48daafe1",
@@ -2056,7 +2143,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25JNFJXZEZXbm8zVXpRM1RFeE5MVE54YzBSdldFRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-423056ab",
@@ -2078,7 +2166,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2prMlVHVlFhMkptU2tjM2VUYzVkbXQ1UTAwemIzYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-17d5645e",
@@ -2094,7 +2183,8 @@
       "text_complete": true,
       "themes": [
         "timed_entry",
-        "queues"
+        "queues",
+        "capacity"
       ],
       "sentiment": "negative",
       "responded": false,
@@ -2103,7 +2193,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tsNVdGOUdZMVZtY0dZNFVUTlVVVko2WkdONUxXYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-31-1518ede1",
@@ -2125,7 +2216,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwalNsOVdaMjlFU1ROVFRsZHZaMWN0VEdkVWNVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "yelp-2026-07-30-38d02866",
@@ -2153,7 +2245,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "XO3Xf7Z2jnHk1rfKKLdCOQ",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-30-53538fe7",
@@ -2171,7 +2264,8 @@
         "interactive_exhibits",
         "ai_criticism",
         "food_beverage",
-        "drive_market"
+        "drive_market",
+        "families"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -2180,7 +2274,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1070762696",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-ff45ff30",
@@ -2197,9 +2292,9 @@
       "themes": [
         "interactive_exhibits",
         "ai_criticism",
-        "interpretation",
         "architecture",
-        "visitor_flow"
+        "visitor_flow",
+        "interpretation"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -2208,7 +2303,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kb05FaG9NM2xuVkdwalRuTmtRVkZWZGxGQmNIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-e705c7db",
@@ -2230,7 +2326,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t4RFQyWldNUzFQU0ZBd1MyMWhlbTF5VTBkdVMxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-e1d3af71",
@@ -2255,7 +2352,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GeFlsQnVkWEJCZW5sYU5VbFlXRGRrYjNKa1dHYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-dd47ea21",
@@ -2277,7 +2375,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psSmFXOXFhRXMyWWxGbldUZERVWEpEU0hnMFNIYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-d86bb447",
@@ -2301,7 +2400,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21Kb1JWQkxZVVJmY0VaYVNYUlhZazU2TjJoa2VsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-76ad86df",
@@ -2323,7 +2423,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkdlJVcE9MWGQxUVhwbmFEbG9NSFZoVlZWQ1pYYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-50869768",
@@ -2345,7 +2446,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t4UGVucFVWbmh1YVRCWlFqTkVRVWxuZUdwc1ZGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-30-0182d1b1",
@@ -2367,7 +2469,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kdVNrOUdSa05KTmpsTE0wODVkbk5ZVjBwaGRuYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-29-a32289ad",
@@ -2389,7 +2492,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25BMlRTMDJUV3RzV0dWbVRWY3lXWG8wY0ZsS1gwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-29-51275a3c",
@@ -2411,7 +2515,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwd1RGRlNMVWRyUVdwUU5HSTJRV001YWpCdmNHYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-ded8beca",
@@ -2433,7 +2538,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pNd05qTkVZV2xPVjJ4Tk9VTk9WRmhYV1ZWRlowRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-d8c70ac5",
@@ -2451,14 +2557,15 @@
         "timed_entry",
         "landscape"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "positive",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkcU5HUlFaRmxGTkRWbmFGbEpNMnB3TkRocE5sRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOldqNGRQZFlFNDVnaFlJM2pwNDhpNlE%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkcU5HUlFaRmxGTkRWbmFGbEpNMnB3TkRocE5sRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-c40c187d",
@@ -2477,14 +2584,15 @@
         "timed_entry",
         "sellouts"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "positive",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tsMlQwVkphVEY2V0hoRWFYVjNMVU5rZEU5cFdsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkl2T0VJaTF6WHhEaXV3LUNkdE9pWlE%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tsMlQwVkphVEY2V0hoRWFYVjNMVU5rZEU5cFdsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-981ab260",
@@ -2510,7 +2618,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2swd05XTlFaWFp3ZFhkNFptMTBZbE5VTWxKS1NIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-8e6bec16",
@@ -2532,7 +2641,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkMlNXUjZhamwyWmkxVlNFeGhhR1pOTjFCR2QyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-4d78907a",
@@ -2554,7 +2664,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25wUk9YcGplV1l0T0ZwVWR6Sk1NRVZWZWkxbE1XYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-3a4851f1",
@@ -2578,7 +2689,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0bWNVdzNTMUZyTUdaV2NFUlBaVFU1UkVGT2NYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-367abe79",
@@ -2595,8 +2707,8 @@
       "themes": [
         "interactive_exhibits",
         "families",
-        "landscape",
-        "rooftop"
+        "rooftop",
+        "grounds_conduct"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -2605,7 +2717,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25sYWRUVmZPSFE0UnpGek16VkRXRXhHZEhaSVNHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-1c084b70",
@@ -2631,7 +2744,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwQ1pWcEVPVGhaWWpSZlJrMDNiVFYyVjA5QlJFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-28-066d9212",
@@ -2656,7 +2770,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25SRlVHWmhUemhJWWxwSVRsWnlTelowVVhwRFJIYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "yelp-2026-07-27-c7f18f43",
@@ -2673,8 +2788,6 @@
       "themes": [
         "timed_entry",
         "security_screening",
-        "capacity",
-        "crowding",
         "grounds_conduct"
       ],
       "sentiment": "mixed",
@@ -2684,7 +2797,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "rt-Lk0J7SgJ0GRMy6IjJdg",
       "analysis_source": "model",
-      "tone": -1
+      "tone": -1,
+      "unmatched": "explicit music"
     },
     {
       "id": "google-2026-07-27-e4b1bf97",
@@ -2709,7 +2823,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoTGVGVmhORTVqY0dJdFRrbFFRMkpWUkZjdFpVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-27-c3be8ef9",
@@ -2735,7 +2850,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tsc1JFNDVjMUpCWDNWUWJXZ3hkRlZQZDBWdVYxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-27-be6311ce",
@@ -2752,8 +2868,6 @@
       "themes": [
         "timed_entry",
         "security_screening",
-        "capacity",
-        "crowding",
         "grounds_conduct"
       ],
       "sentiment": "mixed",
@@ -2763,7 +2877,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoUVEyTk9VSHBOTm01WVVFeG9OMjVGYmxWR1ZsRRAB",
       "analysis_source": "model",
-      "tone": -1
+      "tone": -1,
+      "unmatched": "explicit music"
     },
     {
       "id": "google-2026-07-27-aeb4b6c1",
@@ -2785,7 +2900,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kS2NYcDZaRGd3Y214QlNtTnBPVmh6U0dRM1IwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-27-29fe9090",
@@ -2809,7 +2925,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tSMVVFUnNRMmcwYzE5Zk5ITkhhbFY2VGtGZlRtYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-e55ca199",
@@ -2831,7 +2948,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25STmQyRnVRbkIyWmtFd1dqQlVWSEJUVm1sNGJHYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-e0dc6789",
@@ -2849,14 +2967,15 @@
         "interactive_exhibits",
         "timed_entry"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "positive",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tkbVZtUjJSbmRSZERreE5YTk1NMGMyUzNScmJYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkdmVmR2RndRdDkxNXNMM0c2S3RrbXc%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkbVZtUjJSbmRSZERreE5YTk1NMGMyUzNScmJYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-c890dac2",
@@ -2872,10 +2991,10 @@
       "text_complete": true,
       "themes": [
         "interpretation",
+        "historical_balance",
         "interactive_exhibits",
         "architecture",
-        "ticket_pricing",
-        "value_for_money"
+        "ticket_pricing"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -2884,7 +3003,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2taQ1RVdEdTSGx4ZGpCVlFWQjROMUJXY1ZSd2IwRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-c1b5f732",
@@ -2906,7 +3026,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tOYVdsVkdPSFZJT1ZjeFJGaElZVTVLUWpCcFlrRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-93efbc03",
@@ -2930,7 +3051,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25oQ2JUaG1OSEZuWkRsbmIwODNkblZ5VWt4dVRuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-77abe1b0",
@@ -2958,7 +3080,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoWldtOTFTRTlLT1ZWSlYxQjRWMVpUTFRJelRWRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-728eb449",
@@ -2985,7 +3108,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2w5NFZubE9SbmhTTTFCU1ZEQTRSRE13UjJabVJVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-6022b7c0",
@@ -3009,7 +3133,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2taRVZGaHliM1p6WVZoWkxWSlphbEE1YWxkR1MwRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-50c8f33c",
@@ -3036,7 +3161,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWcGVsZDVWV2xXYUVjd01saHdTM1prT1hSbk1IYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-26-2d8bfaa5",
@@ -3062,7 +3188,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT210aGJIUkVWMkZwVURkWVZWaENOSGs0TURSTFJuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-bf04457a",
@@ -3084,7 +3211,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25Kc00wSlZMV2hsTFVSUE9VOXVabGhPUzBsNlIxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-b5797135",
@@ -3106,7 +3234,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25RMGNGVTJiVmxVUmpkRVVESTFNSGhTVVdORlIyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-a683f0bb",
@@ -3128,7 +3257,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkVU4wOWpNRjlxWXkxbGJVbG9iMkZ0VjBjd1oyYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-4f85d767",
@@ -3150,7 +3280,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twc2IyUkpVRTlWUVROdVowZGlOWEpsZDB4RVgzYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-461292b6",
@@ -3172,7 +3303,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t4SFNWVmFOblpwU1c1ek56ZHFTR000UmtOak9FRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-25-138fc9ff",
@@ -3194,7 +3326,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pGSFRUbHpNWFpDYlhaUVFWWklTbTVqWjJJeFpGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-24-492089b1",
@@ -3212,8 +3345,8 @@
         "visitor_flow",
         "food_beverage",
         "water_availability",
-        "parking",
-        "boardwalk_trails"
+        "retail_pricing",
+        "parking"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -3222,7 +3355,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1069845208",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-24-599d1052",
@@ -3240,8 +3374,8 @@
         "visitor_flow",
         "food_beverage",
         "water_availability",
-        "parking",
-        "boardwalk_trails"
+        "retail_pricing",
+        "parking"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -3250,7 +3384,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25BMmEzY3hObWhpVkhKa1YwVnJOSFJzUVdGdk1uYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-c7c51205",
@@ -3276,7 +3411,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2trdGJuRklVRGhHTmxSb2RsTnpkMnhMYUhWRFZtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-aec7958e",
@@ -3298,7 +3434,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21KMGJVaFpNRWhUVkdkUFlYbHhVbmhrU0VoMVVrRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-9c972e6a",
@@ -3322,7 +3459,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT201NVNsTmtaMlpYYkdJM1VUWkdURkZoWW5ob1YzYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-73457f2b",
@@ -3346,7 +3484,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21Zd1RVcFdWVWxWYWs1UFdIZHNjMU5RWmxkQlpYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-6b13adb6",
@@ -3364,14 +3503,15 @@
         "architecture",
         "landscape"
       ],
-      "sentiment": "positive",
+      "sentiment": "positive_with_criticism",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xkUFZEbDNWMTlvUlVsc0xVeHdZMnBHYTJaQ1pGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOldPVDl3V19oRUlsLUxwY2pGa2ZCZFE%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkUFZEbDNWMTlvUlVsc0xVeHdZMnBHYTJaQ1pGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": "winter weather"
     },
     {
       "id": "google-2026-07-23-636cdf98",
@@ -3395,7 +3535,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25SNVVsRXhVRVF4TjJST05ETndWM1pDWVZaWlZFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-4b32b1e9",
@@ -3417,7 +3558,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCWE9GSndhek5QTFdGUlZYUmpMVEJUWm1Ga1EyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-49031a26",
@@ -3441,7 +3583,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxb1JYZHJlR2hGWldkelluUkZVblkyY0hCNlZYYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-48c0ab30",
@@ -3459,7 +3602,8 @@
         "interactive_exhibits",
         "ai_criticism",
         "architecture",
-        "families"
+        "families",
+        "visitor_flow"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -3468,7 +3612,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21WbE5ta3pNMjlXY2tvMWNXcDNXVTl1TjBNdExVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-1d1e70a0",
@@ -3485,17 +3630,17 @@
       "themes": [
         "architecture",
         "landscape",
-        "interactive_exhibits",
         "ai_criticism"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "positive",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psdldEVk1jRjlaVFRWclQzWlFka2t5Ymw5TGFWRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjlvWDVMcF9ZTTVrT3ZQdkkybl9LaVE%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psdldEVk1jRjlaVFRWclQzWlFka2t5Ymw5TGFWRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-1954bd12",
@@ -3512,8 +3657,7 @@
       "themes": [
         "interpretation",
         "architecture",
-        "landscape",
-        "interactive_exhibits"
+        "landscape"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -3522,7 +3666,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pGd2VtUjNTMG8xU21kbVNHTkhVWGN3YzJaS1VYYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-23-1627fcbe",
@@ -3539,7 +3684,8 @@
       "themes": [
         "historical_balance",
         "peer_comparison",
-        "interpretation"
+        "interpretation",
+        "landscape"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -3548,7 +3694,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pRNFpVUlRUblZZWDBKMFkyNDBNMk52Vm5Fd2EwRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-d4b7b616",
@@ -3572,7 +3719,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twMlVXOVVVbVppZURaRlkzRjVSMGR1WDNVNE1rRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-980ae463",
@@ -3594,7 +3742,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pKNE9XVkhaRVU1YjBSV05qSnpNVzlqVVdOWVIwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-935a1288",
@@ -3616,7 +3765,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25KWGEwaHZWSEpSWjBVMWIxVlZkMEZwWVROYU5WRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-74beb751",
@@ -3642,7 +3792,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tORk9FazFOa1ZQU1VKaU5tUk1RekpQU21WUlJFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-568061ba",
@@ -3668,7 +3819,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psbFFWWkVZV1I1Y0UwNFlVRlpjbGRaWldOaVYzYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-22-4356ea27",
@@ -3690,7 +3842,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xCRWVFRXdSRWhGVW5BeVdFcHdaSFJxVW1WTFRVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "yelp-2026-07-21-0d397d6f",
@@ -3707,7 +3860,7 @@
       "themes": [
         "interactive_exhibits",
         "ai_criticism",
-        "interpretation"
+        "ticket_pricing"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -3716,7 +3869,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "WFh2hgjucfNtdB6Fx3k12w",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-21-757b0c18",
@@ -3743,7 +3897,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1069321020",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-21-e20d888c",
@@ -3765,7 +3920,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT200MmR6TmhRbkJSVjBWa01tSTRaRTFNZG1SblNGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-21-c8fb7eae",
@@ -3786,14 +3942,15 @@
         "staff",
         "accessibility"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "positive",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21GMWFuRllXbGhxVHkxcE5WWnhkbWxRUVhaMVMyYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmF1anFYWlhqTy1pNVZxdmlQQXZ1S2c%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21GMWFuRllXbGhxVHkxcE5WWnhkbWxRUVhaMVMyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-21-938e416a",
@@ -3807,9 +3964,7 @@
       "title": null,
       "text": "Very informative.",
       "text_complete": true,
-      "themes": [
-        "interpretation"
-      ],
+      "themes": [],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -3817,7 +3972,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWUVJYRTBOalY2U1ROVmJuaGxaVWRSUW5oWU9XYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-21-83e3917b",
@@ -3839,7 +3995,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25OQk1raFdNbXBPWmtzeFptUjVYeTFNVVZOTloxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-21-76901a73",
@@ -3853,9 +4010,7 @@
       "title": null,
       "text": "Wow! I’ve been a. Fan of Theodore Roosevelt for years, and this place did not disappoint. I left feeling inspired",
       "text_complete": true,
-      "themes": [
-        "interpretation"
-      ],
+      "themes": [],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -3863,7 +4018,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pBNGRXNTNiVEpVUjJ3d2FXUTRORVoxTjJkTFlsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-20-75cdb712",
@@ -3889,7 +4045,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1069271381",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-eb671693",
@@ -3911,7 +4068,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCTmEydEhNblJzWjFsNlpXRkNRV1ZSTm05WE5GRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-e6d38655",
@@ -3935,7 +4093,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tnd1dIcHJkV1ZEWlVaclNGUTBTMDVOZUhaSU0wRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-dd4cf1fd",
@@ -3962,7 +4121,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCalFYbENjMDgzUVdaMFdsWlVRbXA1VkhCQ1NsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-dcdb130a",
@@ -3977,7 +4137,9 @@
       "text": "So well organized, interesting and interactive! What a wonderful surprise!!  I would definitely come back again! The compass bracelets allow you to be immersed in the time period, hunt for animals along the way and more!",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "walkup_expectations",
+        "grounds_conduct"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -3986,7 +4148,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkNVVsa3dUbmg2UlRWaVoySlZSM1Z5VEdkak1IYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-c4ccbf41",
@@ -4014,7 +4177,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xWVFNucFlTV0poV0Y4emFGbGhhblpXZEhWVU5YYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-a6e0408b",
@@ -4036,7 +4200,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tGR1YxaDBkbXB5UkZreGIwdHZhVzU0V2pocGJtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-a54f4c2d",
@@ -4058,7 +4223,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21WNlkyOVpiRzVXVldOZmRYUmlVRkpXT1Vwd2FrRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-a4213d7e",
@@ -4083,7 +4249,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xMVlreERWa1JUWTBwd1FVY3lUazVQTUdGVVlWRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-94ecafaa",
@@ -4105,7 +4272,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xOVVNIVXpORmxMYkU5MGQzTmZZamhRWVRsTk9WRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-8b533c87",
@@ -4127,7 +4295,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xWWlRHeFpkV3RNWTJwZmFFbE5ZMWgwUlcwM2FVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-7d449d77",
@@ -4152,7 +4321,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GVFMyWkpiWGRMYVc1MVpXaEZXVjlzVWtkb2RXYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-20-5b84ece0",
@@ -4174,7 +4344,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21obmJtWjViM3B6U2xWWVJtaFFlV1F3T1hsbGMzYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-19-7cd643c7",
@@ -4199,7 +4370,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1069130121",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-fe53d114",
@@ -4223,7 +4395,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwT1lXbG5jMHROUm5nMFZHSm9VbVZ3WDNjMk9IYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-ecdd80ed",
@@ -4245,7 +4418,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21aa1RGZHdaWEJ4Y21SYVIwUTRWalZ3VEZWV1luYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-cd0965d0",
@@ -4269,7 +4443,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25Ob2JGZEtNVkJoZDFaNFdubGxNa1pvTkdRNVIwRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-c2d1e240",
@@ -4294,7 +4469,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twS1ZWVTNTVVI0Tld0S2VtWk9iWGRrV0dOeU1uYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-b72b17ac",
@@ -4316,7 +4492,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoS1VXSlpVa2xYVVdVMmJrcHhZMmRFV1d4VE5GRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-5a922ca2",
@@ -4340,7 +4517,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25wVlNuVnhWSHBtVHpKVVVIQXdPRzgzYUhOVWFHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-19-55c67700",
@@ -4362,7 +4540,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2poWFNVdHdkRzlWWkhwV2FsSlZSa2x2Wm01bVZIYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-18-d469c531",
@@ -4388,7 +4567,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1068983505",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-18-b0f08507",
@@ -4404,7 +4584,8 @@
       "text_complete": true,
       "themes": [
         "staff",
-        "historical_balance"
+        "historical_balance",
+        "crowding"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -4413,7 +4594,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1068866280",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-b73bc3a9",
@@ -4435,7 +4617,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWalpGSm9SWEJKYTFsdVpWTjVVMnRvWjJSdWQyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-a95a74a7",
@@ -4461,7 +4644,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25nM2JVNDRUMU5CVmpKZlVXRXlOSEJGTlVKV1VsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-9dead803",
@@ -4486,7 +4670,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21wdFUxSndVRk5GTkRWV1YxTmhVblJtVEdsZmFVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-7820d729",
@@ -4508,7 +4693,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xWYVVVaEZjSEpQV1VwTU9DMVFNR1JVWWpaa1NtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-56d5ed9f",
@@ -4530,7 +4716,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xVNFRHUXpXRUoyYlZVMFREaDJXRTl1U0dsSk5IYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-32807b97",
@@ -4552,7 +4739,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twcVkwZGFTVUV6VFU1SE5HZENURTVCVUdWU1dtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-16fc74fb",
@@ -4576,7 +4764,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25WdWNFNW9OazAwTkY5NVlURmtlV2hFUTNKa05rRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-0674bcc8",
@@ -4598,7 +4787,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21vd1VIQjNTSFpHTFZKeU1XMXJPV1pYWWt4MmVVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-18-05ebf587",
@@ -4615,6 +4805,7 @@
       "themes": [
         "interactive_exhibits",
         "families",
+        "dwell_time",
         "drive_market"
       ],
       "sentiment": "positive",
@@ -4624,7 +4815,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21sWGNFdzRSelpVWDIxd1gxbGpNMjl5YlV4elRuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-fba67e3f",
@@ -4648,7 +4840,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psRVExWnRWRU5NYURGd2JrSndSSEY2VVVSa01GRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-bd9a727e",
@@ -4670,7 +4863,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25FdFoxbHpZa0YzTVhKck9XSnhhbEptYXpaaU0zYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-b0d325fd",
@@ -4694,7 +4888,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21oNmFIaEJOM1EzY0MxcFUzcEVZbFJVUW5sNWJsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-ad9219c1",
@@ -4719,7 +4914,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xKbGRVOVVVRE42ZHprd1pUSTJORWxEUVVKNVZHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-abccaa40",
@@ -4736,7 +4932,8 @@
       "themes": [
         "architecture",
         "interactive_exhibits",
-        "visitor_flow"
+        "visitor_flow",
+        "crowding"
       ],
       "sentiment": "mixed",
       "responded": false,
@@ -4745,7 +4942,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xsdFVFMU5SaTAyTjNwUU5reE1NbXBVTldKQlMwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-ab41ef36",
@@ -4767,7 +4965,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pWNVpVWjZZMXBqWmpOc1YxSlJOVkZvWmxWdVdIYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-71871fa7",
@@ -4789,7 +4988,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0V1NYUXhjbXRXY25CemNIaG1ORVV6UTFGVFVIYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-3fb08363",
@@ -4813,7 +5013,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwbVRXNVNiM2RIUzBGMkxVNXlYemd0VlhSdWNWRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-3c1c2a13",
@@ -4841,7 +5042,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pkNWJtaHdTV0UxVFhjNFgySlpNa2Q1YXpjNFluYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-39a51824",
@@ -4857,7 +5059,6 @@
       "text_complete": true,
       "themes": [
         "interactive_exhibits",
-        "interpretation",
         "architecture",
         "wayfinding_signage"
       ],
@@ -4868,7 +5069,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25nd2RuUTRMWHBwVm5wRGNWZGpjM0owWDI5a2VGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-380b1339",
@@ -4883,7 +5085,8 @@
       "text": "Amazing experience! Follow the arrows on the map and take the picture at the beginning but don’t worry too much about how you look in it! lol. We spent over 3 hours and still didn’t see everything. We all agreed we could have stayed longer.",
       "text_complete": true,
       "themes": [
-        "dwell_time"
+        "dwell_time",
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -4892,7 +5095,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2paTVZHRkhTMHgyYUU1ME1HWkhhamRyTTFCSWNFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-17-23bc853d",
@@ -4907,6 +5111,7 @@
       "text": "This was the best experience ever! We were there for 4 hours! It's for all ages!",
       "text_complete": true,
       "themes": [
+        "dwell_time",
         "age_tiers"
       ],
       "sentiment": "positive",
@@ -4916,7 +5121,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxZlV6Vllaakk0TVVKSGJERjBVMU0yTjBwcU1XYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-e7908839",
@@ -4942,7 +5148,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSUFJsVmpjVUZOTlhrellUVnJPSHBxYVVkZmFVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-d6d53176",
@@ -4964,7 +5171,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SUVJrWnNOVkZKV0VWMmNHOHpNSEJVYkU5Nk1XYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-ca7ebc5f",
@@ -4992,7 +5200,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GWVdEaEZkVWxQV0dSNWJreGxURFJ5VDFjd1FrRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-a63f4add",
@@ -5016,7 +5225,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pBNVVIRm9aSFo1TnpoemNrTktjV1o1Y1RSdlpHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-a25083f6",
@@ -5041,7 +5251,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2prNFRHbEliRXhmYVhSYWRtOTBhVzUyTjI1SE1GRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-9cdc4dd0",
@@ -5063,7 +5274,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21WRGQzZEljMDFKYkRsVmNVZ3hVQzFsVUZabGJGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-4409e19f",
@@ -5091,7 +5303,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkTkxVeHplVUk0TjBwWlVYQk9ibVpZY1ZadU0xRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-16-088e6cd2",
@@ -5108,17 +5321,17 @@
       "themes": [
         "interactive_exhibits",
         "ticket_pricing",
-        "families",
-        "age_tiers"
+        "families"
       ],
-      "sentiment": "positive",
+      "sentiment": "positive_with_criticism",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKYWNIRTVWMHQwTFRVd2NrY3RTMVZCUjJjME5rRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkJacHE5V0t0LTUwckctS1VBR2c0NkE%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tKYWNIRTVWMHQwTFRVd2NrY3RTMVZCUjJjME5rRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-f78b64f7",
@@ -5145,7 +5358,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pNdFNGY3hPRUpvYWxWV05EZHFjRVI1UmpoVVkxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-d6624511",
@@ -5167,7 +5381,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0V1gzUkpVa3RSTFZWbGJWOUlTRU41UjBjd2RHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-c17443f0",
@@ -5189,7 +5404,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2poWE5FWmFlVXN3Y1hoVmJ6VTJNVVJGTFZKWk5GRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-b7446160",
@@ -5211,7 +5427,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25CT2RqYzVZVEZ2WVVFeGFtNVFUazFUTkZSSk5YYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-a09be52a",
@@ -5233,7 +5450,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxUmEwTkxkbTl2WTB4UFduZEpXbk5wUTNWdFptYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-51ad229c",
@@ -5258,7 +5476,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GaVJFOXFaVU5mYUdkSlZVOW1ZalJJY25OT2QyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-418694c2",
@@ -5283,7 +5502,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xaTmRHZFJlVXc1WVVGSVZYbEtjR1JJYlRSV1ozYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-15-211176e5",
@@ -5305,7 +5525,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SWVdEQnBTakZ5ZW1oRE0zSjVURE01UldWc1lrRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "yelp-2026-07-14-d3628b59",
@@ -5327,7 +5548,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "X1ocLgp3uzZUebEy2xdDWA",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": "inspiration"
     },
     {
       "id": "tripadvisor-2026-07-14-0f3ed8da",
@@ -5345,8 +5567,8 @@
         "ticket_pricing",
         "interactive_exhibits",
         "retail",
-        "staff",
-        "crowding"
+        "food_beverage",
+        "staff"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5355,7 +5577,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1068302965",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-fc4c6062",
@@ -5370,7 +5593,6 @@
       "text": "This place will not disappoint, guaranteed! A breathtaking facility in the heart of one of the most beautiful parks in the nation. I will return time and time again.",
       "text_complete": true,
       "themes": [
-        "architecture",
         "landscape"
       ],
       "sentiment": "positive",
@@ -5380,7 +5602,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwU1JuZG1kV05FYmtOS1pEZFBRelJDTVhkRWNuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-d5d47784",
@@ -5407,7 +5630,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25RNU1sRldaMmx0ZUVSbE1sUmlXVE0yUlZGekxVRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-ca9313de",
@@ -5421,9 +5645,7 @@
       "title": null,
       "text": "I've seen a lot of museums in my life. In addition to the US Holocaust in Washington DC, this is by far one of the best. You will leave inspired.",
       "text_complete": true,
-      "themes": [
-        "interpretation"
-      ],
+      "themes": [],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -5431,7 +5653,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT210b1l6aEJhV3hwUjJWR1kwSktkbUZuZEdoZlRHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-c6b5614c",
@@ -5445,9 +5668,7 @@
       "title": null,
       "text": "Very interesting ... learned a lot!",
       "text_complete": true,
-      "themes": [
-        "interpretation"
-      ],
+      "themes": [],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -5455,7 +5676,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkR1NqWk5MV1pKVGs5M09IaEZZVE5JUzBkVGNVRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-b6596d62",
@@ -5480,7 +5702,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xSbFRrSnhVbloxUWs1Tk9YZHJTVmRKYkZVM1NGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-b3d90952",
@@ -5495,11 +5718,11 @@
       "text": "Stunning setting, landscape, architecture, and exhibits. As a fan of TR, we had to stop here in our family road trip and it did not disappoint. Spent 4 hours in the museum, my daughters loved all of the interactive exhibits. They were so well done and told the story of Teddy Roosevelt well.\n\nOnce we were done, we walked the roof and the grounds, albeit quickly since it was 100 degrees outside.",
       "text_complete": true,
       "themes": [
-        "architecture",
         "landscape",
+        "architecture",
         "interactive_exhibits",
         "rooftop",
-        "families"
+        "grounds_conduct"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5508,7 +5731,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2sxVU9HODVaeTE0TFd0cWNHODFkVEJVV0VKMGMxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-7d7ce2f0",
@@ -5530,7 +5754,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SSlgxUldZVlZ2VWpOblpVcExWV1pYUWxSMVVsRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-489f95a9",
@@ -5554,7 +5779,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xjdFNHcFpRVkZtVERKeGMza3diSEF0UmpOMExXYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-460f980c",
@@ -5568,9 +5794,7 @@
       "title": null,
       "text": "This library is transformative.   Every American needs to visit the Teddy Presidential Library.  This place is a wonder.  A true heroes journey.  I",
       "text_complete": true,
-      "themes": [
-        "interpretation"
-      ],
+      "themes": [],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -5578,7 +5802,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21sWWJWUlFiV2RqTlVWeVVtcEVNMGh1TmxRdE5XYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-34f5d3a0",
@@ -5600,7 +5825,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSS2VqQlNTM1UyWVVkWFZXbFhSMGxWWkVKU1dFRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-14-3474a450",
@@ -5625,7 +5851,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s1ZmNUTnhRVkJaWlc1V2REQmpTR3R0U214WGNVRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-13-43488af8",
@@ -5642,8 +5869,7 @@
       "themes": [
         "interactive_exhibits",
         "ticket_pricing",
-        "dwell_time",
-        "age_tiers"
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5652,7 +5878,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1068153646",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-ec8f440f",
@@ -5677,7 +5904,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tOcFQxb3lYM1pSTlZGbFptWjVkMDA0V2psdGRFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-aff4dbd1",
@@ -5699,7 +5927,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21OMVNsaGFXVWxXYW1OSldYUkljMGxoTVVZeUxVRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-ac5dfcd6",
@@ -5721,7 +5950,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t4VlZsQnZXVkpCZFd0TmRVeHVNRmhRYlVsVE4yYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-6d76d66a",
@@ -5743,7 +5973,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GNFNIUmhUekpCU21GMGQzaHNUMHh1UWtST2QxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-6d2faa6d",
@@ -5758,7 +5989,8 @@
       "text": "This is a terrific presidential library. One of the best presentations of the life and accomplishments of a President. Great movies and lots of interesting history.",
       "text_complete": true,
       "themes": [
-        "interpretation"
+        "interpretation",
+        "historical_balance"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5767,7 +5999,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT214cVFVcHFSMnd6YXpCelNqbHJjWGc1TVhsWWRIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-37ba7fa4",
@@ -5784,7 +6017,7 @@
       "themes": [
         "ai_criticism",
         "architecture",
-        "interpretation",
+        "interactive_exhibits",
         "landscape"
       ],
       "sentiment": "mixed",
@@ -5794,7 +6027,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25ocU9YVmtaRzlvZEhKeldUVkJVa0pCTFZRMk5sRRAB",
       "analysis_source": "model",
-      "tone": -1
+      "tone": -1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-13-117d7f05",
@@ -5819,7 +6053,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xwQ04xZFhNVVJYUzFoRFJIRlNORGhVUkhCamExRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-12-67c507ca",
@@ -5837,8 +6072,7 @@
         "interpretation",
         "ai_criticism",
         "architecture",
-        "landscape",
-        "interactive_exhibits"
+        "landscape"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5847,7 +6081,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1068071980",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-fb4bfcd4",
@@ -5869,7 +6104,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pONlJUbFVVMU16TVZSU2NXOHRWVXh5VXpOblUyYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-f56782d8",
@@ -5884,8 +6120,7 @@
       "text": "AI slop, I'm going back to Japan",
       "text_complete": true,
       "themes": [
-        "ai_criticism",
-        "international_visitor"
+        "ai_criticism"
       ],
       "sentiment": "negative",
       "responded": false,
@@ -5894,7 +6129,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25sc1VtOXllSEpGZDB4aGRtOVZlbVV5YnpSZk9YYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-e632cd01",
@@ -5913,14 +6149,15 @@
         "landscape",
         "ai_criticism"
       ],
-      "sentiment": "positive",
+      "sentiment": "positive_with_criticism",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25NNGFXRlNTbXRKWXpZM1FWaGZablZCWjFWbWRtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnM4aWFSSmtJYzY3QVhfZnVBZ1Vmdmc%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25NNGFXRlNTbXRKWXpZM1FWaGZablZCWjFWbWRtYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-b42f8727",
@@ -5942,7 +6179,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tsYVNFNVpTSEJPZHpCck0ycG9NbWhCYVVKZlkzYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-afae843f",
@@ -5967,7 +6205,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kRldsSlZSRlY0Y0daV05HaG9abG8yVEhSdlVuYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-ac8b21ad",
@@ -5982,7 +6221,8 @@
       "text": "Such a wonderful experience! Wonderful library for people of all ages. A ton of interactive exhibits.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "families"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -5991,7 +6231,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoVE5uTjBiRWxYTUc5eFUybGZXVnB3UVc5MmRFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-9fd7540d",
@@ -6006,16 +6247,18 @@
       "text": "Great new library. Mix of artifacts and AI",
       "text_complete": true,
       "themes": [
+        "interactive_exhibits",
         "ai_criticism"
       ],
-      "sentiment": "positive",
+      "sentiment": "positive_with_criticism",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21wSE1HTmxVRkpRUjFCcVJUbFdkM05IVkhGclJXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmpHMGNlUFJQR1BqRTlWd3NHVHFrRWc%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21wSE1HTmxVRkpRUjFCcVJUbFdkM05IVkhGclJXYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-97c5c0de",
@@ -6030,8 +6273,8 @@
       "text": "So cool! Use of AI in a museum was a first for me, the Amazon video exhibit was a stellar example of AI use. Lots of cool things, def worth the visit. We didn't get to do the Medora musical, maybe next time. Here are some pics of me and my girlfriend generated by the museum AI.",
       "text_complete": true,
       "themes": [
-        "ai_criticism",
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "ai_criticism"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6040,7 +6283,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21nM05DMXNSVkk0TkZSSmJtUm1Xa2RUZGtzd1EwRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-8b6a6b23",
@@ -6065,7 +6309,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pKZmFEWkNkV2RFTjI1T1IwRlhja1pOV0dZelUyYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-87c5769f",
@@ -6090,7 +6335,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2paaExWbFBNbmxXUzFKdWNrVm5NR2cxVDB4NVFrRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-12-0206b85f",
@@ -6112,7 +6358,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pWdU9GbFVUVFpPYVVWR1lsOVRWazR5ZVdSb2NtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-11-21f5cc6c",
@@ -6139,7 +6386,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067927390",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-11-f6250152",
@@ -6161,7 +6409,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xkS2VtaDNPVEJxVW1wRGNtMXhXbWd5TldoR04zYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-11-c22a39da",
@@ -6183,7 +6432,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21SVlh6bHRkVzlJVFd4WGFrUkRjRGhoV1RoWFEwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-11-acaf3144",
@@ -6209,7 +6459,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25sTExUWnpjVTlQUTBscVlraHdRVXBLWlMwNWRGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-11-a9935c84",
@@ -6234,7 +6485,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pWMVVWVm5SVEk1ZGtRM00zaFFVbGg0UjJoT1gyYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-11-1ff614a9",
@@ -6258,7 +6510,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kMU0wOXNMVGh2VERKbU9GcHBPRWMzV1d4aVpGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-10-ab3d7bd6",
@@ -6275,7 +6528,8 @@
       "themes": [
         "interactive_exhibits",
         "guided_tours",
-        "food_beverage"
+        "food_beverage",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6284,7 +6538,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067719083",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-ddaf0427",
@@ -6306,7 +6561,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tnM1prWjZRMHhJWTB4TGVVYzNhRzlIVGpaVk5tYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-c0ed6c2f",
@@ -6321,7 +6577,8 @@
       "text": "A wonderful new interactive all age accommodation of a presidential museum👍👍👍",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "accessibility"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6330,7 +6587,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21sTU16TXpaVEZYU0U1cVVWSnJTM1ZETlMxdFNIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-b49389dd",
@@ -6351,14 +6609,15 @@
         "historical_balance",
         "landscape"
       ],
-      "sentiment": "positive_with_criticism",
+      "sentiment": "mixed",
       "responded": false,
       "response_text": null,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pacVFsVm1URzFSV0VkRVNYSkplSE10T0daaFVtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjZqQlVmTG1RWEdESXJJeHMtOGZhUmc%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pacVFsVm1URzFSV0VkRVNYSkplSE10T0daaFVtYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-9edce7ac",
@@ -6380,7 +6639,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tWSlRtcEJSV2c1VW1oRVpuUTVTRmhUVDBsblFWRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-7b139d7d",
@@ -6402,7 +6662,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pGVFRqUmhRMFo1TXpSdFgwdzFOa2hCU3pSTGNYYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-10-409f2a92",
@@ -6426,7 +6687,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25reGNXMHdhRXhCUnpsQ1ZraFlSa0ZQUldKRU1VRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-09-f057c61a",
@@ -6454,7 +6716,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067587787",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-09-154ec12b",
@@ -6472,7 +6735,8 @@
         "architecture",
         "interactive_exhibits",
         "families",
-        "landscape"
+        "dwell_time",
+        "value_for_money"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6481,7 +6745,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067569436",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-ffaeb448",
@@ -6506,7 +6771,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t0M1lYQk1ablJTWkZaVFMwRm5WSHBrV0VWVWIyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-d7d6471d",
@@ -6531,7 +6797,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xMkxXRkhPRmhsVkdSUE4ySkJjVk5GYTI1cFMwRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-9561833d",
@@ -6546,7 +6813,7 @@
       "text": "AMAZING! Such a well laid out museum. The end is just amazing. You hear the words of TR and then walk right out to see his Badlands. I won't spoil anything else because you don't want to miss this.",
       "text_complete": true,
       "themes": [
-        "interpretation",
+        "visitor_flow",
         "landscape"
       ],
       "sentiment": "positive",
@@ -6556,7 +6823,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25SblQwYzJhbTF1U1RGVmVEWnRTMEpuVDFodGNFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-635104f2",
@@ -6580,7 +6848,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t4TFJ6UTBaRzVJY0VsbVRqZEpSVUU0UVZCRlpGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-483e01a4",
@@ -6597,8 +6866,8 @@
       "themes": [
         "interactive_exhibits",
         "families",
-        "staff",
-        "landscape"
+        "landscape",
+        "staff"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6607,7 +6876,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pBNE0zcDFNa3RuTTJOTFJHaElRM1pTY1VOaFlrRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-242e3bda",
@@ -6629,7 +6899,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21WeU1GUjVaVEl5YVRWU2VIY3dUekEwV0U5blZXYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-09-00e635e4",
@@ -6651,7 +6922,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tGTVFVVjZSMHREWms5amNrWkZWalJQU25sSVdsRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-08-89acd689",
@@ -6667,8 +6939,9 @@
       "text_complete": true,
       "themes": [
         "landscape",
+        "architecture",
         "interactive_exhibits",
-        "architecture"
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6677,7 +6950,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067443626",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-f4a5bb7c",
@@ -6693,7 +6967,8 @@
       "text_complete": true,
       "themes": [
         "interactive_exhibits",
-        "families"
+        "families",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6702,7 +6977,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2s5UmJHVXhWbEZ5TlhveWR6ZEpOWFl5ZVhsV1kyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-e8778023",
@@ -6730,7 +7006,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xoclMyWkZUSFkzYkVZNVdIVTFUVEE0Y1ZkSlMyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-d0db4d1c",
@@ -6752,7 +7029,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pSd05sVmpiMFJGWHpoM2VUTllaRUZrYjI0eGVVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-c5031cb8",
@@ -6777,7 +7055,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25Wd1NYVmZiVVExVVRSUE0yVlJhWEJNUjFVeFZuYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-a46c125f",
@@ -6799,7 +7078,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2paYVdWQnNPWGxNY2sxUmFrSnZVV3hLVjNKRmFrRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-9d836fe6",
@@ -6814,10 +7094,10 @@
       "text": "Tl;dr: For the sake of fairness, I will try to ignore my tremendous bias, as I am an ardent admirer of Theodore Roosevelt (henceforth referred to as TR). That being said, the Theodore Roosevelt Presidential Library is an experience unparalleled. “It was here that the romance of my life began” - TR\n\nService and Price: Memberships at the library cover admission, and regular tickets can be had at different price points for military, students, seniors, and children. All the staff, from the cafe to the janitors to the curators, were second to none! Friendly, passionate, and professional from start to finish.\n\nExperience: Depending on how fast you want to go and how many things you want to do, it will take 2-4 hours to get through the whole exhibit. The first thing you are prompted to do is take a photo at one of their photo stations. Part of the museum experience is interactive, and they take your photo and show you what you would look like if you were part of TR’s entourage throughout significant events of his life, which is tracked via a bracelet given to you at the beginning of the self guided tour. The museum takes you through the life of TR, starting as a child. You journey through his childhood home, his time in the Badlands, his return to politics, his career in government service, and what he did after his career. Each portion of his life is prefaced in the main hall, off which the immersive exhibits all branch. There are numerous items from his life that are on display, and it is all expertly curated. Of course, they do have everything to keep adults engaged, but they also have a good number of activities to keep the kids engaged as well. I would jump at the opportunity to go again, and fully intend to return upon my next journey to Medora.\n\nLocation: The TR Presidential Library is located in the North Dakota Badlands, in the town of Medora. It is up a very steep hill, so walking to it would be very difficult, but they share a parking lot with the Medora Musical, so once you get up the hill, parking is plentiful and the walk into and around the building is flat and easy. And for those wondering, Theodore Roosevelt spent a few years ranching around Medora, after his mother and wife passed away on the same day, the latter of whom had just given birth to this daughter. He chose to come to Medora because he appreciated the desolate and haunting beauty of the land, but also the simplicity and honest nature of the work and lifestyle. By his own admission, his experiences here were what helped shape him into the incredible leader he became.\n\nGrounds and Interior: The first thing you see as you crest the hill is how the museum rises gracefully from the earth, while still being part of it like a natural hill. Native plants decorate the rooftop, which you can walk onto via a meandering walking path on one side, and staircase on the other. Another walking path about half a mile long takes you on a large flat loop in front of the museum to showcase some of the quiet beauty the badlands offer.  All parts of the grounds are wheelchair accessible. To enter the museum, you walk through a massive breezeway, which offers rocking chairs and a view overlooking the town below. The whole building extensively includes natural materials throughout, including wood flooring and rammed earth walls. The massive windows really open up the space, and bring the outdoors into your experience.\n\nOverall: As a true Theodore Roosevelt fan, this is as pure of an experience as you can have. You get to experience all of the highs and lows and adventures of TR’s life. It does an excellent job at not only showing you what his life was like, but immersing you into each part of his journey. The Theodore Roosevelt Presidential Library is an absolute must see, even if you are only driving through. Your time will be well rewarded with incredible history at a world class facility.",
       "text_complete": true,
       "themes": [
-        "staff",
         "ticket_pricing",
-        "interactive_exhibits",
-        "age_tiers"
+        "staff",
+        "dwell_time",
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6826,7 +7106,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2w5elFUWjNiemxYVDFwQlFtUkJWR3MzYjJkeWVXYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-93c60a6e",
@@ -6850,7 +7131,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21jdE1rNUNTMW94WjBGV1EyWmlTV3BLT1hwRVNGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-542a0490",
@@ -6865,7 +7147,8 @@
       "text": "This past weekend we had a wonderful experience at the new library.  We had a wonderful experience with Jacob at the help desk.  It was great learning from him.  We also had Blakely help us in the store she was so helpful and upbeat.  My husband and I were impressed with how cheerful and friendly everyone was on such a long busy opening weekend.  It was a wonderful experience and we cant wait to come back.",
       "text_complete": true,
       "themes": [
-        "staff"
+        "staff",
+        "retail"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6874,7 +7157,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21Oc2JtTjBZVXAyU1hsR1ZXUTJZMVJmU3pCSWVsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-08-198fc99a",
@@ -6890,7 +7174,8 @@
       "text_complete": true,
       "themes": [
         "interactive_exhibits",
-        "families"
+        "families",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6899,7 +7184,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xORFVGOTZSVk15T0ZoNmFIZERhbEpJYmxkNmJrRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-dc791b6b",
@@ -6926,7 +7212,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2trd1NuaE9hMWxPVHpoTFFscE1NVGhSWmtKR01sRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-ccf7d8d9",
@@ -6942,7 +7229,8 @@
       "text_complete": true,
       "themes": [
         "interactive_exhibits",
-        "families"
+        "families",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -6951,7 +7239,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxeGMwMXRSamxhZUdKeWJFVlVhVGhpWnpSMU0xRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-c16cb664",
@@ -6973,7 +7262,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25OaFgzQlpjazVUTUY5bWVUVTViMGx5UzFWS1VGRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-b2ee88c6",
@@ -7000,7 +7290,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25ScldVMWpVM0ZUWW1KdVRsQkJWRmQ1TW5kNlYyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-ab7330be",
@@ -7022,7 +7313,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tSTWEyVjBaRk5MZW1oUFJsRlJjVzlOUkVOWFQxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-a4f89595",
@@ -7037,7 +7329,9 @@
       "text": "This library is so well done. We brought our teens, who were initially not very excited about visiting a presidential library. After our tour, they both said \"that was actually really cool!\" That's the best review you can get!",
       "text_complete": true,
       "themes": [
-        "families"
+        "interactive_exhibits",
+        "families",
+        "guided_tours"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7046,7 +7340,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xCaWFsbGtURUpDTkZCdlJYa3dNbkZLWTFWSVVFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-9a7c9381",
@@ -7060,7 +7355,9 @@
       "title": null,
       "text": "This Presidential Library is so well done and beautiful.   Teddy Roosevelt's spirit will touch all age groups and is a must see for any Historian.",
       "text_complete": true,
-      "themes": [],
+      "themes": [
+        "interpretation"
+      ],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -7068,7 +7365,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25CVk5uSm1abWxYWjJsUGFEaDRXbEF3U0daMloyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-607c0dff",
@@ -7093,7 +7391,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kTE4wTkZPV2xDVmw5UU5rOVZWMUpSVEhabmIxRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-5a25c923",
@@ -7108,7 +7407,8 @@
       "text": "Amazing. We went through  in 2 1/2 hours.  So much to see! Fun interactive stations where you use your 'compass\" to participate/get photos.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits"
+        "interactive_exhibits",
+        "dwell_time"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7117,7 +7417,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21jd1R6SkdlVmhHYWxJMFEyYzBOMlJEUW1vNFUyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-2fc1734d",
@@ -7132,7 +7433,8 @@
       "text": "One of the nicest Presidential Libraries I've been to.  Staff is still working out some kinks on the admission side so plan to have a slow entrance process but once inside it was a fantastic experience.",
       "text_complete": true,
       "themes": [
-        "staff"
+        "staff",
+        "ticket_pricing"
       ],
       "sentiment": "positive_with_criticism",
       "responded": false,
@@ -7141,7 +7443,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t3emFqSk9jV2RIY0ZwclpEVjFaV2h0WTBKaldHYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-07-0f2ff0d9",
@@ -7156,8 +7459,7 @@
       "text": "The library facility is beautiful. The entire experience is incredible and so well done. Be sure to have your picture taken as you enter the exhibit area. Most of the exhibits are interactive and we left feeling inspired.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits",
-        "retail"
+        "interactive_exhibits"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7166,7 +7468,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kSlNFdDFVa1ZHU2xoeVptZHZRMmcwV2xreE5XYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "tripadvisor-2026-07-06-039ec2d0",
@@ -7184,7 +7487,8 @@
         "interactive_exhibits",
         "ai_criticism",
         "timed_entry",
-        "security_screening"
+        "security_screening",
+        "data_privacy"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7193,7 +7497,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "1067120798",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-f87934fc",
@@ -7218,7 +7523,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2poU1gyUjZlRE5UVW5kT1FqUlpjM0pxVlVaQmQwRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-dda19c56",
@@ -7240,7 +7546,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25oRWNVOTZSbnBrTkRJemJtOUdjbmhuYlc1MFQyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-b048cbfd",
@@ -7262,7 +7569,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2paVE1EQkdia1UwUW5Sc2VsUmFiRVZWUkRoWlYyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-9a3944ff",
@@ -7284,7 +7592,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xVMVppMUNVbWd4ZGt0WWEwZFdZbUp6ZGpOdVowRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-96552ab9",
@@ -7298,7 +7607,9 @@
       "title": null,
       "text": "I’ve been waiting for this since moving to ND. As a life long TR fan & lover of history this place is great. I look forward to spending more time here. Highly recommended.",
       "text_complete": true,
-      "themes": [],
+      "themes": [
+        "interpretation"
+      ],
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
@@ -7306,7 +7617,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25WQ1ZIWnlUMk5GVlVGUE1FbHRaRVl5TVZOZlZIYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-890709fe",
@@ -7333,7 +7645,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pCVmFEWkVMV2hXZDI5U2ExWTFTbTAzWmxONGJWRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-7c969457",
@@ -7355,7 +7668,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kZlVsZEhiRlp6UkhOQ1FWOXBjeTFhWDFvemNWRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-7a726531",
@@ -7382,7 +7696,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xVVYzY3liMDVhVjBGWFNqUnNjbVp4TkRkNE1HYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-5a8397e0",
@@ -7404,7 +7719,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21kdFZ6TmZTRGMwY1dkb01qZENORTFYYTNVM1NFRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-3fbf6c05",
@@ -7426,7 +7742,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xGblJVMU5jMVI2TURkNWQydEZiSGgzU1dOVVoxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-06-34d5acbd",
@@ -7442,8 +7759,7 @@
       "text_complete": true,
       "themes": [
         "accessibility",
-        "boardwalk_trails",
-        "landscape"
+        "boardwalk_trails"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7452,7 +7768,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2poS1N6QnhRbHBZY2xSNlpUWndTbkZyT1RSRmQzYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": "service animals"
     },
     {
       "id": "google-2026-07-06-3492f0c1",
@@ -7467,11 +7784,11 @@
       "text": "Amazing library. Opened last weekend. Walk through Tr's life through a state of the art facility. Not just his presidency. So positive. Wow. Special amenities for children. Incredible setting. Staff very helpful. Parking right there. Lots of places to sit. Timed entry. So many folks and descendants worked for years to bring this tribute to life. Set on the top of a hill to view his beloved Badlands. Sit in a rocking chair and enjoy the view, or have lunch in the cafe.",
       "text_complete": true,
       "themes": [
-        "interactive_exhibits",
-        "age_tiers",
+        "architecture",
         "staff",
         "parking",
-        "timed_entry"
+        "timed_entry",
+        "food_beverage"
       ],
       "sentiment": "positive",
       "responded": false,
@@ -7480,7 +7797,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21wcFQwMXpaME15YlU0NU9DMU1ZV3BDUzI5SlpHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-05-fa8aea55",
@@ -7502,7 +7820,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tOTU1VdHlUMFl5VTNZME0xOVFRelZVWkZwS01FRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-05-b805bafd",
@@ -7527,7 +7846,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21WVGR6WXllVmxCYUZKVllVOUhlSGM1YWtaeVpFRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-05-278b58ef",
@@ -7549,7 +7869,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25wTVUzVjBYemhNYkRaYVpHSmpVVGwwYWxOMVIzYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-05-24b1e042",
@@ -7575,7 +7896,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xKc05ESnZNMlZJYnpWM1p6bERVelZaUTNOWGVHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-04-fc57579b",
@@ -7597,7 +7919,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25FNVRuRXRlbVpQVFdnNWIwUmZZazgwV21wc1lVRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-04-74fcf6ca",
@@ -7624,7 +7947,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kwM1FWOXhabXcxVjJSc2FUSlVlbWx6WTBoSVEyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-04-589eadfd",
@@ -7646,7 +7970,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxeVZraDZWVVEyV2t0S1YyZFlZa0oyWWpWV1QxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-04-559d29d1",
@@ -7674,7 +7999,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21FeVoweDFRVGhtTW1RdExVUlZZVFF6VW1kTGRsRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-03-eb502420",
@@ -7696,7 +8022,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kcU1XdGxOV1k1VGs1VmNtcElRalpCU1hWMk4yYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-03-63db650e",
@@ -7718,7 +8045,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2psUmNuQnljWHBDVUc0MFdXeHJVV2xIVEZKR1IxRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-03-308b24b6",
@@ -7740,7 +8068,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20wd1pGcENSMlEyVkhOZlFWUXpka2htVkc1blUwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-03-257531f6",
@@ -7766,7 +8095,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tJeVdWTnROMDB4YlVSYU4ybHFTa3MxTVUxTlRHYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-d3eba999",
@@ -7788,7 +8118,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25wQ05UQnJRV3ByYUhselZHb3RTQzFxY3pkeFpGRRAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-bcf1cd27",
@@ -7813,7 +8144,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25GUlVEbFJabUZTTUZGTVYwRlVPSGQwVTBWeWVGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-9299cdd7",
@@ -7835,7 +8167,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2prMmExRnljVEJtYkhVNWRWcFNWMEUxWlY5NlpGRRAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-8ef055ca",
@@ -7857,7 +8190,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2kxbmVISnJTalZpVlcweFVYZEhVVjl5YjI1bmNYYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-2484b49b",
@@ -7872,7 +8206,6 @@
       "text": "One of our greatest Presidents!!! Must see for all true Americans! Pride, honor and sacrifice was the Teddy way. God fearing, God loving true Americans must put this museum on their bucket list!\nGod bless America!!!",
       "text_complete": true,
       "themes": [
-        "interpretation",
         "historical_balance"
       ],
       "sentiment": "positive",
@@ -7882,7 +8215,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25CeFVVOTBRM1pCYVhObmFXRnJZbXhzTUdNdFRGRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-02-21e2f798",
@@ -7904,7 +8238,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2sxb1ltWlRTRXhGWm5OVVZuTXpiR1l4U0VaWGMwRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-01-f9662404",
@@ -7926,7 +8261,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT205UFZVNTFhV3RyVUZRNGExWk9VM0JtYWpGdlltYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-07-01-ee48e269",
@@ -7941,8 +8277,7 @@
       "text": "This was absolute horrible no guardrails",
       "text_complete": true,
       "themes": [
-        "grounds_conduct",
-        "security_screening"
+        "grounds_conduct"
       ],
       "sentiment": "negative",
       "responded": false,
@@ -7951,7 +8286,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25Cc05sUmpOVWxQWmsxNlUweG1UV2hMUlRkTGEyYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": "lack of guardrails"
     },
     {
       "id": "google-2026-07-01-ae351de2",
@@ -7973,7 +8309,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21sZlpuTnpOSGhmYjBSc1JuaG9aWE5WU21nNWJYYxAB",
       "analysis_source": "model",
-      "tone": -2
+      "tone": -2,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-30-66b17267",
@@ -7995,7 +8332,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2tkWlJHTlRlVUowZDBvd2QzSjBZV2wyVW1kcFJsRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-29-88f691a1",
@@ -8020,7 +8358,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xaWVduaGFaV2M1VmxWUmNteENSbFUwYWtOc1kyYxAB",
       "analysis_source": "model",
-      "tone": 2
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-27-d2552492",
@@ -8042,7 +8381,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT20xaWFWYzNlVVoyVW5sSldVUkVZbVpmUzNWWk5GRRAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-26-7d26d1ee",
@@ -8068,7 +8408,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2trdFJGazVkSGQxWVRkMGFUWkhia2xCWTJ0VmVsRRAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 1,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-25-cb9e54a4",
@@ -8083,7 +8424,6 @@
       "text": "Great to be part of this amazing project.   And seeing that are money is being invested in are land, rather then be sent out to a country that doesn't cares  about our values of this  great  nation !\n\nGod Bless America 🇺🇸",
       "text_complete": true,
       "themes": [
-        "retail",
         "value_for_money"
       ],
       "sentiment": "positive",
@@ -8093,7 +8433,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2pWbFkwWlhjbE5GUjNSa05XWkdZME5CVFhkSk9YYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-22-bb4c4494",
@@ -8117,7 +8458,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xGMWVHTTRhMTlKZGpCV2RHSlVURXhFU3pFdE1uYxAB",
       "analysis_source": "model",
-      "tone": 1
+      "tone": 2,
+      "unmatched": null
     },
     {
       "id": "google-2026-06-21-be73acf7",
@@ -8139,7 +8481,8 @@
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2xGV2NEZzJWM0ZLY2t4a1VFNUJVMDR4TUVsSmJXYxAB",
       "analysis_source": "model",
-      "tone": 0
+      "tone": 0,
+      "unmatched": null
     }
   ],
   "last_reply_refresh": "2026-08-12"

@@ -67,3 +67,15 @@ gets — the people who loved it and still told us what to fix.
 - **Aggregates come from the platform, not from the rows.** Record the platform's own
   displayed rating and count in the snapshot file. Where a computed average differs from the
   displayed one, keep both — the gap is itself worth knowing.
+
+## `unmatched`
+
+`string | null`. A short lowercase phrase naming a subject the review raises that no theme in
+`THEMES` covers — set by the model, `null` from the keyword fallback, which cannot notice what
+it was never taught.
+
+It is **not a theme**. It is never counted, never trended, never filterable, and never enters
+`themes`. `derive.py` groups these into `metrics.json > proposed_themes` for a human to read.
+Adding one to the real vocabulary means editing `THEMES` in `analyze.py` and re-running
+`analyze.py --all`, so the whole dataset is relabelled consistently rather than split across
+two eras of the list.

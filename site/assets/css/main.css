@@ -472,3 +472,15 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
 }
 
 .fgroup[hidden], .freset[hidden] { display: none; }
+
+/* Theme-vocabulary gaps. Quiet by default; a repeat gets the brand rule, because a
+   subject raised twice is the one worth a decision. */
+.gaps-intro { margin: 0 0 1rem; color: var(--color-muted); font-size: .875rem; max-width: 62ch; }
+.gap { padding: .7rem .9rem; margin-bottom: .5rem; border-radius: 4px;
+       background: var(--color-surface-alt, #F3EEE6); border-left: 3px solid var(--color-line, #DDD3C4); }
+.gap-repeat { border-left-color: var(--color-brand); }
+.gap-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.gap-label { font-weight: 600; letter-spacing: .01em; }
+.gap-meta { color: var(--color-muted); font-size: .75rem; white-space: nowrap; }
+.gap-quote { margin: .35rem 0 0; font-size: .8125rem; color: var(--color-muted);
+             font-style: italic; line-height: 1.5; }

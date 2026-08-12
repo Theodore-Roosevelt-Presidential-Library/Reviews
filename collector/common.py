@@ -129,7 +129,8 @@ def blank_record(**kwargs) -> dict:
         "rating": None, "recommends": None, "tone": None,
         "author": None, "author_location": None,
         "trip_type": None, "title": None, "text": "", "text_complete": True,
-        "themes": [], "sentiment": None, "responded": False, "response_text": None,
+        "themes": [], "sentiment": None, "unmatched": None,
+        "responded": False, "response_text": None,
         "url": None, "collected_at": today(),
     }
     record.update(kwargs)

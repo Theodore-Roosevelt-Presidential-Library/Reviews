@@ -103,6 +103,10 @@ For each review return:
 - "tone": an integer from -2 to 2 for how the *writing* reads, independent of any star
   rating: -2 strongly negative, -1 negative, 0 neutral or evenly balanced, 1 positive,
   2 strongly positive. Judge the words the visitor chose, not the score they gave.
+- "unmatched": if the review raises something substantive that NO theme in the list
+  covers, name it in two or three lowercase words, like "broken elevator" or
+  "coat storage". Otherwise use null. Do not stretch: only for a real subject the list
+  genuinely lacks, not a rephrasing of a theme that already exists.
 
 Sentiment definitions:
 - positive: praise, no meaningful complaint
@@ -111,7 +115,7 @@ Sentiment definitions:
 - negative: dissatisfied overall
 
 Never invent a theme that is not in the list. If nothing fits, return an empty theme array.
-Reply with a JSON object: {{"results": [{{"id": "...", "themes": [...], "sentiment": "...", "tone": 0}}]}}
+Reply with a JSON object: {{"results": [{{"id": "...", "themes": [...], "sentiment": "...", "tone": 0, "unmatched": null}}]}}
 Return one entry per review, in the order given."""
 
 
@@ -173,10 +177,27 @@ def apply_analysis(review, result, answered=False):
     except (TypeError, ValueError):
         tone = None
 
+    # A subject the vocabulary does not cover. Recorded, never adopted automatically —
+    # see docs/SCHEMA.md. Auto-adopting would fragment the counts ("parking" vs "car
+    # park") and break month-to-month comparability, which is the whole point of a fixed
+    # list. Recording it removes the blind spot without that cost.
+    unmatched = result.get("unmatched")
+    if isinstance(unmatched, str):
+        # Underscores and hyphens become spaces first. Stripping them outright turned
+        # "printed_receipt" into "printedreceipt" on the dashboard.
+        unmatched = re.sub(r"[_\-/]+", " ", unmatched.lower().strip())
+        unmatched = re.sub(r"[^a-z0-9 ]+", "", unmatched)
+        unmatched = re.sub(r"\s+", " ", unmatched).strip()[:40] or None
+        if unmatched in THEMES or len(unmatched.split()) > 4:
+            unmatched = None
+    else:
+        unmatched = None
+
     if answered and sentiment:
         review["themes"] = themes          # may legitimately be []
         review["sentiment"] = sentiment
         review["tone"] = tone
+        review["unmatched"] = unmatched
         review["analysis_source"] = "model"
         return
 
@@ -186,6 +207,7 @@ def apply_analysis(review, result, answered=False):
     # Rules cannot read tone from prose. Leave it null rather than deriving it from the
     # star rating, which would just be the star rating wearing a different hat.
     review["tone"] = tone
+    review["unmatched"] = None   # rules cannot notice what they were never taught
     review["analysis_source"] = "rules"
 
 
@@ -280,7 +302,8 @@ def main():
         pending = [r for r in reviews if r.get("analysis_source") != "model"]
     else:
         pending = [r for r in reviews
-                   if not r.get("sentiment") or "tone" not in r]
+                   if not r.get("sentiment") or "tone" not in r
+                   or "unmatched" not in r]
     if args.limit:
         pending = pending[:args.limit]
     print(f"{len(pending)} review(s) to analyse", flush=True)

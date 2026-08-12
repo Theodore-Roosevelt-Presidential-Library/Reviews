@@ -176,7 +176,7 @@ back off, but individual reviews cannot be removed.
 
 | Piece | Where it comes from |
 |---|---|
-| Theme vocabulary (39 themes) | Hand-authored in `analyze.py`. Fixed — the model picks from it, never adds to it. |
+| Theme vocabulary (39 themes) | Hand-authored in `analyze.py`. Fixed — the model picks from it and *proposes* additions, but never adds one itself. See below. |
 | Theme + sentiment + tone per review | The model. All 335 reviews carry `analysis_source: "model"`; check `classified_by` in `summary.json` for the split on any run. |
 | "What visitors are saying" narrative | The model, one per window (7/30/60/90). Shown with its provenance printed underneath. |
 | Executive brief wording | Hand-written sentence templates in `brief.py`. |
@@ -198,12 +198,37 @@ which would just be the star rating in disguise.
 |---|---|
 | Volume or rating shifts | Fully. Headline, deltas, every figure track automatically. |
 | More reviews about a theme it already knows | Fully. Ranking reorders, the lead complaint changes. |
-| A complaint it has no theme for | **No.** The theme list never grows on its own. If nothing matches, the brief shows a coverage warning. |
+| A complaint it has no theme for | **Partly.** The list never grows on its own, but the review is surfaced under "Not in our vocabulary" with the sentence that raised it. |
 | A complaint that matches the *wrong* theme | **No, and no warning.** Keyword rules cannot detect their own false positives. |
 
 That last row is the real limit. In testing, 30 reviews about a broken elevator matched the
 `architecture` regex on the word "building" — a wrong label with no signal that it was wrong.
 Reading low-rated reviews directly, weekly, is not optional.
+
+### Why the vocabulary is fixed, and how it grows anyway
+
+A list that grew on its own would destroy the thing it was built for. "Crowding up 19 points"
+only means something if `crowding` meant the same thing last month, and a model inventing
+labels produces `parking`, `car park`, and `parking lot` as three separate lines that each
+look small. Fixed labels are what make a trend line a trend line.
+
+But a fixed list also cannot discover the next problem. Two of the most-used themes here,
+`interpretation` (45 reviews) and `historical_balance` (17), exist only because they were
+guessed at the start. Had they not been, sixty-two reviews arguing about how the Library
+tells TR's story would have been invisible.
+
+So the model does both. It labels from the fixed list, and separately names anything
+substantive the list has no word for — stored as `unmatched`, aggregated into
+`proposed_themes`, and shown on the Overview tab under **Not in our vocabulary**, each with
+the sentence that raised it. Nothing there is counted, trended, or filtered on. Promoting one
+means editing `THEMES` in `analyze.py` and re-running `analyze.py --all`; that is a person's
+decision, made once, in a commit.
+
+Two things to know when reading that card. **Single mentions are noisy** — the wording varies
+between runs, and a one-off often reflects the model reaching. **Repeats are the signal**, and
+are marked with a red rule. Three separate reviews about shuttle service is a theme; one review
+labelled "inspiration" is not. Near-duplicate wordings ("winter weather" and "weather heat")
+will not cluster on their own, so read the card rather than sorting it.
 
 **On providers.** This project ran on GitHub Models until that product was retired on
 July 30, 2026. The endpoint began returning `410 github_models_retirement_brownout`, the
