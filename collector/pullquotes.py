@@ -29,7 +29,9 @@ import unicodedata
 from datetime import date, timedelta
 
 import llm
-from common import CONFIG, DATA, ROOT, load_reviews, today, write_json
+from common import CONFIG, DATA, ROOT, load_reviews, theme_labels, today, write_json
+
+VOCAB = theme_labels()
 
 Q = CONFIG.get("pullquotes", {})
 POOL_PATH = DATA / "pullquotes.json"
@@ -194,13 +196,25 @@ Rules:
 - 60 to 220 characters. You may start and end mid-review but not mid-word.
 - Return null rather than forcing a weak quote. Most reviews should return null.
 
-Also return "draw": the single reason this quote would move someone to visit, as two or
-three lowercase words, e.g. "worth the drive", "kids stayed engaged", "the badlands view".
+Also return:
+
+- "draw": the single reason this quote would move someone to visit, as two or three
+  lowercase words, e.g. "worth the drive", "kids stayed engaged", "the badlands view".
+
+- "topics": which subjects THE QUOTED PASSAGE ITSELF is about, chosen only from the list
+  below. Judge the passage alone, not the review around it. If the review praises the cafe
+  but your chosen passage is about the exhibits, the passage is about the exhibits and the
+  cafe must not appear. Return an empty array rather than reaching. These decide which page
+  of the website the quote appears on, so a wrong one puts a quote about children's
+  exhibits on the restaurant page.
+  Choose from: {vocab}
 
 Vary what you choose. If a review praises several things, prefer the one a prospective
 visitor is least likely to have already assumed about a presidential library.
 
-Reply with JSON: {"results":[{"id":"...","quote":"..." or null,"draw":"..." or null}]}"""
+Reply with JSON:
+{"results":[{"id":"...","quote":"..." or null,"draw":"..." or null,"topics":[...]}]}"""
+SYSTEM = SYSTEM.replace("{vocab}", ", ".join(VOCAB))
 
 
 def choose(reviews, client, batch_size=12):
@@ -240,6 +254,13 @@ def choose(reviews, client, batch_size=12):
                 "id": src["id"],
                 "quote": result,
                 "draw": (item.get("draw") or "").strip().lower()[:40] or None,
+                # Topics describe THE EXCERPT, not the review it came from. Using the
+                # review's themes put two quotes about children's exhibits on the Where to
+                # Eat page: their reviews mentioned the cafe in a sentence nobody quoted.
+                # A page-targeted quote that isn't about the page is worse than a random one,
+                # because it looks deliberate.
+                "themes": [t for t in (item.get("topics") or []) if t in VOCAB][:5],
+                "review_themes": src.get("themes") or [],
                 "author": display_author(src.get("author")),
                 "source": src["source"],
                 "date": src.get("date"),
@@ -278,10 +299,15 @@ def eligible(reviews):
 def build_embed(pool):
     """Write site/embed.js with the quotes already inside it."""
     template = (ROOT / "site" / "embed.template.js").read_text()
-    quotes = [{k: q[k] for k in ("quote", "draw", "author", "source", "date", "url")}
+    quotes = [{k: q.get(k) for k in
+               ("quote", "draw", "author", "source", "date", "url", "themes")}
               for q in pool["quotes"]]
     js = template.replace("/*__QUOTES__*/[]",
                           json.dumps(quotes, ensure_ascii=False, separators=(",", ":")))
+    js = js.replace("/*__TOPICS__*/{}",
+                    json.dumps({k: v for k, v in Q.get("topics", {}).items()
+                                if not k.startswith("_")},
+                               ensure_ascii=False, separators=(",", ":")))
     js = js.replace("__GENERATED__", pool["generated"])
     out = ROOT / "site" / "embed.js"
     out.write_text(js)

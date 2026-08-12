@@ -15,6 +15,9 @@
  *   data-interval seconds between rotations, 0 = off (default 8)
  *   data-align    left | center                      (default center for banner)
  *   data-height   fixed | auto                       (default fixed — no layout shift)
+ *   data-topic    outdoors | exhibits | families ... — lead with quotes about this subject.
+ *                 Names come from config.json > pullquotes.topics, or use a raw theme name.
+ *                 Ranks rather than filters, so a block never renders empty.
  *
  * Design notes worth keeping:
  *
@@ -35,6 +38,7 @@
   "use strict";
 
   var QUOTES = /*__QUOTES__*/[];
+  var TOPICS = /*__TOPICS__*/{};
   var GENERATED = "__GENERATED__";
   if (!QUOTES.length) return;
 
@@ -122,6 +126,32 @@
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
     });
+  }
+
+  /**
+   * Order the pool for a page topic.
+   *
+   * A topic ranks, it never filters to nothing. The Shopping page has one quote mentioning
+   * the store and the Eat page has two; hard filtering would leave those blocks empty or
+   * showing a lone quote in a three-column grid, which looks broken rather than targeted.
+   * On-topic quotes come first in random order, then everything else in random order, so a
+   * page always fills and always leads with what it is about.
+   *
+   * data-topic takes one or more names from config.json > pullquotes.topics, or raw theme
+   * names straight from data/themes.json if you want to be specific.
+   */
+  function rankForTopic(pool, topicAttr) {
+    if (!topicAttr) return shuffle(pool);
+    var wanted = {};
+    topicAttr.toLowerCase().split(/[,\s]+/).filter(Boolean).forEach(function (name) {
+      (TOPICS[name] || [name]).forEach(function (theme) { wanted[theme] = true; });
+    });
+    var on = [], off = [];
+    pool.forEach(function (q) {
+      var hit = (q.themes || []).some(function (t) { return wanted[t]; });
+      (hit ? on : off).push(q);
+    });
+    return shuffle(on).concat(shuffle(off));
   }
 
   function shuffle(list) {
@@ -327,7 +357,7 @@
     var ac = pickAccent(accent, bg, dark ? "#FFFFFF" : "#241C17");
 
     var root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
-    var pool = shuffle(QUOTES);
+    var pool = rankForTopic(QUOTES, host.getAttribute("data-topic"));
 
     var sheet = document.createElement("style");
     sheet.textContent = styles(dark, ac, align, back.media);
@@ -461,5 +491,23 @@
   } else {
     init();
   }
-  window.TRPLQuotes = { refresh: init, count: QUOTES.length };
+  // Exposed so the preview page can show which page topics actually have material behind
+  // them. A topic with nothing on it still renders — it just isn't targeted, and whoever is
+  // placing the embed deserves to know that before they put it on a page.
+  window.TRPLQuotes = {
+    refresh: init,
+    count: QUOTES.length,
+    topics: TOPICS,
+    coverage: function () {
+      var out = {};
+      Object.keys(TOPICS).forEach(function (name) {
+        var want = {};
+        TOPICS[name].forEach(function (t) { want[t] = true; });
+        out[name] = QUOTES.filter(function (q) {
+          return (q.themes || []).some(function (t) { return want[t]; });
+        }).length;
+      });
+      return out;
+    }
+  };
 })();

@@ -18,9 +18,14 @@
       "offered": "The museum is very interactive and fun for all ages."
     },
     {
-      "id": "google-2026-08-06-ddc53a18",
-      "reason": "length 51 outside 60-220",
-      "offered": "The library experience itself is definitely 5 star."
+      "id": "tripadvisor-2026-08-06-6e226cef",
+      "reason": "off-limits subject: email",
+      "offered": "When you go, you receive a bracelet and you enter your name and email. Then at the exhibit you can scan your bracelet. It makes pictures of you and has you do q"
+    },
+    {
+      "id": "google-2026-08-06-9eac3d67",
+      "reason": "length 59 outside 60-220",
+      "offered": "Fortunately, we were able to get tickets for the next hour."
     },
     {
       "id": "google-2026-08-06-08f38b53",
@@ -44,8 +49,13 @@
     },
     {
       "id": "google-2026-08-04-8b88644d",
-      "reason": "length 49 outside 60-220",
-      "offered": "Each exhibit gives you a glimpse of Teddy's life."
+      "reason": "length 251 outside 60-220",
+      "offered": "This museum blends into the landscape and the exhibits are breathtaking, as the fusion of the 21st, 20th, and 19th Centuries gives the visitor an experience of "
+    },
+    {
+      "id": "google-2026-08-04-3868bc90",
+      "reason": "length 59 outside 60-220",
+      "offered": "Spent 6 hours there and still didn't experience everything."
     },
     {
       "id": "google-2026-08-04-289c44d2",
@@ -53,9 +63,19 @@
       "offered": "My 12 and 14 year old boys had a great time!"
     },
     {
+      "id": "google-2026-08-02-b735f7c8",
+      "reason": "length 26 outside 60-220",
+      "offered": "Absolutely worth the trip!"
+    },
+    {
       "id": "tripadvisor-2026-08-01-7d5ae4bf",
       "reason": "hedge/criticism: even if",
       "offered": "Building, exhibits and connection to the landscape are outstanding, even if I might have a few quibbles with the museum's interpretations of TR's career."
+    },
+    {
+      "id": "google-2026-08-01-dc637cc9",
+      "reason": "length 46 outside 60-220",
+      "offered": "The panoramic views alone are worth the visit."
     },
     {
       "id": "google-2026-07-31-a4ee0b12",
@@ -68,20 +88,20 @@
       "offered": "The library is very interactive with fun AI engagement."
     },
     {
-      "id": "google-2026-07-30-ff45ff30",
-      "reason": "length 32 outside 60-220",
-      "offered": "And Teddy’s real diary?? Insane."
-    },
-    {
       "id": "google-2026-07-28-d8c70ac5",
       "reason": "length 47 outside 60-220",
       "offered": "Amazing facility in one of his favorite places."
+    },
+    {
+      "id": "google-2026-07-28-3a4851f1",
+      "reason": "length 35 outside 60-220",
+      "offered": "An awesome experience for all ages."
     }
   ],
   "cut_by_critic_last_run": [
     {
       "quote": "The interactive photo opportunities make this an over the top experience for all ages",
-      "reason": "Mentions 'interactive photo opportunities' which could imply photography or photos of visitors."
+      "reason": "Mentions 'interactive photo opportunities' which references photographs of visitors."
     },
     {
       "quote": "The building is vet cool architecture that perfectly complements the bad lands. The trail on the roof is amust",
@@ -89,43 +109,35 @@
     },
     {
       "quote": "Touch the compass seen throughout and see yourself in in time of Teddy.",
-      "reason": "Quote is unclear and incomplete, difficult to understand without context."
+      "reason": "Unclear and confusing quote that cannot be understood without context."
     },
     {
       "quote": "Great used of historical artifacts and technology to tell the history of this great US president.",
-      "reason": "Contains a spelling error ('used' instead of 'use')."
-    },
-    {
-      "quote": "Absolutely worth the trip! Give yourself at least 4 hours to explore the whole place.",
-      "reason": "Mentions time needed to explore, which is a form of hedging."
+      "reason": "Contains a grammatical error: 'Great used' should be 'Great use'."
     },
     {
       "quote": "Recently opened on July 4 this year it is a beautiful display of architecture that meets nature and its surrounding area.",
-      "reason": "Mentions opening date, which is disallowed."
+      "reason": "Mentions opening date, which is not allowed."
     },
     {
       "quote": "The historical photos of you in the various times /places that are so much fun to look through, and the whole experience was remarkably kid-friendly.",
-      "reason": "Mentions another visitor ('you') and is unclear without context."
+      "reason": "Mentions 'you' which is unclear without context; also mentions kid-friendliness which is generic."
     },
     {
-      "quote": "There's immersive videos, too, as well as an AI Teddy Roosevelt you can ask questions to (a partnership with Microsoft).",
-      "reason": "Mentions a partnership with Microsoft and AI features, which may be too specific and not clearly promotional."
+      "quote": "Incredibly engaging and fun. The exhibits and videos are really good.",
+      "reason": "Generic praise that could describe any museum."
     },
     {
-      "quote": "Be sure to take the scenic drive and view the library from across the badlands too.",
-      "reason": "Mentions a scenic drive and viewing from outside, which is not about the library experience itself."
+      "quote": "There are so many interactive experiences throughout!! I don't want to spoil any fun, but there's a bracelet you wear with an RFID tag (think Disney magic band) that allows for activations throughout the exhibits.",
+      "reason": "Mentions registration-type technology and could spoil fun; not suitable."
     },
     {
       "quote": "Inside, the kids can find hidden animals in about seven of the rooms while the adults read all the materials in the room (and the adults can look for the animals too).",
-      "reason": "Mentions adults and kids looking for animals, which is too generic and unclear."
+      "reason": "Mentions adults and kids looking for animals, which is generic and unclear without context."
     },
     {
       "quote": "My wife and I loved the AI photos they made of us as well as the really cool mini-theaters detailing TR's Rough Riders and Brazilian river expedition.",
-      "reason": "Mentions another visitor ('my wife and I') and AI photos, which is not suitable."
-    },
-    {
-      "quote": "The rooftop and boardwalk offer stunning views and the building is innovative.",
-      "reason": "The quote is generic praise that could describe any building or museum and does not specifically encourage a visit to this location."
+      "reason": "Mentions 'my wife and I' which names visitors; also mentions AI photos which is good but personal naming disqualifies."
     }
   ],
   "quotes": [
@@ -133,6 +145,17 @@
       "id": "tripadvisor-2026-08-10-20f79889",
       "quote": "The interactive exhibits made it engaging for young children and an incredible educational experience.",
       "draw": "kids stayed engaged",
+      "themes": [
+        "interactive_exhibits",
+        "families"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "accessibility",
+        "queues",
+        "restrooms",
+        "food_beverage"
+      ],
       "author": "Abby H.",
       "source": "tripadvisor",
       "date": "2026-08-10",
@@ -142,7 +165,18 @@
     {
       "id": "google-2026-08-07-63e74833",
       "quote": "There were things to do and see for all ages. Museum artifacts, interactive exhibits, scavenger hunts, replicas, rooms designed to immerse you in different eras of TR's life... there was just so much.",
-      "draw": "enough to fill a day",
+      "draw": "kids stayed engaged",
+      "themes": [
+        "interactive_exhibits",
+        "families"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "ai_criticism",
+        "retail",
+        "restrooms",
+        "security_screening"
+      ],
       "author": "Lakeisha H.",
       "source": "google",
       "date": "2026-08-07",
@@ -152,7 +186,17 @@
     {
       "id": "google-2026-08-07-39308120",
       "quote": "The design blended into the landscape and incorporated features of the surrounding lands with wood textures and even the essence of the sandstone striations seen in the Badlands.",
-      "draw": "building blends with landscape",
+      "draw": "the badlands view",
+      "themes": [
+        "architecture",
+        "landscape"
+      ],
+      "review_themes": [
+        "architecture",
+        "landscape",
+        "interpretation",
+        "interactive_exhibits"
+      ],
       "author": "Tina J.",
       "source": "google",
       "date": "2026-08-07",
@@ -160,19 +204,19 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2kweFdHOXZTM1pJY1VwSVoySkhTamw0TVVGbmJYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOi0xWG9vS3ZIcUpIZ2JHSjl4MUFnbXc%7C%7C?hl=en"
     },
     {
-      "id": "tripadvisor-2026-08-06-6e226cef",
-      "quote": "Over the top exhibits. So interactive. Families and children were just loving it.",
-      "draw": "kids stayed engaged",
-      "author": "Becky W.",
-      "source": "tripadvisor",
-      "date": "2026-08-06",
-      "rating": 5,
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1071737934-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html"
-    },
-    {
       "id": "tripadvisor-2026-08-06-256e808b",
       "quote": "Stunning architecture designed to blend into the Badlands landscape.",
-      "draw": "building blends with landscape",
+      "draw": "the badlands view",
+      "themes": [
+        "architecture",
+        "landscape"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "architecture",
+        "landscape",
+        "boardwalk_trails"
+      ],
       "author": "Mayberrys",
       "source": "tripadvisor",
       "date": "2026-08-06",
@@ -182,7 +226,15 @@
     {
       "id": "google-2026-08-06-e312f942",
       "quote": "An absolutely amazing structure built into the North Dakota landscape.",
-      "draw": "building blends with landscape",
+      "draw": "the badlands view",
+      "themes": [
+        "architecture",
+        "landscape"
+      ],
+      "review_themes": [
+        "architecture",
+        "landscape"
+      ],
       "author": "Jonathan M.",
       "source": "google",
       "date": "2026-08-06",
@@ -192,7 +244,13 @@
     {
       "id": "google-2026-08-06-4937baa9",
       "quote": "Interactive exhibit, very informative and the interactive exhibits were a fun highlight",
-      "draw": "interactive exhibits",
+      "draw": "interactive_exhibits",
+      "themes": [
+        "interactive_exhibits"
+      ],
+      "review_themes": [
+        "interactive_exhibits"
+      ],
       "author": "Sharon F.",
       "source": "google",
       "date": "2026-08-06",
@@ -200,19 +258,19 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2w4dFduVXlNWFpDUzFOUFlXVm9MVmhsUlZOTmMxRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOl8tWnUyMXZCS1NPYWVoLVhlRVNNc1E%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-08-04-ab4bd281",
-      "quote": "Beautiful views from the roof and cool looking architecture.",
-      "draw": "the badlands view",
-      "author": "Scott R.",
-      "source": "google",
-      "date": "2026-08-04",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kQlR6QlZZbVIwT1VvNWMyZERjbWRzTVU1bGRXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndBTzBVYmR0OUo5c2dDcmdsMU5ldWc%7C%7C?hl=en"
-    },
-    {
       "id": "google-2026-08-04-83a64718",
       "quote": "Totally loved the location, the design, use of AI, and the interactive exhibits.",
-      "draw": "interactive exhibits",
+      "draw": "interactive_exhibits",
+      "themes": [
+        "interactive_exhibits",
+        "architecture"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "ai_criticism",
+        "families",
+        "interpretation"
+      ],
       "author": "Brian H.",
       "source": "google",
       "date": "2026-08-04",
@@ -220,19 +278,19 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21wUVRsRmpMV3QxUVhSSFgxUlhabGRvTjJKWmVGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmpQTlFjLWt1QXRHX1RXZldoN2JZeFE%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-08-04-3868bc90",
-      "quote": "This a must see experience! Spent 6 hours there and still didn't experience everything.",
-      "draw": "enough to fill a day",
-      "author": "Randy H.",
-      "source": "google",
-      "date": "2026-08-04",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21aNlFtOTVkWGRaVjAxdFlUTkpWQzB0VG13dFgxRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmZ6Qm95dXdZV01tYTNJVC0tTmwtX1E%7C%7C?hl=en"
-    },
-    {
       "id": "google-2026-08-03-d5951bfc",
       "quote": "The interactive exhibits are wonderful, kids will enjoy them too.",
       "draw": "kids stayed engaged",
+      "themes": [
+        "interactive_exhibits",
+        "families"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "ticket_pricing",
+        "food_beverage",
+        "dwell_time"
+      ],
       "author": "Tom K.",
       "source": "google",
       "date": "2026-08-03",
@@ -242,7 +300,18 @@
     {
       "id": "google-2026-08-02-8222474a",
       "quote": "An exceptionally interactive and immersive educational experience housed in architecture that mirrors the surrounding beautiful landscape.",
-      "draw": "immersive experience",
+      "draw": "architecture",
+      "themes": [
+        "architecture",
+        "interactive_exhibits",
+        "landscape"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "architecture",
+        "landscape",
+        "timed_entry"
+      ],
       "author": "Annika G.",
       "source": "google",
       "date": "2026-08-02",
@@ -250,19 +319,16 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tRNFUyTjBRbHB5VjJORWNXWmhSRmxSV2toSU9GRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkQ4U2N0QlpyV2NEcWZhRFlRWkhIOFE%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-08-01-dc637cc9",
-      "quote": "The building itself is a masterpiece, seamlessly blending into the surrounding landscape, and the panoramic views alone are worth the visit.",
-      "draw": "the badlands view",
-      "author": "Obaidullah R.",
-      "source": "google",
-      "date": "2026-08-01",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kbFRFWkpRMGRXU21VMFRWWndNalpZY1hOWmFYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndlTEZJQ0dWSmU0TVZwMjZYcXNZaXc%7C%7C?hl=en"
-    },
-    {
       "id": "google-2026-08-01-4d6ea530",
       "quote": "It is an inspiring place for its architecture and high tech show.",
-      "draw": "architecture and tech",
+      "draw": "architecture",
+      "themes": [
+        "architecture"
+      ],
+      "review_themes": [
+        "architecture",
+        "interactive_exhibits"
+      ],
       "author": "Giorgio F.",
       "source": "google",
       "date": "2026-08-01",
@@ -270,19 +336,37 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pkWGJFODNTbGxxVFhka1VEUlFSalo0WkhkUGFXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjdXbE83SllqTXdkUDRQRjZ4ZHdPaWc%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-07-31-74100b92",
-      "quote": "Incredibly engaging and fun. The exhibits and videos are really good.",
-      "draw": "engaging exhibits and videos",
-      "author": "Matt R.",
+      "id": "google-2026-07-30-ff45ff30",
+      "quote": "The AI photos were so amusing, as well as the games throughout and the immersive Amazon expedition.",
+      "draw": "interactive exhibits",
+      "themes": [
+        "interactive_exhibits"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "ai_criticism",
+        "architecture",
+        "visitor_flow",
+        "interpretation"
+      ],
+      "author": "Richard D.",
       "source": "google",
-      "date": "2026-07-31",
+      "date": "2026-07-30",
       "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21SNFJtaGpUVmg2YVZoM1FYazBRV2h4Y1VaclNGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmR4RmhjTVh6aVh3QXk0QWhxcUZrSFE%7C%7C?hl=en"
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kb05FaG9NM2xuVkdwalRuTmtRVkZWZGxGQmNIYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndoNEhoM3lnVGpjTnNkQVFVdlFBcHc%7C%7C?hl=en"
     },
     {
       "id": "google-2026-07-30-e1d3af71",
       "quote": "Interactive displays get people of all ages and abilities involved.",
-      "draw": "interactive for all ages",
+      "draw": "interactive exhibits",
+      "themes": [
+        "interactive_exhibits",
+        "age_tiers"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "timed_entry"
+      ],
       "author": "Betty B.",
       "source": "google",
       "date": "2026-07-30",
@@ -290,24 +374,44 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GeFlsQnVkWEJCZW5sYU5VbFlXRGRrYjNKa1dHYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnFxYlBudXBBenlaNUlYWDdkb3JkWGc%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-07-27-c3be8ef9",
-      "quote": "The building itself is absolutely beautiful, and it's worth to to learn also about the ways the library is generating its own sustainable energy, curbs carbon, loses no water, and aims for zero waste.",
-      "draw": "sustainable building",
-      "author": "M-A",
+      "id": "google-2026-07-28-1c084b70",
+      "quote": "The design of the walls mimicking the layers of soil in the surrounding area to the large windows showing the exterior landscape showcases the thoughtful design.",
+      "draw": "architecture",
+      "themes": [
+        "architecture",
+        "landscape"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "architecture",
+        "landscape"
+      ],
+      "author": "Madge A.",
       "source": "google",
-      "date": "2026-07-27",
+      "date": "2026-07-28",
       "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tsc1JFNDVjMUpCWDNWUWJXZ3hkRlZQZDBWdVYxRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOklsRE45c1JBX3VQbWgxdFVPd0VuV1E%7C%7C?hl=en"
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xwQ1pWcEVPVGhaWWpSZlJrMDNiVFYyVjA5QlJFRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlpCZVpEOThZYjRfRk03bTV2V09BREE%7C%7C?hl=en"
     },
     {
-      "id": "google-2026-07-26-c890dac2",
-      "quote": "The architecture and grounds are fantastic! You get a good sense of the place and what it must have felt like to live here more than a century ago.",
-      "draw": "historic atmosphere",
-      "author": "Stewart K.",
+      "id": "google-2026-07-26-728eb449",
+      "quote": "The rooftop and boardwalk offer stunning views and the building is innovative.",
+      "draw": "rooftop",
+      "themes": [
+        "rooftop",
+        "boardwalk_trails",
+        "architecture"
+      ],
+      "review_themes": [
+        "architecture",
+        "rooftop",
+        "boardwalk_trails",
+        "guided_tours"
+      ],
+      "author": "Pam",
       "source": "google",
       "date": "2026-07-26",
       "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2taQ1RVdEdTSGx4ZGpCVlFWQjROMUJXY1ZSd2IwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkZCTUtGSHlxdjBVQVB4N1BWcVRwb0E%7C%7C?hl=en"
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2w5NFZubE9SbmhTTTFCU1ZEQTRSRE13UjJabVJVRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOl94VnlORnhSM1BSVDA4RDMwR2ZmRUE%7C%7C?hl=en"
     }
   ]
 }

@@ -316,6 +316,29 @@ on white, cream, brand red or near-black. The accent is contrast-checked against
 background and falls back to the text colour if it would drop below 3:1, which is what the
 brand-red block needs.
 
+**Targeting a page topic.** `data-topic="outdoors"` makes a block lead with quotes about that
+subject. Topic names live in `config.json > pullquotes.topics` and map onto the same controlled
+theme vocabulary the dashboard uses, so retargeting a page is a config edit. Several are
+allowed: `data-topic="families,exhibits"`.
+
+**A topic ranks, it never filters to nothing.** On-topic quotes come first, the rest fill the
+block. Hard filtering would leave the Shopping page showing one quote in a three-column grid,
+which reads as broken rather than targeted.
+
+**Topics describe the excerpt, not the review.** This is the part that matters. The first
+version ranked on the source review's themes and put two quotes about children's exhibits on
+the Where to Eat page — both reviews mentioned the cafe in a sentence nobody quoted. Worse, a
+quote reading *"The AI photos were so amusing"* carried `ai_criticism` from elsewhere in its
+review. A targeted quote that isn't about the page is worse than a random one, because it looks
+deliberate. The model now tags the passage alone, and `review_themes` is kept on the record for
+reference but never used for ranking.
+
+`/widget.html` prints a live coverage table — how many quotes each topic has, and which pages
+it suits. As of the current pool: `exhibits`, `architecture`, `families` and `visit` have 8 of
+14 each; `outdoors`, `hiking` and `landscape` have 6; and `tours`, `shopping`, `eat`, `tickets`,
+`membership` and `accessibility` have **none yet**. Those will fill as reviews arrive — the pool
+holds 60 — but until they do, those pages get an untargeted block, so check the table first.
+
 **Forcing a text colour: use `data-text`.** `data-text="white"` gives white text and gold
 stars; `data-text="dark"` gives near-black. It names the text, so there is nothing to get
 backwards. `data-theme` still works but names the *background* — `data-theme="dark"` means a

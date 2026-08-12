@@ -146,11 +146,48 @@
   </section>
 
   <section>
+    <h2>Targeting a page topic</h2>
+    <p class="note">Add <code>data-topic</code> and the block leads with quotes about that
+    subject. Topics are named in <code>config.json</code> and map onto the same controlled theme
+    vocabulary the dashboard uses, so the Outdoors page pulls quotes about the boardwalk, the
+    roof and the Badlands, while the Exhibits page pulls quotes about what is inside.</p>
+    <p class="note"><strong>A topic ranks; it never filters to nothing.</strong> On-topic quotes
+    come first, then the rest fill the block. A page with thin coverage still shows something
+    rather than an empty band — but it also isn't really targeted, so check the table below
+    before placing one.</p>
+    <div class="demo bg-cream">
+      <span class="tag">data-topic="outdoors"</span>
+      <div data-trpl-quotes data-layout="wall" data-count="3" data-topic="outdoors"></div>
+    </div>
+    <div class="demo bg-white" style="margin-top:1rem">
+      <span class="tag">data-topic="architecture"</span>
+      <div data-trpl-quotes data-layout="wall" data-count="3" data-topic="architecture"></div>
+    </div>
+<pre><code>&lt;!-- /visit/outdoors, /visit/hiking --&gt;
+&lt;div data-trpl-quotes data-layout="wall" data-count="3" data-topic="outdoors"&gt;&lt;/div&gt;
+
+&lt;!-- /visit/exhibits --&gt;
+&lt;div data-trpl-quotes data-layout="banner" data-topic="exhibits"&gt;&lt;/div&gt;
+
+&lt;!-- more than one subject --&gt;
+&lt;div data-trpl-quotes data-layout="wall" data-topic="families,exhibits"&gt;&lt;/div&gt;</code></pre>
+
+    <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1rem;margin:2rem 0 .3rem">
+      What each topic has to draw on</h3>
+    <p class="note">Live from the current pool. Topics are matched against what the
+    <em>excerpt</em> says, not the review it came from — a review can mention the cafe in a
+    sentence nobody quoted, and a quote about children's exhibits does not belong on the Where
+    to Eat page. Anything showing zero has no material yet; it will fill as reviews come in.</p>
+    <table id="coverage"><tbody><tr><td class="note">Loading…</td></tr></tbody></table>
+  </section>
+
+  <section>
     <h2>Options</h2>
     <table>
       <thead><tr><th>Attribute</th><th>Values</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td><code>data-layout</code></td><td><code>banner</code> <code>card</code> <code>wall</code> <code>inline</code></td><td>Which of the four above. Default <code>banner</code>.</td></tr>
+        <tr><td><code>data-topic</code></td><td>a topic name, or several comma-separated</td><td>Lead with quotes about this subject. Names from <code>config.json &gt; pullquotes.topics</code>, or a raw theme name. Ranks rather than filters, so the block never renders empty.</td></tr>
         <tr><td><code>data-text</code></td><td><code>white</code> <code>dark</code></td><td><strong>The clearest way to force a text colour.</strong> <code>white</code> gives white text and gold stars; <code>dark</code> gives near-black. Overrides everything below.</td></tr>
         <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Names the <em>background</em>, not the text — <code>dark</code> means a dark block and therefore white text. Easy to read backwards, which is why <code>data-text</code> exists. Default <code>auto</code>: chosen from the background's luminance, and white over any photo, video or gradient where the colour can't be measured.</td></tr>
         <tr><td><code>data-accent</code></td><td>any CSS colour</td><td>Quote mark, stars and active dot. Defaults to brand red, or clay on dark.</td></tr>
@@ -167,6 +204,31 @@
 
 </main>
 
-<script src="embed.js" async></script>
+<script src="embed.js"></script>
+<script>
+  // Rendered from the widget's own data so this table can never drift from what ships.
+  window.addEventListener("load", function () {
+    if (!window.TRPLQuotes || !window.TRPLQuotes.coverage) return;
+    var cov = window.TRPLQuotes.coverage(), total = window.TRPLQuotes.count;
+    var rows = Object.keys(cov).sort(function (a, b) { return cov[b] - cov[a]; });
+    document.getElementById("coverage").innerHTML =
+      "<thead><tr><th>data-topic</th><th>Quotes on topic</th><th>Suggested pages</th></tr></thead><tbody>" +
+      rows.map(function (t) {
+        var n = cov[t];
+        var where = {
+          visit: "/visit", exhibits: "/visit/exhibits", outdoors: "/visit/outdoors",
+          hiking: "/visit/hiking", biking: "/visit/biking", architecture: "/project/design",
+          landscape: "/visit/scenic-drives, /visit/stargazing", itineraries: "/visit/itineraries",
+          planner: "/visit/planner", families: "/visit/groups, /visit/planner",
+          groups: "/visit/groups", tours: "/visit/tours", shopping: "/visit/shopping",
+          eat: "/visit/eat", directions: "/visit/directions", tickets: "/tickets",
+          membership: "/membership", accessibility: "/visit/policies"
+        }[t] || "";
+        return "<tr><td><code>" + t + "</code></td><td>" +
+          (n ? n + " of " + total : "<strong>none yet</strong>") +
+          "</td><td class=\"note\" style=\"margin:0\">" + where + "</td></tr>";
+      }).join("") + "</tbody>";
+  });
+</script>
 </body>
 </html>

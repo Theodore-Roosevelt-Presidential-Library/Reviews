@@ -104,9 +104,99 @@
   },
   "pullquotes": {
     "consider": 60,
-    "pool_size": 40,
+    "pool_size": 60,
     "max_age_days": 540,
     "note": "The public quote widget. Only 5-star reviews dated after opening are eligible. Every excerpt is verified as a verbatim substring of its review before it ships; anything that isn't is discarded and reported, never repaired.",
-    "max_per_draw": 3
+    "max_per_draw": 3,
+    "topics": {
+      "_note": "Page topic -> themes from data/themes.json. Used by data-topic on the embed. A topic only ranks quotes; it never empties the block \u2014 if too few match, the widget tops up with general ones so a page can't end up showing nothing.",
+      "visit": [
+        "dwell_time",
+        "interactive_exhibits",
+        "families",
+        "peer_comparison",
+        "value_for_money"
+      ],
+      "exhibits": [
+        "interactive_exhibits",
+        "interpretation",
+        "historical_balance",
+        "guided_tours"
+      ],
+      "outdoors": [
+        "boardwalk_trails",
+        "landscape",
+        "rooftop",
+        "conservation_message"
+      ],
+      "hiking": [
+        "boardwalk_trails",
+        "landscape",
+        "rooftop"
+      ],
+      "biking": [
+        "boardwalk_trails",
+        "landscape"
+      ],
+      "architecture": [
+        "architecture",
+        "landscape",
+        "rooftop"
+      ],
+      "landscape": [
+        "landscape",
+        "conservation_message",
+        "boardwalk_trails"
+      ],
+      "itineraries": [
+        "dwell_time",
+        "landscape",
+        "drive_market"
+      ],
+      "planner": [
+        "dwell_time",
+        "families",
+        "value_for_money"
+      ],
+      "families": [
+        "families",
+        "age_tiers",
+        "interactive_exhibits"
+      ],
+      "groups": [
+        "families",
+        "age_tiers",
+        "guided_tours"
+      ],
+      "tours": [
+        "guided_tours",
+        "interpretation"
+      ],
+      "shopping": [
+        "retail",
+        "retail_pricing"
+      ],
+      "eat": [
+        "food_beverage"
+      ],
+      "directions": [
+        "drive_market",
+        "landscape"
+      ],
+      "tickets": [
+        "value_for_money",
+        "timed_entry",
+        "dwell_time"
+      ],
+      "membership": [
+        "value_for_money",
+        "dwell_time",
+        "peer_comparison"
+      ],
+      "accessibility": [
+        "accessibility",
+        "staff"
+      ]
+    }
   }
 }
