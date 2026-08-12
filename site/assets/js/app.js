@@ -19,6 +19,7 @@
     sort: "newest",
     tier: "all",
     allThemes: false,
+    themeSort: "size",
     expanded: {}
   };
 
@@ -425,14 +426,38 @@
   }
 
   function renderThemes() {
-    var moves = M.windows[S.window].theme_movement || [];
+    var moves = (M.windows[S.window].theme_movement || []).slice();
+
+    // Order matters more than it looks, because the list is capped. derive.py sorts by how
+    // far a theme's share moved, which buries anything large and steady: ai_criticism sat at
+    // 27 mentions and rank 21, cut from a card titled "Themes", while value_for_money showed
+    // at rank 10 with zero mentions this period because it had fallen. Size is the honest
+    // default for a capped list — what gets cut is then genuinely small. Movement is still
+    // one click away, because a theme doubling quietly is worth catching early.
+    if (S.themeSort === "size") {
+      moves.sort(function (a, b) {
+        return (b.current - a.current) || (Math.abs(b.change) - Math.abs(a.change));
+      });
+    } else {
+      moves.sort(function (a, b) { return Math.abs(b.change) - Math.abs(a.change); });
+    }
+
+    document.querySelectorAll("[data-themesort]").forEach(function (b) {
+      b.classList.toggle("active", b.dataset.themesort === S.themeSort);
+      b.onclick = function () {
+        S.themeSort = b.dataset.themesort; S.allThemes = false; render();
+      };
+    });
+
     if (!moves.length) {
       $("themes").innerHTML = '<tbody><tr><td class="empty">Not enough reviews in this period to show movement.</td></tr></tbody>';
       return;
     }
     $("themes").innerHTML =
       "<thead><tr><th>Theme</th><th class='num'>Now</th><th class='num'>Prior</th>" +
-      "<th class='num'>Share</th><th class='num'>Change</th></tr></thead><tbody>" +
+      "<th class='num'>Share</th><th class='num' title=\"Change in this theme's share of " +
+      "all reviews, not in its raw count. A theme can gain mentions and still lose share " +
+      "in a busier month.\">Share change</th></tr></thead><tbody>" +
       moves.slice(0, S.allThemes ? moves.length : THEME_LIMIT).map(function (m) {
         // More mentions of a theme is not inherently good or bad, but for complaint
         // themes a rise is worth noticing — colour by direction, not by judgement.

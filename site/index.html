@@ -94,7 +94,11 @@
     <div class="grid-2">
       <article class="card">
         <header class="card-head">
-          <h2>Themes</h2><span class="card-tag">Share vs previous period</span>
+          <h2>Themes</h2>
+          <div class="segmented" role="group" aria-label="Sort themes">
+            <button type="button" data-themesort="size">Most mentioned</button>
+            <button type="button" data-themesort="move">Biggest movers</button>
+          </div>
         </header>
         <div class="card-body flush"><table id="themes"></table></div>
         <footer class="card-foot">

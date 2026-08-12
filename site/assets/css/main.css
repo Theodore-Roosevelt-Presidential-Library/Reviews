@@ -495,3 +495,14 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
   font-size: .8125rem; color: var(--color-brand); text-decoration: underline;
   text-underline-offset: 2px; }
 .linkbtn:hover { text-decoration: none; }
+
+/* Sort control for the theme table. The table is capped, so which order it is in decides
+   what gets hidden — that choice belongs on screen, not buried in derive.py. */
+.segmented { display: inline-flex; border: 1px solid var(--color-line, #DDD3C4);
+  border-radius: 4px; overflow: hidden; }
+.segmented button { background: none; border: 0; cursor: pointer; font: inherit;
+  font-size: .6875rem; letter-spacing: .04em; text-transform: uppercase;
+  padding: .28rem .6rem; color: var(--color-muted); }
+.segmented button + button { border-left: 1px solid var(--color-line, #DDD3C4); }
+.segmented button:hover { background: rgba(139, 46, 31, .06); }
+.segmented button.active { background: var(--color-brand); color: #fff; }

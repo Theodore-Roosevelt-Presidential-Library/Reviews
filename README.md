@@ -251,6 +251,21 @@ up in board reports.
 vocabulary has no ceiling now, and without a cap a long tail of two-mention themes would
 eventually own the page.
 
+Because the list is capped, **the sort decides what gets hidden**, so it sits on the card as
+a control rather than in `derive.py`. The default is **Most mentioned**; what falls off is
+then genuinely small. **Biggest movers** is one click away and re-sorts by change in share,
+which is worth watching for a theme doubling quietly.
+
+`derive.py` originally sorted only by movement, and the cap made that actively misleading:
+`ai_criticism` sat at 27 mentions and rank 21 — cut from a card titled "Themes", and the most
+reputationally significant theme in the dataset — while `value_for_money` showed at rank 10
+with zero mentions in the period, purely because it had fallen. A capped list ordered by
+volatility hides exactly the things a capped list should keep.
+
+One column to read carefully: **Share change** is change in a theme's share of all reviews,
+not in its raw count. In a busier month a theme can gain mentions and still lose share —
+`interactive_exhibits` went 40 to 84 mentions and −2.1 points at the same time.
+
 **To undo one:** delete its entry from `data/themes.json` and run `analyze.py --all`. To turn
 the whole mechanism off: `vocabulary.auto_promote: false`.
 
