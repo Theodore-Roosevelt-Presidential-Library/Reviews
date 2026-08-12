@@ -29,6 +29,13 @@
   .bg-sand{background:var(--sand)}
   .bg-brand{background:var(--brand)}
   .bg-deep{background:var(--deep)}
+  .photo{position:relative;overflow:hidden;
+    background-image:url("https://www.trlibrary.com/sites/default/files/styles/16_9__l/public/2025-04/Snohetta-TRPL-8-DawnDusk-Copyright-Plomp-FINAL-PRINT-ONLY.jpg.webp?h=c1265061&itok=VybjSrEo"),
+      linear-gradient(135deg,#3B2C22,#1B1512);
+    background-size:cover;background-position:center}
+  .photo-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    background:linear-gradient(120deg,#2A3B2E,#101A13)}
+  .photo-video{background-image:none;background-color:transparent}
   .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1rem}
   .swatches .demo{padding:1.75rem 1.25rem}
   .tag{display:inline-block;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;
@@ -98,9 +105,9 @@
   <section>
     <h2>On any colour block</h2>
     <p class="note">The widget reads the background it was dropped onto and picks light or dark
-    text from its luminance. On dark blocks the accent lightens to a clay tone so it keeps
-    contrast without leaving the brand family. Nothing below is configured differently — all four
-    are the same snippet.</p>
+    text from its luminance — white on anything dark, near-black on anything light. Stars are gold
+    throughout, deepened on light backgrounds where bright gold falls below 3:1 against white.
+    Nothing below is configured differently; all four are the same snippet.</p>
     <div class="swatches">
       <div class="demo bg-white"><span class="tag">White</span>
         <div data-trpl-quotes data-layout="inline"></div></div>
@@ -114,12 +121,30 @@
   </section>
 
   <section>
+    <h2>On a photo or video background</h2>
+    <p class="note">The case that broke on the homepage. A Drupal section backed by a photograph
+    or a video reports no background colour at all, so earlier builds looked past it, found the
+    white page behind, and set near-black text on a dark picture. The widget now detects that an
+    ancestor is painted with an image, gradient or full-bleed media and switches to white text
+    with a soft shadow — the only choice that holds up over an image it cannot measure.</p>
+    <div class="demo photo">
+      <div data-trpl-quotes data-layout="banner"></div>
+    </div>
+    <div class="demo photo photo-video" style="margin-top:1rem">
+      <video autoplay muted loop playsinline aria-hidden="true"></video>
+      <div data-trpl-quotes data-layout="banner"></div>
+    </div>
+    <p class="note" style="margin-top:1rem">If a section is light enough that white text struggles,
+    force it: <code>data-theme="light"</code>. Detection is a default, not a lock.</p>
+  </section>
+
+  <section>
     <h2>Options</h2>
     <table>
       <thead><tr><th>Attribute</th><th>Values</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td><code>data-layout</code></td><td><code>banner</code> <code>card</code> <code>wall</code> <code>inline</code></td><td>Which of the four above. Default <code>banner</code>.</td></tr>
-        <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Override the background detection. Default <code>auto</code>, which is right almost always.</td></tr>
+        <tr><td><code>data-theme</code></td><td><code>auto</code> <code>light</code> <code>dark</code></td><td>Override the background detection. Default <code>auto</code>: light or dark text chosen from the background's luminance, and white text over any photo, video or gradient, where the colour can't be measured.</td></tr>
         <tr><td><code>data-accent</code></td><td>any CSS colour</td><td>Quote mark, stars and active dot. Defaults to brand red, or clay on dark.</td></tr>
         <tr><td><code>data-align</code></td><td><code>left</code> <code>center</code></td><td>Banner and card only. Default centre.</td></tr>
         <tr><td><code>data-count</code></td><td>a number</td><td>Wall only — how many quotes. Default 3.</td></tr>

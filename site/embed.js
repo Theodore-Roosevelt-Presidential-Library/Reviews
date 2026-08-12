@@ -12,6 +12,7 @@
  *   data-count    how many to show in wall layout    (default 3)
  *   data-interval seconds between rotations, 0 = off (default 8)
  *   data-align    left | center                      (default center for banner)
+ *   data-height   fixed | auto                       (default fixed — no layout shift)
  *
  * Design notes worth keeping:
  *
@@ -47,15 +48,36 @@
     return { r: +m[1], g: +m[2], b: +m[3], a: m[4] === undefined ? 1 : +m[4] };
   }
 
-  /** Effective background behind an element, walking up through transparency. */
+  /**
+   * What is actually behind this widget?
+   *
+   * Returns { color, media }. `media` means an ancestor is painted with an image, gradient
+   * or video, so the colour is a guess and shouldn't be trusted.
+   *
+   * Reading background-color alone is what broke this on trlibrary.com. The homepage is
+   * built from sections backed by photographs and a video banner; every one of them reports
+   * background-color: rgba(0,0,0,0). The walk sailed past them to <body>, found white,
+   * chose near-black text — and put it on a dark picture of the Badlands.
+   */
   function backdrop(el) {
-    var node = el;
-    while (node && node.nodeType === 1) {
-      var c = parseColor(getComputedStyle(node).backgroundColor);
-      if (c && c.a > 0.1) return c;
+    var node = el, media = false;
+    while (node && node.nodeType === 1 && node !== document.documentElement) {
+      var cs = getComputedStyle(node);
+      if (cs.backgroundImage && cs.backgroundImage !== "none") media = true;
+      // A <video> or full-bleed <img> positioned behind the content is the same problem
+      // wearing different markup — very common in Drupal hero sections.
+      if (!media && node.querySelector) {
+        var bleed = node.querySelector(":scope > video, :scope > img, :scope > picture");
+        if (bleed) {
+          var r = bleed.getBoundingClientRect(), n = node.getBoundingClientRect();
+          if (r.width >= n.width * 0.9 && r.height >= n.height * 0.9) media = true;
+        }
+      }
+      var c = parseColor(cs.backgroundColor);
+      if (c && c.a > 0.1) return { color: c, media: media };
       node = node.parentElement;
     }
-    return { r: 255, g: 255, b: 255, a: 1 };
+    return { color: { r: 255, g: 255, b: 255, a: 1 }, media: media };
   }
 
   /** WCAG relative luminance. Decides light text vs dark, nothing else. */
@@ -111,16 +133,25 @@
 
   // ------------------------------------------------------------------ styles
 
-  function styles(dark, ac, align) {
-    var fg = dark ? "#F7F3EC" : "#241C17";
-    var muted = dark ? "rgba(247,243,236,.62)" : "rgba(36,28,23,.58)";
-    var rule = dark ? "rgba(247,243,236,.20)" : "rgba(36,28,23,.14)";
-    var chip = dark ? "rgba(247,243,236,.10)" : "rgba(36,28,23,.05)";
+  function styles(dark, ac, align, media) {
+    // Plain white on dark, not the cream used elsewhere in the brand. Over a photograph the
+    // cream reads as dirty; white reads as intentional.
+    var fg = dark ? "#FFFFFF" : "#241C17";
+    var muted = dark ? "rgba(255,255,255,.78)" : "rgba(36,28,23,.58)";
+    var rule = dark ? "rgba(255,255,255,.28)" : "rgba(36,28,23,.14)";
+    var chip = dark ? "rgba(255,255,255,.16)" : "rgba(36,28,23,.05)";
+    // Stars get their own colour, not the accent. A rating reads as a rating when it is
+    // gold — brand red on a red block was both invisible and unfamiliar. Deepened on light
+    // backgrounds, where bright gold falls under 3:1 against white.
+    var star = dark ? "#FFC24A" : "#B8860B";
+    // Text on an image needs a shadow or it dissolves wherever the picture goes pale.
+    var shadow = media ? "0 1px 12px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.45)" : "none";
     return [
       ':host{all:initial;display:block;contain:content}',
       '*{box-sizing:border-box;margin:0;padding:0}',
       '.w{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;color:' + fg + ';',
-      '  text-align:' + (align === "left" ? "left" : "center") + ';line-height:1.5}',
+      '  text-align:' + (align === "left" ? "left" : "center") + ';line-height:1.5;',
+      '  text-shadow:' + shadow + '}',
       '.w.l-wall,.w.l-inline{text-align:left}',
       'blockquote{font-size:clamp(1.15rem,2.4vw,1.6rem);font-weight:400;letter-spacing:-.01em;',
       '  quotes:none;position:relative}',
@@ -134,11 +165,17 @@
       '  justify-content:' + (align === "left" ? "flex-start" : "center") + '}',
       '.l-wall .cite,.l-inline .cite{justify-content:flex-start}',
       '.who{font-weight:600;color:' + fg + '}',
-      '.stars{color:' + ac + ';letter-spacing:.08em;font-size:.75rem}',
+      '.stars{color:' + star + ';letter-spacing:.09em;font-size:.8125rem;text-shadow:none}',
       '.via{padding:.1rem .4rem;border-radius:3px;background:' + chip + ';font-size:.6875rem;',
-      '  letter-spacing:.03em;text-transform:uppercase}',
+      '  letter-spacing:.03em;text-transform:uppercase;text-shadow:none}',
       // Rotation is a cross-fade with a small lift. Both are suppressed under
       // prefers-reduced-motion, where the quote simply changes.
+      // Measured off-screen at the real width, with the real styles, so the number it
+      // yields is the height the quote will actually occupy. visibility:hidden rather than
+      // display:none — a display:none element has no layout and measures zero.
+      '.probe{position:absolute;left:0;top:0;width:100%;visibility:hidden;',
+      '  pointer-events:none;z-index:-1}',
+      '.stage-host{position:relative}',
       '.slide{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}',
       '.slide.out{opacity:0;transform:translateY(-6px)}',
       '@media (prefers-reduced-motion:reduce){.slide{transition:none}}',
@@ -163,8 +200,11 @@
       '  background:' + rule + ';transition:background .2s,width .2s}',
       '.dot[aria-current="true"]{background:' + ac + ';width:18px;border-radius:3px}',
       '.dot:focus-visible{outline:2px solid ' + ac + ';outline-offset:3px}',
+      // Over a photograph this line sat at .75 opacity on a busy background and vanished.
+      // Full strength and the shared shadow when there is an image behind it.
       '.foot{margin-top:1rem;font-family:Inter,system-ui,sans-serif;font-size:.625rem;',
-      '  letter-spacing:.04em;text-transform:uppercase;opacity:.75;color:' + muted + '}',
+      '  letter-spacing:.04em;text-transform:uppercase;color:' + muted + ';',
+      '  opacity:' + (media ? "1" : ".75") + '}',
       '.foot a{color:inherit;text-underline-offset:2px}'
     ].join("");
   }
@@ -187,6 +227,59 @@
       '<span class="via">' + esc(via) + '</span></footer></blockquote>';
   }
 
+  /**
+   * Reserve the height of the tallest quote so rotation never moves the page.
+   *
+   * Quotes vary from one line to five. Left alone the block resizes every eight seconds and
+   * shoves everything below it up and down — the worst kind of layout shift, because it
+   * happens while someone is reading further down the page rather than only at load.
+   *
+   * Measured rather than guessed: a character-count estimate breaks the moment the font,
+   * the column width or the viewport changes. This renders every quote into a hidden probe
+   * that sits inside the same container and inherits the same rules, takes the largest
+   * height, and pins the stage to it.
+   */
+  function reserveHeight(container, stage, pool) {
+    var probe = document.createElement("div");
+    probe.className = "probe";
+    container.appendChild(probe);
+    var tallest = 0;
+    for (var n = 0; n < pool.length; n++) {
+      probe.innerHTML = quoteHtml(pool[n], {});
+      tallest = Math.max(tallest, probe.getBoundingClientRect().height);
+    }
+    container.removeChild(probe);
+    if (tallest > 0) stage.style.minHeight = Math.ceil(tallest) + "px";
+  }
+
+  /** Re-measure when the width changes or a webfont finally lands. */
+  function keepReserved(host, container, stage, pool) {
+    var pending = null;
+    function remeasure() {
+      clearTimeout(pending);
+      pending = setTimeout(function () {
+        stage.style.minHeight = "";      // release before measuring, or it only ever grows
+        reserveHeight(container, stage, pool);
+      }, 120);
+    }
+    reserveHeight(container, stage, pool);
+
+    // Source Serif 4 arrives after first paint. Measuring in the fallback font gives the
+    // wrong answer and the reserved box ends up short by a line on narrow screens.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(remeasure).catch(function () {});
+    }
+    if (window.ResizeObserver) {
+      var first = true;
+      new ResizeObserver(function () {
+        if (first) { first = false; return; }   // the observer fires once on attach
+        remeasure();
+      }).observe(host);
+    } else {
+      window.addEventListener("resize", remeasure);
+    }
+  }
+
   function mount(host) {
     var layout = (host.getAttribute("data-layout") || "banner").toLowerCase();
     var themeAttr = (host.getAttribute("data-theme") || "auto").toLowerCase();
@@ -196,16 +289,23 @@
     var interval = host.hasAttribute("data-interval")
       ? parseFloat(host.getAttribute("data-interval")) * 1000 : 8000;
 
-    var bg = backdrop(host);
+    var back = backdrop(host);
+    var bg = back.color;
     var dark = themeAttr === "dark";
-    if (themeAttr === "auto") dark = luminance(bg) < 0.45;
-    var ac = pickAccent(accent, bg, dark ? "#F7F3EC" : "#241C17");
+    if (themeAttr === "auto") {
+      // Over a photograph or video the measured colour means nothing. Light text with a
+      // soft shadow is the safe read on almost any image; dark text on an unknown picture
+      // is a coin flip, and this one landed wrong on the Library's own homepage.
+      dark = back.media ? true : luminance(bg) < 0.45;
+    }
+    if (back.media && dark) bg = { r: 40, g: 36, b: 32, a: 1 };  // assume a dark-ish image
+    var ac = pickAccent(accent, bg, dark ? "#FFFFFF" : "#241C17");
 
     var root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
     var pool = shuffle(QUOTES);
 
     var sheet = document.createElement("style");
-    sheet.textContent = styles(dark, ac, align);
+    sheet.textContent = styles(dark, ac, align, back.media);
     root.appendChild(sheet);
 
     var wrap = document.createElement("div");
@@ -223,12 +323,17 @@
     var i = 0;
     var stage = document.createElement("div");
     stage.className = "slide";
+    // The probe has to be measured inside whatever box constrains the real quote, or a
+    // padded card measures at the wrong width and reserves too little.
+    var container = wrap;
     if (layout === "card") {
       var box = document.createElement("div");
-      box.className = "box";
+      box.className = "box stage-host";
       box.appendChild(stage);
       wrap.appendChild(box);
+      container = box;
     } else {
+      wrap.classList.add("stage-host");
       wrap.appendChild(stage);
     }
 
@@ -289,6 +394,11 @@
 
     paint(0);
     if (dots) dots.children[0].setAttribute("aria-current", "true");
+
+    // Opt out with data-height="auto" if a block genuinely wants to hug its content.
+    if ((host.getAttribute("data-height") || "fixed").toLowerCase() !== "auto") {
+      keepReserved(host, container, stage, pool);
+    }
     restart();
 
     host.addEventListener("mouseenter", stop);
