@@ -17,6 +17,23 @@ from brief import build as build_brief
 from common import CONFIG, DERIVED, load_reviews, load_vocabulary, write_json
 
 TRIAGE = CONFIG["triage"]
+
+
+def load_decisions():
+    """Reviews a person decided not to answer.
+
+    Without this the queue has no way to distinguish "nobody has got to it" from
+    "we looked at it and chose not to reply", so a deliberate decision keeps ageing
+    as though it were a backlog item and the overdue count slowly stops meaning
+    anything. Recorded rather than deleted: the review still counts everywhere else,
+    and the decision stays visible and reversible.
+    """
+    path = DERIVED.parent / "decisions.json"
+    if not path.exists():
+        return {}
+    import json as _json
+    doc = _json.loads(path.read_text())
+    return {d["id"]: d for d in doc.get("decisions", []) if d.get("id")}
 WINDOWS = CONFIG["windows"]
 
 
@@ -102,12 +119,13 @@ def is_pre_opening(r):
     return bool(d and d < date.fromisoformat(OPENED))
 
 
-def triage(reviews, today_):
+def triage(reviews, today_, decisions=None):
     """Anything needing a human, ordered by how overdue it is."""
     sla = TRIAGE["response_sla_days"]
+    decisions = decisions or {}
     queue = []
     for r in reviews:
-        if r.get("responded") or is_pre_opening(r):
+        if r.get("responded") or is_pre_opening(r) or r["id"] in decisions:
             continue
         rating = r.get("rating")
         sentiment = r.get("sentiment")
@@ -231,7 +249,18 @@ def main():
                                              key=lambda x: x.get("date") or "")],
         },
         "windows": windows,
-        "triage": (queue := triage(reviews, today_)),
+        "triage": (queue := triage(reviews, today_, decisions := load_decisions())),
+        # Shown on the dashboard as "Closed without a reply" so a decision is visible
+        # rather than silently absent. An empty queue should mean the work is done,
+        # not that something quietly fell out of it.
+        "closed_without_reply": [
+            {"id": rid, "reason": dec.get("reason"), "decided_on": dec.get("decided_on"),
+             "author": (rv.get("author") if (rv := next((x for x in reviews
+                        if x["id"] == rid), None)) else None),
+             "rating": rv.get("rating") if rv else None,
+             "source": rv.get("source") if rv else None}
+            for rid, dec in decisions.items()
+        ],
         "series": daily_series(reviews),
         "sla": TRIAGE["response_sla_days"],
     }

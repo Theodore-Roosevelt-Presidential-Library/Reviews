@@ -6,3 +6,10 @@ __pycache__/
 
 # Handshake between promote.py and the workflow; never committed.
 data/.promoted
+
+# Working reply drafts and the response library. These carry internal deliberation —
+# "do not post as written", unverified figures, safety incidents, notes on what a
+# journalist would seize on. This repo is PUBLIC: committing them publishes them.
+# They live in the TRPL working folder instead. See docs/RESPONSE-PLAYBOOK.md.
+docs/DRAFT-REPLIES-*.md
+docs/private/

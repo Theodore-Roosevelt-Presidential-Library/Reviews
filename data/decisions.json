@@ -1,0 +1,31 @@
+{
+  "note": "Reviews deliberately closed without a public reply. derive.py removes these from the triage queue so they stop accruing SLA age, and reports them separately so a decision never looks like an oversight. THIS FILE IS PUBLIC: use the reason codes below and never free text about a reviewer.",
+  "reason_codes": {
+    "no_content": "Rating only, or too little text to respond to meaningfully.",
+    "pre_opening": "Predates public opening; describes a building that wasn't finished.",
+    "not_a_visit": "Does not describe a visit to the Library.",
+    "duplicate": "Same visitor, already answered on another platform.",
+    "answered_elsewhere": "Covered by a reply to a near-identical review.",
+    "no_public_reply": "Handled privately instead."
+  },
+  "decisions": [
+    {
+      "id": "google-2026-07-02-d3eba999",
+      "reason": "no_content",
+      "decided_on": "2026-08-12",
+      "decided_by": "CCMO"
+    },
+    {
+      "id": "google-2026-07-01-ee48e269",
+      "reason": "no_content",
+      "decided_on": "2026-08-12",
+      "decided_by": "CCMO"
+    },
+    {
+      "id": "google-2026-07-01-ae351de2",
+      "reason": "no_content",
+      "decided_on": "2026-08-12",
+      "decided_by": "CCMO"
+    }
+  ]
+}
