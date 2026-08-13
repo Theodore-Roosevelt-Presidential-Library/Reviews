@@ -195,7 +195,9 @@
       '  quotes:none;position:relative}',
       '.l-banner blockquote{max-width:44ch;margin:0 auto}',
       '.l-banner.a-left blockquote{margin:0}',
-      '.mark{display:block;font-size:2.6em;line-height:.6;color:' + ac + ';opacity:.4;',
+      // Lighter backgrounds can carry a faint mark; on dark it disappears at .4.
+      '.mark{display:block;font-size:2.6em;line-height:.6;color:' + ac + ';',
+      '  opacity:' + (dark ? '.75' : '.4') + ';',
       '  margin-bottom:.16em;font-family:Georgia,serif}',
       '.cite{margin-top:1rem;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",',
       '  Helvetica,Arial,sans-serif;font-size:.8125rem;font-style:normal;color:' + muted + ';',
@@ -354,6 +356,17 @@
       dark = back.media ? true : luminance(bg) < 0.45;
     }
     if (back.media && dark) bg = { r: 40, g: 36, b: 32, a: 1 };  // assume a dark-ish image
+
+    // When the caller forces a theme, the measured background is no longer the one the text
+    // is designed against — so the accent must not be picked against it either. On
+    // trlibrary.com the homepage section paints no background at any level, so the widget
+    // measured white, chose brand red as a perfectly good accent for white, and then set the
+    // text to white because data-theme="dark" said so. Result: a red quote mark at 40%
+    // opacity on dark blue. Text colour followed the override; the accent didn't.
+    if (themeAttr !== "auto" && (luminance(bg) < 0.45) !== dark) {
+      bg = dark ? { r: 26, g: 32, b: 48, a: 1 } : { r: 255, g: 255, b: 255, a: 1 };
+    }
+
     var ac = pickAccent(accent, bg, dark ? "#FFFFFF" : "#241C17");
 
     var root = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
