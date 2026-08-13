@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "entity": "Theodore Roosevelt Presidential Library",
   "address": "3410 Chateau Rd, Medora, ND 58645",
-  "last_updated": "2026-08-12",
+  "last_updated": "2026-08-13",
   "reviews": [
     {
       "id": "tripadvisor-2026-08-10-baf8260e",
@@ -108,7 +108,7 @@
       "sentiment": "positive",
       "responded": false,
       "response_text": null,
-      "url": null,
+      "url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2?hrid=NKBAVIv2rv_2GMNC2VHLkw",
       "collected_at": "2026-08-12",
       "platform_id": "NKBAVIv2rv_2GMNC2VHLkw",
       "analysis_source": "model",
@@ -703,6 +703,33 @@
       "unmatched": null
     },
     {
+      "id": "google-2026-08-05-ac554565",
+      "source": "google",
+      "date": "2026-08-05",
+      "visit_period": null,
+      "rating": 1,
+      "recommends": null,
+      "tone": -2,
+      "author": "Parker",
+      "author_location": null,
+      "trip_type": null,
+      "title": null,
+      "text": "Beautiful building ruined by AI slop pervading the entire experience",
+      "text_complete": true,
+      "themes": [
+        "architecture",
+        "ai_criticism"
+      ],
+      "sentiment": "negative",
+      "unmatched": null,
+      "responded": false,
+      "response_text": null,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21acFQyaERjRk56ZW1vMmMyVnZNMVpoUW10YWFHYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmZpT2hDcFNzemo2c2VvM1ZhQmtaaGc%7C%7C?hl=en",
+      "collected_at": "2026-08-13",
+      "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT21acFQyaERjRk56ZW1vMmMyVnZNMVpoUW10YWFHYxAB",
+      "analysis_source": "model"
+    },
+    {
       "id": "google-2026-08-05-a9eb07fb",
       "source": "google",
       "date": "2026-08-05",
@@ -721,8 +748,8 @@
         "age_tiers"
       ],
       "sentiment": "mixed",
-      "responded": false,
-      "response_text": null,
+      "responded": true,
+      "response_text": "You're the second visitor to flag the Rough Riders video specifically. It's being looked at.\n\nOn the objects: some of what's on display are reproductions, and where that's the case the labels should say so plainly. If you came across ones that didn't, tell us which and we'll check them — that's a fair thing to expect and an easy thing to fix.  The Library has many original objects including his diary, Rough Rider uniform, buckskin outfit, objects from the Smithsonian–Roosevelt African expedition, his hunting rifles, the Lincoln portrait from his office in with White House and diplomatic gifts from his time as President, and the eyeglass case, and shirt from the assassination attempt among many others.   We hope you will come back we are looking into digital curator tours that can help guide people through the history of the original objects on display.\n\n— The team at the Theodore Roosevelt Presidential Library",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2twWVJqTjRXSEp5UkZOZlJtSlBOa05YWW5CYVMzYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkpYRjN4WHJyRFNfRmJPNkNXYnBaS3c%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2twWVJqTjRXSEp5UkZOZlJtSlBOa05YWW5CYVMzYxAB",
@@ -1001,8 +1028,8 @@
         "parking"
       ],
       "sentiment": "positive_with_criticism",
-      "responded": false,
-      "response_text": null,
+      "responded": true,
+      "response_text": "We do run golf cart shuttles from the drop-off circle for anyone who needs them — so the walk you and your husband made wasn't one you had to make, and we're sorry you had no way of knowing. Ask any Welcome team member, or call ahead on 701-892-6070 and we'll have one there.\n\nThere are also eight accessible parking spaces within 400 feet of the entrance and wheelchairs at the Welcome desk. More on all of it: trlibrary.com/visit/accessibility\n\nYou're not the first person to suggest something we already offer, which tells us we aren't saying it loudly enough. Thank you for that — and we're glad about the rocking chairs.\n\n— The team at the Theodore Roosevelt Presidential Library",
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kWWRqSlhlR2syTW14eVVXZEZRa3RLY1VWSGMwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndYdjJXeGk2MmxyUWdFQktKcUVHc0E%7C%7C?hl=en",
       "collected_at": "2026-08-12",
       "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25kWWRqSlhlR2syTW14eVVXZEZRa3RLY1VWSGMwRRAB",
