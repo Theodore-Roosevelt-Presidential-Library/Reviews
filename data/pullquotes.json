@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-19",
+  "generated": "2026-08-20",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -8,19 +8,14 @@
       "offered": "Learned many things about Teddy Roosevelt and his family."
     },
     {
-      "id": "google-2026-08-08-170a3a8d",
-      "reason": "length 55 outside 60-220",
-      "offered": "Inspirational, educational, and excellent for all ages."
-    },
-    {
       "id": "google-2026-08-07-f8162ba8",
       "reason": "length 52 outside 60-220",
       "offered": "The museum is very interactive and fun for all ages."
     },
     {
       "id": "google-2026-08-06-08f38b53",
-      "reason": "length 29 outside 60-220",
-      "offered": "You can spend hours in there."
+      "reason": "length 42 outside 60-220",
+      "offered": "It was huge. You can spend hours in there."
     },
     {
       "id": "tripadvisor-2026-08-05-58e31359",
@@ -48,14 +43,14 @@
       "offered": "Spent 6 hours there and still didn't experience everything."
     },
     {
-      "id": "google-2026-08-02-f82532e3",
-      "reason": "length 33 outside 60-220",
-      "offered": "There's so much to see and learn."
-    },
-    {
       "id": "tripadvisor-2026-08-01-7d5ae4bf",
       "reason": "hedge/criticism: even if",
       "offered": "Building, exhibits and connection to the landscape are outstanding, even if I might have a few quibbles with the museum's interpretations of TR's career."
+    },
+    {
+      "id": "google-2026-07-31-a4ee0b12",
+      "reason": "length 44 outside 60-220",
+      "offered": "Its well done, interractive and educational."
     },
     {
       "id": "google-2026-07-30-d86bb447",
@@ -63,14 +58,9 @@
       "offered": "It's beautiful, interactive, and educational."
     },
     {
-      "id": "google-2026-07-28-981ab260",
-      "reason": "length 44 outside 60-220",
-      "offered": "Fun and interactive experience for all ages."
-    },
-    {
-      "id": "google-2026-07-26-2d8bfaa5",
-      "reason": "length 49 outside 60-220",
-      "offered": "So many interactive exhibits and fun experiences."
+      "id": "google-2026-07-28-3a4851f1",
+      "reason": "length 35 outside 60-220",
+      "offered": "An awesome experience for all ages."
     },
     {
       "id": "google-2026-07-23-1627fcbe",
@@ -78,14 +68,14 @@
       "offered": "The TR Library location and its story is epic."
     },
     {
-      "id": "google-2026-07-19-fe53d114",
-      "reason": "length 32 outside 60-220",
-      "offered": "Really cool, basically a museum."
+      "id": "tripadvisor-2026-07-18-d469c531",
+      "reason": "length 50 outside 60-220",
+      "offered": "The interactive exhibits were fun and educational."
     },
     {
       "id": "tripadvisor-2026-07-18-b0f08507",
-      "reason": "length 49 outside 60-220",
-      "offered": "The library is worth th3 visit. Make a day of it."
+      "reason": "length 28 outside 60-220",
+      "offered": "Great historical esperience."
     },
     {
       "id": "google-2026-07-18-a95a74a7",
@@ -96,39 +86,47 @@
   "cut_by_critic_last_run": [
     {
       "quote": "Surrounding canyon sights were magnificent. Glad we drove 4 hours from Mt Rushmore to get there.",
-      "reason": "Mentions driving 4 hours from another location, which is not directly about the library itself and may not encourage a stranger to visit."
+      "reason": "Mentions driving 4 hours from another location, which is not a direct promotion of the library itself."
     },
     {
       "quote": "interactive elements teach the visitor about his life and how hard it is to be excellent. Fun and worthwhile and uplifting. Hurrah!",
-      "reason": "Contains a mild hedging phrase 'how hard it is to be excellent' which is a concession."
+      "reason": "Contains a mild hedging phrase 'how hard it is to be excellent.'"
     },
     {
       "quote": "Very interesting place, lots of \"Techy\" things. Very large place. You need at least a day, probably 2 to see everything",
-      "reason": "Mentions needing a day or two to see everything, which is a reservation about the visit length."
+      "reason": "Mentions needing a day or two to see everything, which is a mild reservation about time required."
     },
     {
-      "quote": "There is a really good press briefing where you can ask any question and probably answer correctly.",
-      "reason": "Mentions a press briefing and answering questions, which may imply registration or event details."
+      "quote": "Inspirational, educational, and excellent for all ages. Allow at least 3 hours to experience.",
+      "reason": "Mentions 'Allow at least 3 hours to experience,' which is a mild reservation about time."
+    },
+    {
+      "quote": "Fortunately, we were able to get tickets for the next hour.  Amazing place!",
+      "reason": "Mentions getting tickets, which is not allowed."
+    },
+    {
+      "quote": "Also, the building is vet cool architecture that perfectly complements the bad lands. The trail on the roof is amust",
+      "reason": "Contains spelling errors ('vet' instead of 'very', 'amust' instead of 'a must')."
     },
     {
       "quote": "Touch the compass seen throughout and see yourself in in time of Teddy.",
-      "reason": "The quote is unclear and incomplete, hard to understand without context."
+      "reason": "Contains a typo/repetition: 'see yourself in in time of Teddy.'"
     },
     {
-      "quote": "Recently opened on July 4 this year it is a beautiful display of architecture that meets nature and its surrounding area.",
-      "reason": "Mentions recent opening date, which is not allowed."
+      "quote": "The interactive exhibits kept us engaged for hours, and the staff was welcoming, knowledgeable, and genuinely passionate about sharing Roosevelt’s legacy.",
+      "reason": "Mentions staff by describing them, which is not allowed."
     },
     {
-      "quote": "We've visited most of the presidental libraries...this one is in our top 3. Its well done, interractive and educational.",
-      "reason": "Contains spelling errors ('presidental', 'interractive') and is generic praise that could describe any museum."
+      "quote": "The historical photos of you in the various times /places that are so much fun to look through, and the whole experience was remarkably kid-friendly.",
+      "reason": "Mentions 'historical photos of you' which is unclear without context and also 'kid-friendly' is generic."
+    },
+    {
+      "quote": "There are so many interactive experiences throughout!! I don't want to spoil any fun, but there's a bracelet you wear with an RFID tag (think Disney magic band) that allows for activations throughout the exhibits.",
+      "reason": "Mentions specific registration-like technology (RFID bracelet), which is not allowed."
     },
     {
       "quote": "The area is a must see, if only to appreciate the remoteness, solitude and sparcity the pioneers experienced.",
-      "reason": "Focuses on the area rather than the library itself; does not clearly promote the library as a destination."
-    },
-    {
-      "quote": "The museum is exceptionally done with alot of opportunities.",
-      "reason": "Contains a spelling error ('alot') and is generic praise."
+      "reason": "Mentions remoteness and sparcity (spelling error: should be 'sparsity')."
     },
     {
       "quote": "There is ample outside space to explore, great walking paths, and rocking chairs to enjoy the view (just need more).",
@@ -136,11 +134,15 @@
     },
     {
       "quote": "There is ample outside space to explore, great walking paths, and rocking chairs to enjoy the view (just need more).",
-      "reason": "Same as above; contains a mild reservation."
+      "reason": "Mentions a need for more rocking chairs, which is a mild reservation."
     },
     {
-      "quote": "The most moving museum I have ever been too. Truly the standard, especially with interactivity, that all future museums will aim to match.",
-      "reason": "Contains a spelling error ('too' instead of 'to') and is overly generic."
+      "quote": "The outdoor area is going to look so great when everything grows in",
+      "reason": "Mentions future condition ('going to look so great'), which is hedging."
+    },
+    {
+      "quote": "They even had activities while you're going through the library for young children.",
+      "reason": "The quote contains a grammatical mistake ('you're' should be 'you are' or 'you’re') and is somewhat generic; it does not strongly encourage a stranger to visit Medora, North Dakota."
     }
   ],
   "quotes": [
