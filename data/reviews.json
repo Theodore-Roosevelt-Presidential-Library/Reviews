@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "entity": "Theodore Roosevelt Presidential Library",
   "address": "3410 Chateau Rd, Medora, ND 58645",
-  "last_updated": "2026-08-22",
+  "last_updated": "2026-08-23",
   "reviews": [
     {
       "id": "tripadvisor-2026-08-22-8031a7da",
@@ -26,6 +26,36 @@
       "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1074318156-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
       "collected_at": "2026-08-22",
       "platform_id": "1074318156",
+      "analysis_source": "model"
+    },
+    {
+      "id": "tripadvisor-2026-08-22-0d9cf74c",
+      "source": "tripadvisor",
+      "date": "2026-08-22",
+      "visit_period": null,
+      "rating": 5,
+      "recommends": null,
+      "tone": 2,
+      "author": "gramma of many",
+      "author_location": null,
+      "trip_type": "couples",
+      "title": "Wonderful Experience !",
+      "text": "Cannot even begin to describe how wonderful this place is! \nBeautifully done, very interactive and use of AI with photography. You will get several keepsake photos of your experience. You will also get to ask Teddy live questions and he answers…. Just unbelievable! \nPlenty for children to interact with; scavenger hunt for animals through out is fun for kids. Plan to spend at least 4 hours! We didn’t want to leave!\nCafe is delicious and priced fair.\n Only disappointing thing was gift shop… very little to choose from, few books, one or two shirts and 2 sweatshirts to choose from… no stickers!\nBeautiful setting with outdoor rocking chairs to enjoy the badlands \nI’d recommend reading “ mornings on horseback “ before you go and the museum will come alive. \nI loved it so much, I will visit again!!",
+      "text_complete": true,
+      "themes": [
+        "interactive_exhibits",
+        "ai_criticism",
+        "families",
+        "dwell_time",
+        "food_beverage"
+      ],
+      "sentiment": "positive_with_criticism",
+      "unmatched": null,
+      "responded": false,
+      "response_text": null,
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1074366860-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+      "collected_at": "2026-08-23",
+      "platform_id": "1074366860",
       "analysis_source": "model"
     },
     {
