@@ -1,0 +1,42 @@
+{
+  "snapshot_date": "2026-09-01",
+  "computed_from": "stored reviews",
+  "platforms": {
+    "google": {
+      "label": "Google",
+      "review_count": 437,
+      "rating_computed": 4.74,
+      "distribution": {
+        "1": 12,
+        "2": 6,
+        "3": 12,
+        "4": 25,
+        "5": 382
+      }
+    },
+    "tripadvisor": {
+      "label": "TripAdvisor",
+      "review_count": 35,
+      "rating_computed": 4.49,
+      "distribution": {
+        "1": 3,
+        "2": 0,
+        "3": 1,
+        "4": 4,
+        "5": 27
+      }
+    },
+    "yelp": {
+      "label": "Yelp",
+      "review_count": 8,
+      "rating_computed": 4.25,
+      "distribution": {
+        "1": 1,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 6
+      }
+    }
+  }
+}
