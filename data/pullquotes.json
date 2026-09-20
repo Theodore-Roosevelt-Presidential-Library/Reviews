@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19",
+  "generated": "2026-09-20",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -13,9 +13,9 @@
       "offered": "Well worth the 15 hour drive."
     },
     {
-      "id": "google-2026-09-17-e50edc83",
-      "reason": "length 49 outside 60-220",
-      "offered": "The roof top garden just added to the experience."
+      "id": "google-2026-09-15-3323f380",
+      "reason": "off-limits subject: email",
+      "offered": "About an hour after you leave you will get an email with a picture of you in each section you visit in appreciate clothing and scenery ."
     },
     {
       "id": "google-2026-09-13-aa6fa894",
@@ -49,13 +49,13 @@
     },
     {
       "id": "google-2026-09-08-dea83a88",
-      "reason": "length 31 outside 60-220",
-      "offered": "Very interesting had fun there."
+      "reason": "length 51 outside 60-220",
+      "offered": "They had different things to do inside. And to see."
     },
     {
       "id": "google-2026-09-07-aea41023",
-      "reason": "length 53 outside 60-220",
-      "offered": "This is a very interesting slice of Roosevelt's life."
+      "reason": "length 29 outside 60-220",
+      "offered": "The architecture was awesome."
     },
     {
       "id": "google-2026-09-06-1c4eb291",
@@ -103,77 +103,112 @@
       "offered": "Do not miss the AI Theodore."
     },
     {
-      "id": "google-2026-08-27-3861ab68",
-      "reason": "length 57 outside 60-220",
-      "offered": "Yes it is out of the way and yes it is worth every moment"
-    },
-    {
       "id": "google-2026-08-25-b8effaa6",
       "reason": "length 51 outside 60-220",
       "offered": "A great interactive experience for adults and kids."
-    },
-    {
-      "id": "google-2026-08-24-af26064f",
-      "reason": "length 43 outside 60-220",
-      "offered": "We spent 3 hours and didn't see everything."
-    },
-    {
-      "id": "google-2026-08-24-a53b3886",
-      "reason": "length 55 outside 60-220",
-      "offered": "Very informative engaging for both adults and children."
     }
   ],
   "cut_by_critic_last_run": [
     {
       "quote": "We thought 3 hrs would be enough time, but 5 hrs later we were not finished!",
-      "reason": "Contains a mild reservation about time needed."
+      "reason": "Quote implies insufficient time but could be read as a mild reservation or hedging."
     },
     {
-      "quote": "Their are AI generated photo stations  that insert you into 7 periods of his lifetime.",
-      "reason": "Contains a spelling error ('Their' instead of 'There')."
-    },
-    {
-      "quote": "Getting to talk to TR was fun, I was asking about conservation.",
-      "reason": "Mentions talking to TR, which is a staff member or actor portrayal, and is unclear without context."
+      "quote": "Their are AI generated photo stations  that insert you into 7 periods of his lifetime. These are very popular and are emailed to you after you leave.",
+      "reason": "Mentions emailed photos, which is not allowed."
     },
     {
       "quote": "Uma construcão moderna e muito bem aproveitada, com vistas belissimas das montanhas.",
-      "reason": "Not in English and thus not understandable to the general audience."
+      "reason": "Not in English and thus not understandable to all visitors."
     },
     {
       "quote": "Also just a great place to stop and walk around the grounds or relax in the rockers.",
-      "reason": "Generic praise that could describe any place, not specific to the library or compelling to drive to Medora."
-    },
-    {
-      "quote": "I had it in a lot of interactive programs along with films And reading .",
-      "reason": "Unclear and grammatically incorrect, not understandable without context."
-    },
-    {
-      "quote": "These interactive experiences added to the enjoyment of the exhibits and you did not have to participate if you did not want to.",
-      "reason": "Mentions optional participation, which hedges the experience."
+      "reason": "Generic praise that could describe any museum anywhere."
     },
     {
       "quote": "The library is very interactive and people got a kick out of some of the AI use for putting yourself in Teddy’s time.",
-      "reason": "Mentions AI use but also 'people got a kick out of' which is vague and not compelling enough."
+      "reason": "Mentions AI use but in a generic way and 'people got a kick' is vague."
     },
     {
-      "quote": "There are a lot of exhibits to read, listen to, and watch, but it’s difficult to see all of them due to the crowds.",
-      "reason": "Contains a mild criticism about crowd difficulty."
+      "quote": "The highlight for most people are the AI images that place you in a period photo as a Rough Rider, presidential candidate, and more.",
+      "reason": "Mentions AI images but reads as generic and not clearly promotional."
     },
     {
       "quote": "Four hours wasn't enough time to do and see all that was available.",
-      "reason": "Implies a reservation about time being insufficient."
+      "reason": "Mentions a limitation (four hours wasn't enough), which is a mild reservation."
     },
     {
       "quote": "Numerous interactive exhibits which can be downloaded to your e-mail.",
-      "reason": "Mentions email, which is disallowed."
+      "reason": "Mentions downloading exhibits to email, which references email and registration."
     },
     {
-      "quote": "We were able to sit in the Oval Office and ask President Roosevelt questions.",
-      "reason": "Mentions a specific staff role (President Roosevelt) in a way that could be interpreted as a staff member or another visitor."
+      "quote": "As you walked through the timeline of President Roosevelt’s life, we could see our pictures in dress for that time and place.  Very cool to see my husband as one of the rough riders!",
+      "reason": "Mentions seeing personal photographs of visitors, which is not allowed."
     }
   ],
   "quotes": [
+    {
+      "id": "google-2026-09-20-234a8c35",
+      "quote": "Loved the interactive nature of the exhibits!  And the view from the roof is awesome!",
+      "draw": "interactive exhibits",
+      "themes": [
+        "interactive_exhibits",
+        "rooftop"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "rooftop"
+      ],
+      "author": "Susan B.",
+      "source": "google",
+      "date": "2026-09-20",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pNMFVucFNTRVV6VW5SbGNscHlTV05JWkROdlltYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjM0UnpSSEUzUnRlclpySWNIZDNvYmc%7C%7C?hl=en"
+    },
+    {
+      "id": "tripadvisor-2026-09-19-3bbe4f28",
+      "quote": "This is a very interactive museum so take advantage of all the “ extras” offered. Not only do you have fun with the interactive parts but the presentation makes learning about TR interesting and educational.",
+      "draw": "interactive and educational",
+      "themes": [
+        "interactive_exhibits",
+        "interpretation"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "timed_entry",
+        "boardwalk_trails",
+        "dwell_time",
+        "peer_comparison"
+      ],
+      "author": "Vistaviewer77",
+      "source": "tripadvisor",
+      "date": "2026-09-19",
+      "rating": 5,
+      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1078435690-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html"
+    },
+    {
+      "id": "google-2026-09-19-5c9b7d2d",
+      "quote": "The structure and the site are outstanding to see!  Beautiful views of the Badlands from the walking trail, and the roof trail.",
+      "draw": "the badlands view",
+      "themes": [
+        "architecture",
+        "boardwalk_trails",
+        "rooftop",
+        "landscape"
+      ],
+      "review_themes": [
+        "architecture",
+        "landscape",
+        "rooftop",
+        "interactive_exhibits",
+        "visitor_flow"
+      ],
+      "author": "Philip R.",
+      "source": "google",
+      "date": "2026-09-19",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25GM00zaERjRUYwUVd4b1NYbFBWRWR0TWtoMFJrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnF3M3hDcEF0QWxoSXlPVEdtMkh0RkE%7C%7C?hl=en"
+    },
     {
       "id": "google-2026-09-18-afc7fcc7",
       "quote": "Stunning views, great interactive opportunities,  beautiful building.",
@@ -210,6 +245,24 @@
       "date": "2026-09-18",
       "rating": 5,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xWalJFOXpSak5vVUhnd2QwaEJVR0ptVUZWdFdtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlVjRE9zRjNoUHgwd0hBUGJmUFVtWmc%7C%7C?hl=en"
+    },
+    {
+      "id": "google-2026-09-17-e50edc83",
+      "quote": "One of the biggest positives is there was seating everywhere. I thought the interactive photos were hilarious especially the one where I have 3 hands.",
+      "draw": "interactive photos",
+      "themes": [
+        "interactive_exhibits"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "rooftop",
+        "dwell_time"
+      ],
+      "author": "Angela R.",
+      "source": "google",
+      "date": "2026-09-17",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xaSWIwNUtTSGRCVDNSbk1WRnBRbk5PVGpobVNrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlZIb05KSHdBT3RnMVFpQnNOTjhmSkE%7C%7C?hl=en"
     },
     {
       "id": "google-2026-09-15-f9f82e7b",
@@ -322,6 +375,25 @@
       "date": "2026-09-14",
       "rating": 5,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t0SVQxcHZORzFOUzJsTGRGZGlTM2hzYzJWVVdtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOktIT1pvNG1NS2lLdFdiS3hsc2VUWmc%7C%7C?hl=en"
+    },
+    {
+      "id": "google-2026-09-14-d19b8ff6",
+      "quote": "I enjoyed the sensory, interactive displays. Getting to talk to TR was fun, I was asking about conservation.",
+      "draw": "interactive displays",
+      "themes": [
+        "interactive_exhibits",
+        "conservation_message"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "age_tiers",
+        "conservation_message"
+      ],
+      "author": "Verlee G.",
+      "source": "google",
+      "date": "2026-09-14",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pKbWFsbHVZVUppT1Uxb2NIQXRaa2RpVkRaWFNGRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjJmalluYUJiOU1ocHAtZkdiVDZXSFE%7C%7C?hl=en"
     },
     {
       "id": "google-2026-09-13-94524241",
@@ -459,26 +531,6 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21OT2QxUjVYM0pVY1daR1NIRnFjMDFDV25KNU5rRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmNOd1R5X3JUcWZGSHFqc01CWnJ5NkE%7C%7C?hl=en"
     },
     {
-      "id": "tripadvisor-2026-09-10-e28ce1bb",
-      "quote": "The ability to herd cows, develop a brand and shoot a rifle as a ranch experience was creative and fun.",
-      "draw": "interactive exhibits",
-      "themes": [
-        "interactive_exhibits"
-      ],
-      "review_themes": [
-        "boardwalk_trails",
-        "rooftop",
-        "crowding",
-        "interactive_exhibits",
-        "ai_criticism"
-      ],
-      "author": "MHall",
-      "source": "tripadvisor",
-      "date": "2026-09-10",
-      "rating": 5,
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1077104909-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html"
-    },
-    {
       "id": "google-2026-09-10-b5bfa7cb",
       "quote": "The architecture is the first exhibit. Snøhetta set the 96,000-square-foot building into the hill, capped it with a walkable roof of native prairie grass, and used rammed-earth walls that read like Badlands layers.",
       "draw": "architecture",
@@ -609,25 +661,6 @@
       "date": "2026-09-06",
       "rating": 5,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21GalIzVkhRa2R4V1hKRVYxZG5ZVmsyUW5GMFdsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmFjR3VHQkdxWXJEV1dnYVk2QnF0WlE%7C%7C?hl=en"
-    },
-    {
-      "id": "tripadvisor-2026-09-05-37c91a95",
-      "quote": "Amazing architecture the way it blends in and mimics the badlands it is situated in.",
-      "draw": "the badlands view",
-      "themes": [
-        "architecture",
-        "landscape"
-      ],
-      "review_themes": [
-        "architecture",
-        "interactive_exhibits",
-        "sellouts"
-      ],
-      "author": "trip4four",
-      "source": "tripadvisor",
-      "date": "2026-09-05",
-      "rating": 5,
-      "url": "https://www.tripadvisor.com/ShowUserReviews-g60973-d34391224-r1076397571-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html"
     },
     {
       "id": "google-2026-09-05-9a5cd36f",
@@ -1242,63 +1275,6 @@
       "date": "2026-08-07",
       "rating": 5,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT214UkxVUnVjRU5qU0V4MmJqRldaakp4Vlc5SmEwRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmxRLURucENjSEx2bjFWZjJxVW9Ja0E%7C%7C?hl=en"
-    },
-    {
-      "id": "google-2026-08-07-8ef58c89",
-      "quote": "They did a wonderful job making an interesting museum and library.",
-      "draw": "interesting museum",
-      "themes": [
-        "interpretation"
-      ],
-      "review_themes": [
-        "interpretation"
-      ],
-      "author": "Mark S.",
-      "source": "google",
-      "date": "2026-08-07",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2psRE1sSlNibXBJVFZkR1dEUkxiVlJyTkZGd2RYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjlDMlJSbmpITVdGWDRLbVRrNFFwdXc%7C%7C?hl=en"
-    },
-    {
-      "id": "google-2026-08-07-63e74833",
-      "quote": "There were things to do and see for all ages. Museum artifacts, interactive exhibits, scavenger hunts, replicas, rooms designed to immerse you in different eras of TR's life... there was just so much.",
-      "draw": "enough to fill a day",
-      "themes": [
-        "interactive_exhibits",
-        "families",
-        "interpretation"
-      ],
-      "review_themes": [
-        "interactive_exhibits",
-        "ai_criticism",
-        "retail",
-        "restrooms",
-        "security_screening"
-      ],
-      "author": "Lakeisha H.",
-      "source": "google",
-      "date": "2026-08-07",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT20xWlFtSm1jSGRwZWtGMmFVRXlZVFkzTVZCcGVsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOm1ZQmJmcHdpekF2aUEyYTY3MVBpelE%7C%7C?hl=en"
-    },
-    {
-      "id": "google-2026-08-04-ab4bd281",
-      "quote": "Beautiful views from the roof and cool looking architecture.",
-      "draw": "rooftop view",
-      "themes": [
-        "rooftop",
-        "architecture"
-      ],
-      "review_themes": [
-        "architecture",
-        "rooftop",
-        "boardwalk_trails"
-      ],
-      "author": "Scott R.",
-      "source": "google",
-      "date": "2026-08-04",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25kQlR6QlZZbVIwT1VvNWMyZERjbWRzTVU1bGRXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOndBTzBVYmR0OUo5c2dDcmdsMU5ldWc%7C%7C?hl=en"
     }
   ]
 }
