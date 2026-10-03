@@ -41,6 +41,8 @@
   --font-serif: 'Source Serif 4', Georgia, serif;
 
   --topbar-h: 77px;
+  --entitybar-h: 43px;
+  --accent: #8B2E1F;
   --maxw: 1600px;
 }
 
@@ -89,14 +91,14 @@ a:hover { text-decoration: underline; }
 @media (max-width: 860px) {
   .brand-logo { height: 34px; max-width: 200px; }
   .topbar-title { display: none; }
-  :root { --topbar-h: 67px; }
+  :root { --topbar-h: 67px; --entitybar-h: 39px; }
 }
 
 /* -------- Tabs -------- */
 .tabbar {
   background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-line);
-  position: sticky; top: var(--topbar-h); z-index: 45;
+  position: sticky; top: calc(var(--topbar-h) + var(--entitybar-h)); z-index: 45;
 }
 .tabbar-inner {
   max-width: var(--maxw); margin: 0 auto; padding: 0 24px;
@@ -122,7 +124,7 @@ a:hover { text-decoration: underline; }
 .filterbar {
   background: var(--color-bg-card);
   border-bottom: 1px solid var(--color-line);
-  position: sticky; top: calc(var(--topbar-h) + 45px); z-index: 40;
+  position: sticky; top: calc(var(--topbar-h) + var(--entitybar-h) + 45px); z-index: 40;
   box-shadow: 0 2px 4px rgba(31,42,48,.04);
 }
 .filterbar-inner {
@@ -506,3 +508,45 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
 .segmented button + button { border-left: 1px solid var(--color-line, #DDD3C4); }
 .segmented button:hover { background: rgba(139, 46, 31, .06); }
 .segmented button.active { background: var(--color-brand); color: #fff; }
+
+/* ---------- entity bar -------------------------------------------------- */
+/* Which business. Deliberately heavier than the section tabs below it: a darker ground,
+   a serif label and an accent rule, because confusing the Library's numbers for the
+   restaurant's is the one mistake this interface must make hard to make. Each tab is a
+   real anchor, so the context menu offers Copy Link and a bookmark saves the view. */
+.entitybar {
+  background: var(--color-ink);
+  position: sticky; top: var(--topbar-h); z-index: 47;
+  height: var(--entitybar-h);
+}
+.entitybar[hidden] { display: none; }
+.entitybar-inner {
+  max-width: var(--maxw); margin: 0 auto; padding: 0 24px; height: 100%;
+  display: flex; gap: 4px; align-items: stretch;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.ent {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0 15px; border: 0; background: none; cursor: pointer;
+  font-family: var(--font-serif); font-size: 14px; font-weight: 600;
+  color: rgba(255,255,255,.62); text-decoration: none; white-space: nowrap;
+  border-bottom: 3px solid transparent; transition: color .12s, background .12s;
+}
+.ent:hover { color: #fff; background: rgba(255,255,255,.07); }
+.ent[aria-selected="true"] {
+  color: #fff;
+  border-bottom-color: var(--ent-accent, var(--color-brand-soft));
+  background: rgba(255,255,255,.05);
+}
+.ent-count {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 600;
+  padding: 1px 7px; border-radius: 999px;
+  background: rgba(255,255,255,.14); color: rgba(255,255,255,.9);
+}
+.ent-count.is-alert { background: var(--color-bad); color: #fff; }
+.ent[aria-selected="true"] .ent-count { background: rgba(255,255,255,.22); color: #fff; }
+
+/* The HTML `hidden` attribute is only a UA rule of display:none, so any class setting
+   display: grid or flex silently outranks it. The dashboard hides grids by setting
+   .hidden = true from JS; without this they stayed on screen showing zeroes. */
+[hidden] { display: none !important; }

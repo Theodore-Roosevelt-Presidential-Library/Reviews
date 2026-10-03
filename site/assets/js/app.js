@@ -9,6 +9,12 @@
   "use strict";
 
   var M = null, REVIEWS = [], BRIEF = null, SUMMARY = null, chart = null;
+
+  // The businesses this dashboard covers, from data/entities.json, and the active one.
+  // CACHE holds each entity's loaded files so flipping back and forth is instant and
+  // doesn't re-download a megabyte of reviews every time.
+  var ENTITIES = [], E = null, CACHE = {};
+
   var S = {
     tab: "overview",
     window: "30",
@@ -213,7 +219,9 @@
           d.count + "</span>" : "") + "</button>";
     }).join("");
     $("tabbar").querySelectorAll(".tab").forEach(function (b) {
-      b.onclick = function () { S.tab = b.dataset.tab; render(); };
+      // Pushes rather than replaces: moving between sections is somewhere a reader would
+      // expect Back to return them from, where changing a filter is not.
+      b.onclick = function () { S.tab = b.dataset.tab; writeHash(true); render(); };
     });
     ["overview", "reviews", "triage"].forEach(function (id) {
       $("panel-" + id).hidden = S.tab !== id;
@@ -268,6 +276,11 @@
   function renderBrief() {
     BRIEF = (M.briefs || {})[S.window];
     var host = $("brief");
+    // With no corpus at all the brief has nothing to summarise, and its "Work the queue"
+    // call to action points at an empty queue. The nothing-collected card says it once
+    // and says it accurately; two empty states stacked up just read as a broken page.
+    host.hidden = M.all_time.count === 0;
+    if (host.hidden) { host.innerHTML = ""; return; }
     if (!BRIEF) { host.innerHTML = ""; return; }
 
     // The full brief belongs on Overview. On the working tabs it collapses to one line
@@ -802,6 +815,40 @@
     renderFilters();
     renderBrief();
     renderActiveBar();
+    renderEntityBar();
+    writeHash(false);
+
+    // Nothing collected yet: say that once, plainly, and hide the cards that would
+    // otherwise render as a wall of zeroes and an empty chart.
+    var empty = M.all_time.count === 0;
+    var nodata = $("nodata-card");
+    if (nodata) {
+      nodata.hidden = !(empty && S.tab === "overview");
+      if (empty) {
+        var en = findEntity(E) || {};
+        var live = Object.keys(M.sources).filter(function (k) {
+          return (M.sources[k] || {}).listing_url;
+        });
+        $("nodata-tag").textContent = en.label || E;
+        $("nodata-body").textContent =
+          "No reviews have been collected for " + (en.label || E) + " yet. " +
+          (live.length
+            ? "Collection is configured for " + live.map(function (k) {
+                return (M.sources[k] || {}).label || k;
+              }).join(" and ") + "; the next scheduled run will fill this in."
+            : "No listing URL is configured for any source, so there is nothing to collect. "
+              + "The listings have to exist on the platforms first.");
+      }
+    }
+    ["narrative-card", "gaps-card"].forEach(function (id) {
+      var el = $(id); if (el && empty) el.hidden = true;
+    });
+    // Scoped to the Overview panel and set unconditionally. Querying the whole dashboard
+    // would also match the grids inside Reviews and Triage, and hiding them while Overview
+    // was empty would leave those tabs blank for the rest of the session.
+    $("panel-overview").querySelectorAll(".grid-2, .kpi-grid").forEach(function (el) {
+      el.hidden = empty;
+    });
 
     if (S.tab === "overview") {
       $("f-count").textContent =
@@ -834,62 +881,274 @@
     }
   }
 
-  /* ---------- boot ------------------------------------------------------ */
-  function boot() {
-    var bust = "?v=" + Date.now();
-    Promise.all([
-      fetch("data/derived/metrics.json" + bust).then(function (r) { return r.json(); }),
-      fetch("data/reviews.json" + bust).then(function (r) { return r.json(); })
+  /* ---------- routing --------------------------------------------------- */
+  /* The URL is the state. #/salt-scoria/triage?window=7&source=google restores the
+     business, the section and every filter, which makes a view something you can
+     bookmark or paste to a colleague instead of a set of clicks to describe.
+
+     Only non-default values are written, so the common case stays short and a link
+     keeps working if a default ever changes. Filter changes replace the history entry
+     and business or section changes push one, so Back steps between places a reader
+     would recognise as places rather than undoing keystrokes one at a time. */
+
+  var TABS = ["overview", "reviews", "triage"];
+  var DEFAULTS = { window: "30", source: "all", rating: "all", theme: "", search: "",
+                   sort: "newest", tier: "all", themeSort: "size", allThemes: false };
+  var muteHash = false;
+
+  function parseHash() {
+    var raw = (location.hash || "").replace(/^#\/?/, "");
+    if (!raw) return {};
+    var qi = raw.indexOf("?");
+    var path = (qi === -1 ? raw : raw.slice(0, qi)).split("/").filter(Boolean);
+    var params = {};
+    if (qi !== -1) {
+      raw.slice(qi + 1).split("&").forEach(function (pair) {
+        if (!pair) return;
+        var eq = pair.indexOf("=");
+        var k = decodeURIComponent(eq === -1 ? pair : pair.slice(0, eq));
+        params[k] = eq === -1 ? "" : decodeURIComponent(pair.slice(eq + 1).replace(/\+/g, " "));
+      });
+    }
+    return { slug: path[0], tab: path[1], params: params };
+  }
+
+  function buildHash() {
+    var qs = Object.keys(DEFAULTS).filter(function (k) {
+      var v = S[k], d = DEFAULTS[k];
+      if (k === "theme") v = v || "";
+      if (k === "allThemes") return v === true;
+      return String(v) !== String(d);
+    }).map(function (k) {
+      var v = k === "allThemes" ? "1" : S[k];
+      return encodeURIComponent(k) + "=" + encodeURIComponent(v);
+    });
+    return "#/" + E + "/" + S.tab + (qs.length ? "?" + qs.join("&") : "");
+  }
+
+  function writeHash(push) {
+    var h = buildHash();
+    if (h === location.hash) return;
+    muteHash = true;                       // our own write must not re-enter applyHash
+    try {
+      if (history && history.replaceState) {
+        history[push ? "pushState" : "replaceState"](null, "", h);
+      } else {
+        location.hash = h;
+      }
+    } finally {
+      // The guard has to outlive this tick: assigning location.hash fires hashchange
+      // asynchronously, so clearing it synchronously would let our own write through.
+      setTimeout(function () { muteHash = false; }, 0);
+    }
+  }
+
+  /* Filters that name something the new business doesn't have would silently produce an
+     empty list — "no reviews match" with nothing on screen explaining that the reason is
+     a source this restaurant isn't on. Drop those rather than carry them across. */
+  function reconcileFilters() {
+    var dropped = [];
+    if (S.source !== "all" && !(M.all_time.by_source || {})[S.source]) {
+      dropped.push((M.sources[S.source] || {}).label || S.source);
+      S.source = "all";
+    }
+    var vocab = (M.vocabulary || {});
+    var known = []
+      .concat(vocab.authored || [], vocab.auto || [])
+      .map(function (t) { return t && t.label ? t.label : t; });
+    if (S.theme && known.length && known.indexOf(S.theme) === -1) {
+      dropped.push(titleCase(S.theme));
+      S.theme = null;
+    }
+    if (S.tab === "triage" && !M.triage.length && M.all_time.count === 0) S.tab = "overview";
+    return dropped;
+  }
+
+  function applyHash() {
+    if (muteHash) return;
+    var h = parseHash();
+    var slug = h.slug && findEntity(h.slug) ? h.slug : E;
+    Object.keys(DEFAULTS).forEach(function (k) {
+      if (!h.params || !(k in h.params)) {
+        S[k] = k === "theme" ? null : DEFAULTS[k];
+        return;
+      }
+      S[k] = k === "allThemes" ? h.params[k] === "1" || h.params[k] === "true"
+           : k === "theme" ? (h.params[k] || null)
+           : h.params[k];
+    });
+    if (h.tab && TABS.indexOf(h.tab) !== -1) S.tab = h.tab;
+    var sb = $("f-search"); if (sb) sb.value = S.search || "";
+
+    if (slug !== E) { selectEntity(slug, { fromHash: true }); return; }
+    if (M) { reconcileFilters(); render(); }
+  }
+
+  function findEntity(slug) {
+    for (var i = 0; i < ENTITIES.length; i++) if (ENTITIES[i].slug === slug) return ENTITIES[i];
+    return null;
+  }
+
+  function renderEntityBar() {
+    var host = $("entitybar");
+    if (!host) return;
+    // One business is not a choice. Hide the bar rather than show a single inert tab, and
+    // zero its height variable so the sticky bars below close the gap instead of leaving
+    // a 43px band of nothing under the header.
+    var root = document.documentElement.style;
+    if (ENTITIES.length < 2) {
+      host.parentNode.hidden = true;
+      root.setProperty("--entitybar-h", "0px");
+      return;
+    }
+    host.parentNode.hidden = false;
+    root.removeProperty("--entitybar-h");
+    host.innerHTML = ENTITIES.map(function (en) {
+      var cached = CACHE[en.slug];
+      var n = cached && cached.M ? cached.M.all_time.count : null;
+      var over = cached && cached.M
+        ? cached.M.triage.filter(function (t) { return (t.overdue_by || 0) > 0; }).length : 0;
+      return '<a class="ent" role="tab" href="#/' + esc(en.slug) + '/' + esc(S.tab) + '"' +
+        ' aria-selected="' + (en.slug === E) + '"' +
+        (en.accent ? ' style="--ent-accent:' + esc(en.accent) + '"' : "") +
+        ' data-slug="' + esc(en.slug) + '">' +
+        '<span class="ent-label">' + esc(en.label) + "</span>" +
+        (n != null ? '<span class="ent-count' + (over ? " is-alert" : "") + '">' + n + "</span>" : "") +
+        "</a>";
+    }).join("");
+    // Real anchors, so middle-click and copy-link behave. Intercept the plain click only.
+    host.querySelectorAll(".ent").forEach(function (a) {
+      a.onclick = function (ev) {
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button) return;
+        ev.preventDefault();
+        selectEntity(a.dataset.slug);
+      };
+    });
+  }
+
+  function fetchEntity(slug) {
+    if (CACHE[slug]) return Promise.resolve(CACHE[slug]);
+    var base = "data/" + slug + "/", bust = "?v=" + Date.now();
+    return Promise.all([
+      fetch(base + "derived/metrics.json" + bust).then(function (r) {
+        if (!r.ok) throw new Error("metrics.json for " + slug + " (" + r.status + ")");
+        return r.json();
+      }),
+      fetch(base + "reviews.json" + bust).then(function (r) { return r.json(); })
         .catch(function () { return { reviews: [] }; }),
-      fetch("data/derived/summary.json" + bust).then(function (r) { return r.json(); })
+      fetch(base + "derived/summary.json" + bust).then(function (r) { return r.json(); })
         .catch(function () { return null; })
     ]).then(function (res) {
-      M = res[0];
-      REVIEWS = res[1].reviews || [];
-      SUMMARY = res[2];
+      CACHE[slug] = { M: res[0], REVIEWS: res[1].reviews || [], SUMMARY: res[2] };
+      return CACHE[slug];
+    });
+  }
 
-      $("freshness").textContent = "Updated " + M.generated;
-      $("freshness-sub").textContent = M.all_time.count + " reviews · " +
-        Object.keys(M.all_time.by_source).length + " sources";
-      var b30 = (M.briefs || {})["30"] || {};
-      var notes = (b30.notes || []).filter(function (n) { return n !== b30.coverage_warning; });
-      $("foot").innerHTML = "Built from public reviews on " +
-        Object.keys(M.all_time.by_source).map(function (k) {
-          return esc((M.sources[k] || {}).label || k);
-        }).join(", ") +
-        ". Review text is stored verbatim. " +
-        '<a href="https://github.com/Theodore-Roosevelt-Presidential-Library/Reviews">Source and data</a>.' +
-        (notes.length ? '<br><span class="foot-note">' +
-          notes.map(esc).join(" ") + "</span>" : "");
-
-      $("f-search").oninput = function (e) {
-        S.search = e.target.value;
-        if (S.tab === "overview") S.tab = "reviews";
-        render();
-        $("f-search").focus();
-      };
-      $("clear-all").onclick = function () { $("f-reset").click(); };
-      $("f-reset").onclick = function () {
-        S.source = "all"; S.rating = "all"; S.theme = null; S.search = "";
-        S.tier = "all"; $("f-search").value = ""; render();
-      };
-      $("sort-toggle").onclick = function () {
-        var order = ["newest", "oldest", "lowest"];
-        var labels = { newest: "Newest first", oldest: "Oldest first", lowest: "Lowest rated" };
-        S.sort = order[(order.indexOf(S.sort) + 1) % order.length];
-        $("sort-toggle").textContent = labels[S.sort];
-        render();
-      };
-      document.querySelectorAll("[data-tier]").forEach(function (b) {
-        b.onclick = function () { S.tier = b.dataset.tier; render(); };
-      });
-
+  function selectEntity(slug, opts) {
+    opts = opts || {};
+    return fetchEntity(slug).then(function (bundle) {
+      E = slug;
+      M = bundle.M; REVIEWS = bundle.REVIEWS; SUMMARY = bundle.SUMMARY;
+      if (chart) { chart.destroy(); chart = null; }   // canvas is reused across entities
+      var en = findEntity(slug) || {};
+      document.documentElement.style.setProperty("--accent", en.accent || "#8B2E1F");
+      document.title = (en.label || "Visitor Reviews") + " — Visitor Reviews";
+      reconcileFilters();
+      renderChrome();
+      renderEntityBar();
+      if (!opts.fromHash) writeHash(true);
       render();
     }).catch(function (e) {
-      $("brief").innerHTML = '<div class="brief-headline">Could not load data</div>' +
+      $("brief").innerHTML = '<div class="brief-headline">Could not load ' + esc(slug) + '</div>' +
         '<div class="brief-body"><p>' + esc(e && e.message) +
-        " — has the collector run yet?</p></div>";
+        " — has the collector run for this business yet?</p></div>";
     });
+  }
+
+  /* Header and footer text, which depend on the active entity rather than the filters. */
+  function renderChrome() {
+    $("freshness").textContent = "Updated " + M.generated;
+    $("freshness-sub").textContent = M.all_time.count + " reviews · " +
+      Object.keys(M.all_time.by_source).length + " sources";
+    var b30 = (M.briefs || {})["30"] || {};
+    var notes = (b30.notes || []).filter(function (n) { return n !== b30.coverage_warning; });
+    var live = Object.keys(M.all_time.by_source);
+    $("foot").innerHTML = (live.length
+        ? "Built from public reviews on " + live.map(function (k) {
+            return esc((M.sources[k] || {}).label || k);
+          }).join(", ") + ". Review text is stored verbatim. "
+        : "No reviews collected for this business yet. ") +
+      '<a href="https://github.com/Theodore-Roosevelt-Presidential-Library/Reviews">Source and data</a>.' +
+      (notes.length ? '<br><span class="foot-note">' + notes.map(esc).join(" ") + "</span>" : "");
+  }
+
+  /* ---------- boot ------------------------------------------------------ */
+  function wireControls() {
+    $("f-search").oninput = function (e) {
+      S.search = e.target.value;
+      if (S.tab === "overview") S.tab = "reviews";
+      render();
+      $("f-search").focus();
+    };
+    $("clear-all").onclick = function () { $("f-reset").click(); };
+    $("f-reset").onclick = function () {
+      S.source = "all"; S.rating = "all"; S.theme = null; S.search = "";
+      S.tier = "all"; $("f-search").value = ""; render();
+    };
+    $("sort-toggle").onclick = function () {
+      var order = ["newest", "oldest", "lowest"];
+      var labels = { newest: "Newest first", oldest: "Oldest first", lowest: "Lowest rated" };
+      S.sort = order[(order.indexOf(S.sort) + 1) % order.length];
+      $("sort-toggle").textContent = labels[S.sort];
+      render();
+    };
+    document.querySelectorAll("[data-tier]").forEach(function (b) {
+      b.onclick = function () { S.tier = b.dataset.tier; render(); };
+    });
+
+    window.addEventListener("hashchange", applyHash);
+    window.addEventListener("popstate", applyHash);
+  }
+
+  function boot() {
+    var bust = "?v=" + Date.now();
+    fetch("data/entities.json" + bust)
+      .then(function (r) {
+        if (!r.ok) throw new Error("entities.json (" + r.status + ")");
+        return r.json();
+      })
+      // A single-entity deployment, or a manifest that predates this feature, should still
+      // work. Fall back to one unnamed entity reading the paths it always read.
+      .catch(function () {
+        return { default: "trpl", entities: [{ slug: "trpl", label: "Visitor Reviews" }] };
+      })
+      .then(function (man) {
+        ENTITIES = man.entities || [];
+        var wanted = parseHash().slug;
+        var start = (wanted && findEntity(wanted) && wanted)
+          || man.default
+          || (ENTITIES[0] && ENTITIES[0].slug);
+        wireControls();
+        // Seed S from the URL before the first paint, so a pasted link doesn't render the
+        // default view and then visibly jump to the requested one.
+        var h = parseHash();
+        Object.keys(DEFAULTS).forEach(function (k) {
+          if (!h.params || !(k in h.params)) return;
+          S[k] = k === "allThemes" ? h.params[k] === "1" || h.params[k] === "true"
+               : k === "theme" ? (h.params[k] || null)
+               : h.params[k];
+        });
+        if (h.tab && TABS.indexOf(h.tab) !== -1) S.tab = h.tab;
+        $("f-search").value = S.search || "";
+        return selectEntity(start, { fromHash: true }).then(function () {
+          writeHash(false);   // canonicalise: a bare URL becomes #/<slug>/<tab>
+        });
+      })
+      .catch(function (e) {
+        $("brief").innerHTML = '<div class="brief-headline">Could not load data</div>' +
+          '<div class="brief-body"><p>' + esc(e && e.message) +
+          " — has the collector run yet?</p></div>";
+      });
   }
 
   boot();

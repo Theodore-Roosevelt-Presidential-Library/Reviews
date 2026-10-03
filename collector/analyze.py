@@ -250,6 +250,8 @@ def summarise(reviews, client, days=30):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--entity", default=None,
+                    help="which business to work on; see config.json > entities")
     ap.add_argument("--all", action="store_true", help="re-analyse every review")
     ap.add_argument("--upgrade", action="store_true",
                     help="re-analyse anything the model has not classified yet (resumable)")

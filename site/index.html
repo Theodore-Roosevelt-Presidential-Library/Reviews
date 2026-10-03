@@ -26,6 +26,12 @@
   </div>
 </header>
 
+<!-- Which business. Above the section tabs because it governs them: switching here
+     reloads every number on the page, where switching a section tab does not. -->
+<nav class="entitybar" aria-label="Business">
+  <div class="entitybar-inner" id="entitybar" role="tablist"></div>
+</nav>
+
 <nav class="tabbar" aria-label="Sections">
   <div class="tabbar-inner" id="tabbar" role="tablist"></div>
 </nav>
@@ -61,6 +67,12 @@
 
   <!-- OVERVIEW -->
   <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview">
+    <!-- A business can be listed before anyone reviews it. Saying so beats a page of
+         zeroes, which reads as a broken dashboard rather than an empty one. -->
+    <article class="card" id="nodata-card" hidden>
+      <header class="card-head"><h2>Nothing collected yet</h2><span class="card-tag" id="nodata-tag">—</span></header>
+      <div class="card-body"><p class="narrative" id="nodata-body"></p></div>
+    </article>
     <div class="kpi-grid" id="kpis"></div>
     <article class="card" id="narrative-card" hidden>
       <header class="card-head">

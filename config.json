@@ -1,202 +1,291 @@
 {
-  "entity": {
-    "name": "Theodore Roosevelt Presidential Library",
-    "short_name": "TRPL",
-    "address": "3410 Chateau Rd, Medora, ND 58645",
-    "opened": "2026-07-04"
-  },
+  "_note": "Multi-entity. Everything under 'shared' applies to every entity; an entity block overrides any shared key it repeats. The collector works on one entity per run, chosen with --entity or REVIEWS_ENTITY, and writes to data/<slug>/. Adding an entity is a config change plus a data directory, not a code change.",
+  "default_entity": "trpl",
   "site": {
     "url": "https://reviews.labs.trlibrary.com",
     "title": "Visitor Reviews"
   },
-  "sources": {
-    "google": {
-      "enabled": true,
-      "label": "Google",
-      "apify_actor": "compass~google-maps-reviews-scraper",
-      "listing_url": "https://www.google.com/maps/place/Theodore+Roosevelt+Presidential+Library/@46.9167713,-103.5486042,17z/data=!3m1!4b1!4m6!3m5!1s0x5325eb007ad0296f:0x588995e798312048!8m2!3d46.9167713!4d-103.5486042!16s%2Fg%2F11zc421vls",
-      "input": {
-        "maxReviews": 2000,
-        "reviewsSort": "newest",
-        "language": "en",
-        "personalData": true
-      },
-      "incremental_field": "reviewsStartDate",
-      "reply_url": "https://business.google.com/reviews"
+  "shared": {
+    "analysis": {
+      "provider": "openai",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "api_key_env": "OPENAI_KEY",
+      "batch_size": 20,
+      "fallback_to_rules": true,
+      "note": "Model is pinned to a dated snapshot so classification stays comparable month to month; the preflight catches the day it retires. gpt-4.1-mini is cheap and strong enough for fixed-vocabulary classification. gpt-5-mini is the upgrade if nuance disappoints. The key env var is OPENAI_KEY, matching the existing .env. Set provider to 'rules' to turn the model off deliberately, or 'ollama' with base_url http://localhost:11434/v1 to run locally in Actions.",
+      "base_url": "https://api.openai.com/v1"
     },
-    "tripadvisor": {
-      "enabled": true,
-      "label": "TripAdvisor",
-      "apify_actor": "maxcopell~tripadvisor-reviews",
-      "listing_url": "https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
-      "input": {
-        "maxItemsPerQuery": 2000,
-        "scrapeReviewerInfo": true,
-        "reviewsLanguages": [
-          "en"
-        ]
-      },
-      "incremental_field": "lastReviewDate",
-      "reply_url": "https://www.tripadvisor.com/Owners"
+    "windows": [
+      7,
+      30,
+      60,
+      90
+    ],
+    "reply_refresh": {
+      "every_days": 7,
+      "lookback_days": 120,
+      "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Once a week the collector reaches back this far so replies posted to older reviews are picked up and the response queue actually clears. Costs one deeper Apify pull per week."
     },
-    "yelp": {
-      "enabled": true,
-      "label": "Yelp",
-      "apify_actor": "tri_angle~yelp-review-scraper",
-      "listing_url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2",
-      "input": {
-        "maxReviewsPerUrl": 500,
-        "language": "en"
-      },
-      "incremental_field": "dateFrom",
-      "reply_url": "https://biz.yelp.com"
-    },
-    "facebook": {
-      "enabled": true,
-      "label": "Facebook",
-      "apify_actor": "apify~facebook-reviews-scraper",
-      "listing_url": "https://www.facebook.com/TRPresidentialLibrary",
-      "input": {
-        "resultsLimit": 500
-      },
-      "incremental_field": null,
-      "reply_url": "https://business.facebook.com",
-      "note": "Recommendations were switched on for the Page on 2026-08-12; before that the Page returned nothing at all. The tab starts empty and fills as visitors leave recommendations. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null \u2014 never convert one into a star count."
+    "vocabulary": {
+      "auto_promote": true,
+      "min_reviews": 3,
+      "min_span_days": 14,
+      "max_per_run": 1,
+      "reanalyse_max_reviews": 2000,
+      "note": "How the theme list grows. A subject visitors raise in min_reviews separate reviews spread over min_span_days becomes a real theme automatically. Every promotion re-labels the whole corpus so the new theme's history is real rather than starting at zero and faking a spike. Past reanalyse_max_reviews that re-label gets expensive, so the script reports instead of acting."
     }
   },
-  "analysis": {
-    "provider": "openai",
-    "model": "gpt-4.1-mini-2025-04-14",
-    "api_key_env": "OPENAI_KEY",
-    "batch_size": 20,
-    "fallback_to_rules": true,
-    "note": "Model is pinned to a dated snapshot so classification stays comparable month to month; the preflight catches the day it retires. gpt-4.1-mini is cheap and strong enough for fixed-vocabulary classification. gpt-5-mini is the upgrade if nuance disappoints. The key env var is OPENAI_KEY, matching the existing .env. Set provider to 'rules' to turn the model off deliberately, or 'ollama' with base_url http://localhost:11434/v1 to run locally in Actions.",
-    "base_url": "https://api.openai.com/v1"
-  },
-  "triage": {
-    "critical_rating_at_or_below": 2,
-    "needs_response_at_or_below": 3,
-    "response_sla_days": {
-      "critical": 1,
-      "negative": 3,
-      "positive_with_criticism": 7,
-      "positive": 14
-    }
-  },
-  "windows": [
-    7,
-    30,
-    60,
-    90
-  ],
-  "reply_refresh": {
-    "every_days": 7,
-    "lookback_days": 120,
-    "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Once a week the collector reaches back this far so replies posted to older reviews are picked up and the response queue actually clears. Costs one deeper Apify pull per week."
-  },
-  "vocabulary": {
-    "auto_promote": true,
-    "min_reviews": 3,
-    "min_span_days": 14,
-    "max_per_run": 1,
-    "reanalyse_max_reviews": 2000,
-    "note": "How the theme list grows. A subject visitors raise in min_reviews separate reviews spread over min_span_days becomes a real theme automatically. Every promotion re-labels the whole corpus so the new theme's history is real rather than starting at zero and faking a spike. Past reanalyse_max_reviews that re-label gets expensive, so the script reports instead of acting."
-  },
-  "pullquotes": {
-    "consider": 60,
-    "pool_size": 60,
-    "max_age_days": 540,
-    "note": "The public quote widget. Only 5-star reviews dated after opening are eligible. Every excerpt is verified as a verbatim substring of its review before it ships; anything that isn't is discarded and reported, never repaired.",
-    "max_per_draw": 3,
-    "topics": {
-      "_note": "Page topic -> themes from data/themes.json. Used by data-topic on the embed. A topic only ranks quotes; it never empties the block \u2014 if too few match, the widget tops up with general ones so a page can't end up showing nothing.",
-      "visit": [
-        "dwell_time",
-        "interactive_exhibits",
-        "families",
-        "peer_comparison",
-        "value_for_money"
-      ],
-      "exhibits": [
-        "interactive_exhibits",
-        "interpretation",
-        "historical_balance",
-        "guided_tours"
-      ],
-      "outdoors": [
-        "boardwalk_trails",
-        "landscape",
-        "rooftop",
-        "conservation_message"
-      ],
-      "hiking": [
-        "boardwalk_trails",
-        "landscape",
-        "rooftop"
-      ],
-      "biking": [
-        "boardwalk_trails",
-        "landscape"
-      ],
-      "architecture": [
-        "architecture",
-        "landscape",
-        "rooftop"
-      ],
-      "landscape": [
-        "landscape",
-        "conservation_message",
-        "boardwalk_trails"
-      ],
-      "itineraries": [
-        "dwell_time",
-        "landscape",
-        "drive_market"
-      ],
-      "planner": [
-        "dwell_time",
-        "families",
-        "value_for_money"
-      ],
-      "families": [
-        "families",
-        "age_tiers",
-        "interactive_exhibits"
-      ],
-      "groups": [
-        "families",
-        "age_tiers",
-        "guided_tours"
-      ],
-      "tours": [
-        "guided_tours",
-        "interpretation"
-      ],
-      "shopping": [
-        "retail",
-        "retail_pricing"
-      ],
-      "eat": [
-        "food_beverage"
-      ],
-      "directions": [
-        "drive_market",
-        "landscape"
-      ],
-      "tickets": [
-        "value_for_money",
-        "timed_entry",
-        "dwell_time"
-      ],
-      "membership": [
-        "value_for_money",
-        "dwell_time",
-        "peer_comparison"
-      ],
-      "accessibility": [
-        "accessibility",
-        "staff"
-      ]
+  "entities": {
+    "trpl": {
+      "entity": {
+        "name": "Theodore Roosevelt Presidential Library",
+        "short_name": "TRPL",
+        "address": "3410 Chateau Rd, Medora, ND 58645",
+        "opened": "2026-07-04"
+      },
+      "sources": {
+        "google": {
+          "enabled": true,
+          "label": "Google",
+          "apify_actor": "compass~google-maps-reviews-scraper",
+          "listing_url": "https://www.google.com/maps/place/Theodore+Roosevelt+Presidential+Library/@46.9167713,-103.5486042,17z/data=!3m1!4b1!4m6!3m5!1s0x5325eb007ad0296f:0x588995e798312048!8m2!3d46.9167713!4d-103.5486042!16s%2Fg%2F11zc421vls",
+          "input": {
+            "maxReviews": 2000,
+            "reviewsSort": "newest",
+            "language": "en",
+            "personalData": true
+          },
+          "incremental_field": "reviewsStartDate",
+          "reply_url": "https://business.google.com/reviews"
+        },
+        "tripadvisor": {
+          "enabled": true,
+          "label": "TripAdvisor",
+          "apify_actor": "maxcopell~tripadvisor-reviews",
+          "listing_url": "https://www.tripadvisor.com/Attraction_Review-g60973-d34391224-Reviews-Theodore_Roosevelt_Presidential_Library-Medora_North_Dakota.html",
+          "input": {
+            "maxItemsPerQuery": 2000,
+            "scrapeReviewerInfo": true,
+            "reviewsLanguages": [
+              "en"
+            ]
+          },
+          "incremental_field": "lastReviewDate",
+          "reply_url": "https://www.tripadvisor.com/Owners"
+        },
+        "yelp": {
+          "enabled": true,
+          "label": "Yelp",
+          "apify_actor": "tri_angle~yelp-review-scraper",
+          "listing_url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2",
+          "input": {
+            "maxReviewsPerUrl": 500,
+            "language": "en"
+          },
+          "incremental_field": "dateFrom",
+          "reply_url": "https://biz.yelp.com"
+        },
+        "facebook": {
+          "enabled": true,
+          "label": "Facebook",
+          "apify_actor": "apify~facebook-reviews-scraper",
+          "listing_url": "https://www.facebook.com/TRPresidentialLibrary",
+          "input": {
+            "resultsLimit": 500
+          },
+          "incremental_field": null,
+          "reply_url": "https://business.facebook.com",
+          "note": "Recommendations were switched on for the Page on 2026-08-12; before that the Page returned nothing at all. The tab starts empty and fills as visitors leave recommendations. Facebook Recommendations are yes/no, so records carry `recommends` and leave `rating` null — never convert one into a star count."
+        }
+      },
+      "triage": {
+        "critical_rating_at_or_below": 2,
+        "needs_response_at_or_below": 3,
+        "response_sla_days": {
+          "critical": 1,
+          "negative": 3,
+          "positive_with_criticism": 7,
+          "positive": 14
+        }
+      },
+      "pullquotes": {
+        "consider": 60,
+        "pool_size": 60,
+        "max_age_days": 540,
+        "note": "The public quote widget. Only 5-star reviews dated after opening are eligible. Every excerpt is verified as a verbatim substring of its review before it ships; anything that isn't is discarded and reported, never repaired.",
+        "max_per_draw": 3,
+        "topics": {
+          "_note": "Page topic -> themes from data/themes.json. Used by data-topic on the embed. A topic only ranks quotes; it never empties the block — if too few match, the widget tops up with general ones so a page can't end up showing nothing.",
+          "visit": [
+            "dwell_time",
+            "interactive_exhibits",
+            "families",
+            "peer_comparison",
+            "value_for_money"
+          ],
+          "exhibits": [
+            "interactive_exhibits",
+            "interpretation",
+            "historical_balance",
+            "guided_tours"
+          ],
+          "outdoors": [
+            "boardwalk_trails",
+            "landscape",
+            "rooftop",
+            "conservation_message"
+          ],
+          "hiking": [
+            "boardwalk_trails",
+            "landscape",
+            "rooftop"
+          ],
+          "biking": [
+            "boardwalk_trails",
+            "landscape"
+          ],
+          "architecture": [
+            "architecture",
+            "landscape",
+            "rooftop"
+          ],
+          "landscape": [
+            "landscape",
+            "conservation_message",
+            "boardwalk_trails"
+          ],
+          "itineraries": [
+            "dwell_time",
+            "landscape",
+            "drive_market"
+          ],
+          "planner": [
+            "dwell_time",
+            "families",
+            "value_for_money"
+          ],
+          "families": [
+            "families",
+            "age_tiers",
+            "interactive_exhibits"
+          ],
+          "groups": [
+            "families",
+            "age_tiers",
+            "guided_tours"
+          ],
+          "tours": [
+            "guided_tours",
+            "interpretation"
+          ],
+          "shopping": [
+            "retail",
+            "retail_pricing"
+          ],
+          "eat": [
+            "food_beverage"
+          ],
+          "directions": [
+            "drive_market",
+            "landscape"
+          ],
+          "tickets": [
+            "value_for_money",
+            "timed_entry",
+            "dwell_time"
+          ],
+          "membership": [
+            "value_for_money",
+            "dwell_time",
+            "peer_comparison"
+          ],
+          "accessibility": [
+            "accessibility",
+            "staff"
+          ]
+        }
+      },
+      "slug": "trpl",
+      "label": "TR Presidential Library",
+      "accent": "#8B2E1F",
+      "embed": "embed.js"
+    },
+    "salt-scoria": {
+      "slug": "salt-scoria",
+      "label": "Salt + Scoria",
+      "accent": "#A6452C",
+      "embed": "embed-salt-scoria.js",
+      "entity": {
+        "name": "Salt+Scoria",
+        "short_name": "Salt + Scoria",
+        "address": "3410 Chateau Rd, Medora, ND 58645",
+        "opened": "2026-07-04",
+        "note": "Google lists the business as 'Salt+Scoria' with no spaces; the brand writes it 'Salt + Scoria'. entity.name matches Google so collect.py's listing checks line up. Soft-opened with the Library on 4 July 2026; formal ribbon cutting 23 July. Dining needs no Library admission ticket, so a diner is not necessarily a visitor."
+      },
+      "sources": {
+        "google": {
+          "enabled": true,
+          "label": "Google",
+          "apify_actor": "compass~google-maps-reviews-scraper",
+          "listing_url": "https://www.google.com/maps/place/Salt%2BScoria/@46.9174889,-103.5494323,17z/data=!3m1!4b1!4m6!3m5!1s0x5325eb00594a1a0f:0x58873ad1e72324d6!8m2!3d46.9174889!4d-103.5494323!16s%2Fg%2F11zg4ctm62",
+          "input": {
+            "maxReviews": 2000,
+            "reviewsSort": "newest",
+            "language": "en",
+            "personalData": true
+          },
+          "incremental_field": "reviewsStartDate",
+          "reply_url": "https://business.google.com/reviews"
+        },
+        "tripadvisor": {
+          "enabled": false,
+          "label": "TripAdvisor",
+          "apify_actor": "maxcopell~tripadvisor-reviews",
+          "listing_url": null,
+          "input": {
+            "maxItemsPerQuery": 2000,
+            "scrapeReviewerInfo": true,
+            "reviewsLanguages": [
+              "en"
+            ]
+          },
+          "incremental_field": "lastReviewDate",
+          "reply_url": "https://www.tripadvisor.com/Owners",
+          "note": "No listing exists. Checked 2026-10-03: the Medora restaurants page returns 8 restaurants and Salt + Scoria is not among them. Until someone creates and claims the listing there is nothing to collect. Set enabled true and fill listing_url then."
+        },
+        "yelp": {
+          "enabled": false,
+          "label": "Yelp",
+          "apify_actor": "tri_angle~yelp-review-scraper",
+          "listing_url": null,
+          "input": {
+            "maxReviewsPerUrl": 500,
+            "language": "en"
+          },
+          "incremental_field": "dateFrom",
+          "reply_url": "https://biz.yelp.com",
+          "note": "No listing exists. Checked 2026-10-03: a Yelp search on the street address returns every other Medora restaurant and nothing for Salt + Scoria."
+        }
+      },
+      "triage": {
+        "critical_rating_at_or_below": 2,
+        "needs_response_at_or_below": 3,
+        "response_sla_days": {
+          "critical": 1,
+          "negative": 2,
+          "positive_with_criticism": 5,
+          "positive": 14
+        },
+        "note": "Tighter than the Library's. A bad meal is a same-week decision for the next diner in a way a disappointing exhibit is not, and at 28 reviews a single unanswered one-star moves the public average by more than a tenth of a point."
+      },
+      "pullquotes": {
+        "consider": 40,
+        "pool_size": 40,
+        "max_age_days": 540,
+        "max_per_draw": 3,
+        "note": "Smaller pool because the corpus is smaller. The same three gates apply: verbatim substring check, deterministic screen, model critic.",
+        "topics": {}
+      }
     }
   }
 }

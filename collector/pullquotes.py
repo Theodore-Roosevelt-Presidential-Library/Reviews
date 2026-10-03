@@ -29,7 +29,8 @@ import unicodedata
 from datetime import date, timedelta
 
 import llm
-from common import CONFIG, DATA, ROOT, load_reviews, theme_labels, today, write_json
+from common import (CONFIG, DATA, ENTITY, ROOT, load_reviews, theme_labels, today,
+                    write_json)
 
 VOCAB = theme_labels()
 
@@ -297,7 +298,14 @@ def eligible(reviews):
 
 
 def build_embed(pool):
-    """Write site/embed.js with the quotes already inside it."""
+    """Write the entity's embed bundle with the quotes already inside it.
+
+    One file per business, named by config (entities.<slug>.embed). The Library's stays
+    `embed.js` deliberately: that exact filename is already in a script tag on
+    trlibrary.com, and renaming it to match a tidier scheme would blank the quote block
+    on the live homepage the moment this deploys. A consistent naming convention is not
+    worth breaking a page in production for.
+    """
     template = (ROOT / "site" / "embed.template.js").read_text()
     quotes = [{k: q.get(k) for k in
                ("quote", "draw", "author", "source", "date", "url", "themes")}
@@ -309,13 +317,16 @@ def build_embed(pool):
                                 if not k.startswith("_")},
                                ensure_ascii=False, separators=(",", ":")))
     js = js.replace("__GENERATED__", pool["generated"])
-    out = ROOT / "site" / "embed.js"
+    name = CONFIG.get("embed") or f"embed-{ENTITY}.js"
+    out = ROOT / "site" / name
     out.write_text(js)
-    print(f"embed.js written — {len(quotes)} quotes, {len(js) // 1024}KB")
+    print(f"{name} written — {len(quotes)} quotes, {len(js) // 1024}KB")
 
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--entity", default=None,
+                    help="which business to work on; see config.json > entities")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--rebuild", action="store_true",
                     help="rebuild embed.js from the stored pool, no model calls")

@@ -1,0 +1,60 @@
+{
+  "_note": "A deliberately thin seed. Nine labels covering the things every restaurant review touches, chosen so the first collection has somewhere to put its reviews without inventing subjects nobody has raised. The real vocabulary gets authored from the collected reviews, and auto-promotion grows it from there. Resist padding this list: a theme that fires on the wrong reviews is worse than no theme at all, which is the lesson of the Library's ai_criticism label.",
+  "version": "0.1-seed",
+  "themes": [
+    {
+      "label": "food_quality",
+      "description": "How the food itself tasted, was cooked, or was seasoned",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "service",
+      "description": "Staff attentiveness, warmth, competence, or the lack of it",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "wait_time",
+      "description": "Queueing, time to be seated, time to be served",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "value",
+      "description": "Price against what arrived on the plate",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "menu_range",
+      "description": "How much choice there was, including when something had run out",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "atmosphere",
+      "description": "The room: light, noise, comfort, how it feels to sit in",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "indigenous_menu",
+      "description": "The Native culinary tradition the restaurant is built on",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "dietary_needs",
+      "description": "Vegan, vegetarian, gluten-free, allergy accommodation",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    },
+    {
+      "label": "hours",
+      "description": "When the kitchen opens and closes, including stopping service early",
+      "source": "authored",
+      "authored_on": "2026-10-03"
+    }
+  ]
+}

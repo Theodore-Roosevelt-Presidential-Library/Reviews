@@ -10,6 +10,10 @@ on:
         description: "Ignore stored dates and re-pull every review"
         type: boolean
         default: false
+      entity:
+        description: "Limit the run to one business (slug). Blank runs all of them."
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -29,6 +33,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Which businesses this run covers. Read from config.json rather than listed here,
+      # so adding one is a config change and the workflow never drifts out of step with it.
+      - name: Resolve entities
+        id: ents
+        run: |
+          WANT="${{ inputs.entity }}"
+          ALL=$(python3 -c "import json;print(' '.join(json.load(open('config.json'))['entities']))")
+          if [ -n "$WANT" ]; then
+            case " $ALL " in *" $WANT "*) ALL="$WANT";;
+              *) echo "Unknown entity '$WANT'. Configured: $ALL"; exit 1;; esac
+          fi
+          echo "list=$ALL" >> "$GITHUB_OUTPUT"
+          echo "Running for: $ALL"
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,7 +62,12 @@ jobs:
       - name: Collect from sources
         env:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
-        run: python3 collector/collect.py ${{ inputs.full && '--full' || '' }}
+        run: |
+          for E in ${{ steps.ents.outputs.list }}; do
+            echo "::group::collect $E"
+            python3 collector/collect.py --entity "$E" ${{ inputs.full && '--full' || '' }}
+            echo "::endgroup::"
+          done
 
       # Fail fast if the provider is gone or the model was renamed. This step is the
       # reason a retired endpoint can't quietly turn the pipeline back into regex.
@@ -58,7 +81,12 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 collector/analyze.py
+        run: |
+          for E in ${{ steps.ents.outputs.list }}; do
+            echo "::group::analyze $E"
+            python3 collector/analyze.py --entity "$E"
+            echo "::endgroup::"
+          done
 
       # Grow the theme vocabulary when visitors keep raising something it has no word for.
       # Exit 10 means a theme was promoted; anything else means no change. `|| true` would
@@ -66,25 +94,37 @@ jobs:
       - name: Promote recurring subjects into the vocabulary
         id: promote
         run: |
-          set +e
-          python3 collector/promote.py
-          CODE=$?
-          set -e
-          if [ "$CODE" -eq 10 ]; then
-            echo "promoted=true" >> "$GITHUB_OUTPUT"
-          elif [ "$CODE" -ne 0 ]; then
-            echo "promote.py failed with $CODE"; exit "$CODE"
-          fi
+          PROMOTED=""
+          for E in ${{ steps.ents.outputs.list }}; do
+            set +e
+            python3 collector/promote.py --entity "$E"
+            CODE=$?
+            set -e
+            if [ "$CODE" -eq 10 ]; then
+              PROMOTED="$PROMOTED $E"
+            elif [ "$CODE" -ne 0 ]; then
+              echo "promote.py failed for $E with $CODE"; exit "$CODE"
+            fi
+          done
+          echo "promoted=$(echo $PROMOTED | xargs)" >> "$GITHUB_OUTPUT"
 
       # A new theme that only applied to reviews labelled from today onward would start at
       # zero and show explosive growth in its first period — a trend that never happened.
       # Re-label everything so the new theme's history is as real as every other theme's.
+      # Only the businesses that actually gained a theme are re-labelled. A full re-label
+      # is the most expensive thing this workflow does, and the Library's corpus should
+      # not be re-run because the restaurant grew a word.
       - name: Re-label the corpus for the new vocabulary
-        if: steps.promote.outputs.promoted == 'true'
+        if: steps.promote.outputs.promoted != ''
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 collector/analyze.py --all
+        run: |
+          for E in ${{ steps.promote.outputs.promoted }}; do
+            echo "::group::re-label $E"
+            python3 collector/analyze.py --entity "$E" --all
+            echo "::endgroup::"
+          done
 
       # Refresh the public quote widget. Only considers reviews not already assessed, so a
       # normal day is a couple of API calls. Failure here must not fail the run: the widget
@@ -94,31 +134,40 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 collector/pullquotes.py
+        run: |
+          for E in ${{ steps.ents.outputs.list }}; do
+            python3 collector/pullquotes.py --entity "$E" || \
+              echo "pullquotes failed for $E — keeping the existing bundle"
+          done
 
       # Always regenerate derived files after a rebase. They are a pure function of
       # reviews.json, so this resolves any conflict in them without a manual merge.
       - name: Build derived metrics
-        run: python3 collector/derive.py
+        run: |
+          for E in ${{ steps.ents.outputs.list }}; do
+            python3 collector/derive.py --entity "$E"
+          done
 
       - name: Validate data
         run: python3 collector/validate.py
 
       - name: Commit changes
         run: |
-          rm -f data/.promoted
-          git add data/ site/embed.js
+          rm -f data/*/.promoted
+          git add data/ site/embed.js site/embed-*.js
           if git diff --staged --quiet; then
             echo "No change in review data."
           else
-            NEW=$(python3 -c "import json;print(len(json.load(open('data/reviews.json'))['reviews']))")
-            MSG="Reviews refresh $(date -u +%Y-%m-%d) — ${NEW} tracked"
-            if [ "${{ steps.promote.outputs.promoted }}" = "true" ]; then
-              ADDED=$(python3 -c "import json;v=json.load(open('data/themes.json'))['themes'];print(', '.join(t['label'] for t in v if t.get('promoted_on')=='$(date -u +%Y-%m-%d)'))")
-              MSG="${MSG}; vocabulary grew: ${ADDED}"
-            fi
+            # One line per business, so the commit log says which corpus moved.
+            COUNTS=$(python3 -c "import json;c=json.load(open('config.json'))['entities'];print('; '.join(f'{s} '+str(len(json.load(open(f'data/{s}/reviews.json'))['reviews'])) for s in c))")
+            MSG="Reviews refresh $(date -u +%Y-%m-%d) — ${COUNTS}"
+            for E in ${{ steps.promote.outputs.promoted }}; do
+              ADDED=$(python3 -c "import json;v=json.load(open('data/$E/themes.json'))['themes'];print(', '.join(t['label'] for t in v if t.get('promoted_on')=='$(date -u +%Y-%m-%d)'))")
+              MSG="${MSG}; ${E} vocabulary grew: ${ADDED}"
+            done
             git commit -m "${MSG}"
-            git push || (git pull --rebase origin main && python3 collector/derive.py \
+            git push || (git pull --rebase origin main \
+                         && for E in ${{ steps.ents.outputs.list }}; do python3 collector/derive.py --entity "$E"; done \
                          && git add data/ && git commit --amend --no-edit && git push)
           fi
 

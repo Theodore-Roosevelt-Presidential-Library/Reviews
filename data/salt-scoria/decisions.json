@@ -1,0 +1,12 @@
+{
+  "_note": "Reviews deliberately closed without a public reply, so they stop accruing SLA age and show on the dashboard as a decision rather than an oversight. This file is public: reason codes only, never free text about a reviewer.",
+  "reasons": [
+    "no_content",
+    "pre_opening",
+    "not_a_visit",
+    "duplicate",
+    "answered_elsewhere",
+    "no_public_reply"
+  ],
+  "decisions": {}
+}

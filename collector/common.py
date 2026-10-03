@@ -1,13 +1,28 @@
-"""Shared helpers: paths, config, and the review record contract."""
+"""Shared helpers: paths, config, and the review record contract.
+
+The repo tracks more than one business. Each run of the collector works on exactly one
+of them, chosen with --entity or the REVIEWS_ENTITY environment variable, and every path
+below resolves under data/<slug>/. CONFIG is the *merged* view for the active entity —
+shared settings with the entity's own block laid over the top — so the scripts that import
+CONFIG["entity"], CONFIG["sources"] or CONFIG["triage"] carry on working unchanged and
+cannot accidentally read one business's settings while writing another's files.
+
+One entity per process is deliberate. The alternative, a loop inside each script, would
+mean a failure halfway through left two businesses in different states of freshness, and
+every function would have to be trusted to thread the slug correctly. A process boundary
+is a guarantee instead of a convention.
+"""
 
 import json
+import os
 import re
+import sys
 import unicodedata
 from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CONFIG = json.loads((ROOT / "config.json").read_text())
+RAW_CONFIG = json.loads((ROOT / "config.json").read_text())
 
 
 def _load_dotenv() -> None:
@@ -30,11 +45,70 @@ def _load_dotenv() -> None:
 
 _load_dotenv()
 
-DATA = ROOT / "data"
-THEMES_PATH = ROOT / "data" / "themes.json"
+
+# --- which entity is this run about? ---------------------------------------
+
+def entity_slugs() -> list:
+    """Configured slugs, in config order. The dashboard's tab order follows this."""
+    return list(RAW_CONFIG["entities"].keys())
+
+
+def _resolve_slug() -> str:
+    """--entity wins, then REVIEWS_ENTITY, then default_entity.
+
+    Read straight from sys.argv rather than through argparse because this runs at import
+    time, before any script has built its parser. Each script still declares --entity so
+    that --help documents it and a typo is caught by the parser rather than ignored here.
+    """
+    slug = None
+    for i, arg in enumerate(sys.argv[1:]):
+        if arg == "--entity" and i + 2 <= len(sys.argv) - 1:
+            slug = sys.argv[i + 2]
+        elif arg.startswith("--entity="):
+            slug = arg.split("=", 1)[1]
+    slug = slug or os.environ.get("REVIEWS_ENTITY") or RAW_CONFIG.get("default_entity")
+    if slug not in RAW_CONFIG["entities"]:
+        raise SystemExit(
+            f"Unknown entity {slug!r}. Configured: {', '.join(entity_slugs())}.\n"
+            f"Pass --entity <slug> or set REVIEWS_ENTITY."
+        )
+    return slug
+
+
+def _merge(base: dict, over: dict) -> dict:
+    """Shallow-deep merge: nested dicts merge, anything else is replaced outright.
+
+    Replacing rather than merging lists matters — an entity that sets its own `windows`
+    means those windows instead of those windows as well.
+    """
+    out = dict(base)
+    for key, value in over.items():
+        if isinstance(value, dict) and isinstance(out.get(key), dict):
+            out[key] = _merge(out[key], value)
+        else:
+            out[key] = value
+    return out
+
+
+ENTITY = _resolve_slug()
+CONFIG = _merge(RAW_CONFIG.get("shared", {}), RAW_CONFIG["entities"][ENTITY])
+CONFIG["site"] = RAW_CONFIG.get("site", {})
+ENTITY_LABEL = CONFIG.get("label") or CONFIG["entity"]["name"]
+
+DATA = ROOT / "data" / ENTITY
+THEMES_PATH = DATA / "themes.json"
 REVIEWS_PATH = DATA / "reviews.json"
 DERIVED = DATA / "derived"
 SNAPSHOTS = DATA / "snapshots"
+
+
+def entity_config(slug: str) -> dict:
+    """The merged config for an entity other than the active one.
+
+    Only for the few places that legitimately need to see across entities — writing the
+    dashboard's entity manifest, for instance. Never use it to write another entity's data.
+    """
+    return _merge(RAW_CONFIG.get("shared", {}), RAW_CONFIG["entities"][slug])
 
 # Fields every stored review must carry. See docs/SCHEMA.md.
 REQUIRED_FIELDS = (

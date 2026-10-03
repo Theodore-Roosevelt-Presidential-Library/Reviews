@@ -402,6 +402,8 @@ def snapshot(reviews):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--entity", default=None,
+                    help="which business to work on; see config.json > entities")
     ap.add_argument("--source", help="collect a single source key")
     ap.add_argument("--full", action="store_true", help="ignore stored dates")
     ap.add_argument("--refresh-replies", action="store_true",

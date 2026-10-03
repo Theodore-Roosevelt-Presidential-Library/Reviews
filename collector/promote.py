@@ -153,6 +153,8 @@ def qualifies(c):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--entity", default=None,
+                    help="which business to work on; see config.json > entities")
     ap.add_argument("--dry-run", action="store_true", help="report, change nothing")
     ap.add_argument("--report", action="store_true", help="show every candidate and exit")
     args = ap.parse_args()

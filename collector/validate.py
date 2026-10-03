@@ -47,9 +47,54 @@ def check_file(path):
     return 0, doc
 
 
+def check_entity(slug, docs):
+    """Shape checks on the files the dashboard cannot render without, for one entity.
+
+    An entity with no reviews yet is not an error — a listing can exist before anyone has
+    reviewed it, and a newly added business is in exactly that state until the first
+    collection lands. What *is* an error is a reviews file whose totals disagree with its
+    metrics file, because the dashboard would then publish a number nothing supports.
+    """
+    base = f"data/{slug}"
+    reviews = docs.get(f"{base}/reviews.json")
+    if reviews is None:
+        return fail(f"{base}/reviews.json is missing")
+    rows = reviews.get("reviews")
+    if not isinstance(rows, list):
+        return fail(f"{base}/reviews.json has no reviews array")
+
+    ids = [r.get("id") for r in rows]
+    if len(set(ids)) != len(ids):
+        dupes = sorted({i for i in ids if ids.count(i) > 1})
+        return fail(f"duplicate review ids in {base}/reviews.json: {', '.join(dupes[:5])}")
+    if any(not r.get("id") or not r.get("source") for r in rows):
+        return fail(f"a review in {base}/reviews.json is missing id or source")
+
+    if not rows:
+        print(f"  note  {slug}: no reviews collected yet — skipping metrics checks")
+        return 0
+
+    metrics = docs.get(f"{base}/derived/metrics.json")
+    if metrics is None:
+        return fail(f"{base}/derived/metrics.json is missing")
+    for key in ("all_time", "windows", "triage", "series", "sources", "briefs"):
+        if key not in metrics:
+            return fail(f"{base}/derived/metrics.json is missing '{key}' — the dashboard reads it")
+
+    if metrics["all_time"].get("count") != len(rows):
+        return fail(f"{base}: metrics.json counts {metrics['all_time'].get('count')} reviews "
+                    f"but reviews.json holds {len(rows)}. Re-run collector/derive.py "
+                    f"--entity {slug}.")
+
+    print(f"  ok    {slug}: {len(rows)} reviews, {len(metrics['triage'])} in triage")
+    return 0
+
+
 def main():
     errors = 0
     docs = {}
+
+    slugs = list(json.loads((ROOT / "config.json").read_text())["entities"].keys())
 
     files = sorted(DATA.rglob("*.json"))
     if not files:
@@ -67,34 +112,22 @@ def main():
         print(f"\n{errors} file(s) failed", file=sys.stderr)
         return 1
 
-    # Shape checks on the two files the dashboard cannot render without.
-    reviews = docs.get("data/reviews.json")
-    if reviews is None:
-        return fail("data/reviews.json is missing")
-    rows = reviews.get("reviews")
-    if not isinstance(rows, list) or not rows:
-        return fail("data/reviews.json has no reviews array")
+    print(f"\nChecking {len(slugs)} entit{'y' if len(slugs) == 1 else 'ies'}")
+    for slug in slugs:
+        errors += check_entity(slug, docs)
 
-    ids = [r.get("id") for r in rows]
-    if len(set(ids)) != len(ids):
-        return fail("duplicate review ids in data/reviews.json")
-    if any(not r.get("id") or not r.get("source") for r in rows):
-        return fail("a review is missing id or source")
+    # A stray file directly under data/ is almost always a script that still writes to the
+    # pre-multi-entity path, which would publish one business's numbers under another's tab.
+    strays = [p.name for p in DATA.glob("*.json") if p.name != "entities.json"]
+    if strays:
+        return fail(f"unexpected file(s) directly under data/: {', '.join(strays)}. "
+                    f"Entity data belongs in data/<slug>/.")
 
-    metrics = docs.get("data/derived/metrics.json")
-    if metrics is None:
-        return fail("data/derived/metrics.json is missing")
-    for key in ("all_time", "windows", "triage", "series", "sources", "briefs"):
-        if key not in metrics:
-            return fail(f"metrics.json is missing '{key}' — the dashboard reads it")
+    if errors:
+        print(f"\n{errors} entity check(s) failed", file=sys.stderr)
+        return 1
 
-    # The two files are generated from each other; if they disagree, derive.py did not
-    # run after the last collection and the dashboard would show stale totals.
-    if metrics["all_time"].get("count") != len(rows):
-        return fail(f"metrics.json counts {metrics['all_time'].get('count')} reviews but "
-                    f"reviews.json holds {len(rows)}. Re-run collector/derive.py.")
-
-    print(f"\nAll good — {len(rows)} reviews, {len(metrics['triage'])} in triage.")
+    print("\nAll good.")
     return 0
 
 
