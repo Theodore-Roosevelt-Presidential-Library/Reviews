@@ -57,6 +57,11 @@ jobs:
             mkdir -p "_site/data/$E"
             cp -r "data/$E/derived" "_site/data/$E/"
             cp "data/$E/reviews.json" "_site/data/$E/"
+            # Approved pull quotes, so the MCP server can serve them from the published
+            # site rather than only from a checkout. Small, and already public in the repo.
+            if [ -f "data/$E/pullquotes.json" ]; then
+              cp "data/$E/pullquotes.json" "_site/data/$E/"
+            fi
           done
           cp CNAME _site/CNAME
           # Nothing here should be indexed — it's an internal tool on a public host.

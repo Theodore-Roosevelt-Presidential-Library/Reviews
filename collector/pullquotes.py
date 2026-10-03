@@ -51,11 +51,24 @@ def norm(text: str) -> str:
     text = (text.replace("‘", "'").replace("’", "'")
                 .replace("“", '"').replace("”", '"')
                 .replace("–", "-").replace("—", "-"))
-    return re.sub(r"\s+", " ", text).strip().lower()
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def verify(excerpt: str, source: str):
-    """Is this excerpt really in that review? Returns (ok, reason)."""
+    """Is this excerpt really in that review? Returns (ok, reason-or-cleaned-quote).
+
+    Case-sensitive, with exactly one allowance: the model may capitalise the first letter
+    when the excerpt starts mid-sentence. That is ordinary editorial practice, it changes
+    no word, and rejecting it would throw away good quotes for nothing.
+
+    The allowance is written down here because it used to be accidental. `norm()` folded
+    case, so the comparison was case-insensitive everywhere while the module docstring
+    promised character-for-character — and a quote shipped to trlibrary.com reading "The AI
+    interactive spots were amazing" where the reviewer had written "the". Harmless in
+    itself; the problem was that the gate was quietly weaker than its contract, which is
+    the one thing a verbatim check cannot afford to be. A bounded, deliberate exception is
+    safe. An unbounded one that nobody chose is not.
+    """
     if not excerpt or not source:
         return False, "empty"
     clean = excerpt.strip().strip('"“”').strip()
@@ -63,9 +76,20 @@ def verify(excerpt: str, source: str):
     clean = re.sub(r"\.{3}$|…$", "", clean).strip()
     if not (MIN_LEN <= len(clean) <= MAX_LEN):
         return False, f"length {len(clean)} outside {MIN_LEN}-{MAX_LEN}"
-    if norm(clean) not in norm(source):
-        return False, "not a verbatim substring of the review"
-    return True, clean
+
+    n_src = norm(source)
+    if norm(clean) in n_src:
+        return True, clean
+
+    # The single allowance: same text, first letter lowercased back to the source's.
+    if clean[:1].isupper():
+        lowered = clean[0].lower() + clean[1:]
+        if norm(lowered) in n_src:
+            # Publish the capitalised form — it reads as a sentence and the word is
+            # unchanged — but only now that it has been proved identical otherwise.
+            return True, clean
+
+    return False, "not a verbatim substring of the review"
 
 
 def display_author(name: str) -> str:
