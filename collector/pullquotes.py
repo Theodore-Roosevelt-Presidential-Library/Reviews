@@ -121,21 +121,21 @@ def screen(quote):
     return None
 
 
-CRITIC = """You are the final check before a visitor quote is published on the Theodore
-Roosevelt Presidential Library's own website as promotional copy.
+CRITIC = """You are the final check before a customer quote is published on {possessive}
+own website as promotional copy.
 
 Reject the quote if ANY of these is true:
 - It contains criticism, reservation, hedging, or a concession, however mild or polite.
 - It contains a spelling error, typo, or grammatical mistake. It will be published exactly
   as written, so anything needing a [sic] is a rejection.
-- It mentions registration, email, photographs of visitors, prices, tickets or opening dates.
-- It reads as generic praise that could describe any museum anywhere.
-- It would not make a stranger more likely to drive to Medora, North Dakota.
+{critic_extra_rejects}
+- It reads as generic praise that could describe any business of this kind anywhere.
+- It would not make a stranger more likely to {action}.
 - It names a staff member or another visitor.
 - It cannot be understood without the rest of the review.
 
-Be strict. Rejecting a usable quote costs nothing; publishing a bad one is on the homepage
-of a presidential library. When uncertain, reject.
+Be strict. Rejecting a usable quote costs nothing; publishing a bad one goes on
+{stakes}. When uncertain, reject.
 
 Reply with JSON: {"results":[{"id":"...","publish":true|false,"reason":"..."}]}"""
 
@@ -164,15 +164,14 @@ def critique(picked, client, batch_size=15):
     return kept, cut
 
 
-SYSTEM = """You select pull quotes for the Theodore Roosevelt Presidential Library's website.
+SYSTEM = """You select pull quotes for {possessive} website. The business is {business}.
 
-Your job: from each review, find the ONE passage most likely to make a stranger decide to
-visit. Not the most flattering passage — the most persuasive one.
+Your job: from each review, find the ONE passage most likely to {goal}. Not the most
+flattering passage — the most persuasive one.
 
 What makes a passage work:
-- It shows something specific. A named exhibit, a view, a moment, a reaction from a child.
-- It answers a hesitation a prospective visitor actually has: is it worth the drive, is
-  there enough to fill a day, will teenagers be bored, is it just a building of documents.
+- It shows something specific. {specifics}
+- It answers a hesitation a prospective customer actually has: {hesitations}.
 - It sounds like a person talking, not a brochure. Slight informality is good.
 - It stands alone. A reader seeing only this sentence understands it.
 
@@ -182,9 +181,7 @@ What to reject:
 - Logistics, prices, hours, opening-week references, or anything that will date.
 - Passages naming staff, or mentioning other visitors.
 - Anything with a complaint in it, however mild.
-- Anything describing registration, wristband sign-up, giving a name, email or photograph.
-  A meaningful minority of our critics object to exactly this; quoting it advertises the
-  objection. Praise for the interactive exhibits is welcome — the sign-up mechanics are not.
+{extra_rejects}
 - Passages containing a misspelling or obvious typo. It has to be published exactly as
   written, so a passage that needs fixing is a passage to skip.
 - Passages that begin mid-thought with "Also", "And", "But", "Plus", "It also".
@@ -210,12 +207,32 @@ Also return:
   exhibits on the restaurant page.
   Choose from: {vocab}
 
-Vary what you choose. If a review praises several things, prefer the one a prospective
-visitor is least likely to have already assumed about a presidential library.
+Vary what you choose. If a review praises several things, prefer the one {avoid_assumed}.
 
 Reply with JSON:
 {"results":[{"id":"...","quote":"..." or null,"draw":"..." or null,"topics":[...]}]}"""
-SYSTEM = SYSTEM.replace("{vocab}", ", ".join(VOCAB))
+def _voice(template):
+    """Fill the entity's voice into a prompt.
+
+    The prompts used to name the Library outright. Pointed at the restaurant, the critic
+    rejected every candidate for being "about food and a cafe, not the Theodore Roosevelt
+    Presidential Library" — reasoning correctly from a brief that described the wrong
+    business. The per-entity text lives in config.json > entities.<slug>.voice.
+    """
+    V = CONFIG.get("voice") or {}
+    out = template.replace("{vocab}", ", ".join(VOCAB))
+    for key in ("business", "possessive", "goal", "action", "stakes",
+                "specifics", "hesitations", "avoid_assumed"):
+        out = out.replace("{" + key + "}", V.get(key) or "")
+    for key in ("extra_rejects", "critic_extra_rejects"):
+        lines = V.get(key) or []
+        block = "\n".join("- " + re.sub(r"\s+", " ", x).strip() for x in lines)
+        out = out.replace("{" + key + "}", block)
+    return out
+
+
+SYSTEM = _voice(SYSTEM)
+CRITIC = _voice(CRITIC)
 
 
 def choose(reviews, client, batch_size=12):

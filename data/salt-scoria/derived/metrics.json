@@ -7,18 +7,20 @@
     "reviews": []
   },
   "all_time": {
-    "count": 0,
-    "rated_count": 0,
-    "average": null,
+    "count": 28,
+    "rated_count": 28,
+    "average": 3.61,
     "distribution": {
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0
+      "1": 6,
+      "2": 4,
+      "3": 1,
+      "4": 1,
+      "5": 16
     },
-    "by_source": {},
-    "unanswered": 0
+    "by_source": {
+      "google": 28
+    },
+    "unanswered": 28
   },
   "sources": {
     "google": {
@@ -79,25 +81,32 @@
         "unanswered": 0
       },
       "prior": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 1,
+        "rated_count": 1,
+        "average": 5.0,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 0,
-          "5": 0
+          "5": 1
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 100.0,
+        "pct_low": 0.0,
+        "by_source": {
+          "google": 1
+        },
+        "sentiment": {
+          "positive": 1
+        },
+        "themes": {
+          "food_quality": 1,
+          "wait_time": 1
+        },
+        "unanswered": 1
       },
       "delta": {
-        "count": 0,
+        "count": -1,
         "average": null,
         "pct_5_star": null,
         "pct_low": null
@@ -115,48 +124,112 @@
         "2026-09-03"
       ],
       "current": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 8,
+        "rated_count": 8,
+        "average": 4.62,
         "distribution": {
           "1": 0,
-          "2": 0,
+          "2": 1,
           "3": 0,
           "4": 0,
-          "5": 0
+          "5": 7
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 87.5,
+        "pct_low": 12.5,
+        "by_source": {
+          "google": 8
+        },
+        "sentiment": {
+          "positive": 7,
+          "negative": 1
+        },
+        "themes": {
+          "food_quality": 6,
+          "wait_time": 3,
+          "service": 2,
+          "atmosphere": 1,
+          "menu_range": 1,
+          "value": 1
+        },
+        "unanswered": 8
       },
       "prior": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 9,
+        "rated_count": 9,
+        "average": 2.56,
         "distribution": {
-          "1": 0,
-          "2": 0,
+          "1": 4,
+          "2": 2,
           "3": 0,
           "4": 0,
-          "5": 0
+          "5": 3
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 33.3,
+        "pct_low": 66.7,
+        "by_source": {
+          "google": 9
+        },
+        "sentiment": {
+          "positive": 4,
+          "negative": 5
+        },
+        "themes": {
+          "food_quality": 5,
+          "value": 4,
+          "menu_range": 3,
+          "service": 2,
+          "atmosphere": 1
+        },
+        "unanswered": 9
       },
       "delta": {
-        "count": 0,
-        "average": null,
-        "pct_5_star": null,
-        "pct_low": null
+        "count": -1,
+        "average": 2.06,
+        "pct_5_star": 54.2,
+        "pct_low": -54.2
       },
-      "theme_movement": []
+      "theme_movement": [
+        {
+          "theme": "wait_time",
+          "current": 3,
+          "prior": 0,
+          "current_share": 37.5,
+          "prior_share": 0.0,
+          "change": 37.5
+        },
+        {
+          "theme": "value",
+          "current": 1,
+          "prior": 4,
+          "current_share": 12.5,
+          "prior_share": 44.4,
+          "change": -31.9
+        },
+        {
+          "theme": "menu_range",
+          "current": 1,
+          "prior": 3,
+          "current_share": 12.5,
+          "prior_share": 33.3,
+          "change": -20.8
+        },
+        {
+          "theme": "food_quality",
+          "current": 6,
+          "prior": 5,
+          "current_share": 75.0,
+          "prior_share": 55.6,
+          "change": 19.4
+        },
+        {
+          "theme": "service",
+          "current": 2,
+          "prior": 2,
+          "current_share": 25.0,
+          "prior_share": 22.2,
+          "change": 2.8
+        }
+      ]
     },
     "60": {
       "days": 60,
@@ -169,48 +242,125 @@
         "2026-08-04"
       ],
       "current": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 17,
+        "rated_count": 17,
+        "average": 3.53,
         "distribution": {
-          "1": 0,
-          "2": 0,
+          "1": 4,
+          "2": 3,
           "3": 0,
           "4": 0,
-          "5": 0
+          "5": 10
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 58.8,
+        "pct_low": 41.2,
+        "by_source": {
+          "google": 17
+        },
+        "sentiment": {
+          "positive": 11,
+          "negative": 6
+        },
+        "themes": {
+          "food_quality": 11,
+          "value": 5,
+          "service": 4,
+          "menu_range": 4,
+          "wait_time": 3,
+          "atmosphere": 2
+        },
+        "unanswered": 17
       },
       "prior": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 11,
+        "rated_count": 11,
+        "average": 3.73,
         "distribution": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
+          "1": 2,
+          "2": 1,
+          "3": 1,
+          "4": 1,
+          "5": 6
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 54.5,
+        "pct_low": 36.4,
+        "by_source": {
+          "google": 11
+        },
+        "sentiment": {
+          "positive": 6,
+          "negative": 3,
+          "positive_with_criticism": 2
+        },
+        "themes": {
+          "food_quality": 10,
+          "service": 3,
+          "menu_range": 2,
+          "value": 1,
+          "hours": 1,
+          "dietary_needs": 1,
+          "indigenous_menu": 1,
+          "atmosphere": 1,
+          "wait_time": 1
+        },
+        "unanswered": 11
       },
       "delta": {
-        "count": 0,
-        "average": null,
-        "pct_5_star": null,
-        "pct_low": null
+        "count": 6,
+        "average": -0.2,
+        "pct_5_star": 4.3,
+        "pct_low": 4.8
       },
-      "theme_movement": []
+      "theme_movement": [
+        {
+          "theme": "food_quality",
+          "current": 11,
+          "prior": 10,
+          "current_share": 64.7,
+          "prior_share": 90.9,
+          "change": -26.2
+        },
+        {
+          "theme": "value",
+          "current": 5,
+          "prior": 1,
+          "current_share": 29.4,
+          "prior_share": 9.1,
+          "change": 20.3
+        },
+        {
+          "theme": "wait_time",
+          "current": 3,
+          "prior": 1,
+          "current_share": 17.6,
+          "prior_share": 9.1,
+          "change": 8.6
+        },
+        {
+          "theme": "menu_range",
+          "current": 4,
+          "prior": 2,
+          "current_share": 23.5,
+          "prior_share": 18.2,
+          "change": 5.3
+        },
+        {
+          "theme": "service",
+          "current": 4,
+          "prior": 3,
+          "current_share": 23.5,
+          "prior_share": 27.3,
+          "change": -3.7
+        },
+        {
+          "theme": "atmosphere",
+          "current": 2,
+          "prior": 1,
+          "current_share": 11.8,
+          "prior_share": 9.1,
+          "change": 2.7
+        }
+      ]
     },
     "90": {
       "days": 90,
@@ -223,51 +373,362 @@
         "2026-07-05"
       ],
       "current": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 27,
+        "rated_count": 27,
+        "average": 3.56,
         "distribution": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
+          "1": 6,
+          "2": 4,
+          "3": 1,
+          "4": 1,
+          "5": 15
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 55.6,
+        "pct_low": 40.7,
+        "by_source": {
+          "google": 27
+        },
+        "sentiment": {
+          "positive": 16,
+          "negative": 9,
+          "positive_with_criticism": 2
+        },
+        "themes": {
+          "food_quality": 20,
+          "service": 7,
+          "menu_range": 6,
+          "value": 6,
+          "wait_time": 4,
+          "atmosphere": 3,
+          "hours": 1,
+          "dietary_needs": 1,
+          "indigenous_menu": 1
+        },
+        "unanswered": 27
       },
       "prior": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
+        "count": 1,
+        "rated_count": 1,
+        "average": 5.0,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 0,
-          "5": 0
+          "5": 1
         },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
+        "pct_5_star": 100.0,
+        "pct_low": 0.0,
+        "by_source": {
+          "google": 1
+        },
+        "sentiment": {
+          "positive": 1
+        },
+        "themes": {
+          "food_quality": 1
+        },
+        "unanswered": 1
       },
       "delta": {
-        "count": 0,
-        "average": null,
-        "pct_5_star": null,
-        "pct_low": null
+        "count": 26,
+        "average": -1.44,
+        "pct_5_star": -44.4,
+        "pct_low": 40.7
       },
-      "theme_movement": []
+      "theme_movement": [
+        {
+          "theme": "food_quality",
+          "current": 20,
+          "prior": 1,
+          "current_share": 74.1,
+          "prior_share": 100.0,
+          "change": -25.9
+        },
+        {
+          "theme": "service",
+          "current": 7,
+          "prior": 0,
+          "current_share": 25.9,
+          "prior_share": 0.0,
+          "change": 25.9
+        },
+        {
+          "theme": "menu_range",
+          "current": 6,
+          "prior": 0,
+          "current_share": 22.2,
+          "prior_share": 0.0,
+          "change": 22.2
+        },
+        {
+          "theme": "value",
+          "current": 6,
+          "prior": 0,
+          "current_share": 22.2,
+          "prior_share": 0.0,
+          "change": 22.2
+        },
+        {
+          "theme": "wait_time",
+          "current": 4,
+          "prior": 0,
+          "current_share": 14.8,
+          "prior_share": 0.0,
+          "change": 14.8
+        },
+        {
+          "theme": "atmosphere",
+          "current": 3,
+          "prior": 0,
+          "current_share": 11.1,
+          "prior_share": 0.0,
+          "change": 11.1
+        }
+      ]
     }
   },
-  "triage": [],
+  "triage": [
+    {
+      "id": "google-2026-07-26-3d2ecbd6",
+      "source": "google",
+      "date": "2026-07-26",
+      "rating": 1,
+      "recommends": null,
+      "author": "Wells S",
+      "title": null,
+      "text": "Worst grilled cheese I’ve ever had in my entire life.",
+      "themes": [
+        "food_quality"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oak9WSkdXa05KYTJaTU1WTm5PVXcyU0d0SmNFRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnhjOVJGWkNJa2ZMMVNnOUw2SGtJcEE%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 69,
+      "overdue_by": 68
+    },
+    {
+      "id": "google-2026-07-26-3b31558e",
+      "source": "google",
+      "date": "2026-07-26",
+      "rating": 1,
+      "recommends": null,
+      "author": "Gage",
+      "title": null,
+      "text": "The bison sandwich was mediocre and the whole place was overpriced.",
+      "themes": [
+        "food_quality",
+        "value"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT210MmFubDBaVE52T0hWcE4yWnhUbGROYTBOaWMyYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmt2anl0ZTNvOHVpN2ZxTldNa0Nic2c%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 69,
+      "overdue_by": 68
+    },
+    {
+      "id": "google-2026-07-26-2d761b1a",
+      "source": "google",
+      "date": "2026-07-26",
+      "rating": 2,
+      "recommends": null,
+      "author": "Bryan Donaldson",
+      "title": null,
+      "text": "The “kabob” was not a kabob it was a salad and it was not good",
+      "themes": [
+        "food_quality"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGTGNuWjBhVUpLUjNOUU9ESktabU0xY21ka1dIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkFLcnZ0aUJKR3NQODJKZmM1cmdkWHc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 69,
+      "overdue_by": 68
+    },
+    {
+      "id": "google-2026-08-06-831eb748",
+      "source": "google",
+      "date": "2026-08-06",
+      "rating": 1,
+      "recommends": null,
+      "author": "Rich NunYaBusiness",
+      "title": null,
+      "text": "Skip it unless it's late and you have to feed the kids. Horrible PB&J sandwich, take dry summer camp peanut butter and flavorless jelly, slap it between two giant flavorless pieces of bread and you have a recipe for a desert in your mouth. Good luck swallowing. Bison sandwich was almost as bad dry slices of bison. I finally opened it up, took the meat off, scraped the sauce off the bread and spread it on the meat and just ate that.",
+      "themes": [
+        "food_quality"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205TmNITkdWVkpwUzBKWlJGVnNOREYxVXpGb1EzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOm9NcHNGVVJpS0JZRFVsNDF1UzFoQ3c%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 58,
+      "overdue_by": 57
+    },
+    {
+      "id": "google-2026-08-14-ef3fe7f6",
+      "source": "google",
+      "date": "2026-08-14",
+      "rating": 2,
+      "recommends": null,
+      "author": "Kath Williams",
+      "title": null,
+      "text": "Chili was good. Small portions for the price. A cup of chili was $10. Soda and water by the can $4.75. Overpriced and underwhelming. Sandwiches and wraps were $20+.",
+      "themes": [
+        "food_quality",
+        "value",
+        "menu_range"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsVGFVNUhOVlkyTm5ocVptNXJRVGx0V0hSTmNsRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOllTaU5HNVY2NnhqZm5rQTltWHRNclE%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 50,
+      "overdue_by": 49
+    },
+    {
+      "id": "google-2026-08-14-bb69113c",
+      "source": "google",
+      "date": "2026-08-14",
+      "rating": 1,
+      "recommends": null,
+      "author": "Brittany Scott",
+      "title": null,
+      "text": "Food was way too expensive for the quality. They really need to re-think the style and logistics of this Cafe.",
+      "themes": [
+        "value",
+        "service"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pOUFkzZHNSbVIyU2t0WFRWRnBSekJVWTBSemNYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjNPY3dsRmR2SktXTVFpRzBUY0RzcXc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 50,
+      "overdue_by": 49
+    },
+    {
+      "id": "google-2026-08-14-047676e9",
+      "source": "google",
+      "date": "2026-08-14",
+      "rating": 2,
+      "recommends": null,
+      "author": "Lisa Field",
+      "title": null,
+      "text": "I ordered a sour dough grilled Bison sandwich. I could not bite or chew the Bison so took it off and paid $23 for 2 slices of sourdough. Brought the meat back to camp to give to the dog so at least it wasn't wasted. Green Chile Pazole was edible but did not taste as good as I've had it prepared by my Hispanic friends.",
+      "themes": [
+        "food_quality",
+        "value"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pScGVFd3dhRGxYTjJSWGNXMUJRVk50UlUwd2NuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRpeEwwaDlXN2RXcW1BQVNtRU0wcnc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 50,
+      "overdue_by": 49
+    },
+    {
+      "id": "google-2026-08-17-5b1e181b",
+      "source": "google",
+      "date": "2026-08-17",
+      "rating": 1,
+      "recommends": null,
+      "author": "Bruce Bartholomew",
+      "title": null,
+      "text": "So the grab and go is the only option for the last three hours that the Library is open. Really disappointed because the menu sounded amazing but don't expect to be able to order off of it. As others have said, they need to figure out their pricing and service",
+      "themes": [
+        "service",
+        "menu_range",
+        "value"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pSRmVGRjJRbGxaZDBoMGNHZEtYMVZYTVcwM1RYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRFeFF2QllZd0h0cGdKX1VXMW03TXc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 47,
+      "overdue_by": 46
+    },
+    {
+      "id": "google-2026-08-22-aae0a501",
+      "source": "google",
+      "date": "2026-08-22",
+      "rating": 1,
+      "recommends": null,
+      "author": "Eileen McAuley",
+      "title": null,
+      "text": "We had to wait 10 minutes on line to then find out when we get to the front they are not taking orders because kitchen is backed up. No estimate on when they will open up again, took another 20 minutes. Eat before you come",
+      "themes": [],
+      "sentiment": "positive",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKeU0yd3RVa0UyYkVvME5rRnROMWQwY0hSWVJIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkJyM2wtUkE2bEo0NkFtN1d0cHRYRHc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 42,
+      "overdue_by": 41
+    },
+    {
+      "id": "google-2026-09-05-0fb1273a",
+      "source": "google",
+      "date": "2026-09-05",
+      "rating": 2,
+      "recommends": null,
+      "author": "George Heinrichs",
+      "title": null,
+      "text": "Very limited and poorly chosen menu for my tastes; food was edible but not enjoyable- a great library but some questionable choices on food - potatoes salad was bland and frozen, grilled cheese was more like two separately toasted bread slices with two cheese slices slapped in the middle (not melted, possibly never exposed to heat) - advertised as Havarti but clearly had other cheese; no chips; no fries; just no choices",
+      "themes": [
+        "menu_range",
+        "food_quality",
+        "value"
+      ],
+      "sentiment": "negative",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kV1RDMWFabGQyUVc1TFFUQmllbWR5WW5VeGNuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmdWTC1aZld2QW5LQTBiemdyYnUxcnc%7C%7C?hl=en",
+      "tier": "critical",
+      "sla_days": 1,
+      "age_days": 28,
+      "overdue_by": 27
+    },
+    {
+      "id": "google-2026-07-07-d98ea20d",
+      "source": "google",
+      "date": "2026-07-07",
+      "rating": 3,
+      "recommends": null,
+      "author": "C J",
+      "title": null,
+      "text": "Okay, so—this cafe needs some fine tuning. We visited today, on a Monday between meal times and it was a logistical nightmare. The line cuts in front of the access to the bathroom, the gals taking orders seemed deeply overwhelmed, some of the orders were being called out by number from the counter, some were being served by food runners. Someone needs to shuffle the whole cafe around, have a more efficient line situation, and hire more hands for the kitchen and coffee area. I think the food has EXCELLENT potential, we only had coffee and a cookie (which was very good!) but the logistics and serving situation need to be fine tuned. I hope they get some of the details ironed out before we visit again. Lots and lots of potential, but have patience if you visit anytime soon!",
+      "themes": [
+        "service",
+        "wait_time",
+        "menu_range",
+        "food_quality"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ac1RGTlVjMnB6UzFGT2FGUlROM2cyWjBKU2IzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZsTFNUc2pzS1FOaFRTN3g2Z0JSb3c%7C%7C?hl=en",
+      "tier": "negative",
+      "sla_days": 2,
+      "age_days": 88,
+      "overdue_by": 86
+    },
+    {
+      "id": "google-2026-07-22-5e8addf7",
+      "source": "google",
+      "date": "2026-07-22",
+      "rating": 4,
+      "recommends": null,
+      "author": "Bridget",
+      "title": null,
+      "text": "The food is outstanding. The only reason I took off one star is their failure to update their Google listing. Take note!! Only limited “Grab n Go” after 3:00pm.",
+      "themes": [
+        "food_quality",
+        "hours"
+      ],
+      "sentiment": "positive_with_criticism",
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21aNWRFWXRXa05qZUVST2FFbzVlblp0YTBSTFlXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZ5dEYtWkNjeEROaEo5enZta0RLYWc%7C%7C?hl=en",
+      "tier": "positive_with_criticism",
+      "sla_days": 5,
+      "age_days": 73,
+      "overdue_by": 68
+    }
+  ],
   "closed_without_reply": [],
   "series": [
     {
@@ -902,640 +1363,640 @@
     },
     {
       "date": "2026-07-05",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 1
     },
     {
       "date": "2026-07-06",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 1
     },
     {
       "date": "2026-07-07",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 2,
+      "average": 4.0,
+      "trailing_30_average": 4.33,
+      "trailing_30_count": 3
     },
     {
       "date": "2026-07-08",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.33,
+      "trailing_30_count": 3
     },
     {
       "date": "2026-07-09",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-10",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-11",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-12",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-13",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-14",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-15",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.5,
+      "trailing_30_count": 4
     },
     {
       "date": "2026-07-16",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.6,
+      "trailing_30_count": 5
     },
     {
       "date": "2026-07-17",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 6
     },
     {
       "date": "2026-07-18",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 6
     },
     {
       "date": "2026-07-19",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 6
     },
     {
       "date": "2026-07-20",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 6
     },
     {
       "date": "2026-07-21",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 6
     },
     {
       "date": "2026-07-22",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 4.0,
+      "trailing_30_average": 4.57,
+      "trailing_30_count": 7
     },
     {
       "date": "2026-07-23",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.57,
+      "trailing_30_count": 7
     },
     {
       "date": "2026-07-24",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.57,
+      "trailing_30_count": 7
     },
     {
       "date": "2026-07-25",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.57,
+      "trailing_30_count": 7
     },
     {
       "date": "2026-07-26",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 3,
+      "average": 1.33,
+      "trailing_30_average": 3.6,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-07-27",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-07-28",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-07-29",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-07-30",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-07-31",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-01",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-02",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-03",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-04",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-05",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.6,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-08-06",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 1.0,
+      "trailing_30_average": 3.36,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-07",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-08",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-09",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.0,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-08-10",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-11",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-12",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-13",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-14",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 3,
+      "average": 1.67,
+      "trailing_30_average": 2.83,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-15",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.83,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-16",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.64,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-17",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 1.0,
+      "trailing_30_average": 2.27,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-18",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.27,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-19",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.27,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-20",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.27,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-21",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.27,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-08-22",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 2,
+      "average": 3.0,
+      "trailing_30_average": 2.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-23",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-24",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-25",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-08-26",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-27",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-28",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-29",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-30",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-08-31",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-01",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-02",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-03",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-04",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.56,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-05",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 2,
+      "average": 3.5,
+      "trailing_30_average": 2.73,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-06",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.9,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-09-07",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 2.9,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-09-08",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 3.09,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-09",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.09,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-10",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 3.09,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-11",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 3.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-09-12",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-09-13",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.25,
+      "trailing_30_count": 12
     },
     {
       "date": "2026-09-14",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.78,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-15",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.78,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-16",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 3.78,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-17",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.22,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-18",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.3,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-09-19",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.3,
+      "trailing_30_count": 10
     },
     {
       "date": "2026-09-20",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "count": 1,
+      "average": 5.0,
+      "trailing_30_average": 4.36,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-21",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.36,
+      "trailing_30_count": 11
     },
     {
       "date": "2026-09-22",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-23",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-24",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-25",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-26",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.67,
+      "trailing_30_count": 9
     },
     {
       "date": "2026-09-27",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-09-28",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-09-29",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-09-30",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-10-01",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-10-02",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     },
     {
       "date": "2026-10-03",
       "count": 0,
       "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
     }
   ],
   "sla": {
@@ -1572,27 +2033,66 @@
     },
     "30": {
       "window": "30",
-      "headline": "No reviews in this window",
+      "headline": "Ratings easing to 4.62 across 8 reviews",
       "paragraphs": [
-        "Nothing has come in over this period. Widen the window, or check that collection ran."
+        "8 reviews in the last 30 days, down 1 on the previous 30 days. The average is up 2.06. 12.5% rated three stars or below.",
+        "Visitors are consistently praising the visit overall.",
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
-      "actions": []
+      "coverage_warning": null,
+      "actions": [],
+      "notes": [],
+      "stats": {
+        "count": 8,
+        "average": 4.62,
+        "count_delta": -1,
+        "average_delta": 2.06,
+        "pct_low": 12.5,
+        "unanswered": 12,
+        "overdue": 12
+      }
     },
     "60": {
       "window": "60",
-      "headline": "No reviews in this window",
+      "headline": "Ratings at 3.53 across 17 reviews — worth attention",
       "paragraphs": [
-        "Nothing has come in over this period. Widen the window, or check that collection ran."
+        "17 reviews in the last 60 days, up 6 on the previous 60 days. The average is down 0.2. 41.2% rated three stars or below.",
+        "Visitors are consistently praising the visit overall.",
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
-      "actions": []
+      "coverage_warning": null,
+      "actions": [],
+      "notes": [],
+      "stats": {
+        "count": 17,
+        "average": 3.53,
+        "count_delta": 6,
+        "average_delta": -0.2,
+        "pct_low": 41.2,
+        "unanswered": 12,
+        "overdue": 12
+      }
     },
     "90": {
       "window": "90",
-      "headline": "No reviews in this window",
+      "headline": "Ratings at 3.56 across 27 reviews — worth attention",
       "paragraphs": [
-        "Nothing has come in over this period. Widen the window, or check that collection ran."
+        "27 reviews in the last 90 days, up 26 on the previous 90 days. The average is down 1.44. 40.7% rated three stars or below.",
+        "Visitors are consistently praising the visit overall.",
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
-      "actions": []
+      "coverage_warning": null,
+      "actions": [],
+      "notes": [],
+      "stats": {
+        "count": 27,
+        "average": 3.56,
+        "count_delta": 26,
+        "average_delta": -1.44,
+        "pct_low": 40.7,
+        "unanswered": 12,
+        "overdue": 12
+      }
     }
   }
 }

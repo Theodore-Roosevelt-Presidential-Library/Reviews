@@ -1,0 +1,99 @@
+{
+  "generated": "2026-10-03",
+  "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
+  "rejected_last_run": [
+    {
+      "id": "google-2026-09-18-3bcec4c9",
+      "reason": "length 42 outside 60-220",
+      "offered": "We enjoyed our delicious food with a view."
+    },
+    {
+      "id": "google-2026-07-17-d3d736bc",
+      "reason": "length 53 outside 60-220",
+      "offered": "Vegan meals =  a few very tasty, very fresh, options."
+    }
+  ],
+  "cut_by_critic_last_run": [
+    {
+      "quote": "I had the special of the day (Bison Sloppy Joe’s) with a side salad.  Very yummy.  Dressing was delicious.",
+      "reason": "Mentions a dish by name that draws repeated complaints (Bison Sloppy Joe’s)."
+    },
+    {
+      "quote": "You could smell the wood smoke off the chicken when it arrived, the flavor reminded me of other BBQ spots in MT, and the greens were dressed perfectly.",
+      "reason": "Contains a mild reservation by comparison to other BBQ spots, which is a form of hedging."
+    }
+  ],
+  "quotes": [
+    {
+      "id": "google-2026-09-17-1774b90d",
+      "quote": "Chili and salad quite tasty, and the chocolate chip cookies (with lattes) simply amazing.",
+      "draw": "dessert and drink",
+      "themes": [
+        "food_quality"
+      ],
+      "review_themes": [
+        "food_quality",
+        "service",
+        "wait_time"
+      ],
+      "author": "Mary H.",
+      "source": "google",
+      "date": "2026-09-17",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xGTE1uZG9hVVV5VWs1elFubFVTVFJrU21NNWMzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOlFLMndoaUUyUk5zQnlUSTRkSmM5c3c%7C%7C?hl=en"
+    },
+    {
+      "id": "google-2026-08-27-2e8ed527",
+      "quote": "Fresh salads, venison chili, other dishes as well, and a perfect view.",
+      "draw": "the badlands view",
+      "themes": [
+        "food_quality",
+        "atmosphere"
+      ],
+      "review_themes": [
+        "food_quality",
+        "menu_range",
+        "atmosphere"
+      ],
+      "author": "Garett J.",
+      "source": "google",
+      "date": "2026-08-27",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xrNE9XZG9Sek5NYlhBeVVWbFFMVWd4YWxsVE5XYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOlk4OWdoRzNMbXAyUVlQLUgxallTNWc%7C%7C?hl=en"
+    },
+    {
+      "id": "google-2026-07-09-514a361e",
+      "quote": "Wow, they have great espresso and the little that is on the menu is top notch (that’s how I like it).",
+      "draw": "great espresso",
+      "themes": [
+        "food_quality"
+      ],
+      "review_themes": [
+        "food_quality",
+        "menu_range"
+      ],
+      "author": "marcus M.",
+      "source": "google",
+      "date": "2026-07-09",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pFNGMxWjBVa1k0ZEdGSGNWWTVlREUyWjNKSWMwRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjE4c1Z0UkY4dGFHcVY5eDE2Z3JIc0E%7C%7C?hl=en"
+    },
+    {
+      "id": "google-2026-07-07-594137e3",
+      "quote": "We had the breakfast pudding before exploring the library and loved it.",
+      "draw": "unique breakfast",
+      "themes": [
+        "food_quality"
+      ],
+      "review_themes": [
+        "food_quality",
+        "service"
+      ],
+      "author": "Megan R.",
+      "source": "google",
+      "date": "2026-07-07",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Sc01tazRVMGRTU1ZoZlZHNTBjRmRrVEZCQlQwRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnRsMmk4U0dSSVhfVG50cFdkTFBBT0E%7C%7C?hl=en"
+    }
+  ]
+}

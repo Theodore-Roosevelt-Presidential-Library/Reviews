@@ -208,7 +208,24 @@
       "slug": "trpl",
       "label": "TR Presidential Library",
       "accent": "#8B2E1F",
-      "embed": "embed.js"
+      "embed": "embed.js",
+      "voice": {
+        "_note": "What the quote-selection prompts say about this business. Hardcoding the Library into the prompts meant the critic rejected every Salt + Scoria quote for being 'about food and a cafe, not the Theodore Roosevelt Presidential Library' — correct reasoning against the wrong brief.",
+        "business": "the Theodore Roosevelt Presidential Library",
+        "possessive": "the Theodore Roosevelt Presidential Library's",
+        "goal": "make a stranger decide to visit",
+        "action": "drive to Medora, North Dakota",
+        "stakes": "the homepage of a presidential library",
+        "specifics": "A named exhibit, a view, a moment, a reaction from a child.",
+        "hesitations": "is it worth the drive, is there enough to fill a day, will teenagers be bored, is it just a building of documents",
+        "avoid_assumed": "a prospective visitor is least likely to have already assumed about a presidential library",
+        "extra_rejects": [
+          "Anything describing registration, wristband sign-up, giving a name, email or photograph. A meaningful minority of our critics object to exactly this; quoting it advertises the objection. Praise for the interactive exhibits is welcome — the sign-up mechanics are not."
+        ],
+        "critic_extra_rejects": [
+          "It mentions registration, email, photographs of visitors, prices, tickets or opening dates."
+        ]
+      }
     },
     "salt-scoria": {
       "slug": "salt-scoria",
@@ -297,6 +314,25 @@
         "max_per_draw": 3,
         "note": "Smaller pool because the corpus is smaller. The same three gates apply: verbatim substring check, deterministic screen, model critic.",
         "topics": {}
+      },
+      "voice": {
+        "business": "Salt + Scoria, the restaurant inside the Theodore Roosevelt Presidential Library",
+        "possessive": "Salt + Scoria's",
+        "goal": "make a reader decide to eat here",
+        "action": "plan a meal at Salt + Scoria rather than eat somewhere else in Medora",
+        "stakes": "the front page of a restaurant that is part of a presidential library",
+        "specifics": "A named dish, an ingredient, how something was cooked, the view from the table, a reaction to a first taste.",
+        "hesitations": "is it worth stopping for, is it more than museum-cafe food, is there anything here I cannot get elsewhere, can I eat here without a Library ticket",
+        "avoid_assumed": "a reader is least likely to have already assumed about a restaurant inside a museum",
+        "extra_rejects": [
+          "Anything about price, portion size, what things cost, or value for money. Those are the restaurant's most common complaints and quoting the positive side of a live argument invites the negative side.",
+          "Anything about queueing, how long food took, ordering, counter service, the grab-and-go case, or which hours the full menu is available. These are known operational problems; praising them in public ages badly and reads as a rebuttal.",
+          "Anything about a specific dish that is the subject of repeated complaints elsewhere in the corpus, the bison sandwich above all."
+        ],
+        "critic_extra_rejects": [
+          "It mentions price, portion size, value for money, waiting, queueing or ordering.",
+          "It praises a dish by name when that same dish draws repeated complaints elsewhere — the bison sandwich in particular."
+        ]
       }
     }
   }
