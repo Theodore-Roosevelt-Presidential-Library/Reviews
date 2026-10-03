@@ -358,6 +358,10 @@ def build_embed(pool):
                                 if not k.startswith("_")},
                                ensure_ascii=False, separators=(",", ":")))
     js = js.replace("__GENERATED__", pool["generated"])
+    # Falls back to the Library red when an entity declares no brand, so adding a
+    # business without a palette still produces a working bundle.
+    accent = ((CONFIG.get("brand") or {}).get("accent") or "#8B2E1F")
+    js = js.replace("__BRAND_ACCENT__", accent)
     name = CONFIG.get("embed") or f"embed-{ENTITY}.js"
     out = ROOT / "site" / name
     out.write_text(js)

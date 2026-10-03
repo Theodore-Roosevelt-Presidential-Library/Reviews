@@ -225,12 +225,16 @@
         "critic_extra_rejects": [
           "It mentions registration, email, photographs of visitors, prices, tickets or opening dates."
         ]
+      },
+      "brand": {
+        "_note": "Accent written into this entity's embed bundle at build time. Must stay #8B2E1F for the Library: embed.js is already in script tags across trlibrary.com and changing it would restyle every one of them.",
+        "accent": "#8B2E1F"
       }
     },
     "salt-scoria": {
       "slug": "salt-scoria",
       "label": "Salt + Scoria",
-      "accent": "#A6452C",
+      "accent": "#B63D25",
       "embed": "embed-salt-scoria.js",
       "entity": {
         "name": "Salt+Scoria",
@@ -333,6 +337,13 @@
           "It mentions price, portion size, value for money, waiting, queueing or ordering.",
           "It praises a dish by name when that same dish draws repeated complaints elsewhere — the bison sandwich in particular."
         ]
+      },
+      "brand": {
+        "_note": "Read from saltandscoria.com's rendered stylesheet on 2026-10-03, not chosen: rgb(182,61,37) is the colour the site actually uses for headings and rules, 56 occurrences on the homepage. The earlier #A6452C in `accent` was a guess and was wrong.",
+        "accent": "#B63D25",
+        "ink": "#242729",
+        "paper": "#FAFAFA",
+        "sand": "#D1CCBD"
       }
     }
   }

@@ -42,7 +42,14 @@
   var GENERATED = "__GENERATED__";
   if (!QUOTES.length) return;
 
-  var BRAND = "#8B2E1F";
+  // The business's own accent, written in at build time from
+  // config.json > entities.<slug>.brand.accent. It is only ever a *fallback*: an explicit
+  // data-accent on the embed still wins, and pickAccent below will drop it for the
+  // foreground colour if it fails contrast against whatever background it lands on.
+  //
+  // The Library's bundle substitutes its existing #8B2E1F, so embed.js — which is already
+  // in script tags across trlibrary.com — comes out byte-identical to before this change.
+  var BRAND = "__BRAND_ACCENT__";
   var SOURCE_LABEL = { google: "Google", tripadvisor: "TripAdvisor",
                        yelp: "Yelp", facebook: "Facebook" };
 
@@ -122,6 +129,26 @@
     return fg;
   }
 
+  /**
+   * The first gold that actually reads on this background.
+   *
+   * Same shape as pickAccent, deliberately: one contrast rule, applied twice, rather than
+   * two colour policies that can disagree. `bg` is resolved by the caller.
+   */
+  function pickStar(candidates, fg, bg) {
+    candidates = candidates.concat([fg]);
+    for (var i = 0; i < candidates.length; i++) {
+      if (!candidates[i]) continue;
+      var probe = document.createElement("span");
+      probe.style.color = candidates[i];
+      document.body.appendChild(probe);
+      var resolved = parseColor(getComputedStyle(probe).color);
+      document.body.removeChild(probe);
+      if (resolved && contrast(resolved, bg) >= 3) return candidates[i];
+    }
+    return fg;
+  }
+
   function esc(s) {
     return String(s == null ? "" : s).replace(/[&<>"']/g, function (ch) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
@@ -165,7 +192,7 @@
 
   // ------------------------------------------------------------------ styles
 
-  function styles(dark, ac, align, media) {
+  function styles(dark, ac, align, media, bg) {
     // Plain white on dark, not the cream used elsewhere in the brand. Over a photograph the
     // cream reads as dirty; white reads as intentional.
     var fg = dark ? "#FFFFFF" : "#241C17";
@@ -175,7 +202,19 @@
     // Stars get their own colour, not the accent. A rating reads as a rating when it is
     // gold — brand red on a red block was both invisible and unfamiliar. Deepened on light
     // backgrounds, where bright gold falls under 3:1 against white.
-    var star = dark ? "#FFC24A" : "#B8860B";
+    //
+    // Picked by contrast rather than by the light/dark flag alone. A mid-tone background
+    // can be "light" by luminance and still sit far too close to the deep gold: Salt +
+    // Scoria's warm sand (#D1CCBD) put the stars at 2.03:1, under the 3:1 floor for
+    // non-text, while passing the dark check. The Library's own #F1EBE0 was failing at
+    // 2.74:1 for the same reason.
+    //
+    // #8A6508 exists for exactly those mid-tones: the shallowest gold that clears 3:1 on
+    // every background either brand uses. It matters that the fallback is another gold
+    // rather than the foreground colour — a rating reads as a rating when it is gold, so
+    // dropping to near-black would fix the contrast and lose the meaning. The foreground
+    // stays last in the chain for a background no gold survives.
+    var star = pickStar(dark ? ["#FFC24A", "#B8860B"] : ["#B8860B", "#8A6508"], fg, bg);
     // Text on an image needs a halo or it dissolves wherever the picture works against it.
     // The halo has to follow the text colour, not merely the presence of an image: keying it
     // to `media` alone put a black glow behind near-black text whenever someone forced
@@ -373,7 +412,7 @@
     var pool = rankForTopic(QUOTES, host.getAttribute("data-topic"));
 
     var sheet = document.createElement("style");
-    sheet.textContent = styles(dark, ac, align, back.media);
+    sheet.textContent = styles(dark, ac, align, back.media, bg);
     root.appendChild(sheet);
 
     var wrap = document.createElement("div");
