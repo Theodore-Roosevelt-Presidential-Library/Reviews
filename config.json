@@ -237,6 +237,18 @@
           "incremental_field": "reviewsStartDate",
           "reply_url": "https://business.google.com/reviews"
         },
+        "facebook": {
+          "enabled": true,
+          "label": "Facebook",
+          "apify_actor": "apify~facebook-reviews-scraper",
+          "listing_url": "https://www.facebook.com/saltandscoria",
+          "input": {
+            "resultsLimit": 500
+          },
+          "incremental_field": null,
+          "reply_url": "https://business.facebook.com",
+          "note": "Recommendations are yes/no, so records carry `recommends` and leave `rating` null — never convert one into a star count. The Page may return nothing until Recommendations are switched on for it, which is what happened on the Library's Page in August 2026."
+        },
         "tripadvisor": {
           "enabled": false,
           "label": "TripAdvisor",
