@@ -307,6 +307,11 @@ def main():
     # presidential library, a reader should be able to tell those apart without asking.
     vocab = load_vocabulary()["themes"]
     payload["vocabulary"] = {
+        # A flat list of every valid label, for the dashboard. The authored/auto split below
+        # is a provenance summary — `authored` is a count and `auto` is keyed by label — so
+        # neither can answer "is this theme real for this business", which is what the
+        # browser needs when it carries a theme filter from one business to another.
+        "labels": sorted(t["label"] for t in vocab),
         "count": len(vocab),
         "authored": sum(1 for t in vocab if t.get("source") != "auto"),
         "auto": {t["label"]: {k: t.get(k) for k in

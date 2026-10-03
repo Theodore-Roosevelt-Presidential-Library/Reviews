@@ -550,3 +550,11 @@ tbody tr.clickable:hover { background: var(--color-bg-subtle); }
    display: grid or flex silently outranks it. The dashboard hides grids by setting
    .hidden = true from JS; without this they stayed on screen showing zeroes. */
 [hidden] { display: none !important; }
+
+/* Filters dropped when switching business. role="status" so a screen reader hears it
+   without the focus moving. */
+.dropped-note {
+  max-width: var(--maxw); margin: 0 auto; padding: 8px 24px;
+  font-size: 12.5px; color: var(--color-ink-soft);
+  background: var(--color-warn-bg); border-bottom: 1px solid var(--color-line);
+}

@@ -154,7 +154,10 @@ jobs:
       - name: Commit changes
         run: |
           rm -f data/*/.promoted
-          git add data/ site/embed.js site/embed-*.js
+          # Quoted so git expands the glob itself: an unquoted shell glob that matches
+          # nothing is passed through literally and `git add` exits 128 on it, which under
+          # `bash -e` would throw away the whole day's collection at the final step.
+          git add data/ 'site/embed*.js'
           if git diff --staged --quiet; then
             echo "No change in review data."
           else

@@ -334,11 +334,21 @@ def main():
     args = ap.parse_args()
 
     if args.rebuild:
+        if not POOL_PATH.exists():
+            print(f"no stored pool at {POOL_PATH.relative_to(ROOT)} — nothing to rebuild")
+            return 0
         build_embed(json.loads(POOL_PATH.read_text()))
         return 0
 
     reviews = load_reviews()["reviews"]
-    pool = json.loads(POOL_PATH.read_text()) if POOL_PATH.exists() else {"quotes": []}
+    # `generated` matters: build_embed stamps it into the bundle. A newly added business has
+    # no pool file at all, and without the date here the first run died on a KeyError — in a
+    # step marked continue-on-error, so the failure was swallowed and only showed up later
+    # as a missing embed file.
+    pool = (json.loads(POOL_PATH.read_text()) if POOL_PATH.exists()
+            else {"generated": today(), "quotes": []})
+    pool.setdefault("generated", today())
+    pool.setdefault("quotes", [])
     have = {q["id"] for q in pool.get("quotes", [])}
 
     candidates = [r for r in eligible(reviews) if r["id"] not in have][:args.limit]

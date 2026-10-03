@@ -48,10 +48,16 @@ jobs:
         run: |
           mkdir -p _site
           cp -r site/. _site/
-          # The dashboard reads its data from a path relative to itself.
+          # The dashboard reads its data from paths relative to itself. entities.json is
+          # fetched first and is what builds the business tabs — without it the page falls
+          # back to a single unnamed entity, which looks like the feature was never shipped.
           mkdir -p _site/data
-          cp -r data/derived _site/data/
-          cp data/reviews.json _site/data/
+          cp data/entities.json _site/data/
+          for E in $(python3 -c "import json;print(' '.join(json.load(open('config.json'))['entities']))"); do
+            mkdir -p "_site/data/$E"
+            cp -r "data/$E/derived" "_site/data/$E/"
+            cp "data/$E/reviews.json" "_site/data/$E/"
+          done
           cp CNAME _site/CNAME
           # Nothing here should be indexed — it's an internal tool on a public host.
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt

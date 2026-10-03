@@ -81,7 +81,7 @@ jobs:
           python3 - <<'PY'
           import json, os
           c = json.load(open("config.json"))
-          c["analysis"].update({
+          c["shared"]["analysis"].update({
               "provider": "ollama",
               "base_url": "http://localhost:11434/v1",
               "model": os.environ["OLLAMA_MODEL"],
@@ -95,10 +95,18 @@ jobs:
         run: python3 collector/analyze.py --check
 
       - name: Classify
-        run: python3 collector/analyze.py ${{ inputs.all && '--all' || '' }}
+        run: |
+          for E in $(python3 -c "import json;print(' '.join(json.load(open('config.json'))['entities']))"); do
+            echo "::group::analyze $E"
+            python3 collector/analyze.py --entity "$E" ${{ inputs.all && '--all' || '' }}
+            echo "::endgroup::"
+          done
 
       - name: Build derived metrics
-        run: python3 collector/derive.py
+        run: |
+          for E in $(python3 -c "import json;print(' '.join(json.load(open('config.json'))['entities']))"); do
+            python3 collector/derive.py --entity "$E"
+          done
 
       - name: Validate data
         run: python3 collector/validate.py

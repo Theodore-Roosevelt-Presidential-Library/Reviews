@@ -15,6 +15,11 @@
   // doesn't re-download a megabyte of reviews every time.
   var ENTITIES = [], E = null, CACHE = {};
 
+  // Filters dropped by the last entity switch, held until they've been shown once. A
+  // filter silently disappearing is worse than one that never applied: the reader is
+  // looking at a different result set and has no way to know why.
+  var DROPPED = [];
+
   var S = {
     tab: "overview",
     window: "30",
@@ -818,6 +823,17 @@
     renderEntityBar();
     writeHash(false);
 
+    var note = $("dropped-note");
+    if (note) {
+      note.hidden = !DROPPED.length;
+      if (DROPPED.length) {
+        note.textContent = (DROPPED.length === 1 ? "Filter removed: " : "Filters removed: ") +
+          DROPPED.join(", ") +
+          " — not used by " + ((findEntity(E) || {}).label || E) + ".";
+      }
+      DROPPED = [];
+    }
+
     // Nothing collected yet: say that once, plainly, and hide the cards that would
     // otherwise render as a wall of zeroes and an empty chart.
     var empty = M.all_time.count === 0;
@@ -952,10 +968,7 @@
       dropped.push((M.sources[S.source] || {}).label || S.source);
       S.source = "all";
     }
-    var vocab = (M.vocabulary || {});
-    var known = []
-      .concat(vocab.authored || [], vocab.auto || [])
-      .map(function (t) { return t && t.label ? t.label : t; });
+    var known = (M.vocabulary || {}).labels || [];
     if (S.theme && known.length && known.indexOf(S.theme) === -1) {
       dropped.push(titleCase(S.theme));
       S.theme = null;
@@ -981,7 +994,7 @@
     var sb = $("f-search"); if (sb) sb.value = S.search || "";
 
     if (slug !== E) { selectEntity(slug, { fromHash: true }); return; }
-    if (M) { reconcileFilters(); render(); }
+    if (M) { DROPPED = reconcileFilters(); render(); }
   }
 
   function findEntity(slug) {
@@ -1053,7 +1066,7 @@
       var en = findEntity(slug) || {};
       document.documentElement.style.setProperty("--accent", en.accent || "#8B2E1F");
       document.title = (en.label || "Visitor Reviews") + " — Visitor Reviews";
-      reconcileFilters();
+      DROPPED = reconcileFilters();
       renderChrome();
       renderEntityBar();
       if (!opts.fromHash) writeHash(true);

@@ -5,7 +5,7 @@ __pycache__/
 .DS_Store
 
 # Handshake between promote.py and the workflow; never committed.
-data/.promoted
+data/*/.promoted
 
 # Working reply drafts and the response library. These carry internal deliberation —
 # "do not post as written", unverified figures, safety incidents, notes on what a
