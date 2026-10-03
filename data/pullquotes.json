@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02",
+  "generated": "2026-10-03",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -28,6 +28,11 @@
       "offered": "We, on the other hand, we're enamored."
     },
     {
+      "id": "tripadvisor-2026-09-25-22b939b1",
+      "reason": "length 54 outside 60-220",
+      "offered": "It was very interactive which was the best part to me."
+    },
+    {
       "id": "google-2026-09-20-05f963f2",
       "reason": "hedge/criticism: complain",
       "offered": "Some reviews complain about the AI \"slop\".   Our group thought it was fun.  Easy to skip it if you didn't want to do it."
@@ -36,11 +41,6 @@
       "id": "google-2026-09-19-4567a8f9",
       "reason": "length 38 outside 60-220",
       "offered": "Loved all the interactive exhibits! 🇺🇸"
-    },
-    {
-      "id": "google-2026-09-18-c3c4040e",
-      "reason": "length 29 outside 60-220",
-      "offered": "Well worth the 15 hour drive."
     },
     {
       "id": "google-2026-09-16-b592bfeb",
@@ -55,7 +55,7 @@
     {
       "id": "yelp-2026-09-11-d4741692",
       "reason": "off-limits subject: email",
-      "offered": "I had it in a lot of interactive programs along with films And reading .  Send you an email with all the pictures AI."
+      "offered": "I had it in a lot of interactive programs along with films And reading .  Send you an email with all the pictures AI. Album of all the costumes you tried on if "
     },
     {
       "id": "tripadvisor-2026-09-11-a0fdb957",
@@ -79,13 +79,8 @@
     },
     {
       "id": "google-2026-09-08-dea83a88",
-      "reason": "length 39 outside 60-220",
-      "offered": "They had different things to do inside."
-    },
-    {
-      "id": "google-2026-09-06-1c4eb291",
-      "reason": "length 47 outside 60-220",
-      "offered": "Worth the drive - no matter how far you may be."
+      "reason": "length 31 outside 60-220",
+      "offered": "Very interesting had fun there."
     },
     {
       "id": "google-2026-09-03-8da79e5e",
@@ -96,7 +91,7 @@
   "cut_by_critic_last_run": [
     {
       "quote": "The town, library, National Park, lots to do. Library will take at least 4 hours to tour.",
-      "reason": "Mentions the town and National Park generally, and the time needed to tour, but is not clearly promotional or compelling to drive to Medora."
+      "reason": "Mentions the time needed to tour, which is not promotional and reads as generic information."
     },
     {
       "quote": "Really cool museum.  Lots of interactive displays and whatnot.",
@@ -104,51 +99,35 @@
     },
     {
       "quote": "As a history lover, I thoroughly enjoyed the new presidential library and so did my wife  (who is not so fond of history).",
-      "reason": "Contains a mild concession about the wife not being fond of history."
+      "reason": "Mentions a personal concession about a companion not fond of history."
     },
     {
       "quote": "The fun part is the interaction and the photos that you get emailed to you at the end.",
-      "reason": "Mentions photos emailed to visitors, which is disallowed."
-    },
-    {
-      "quote": "Apparently the  size of the facility plus everything to do outside helps spread everyone out.",
-      "reason": "Generic statement about size and crowd spread, not compelling to visit."
+      "reason": "Mentions photos emailed to visitors, which is not allowed."
     },
     {
       "quote": "Awsome property.. Tuesday entry ahead of time. Go early,if possible. Fantastic experience.",
-      "reason": "Contains mention of entry ahead of time, which relates to registration or tickets."
+      "reason": "Mentions entry ahead of time, which relates to registration or tickets."
     },
     {
       "quote": "Spent 5 hours there all inside the library, but read a lot and didn't rush. Many audio / video experiences also.",
-      "reason": "Mentions spending 5 hours and reading a lot, but not clearly promotional or compelling to drive to Medora."
+      "reason": "Mentions spending 5 hours and reading a lot, which is generic and not promotional."
     },
     {
       "quote": "We thought 3 hrs would be enough time, but 5 hrs later we were not finished!",
-      "reason": "Mentions time spent but not compelling or specific enough to encourage a visit."
+      "reason": "Mentions time spent and not finishing, which is generic and not promotional."
     },
     {
       "quote": "Their are AI generated photo stations  that insert you into 7 periods of his lifetime. These are very popular and are emailed to you after you leave.",
       "reason": "Mentions emailed photos, which is not allowed."
     },
     {
-      "quote": "This library is SO interactive and has the coolest ways to involve the visitor as an active participant in Roosevelt's time from New York to North Dakota and back again.",
-      "reason": "Generic praise that could describe any museum anywhere."
-    },
-    {
-      "quote": "The interactive exhibits were well worth our long trip from Illinois!",
-      "reason": "Generic praise that could describe any museum anywhere."
-    },
-    {
-      "quote": "So. Much. Fun.  Great library. Loved the AI pics that we took along the way.",
-      "reason": "Mentions AI pictures taken along the way but does not make a stranger more likely to drive to Medora, ND; also somewhat generic."
-    },
-    {
       "quote": "Uma construcão moderna e muito bem aproveitada, com vistas belissimas das montanhas.",
-      "reason": "Written in Portuguese and not understandable without translation."
+      "reason": "Written in Portuguese and not understandable without context."
     },
     {
       "quote": "I find myself recommending it to everybody that I stop and visit with it was just a spectacular well-done project by the contractors and by everybody involved putting all the displays together",
-      "reason": "Contains grammatical errors and awkward phrasing; also generic praise."
+      "reason": "Mentions recommending to everybody but is generic and vague; also contains a grammatical error ('with it was')."
     },
     {
       "quote": "You could easily make this a day trip, if you include hiking the trails.",
@@ -156,15 +135,11 @@
     },
     {
       "quote": "Kids are kept entertained by an animal scavenger hunt (I think anyone aver the age of 6 will enjoy).",
-      "reason": "Contains a typo ('aver' instead of 'over')."
+      "reason": "Contains a typo ('aver' instead of 'over') and is generic about kids' entertainment."
     },
     {
       "quote": "We followed the map to chronologically learn about TR starting from age 7.",
-      "reason": "Too generic and not clearly making a stranger more likely to drive to Medora."
-    },
-    {
-      "quote": "The highlight for most people are the AI images that place you in a period photo as a Rough Rider, presidential candidate, and more.",
-      "reason": "Generic mention of AI images without compelling reason to visit or drive to Medora."
+      "reason": "Too generic and vague; does not make a stranger more likely to visit."
     }
   ],
   "quotes": [
