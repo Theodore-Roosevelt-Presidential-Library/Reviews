@@ -1,7 +1,12 @@
 {
-  "generated": "2026-10-03",
+  "generated": "2026-10-04",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
+    {
+      "id": "google-2026-09-20-0b89b292",
+      "reason": "length 23 outside 60-220",
+      "offered": "Dressing was delicious."
+    },
     {
       "id": "google-2026-09-18-3bcec4c9",
       "reason": "length 42 outside 60-220",
@@ -15,12 +20,8 @@
   ],
   "cut_by_critic_last_run": [
     {
-      "quote": "I had the special of the day (Bison Sloppy Joe’s) with a side salad.  Very yummy.  Dressing was delicious.",
-      "reason": "Mentions a dish by name that draws repeated complaints (Bison Sloppy Joe’s)."
-    },
-    {
       "quote": "You could smell the wood smoke off the chicken when it arrived, the flavor reminded me of other BBQ spots in MT, and the greens were dressed perfectly.",
-      "reason": "Contains a mild reservation by comparison to other BBQ spots, which is a form of hedging."
+      "reason": "The quote contains a mild reservation by comparing the flavor to other BBQ spots, which does not make it uniquely compelling for Salt + Scoria."
     }
   ],
   "quotes": [
