@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03",
+  "generated": "2026-10-04",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-09-27",
-        "2026-10-03"
+        "2026-09-28",
+        "2026-10-04"
       ],
       "prior_range": [
-        "2026-09-20",
-        "2026-09-26"
+        "2026-09-21",
+        "2026-09-27"
       ],
       "current": {
         "count": 0,
@@ -81,32 +81,25 @@
         "unanswered": 0
       },
       "prior": {
-        "count": 1,
-        "rated_count": 1,
-        "average": 5.0,
+        "count": 0,
+        "rated_count": 0,
+        "average": null,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 0,
-          "5": 1
+          "5": 0
         },
-        "pct_5_star": 100.0,
-        "pct_low": 0.0,
-        "by_source": {
-          "google": 1
-        },
-        "sentiment": {
-          "positive": 1
-        },
-        "themes": {
-          "food_quality": 1,
-          "wait_time": 1
-        },
-        "unanswered": 1
+        "pct_5_star": null,
+        "pct_low": null,
+        "by_source": {},
+        "sentiment": {},
+        "themes": {},
+        "unanswered": 0
       },
       "delta": {
-        "count": -1,
+        "count": 0,
         "average": null,
         "pct_5_star": null,
         "pct_low": null
@@ -116,12 +109,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-09-04",
-        "2026-10-03"
+        "2026-09-05",
+        "2026-10-04"
       ],
       "prior_range": [
-        "2026-08-05",
-        "2026-09-03"
+        "2026-08-06",
+        "2026-09-04"
       ],
       "current": {
         "count": 8,
@@ -234,12 +227,12 @@
     "60": {
       "days": 60,
       "range": [
-        "2026-08-05",
-        "2026-10-03"
+        "2026-08-06",
+        "2026-10-04"
       ],
       "prior_range": [
-        "2026-06-06",
-        "2026-08-04"
+        "2026-06-07",
+        "2026-08-05"
       ],
       "current": {
         "count": 17,
@@ -365,12 +358,12 @@
     "90": {
       "days": 90,
       "range": [
-        "2026-07-06",
-        "2026-10-03"
+        "2026-07-07",
+        "2026-10-04"
       ],
       "prior_range": [
-        "2026-04-07",
-        "2026-07-05"
+        "2026-04-08",
+        "2026-07-06"
       ],
       "current": {
         "count": 27,
@@ -505,8 +498,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oak9WSkdXa05KYTJaTU1WTm5PVXcyU0d0SmNFRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnhjOVJGWkNJa2ZMMVNnOUw2SGtJcEE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 69,
-      "overdue_by": 68
+      "age_days": 70,
+      "overdue_by": 69
     },
     {
       "id": "google-2026-07-26-3b31558e",
@@ -525,8 +518,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT210MmFubDBaVE52T0hWcE4yWnhUbGROYTBOaWMyYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmt2anl0ZTNvOHVpN2ZxTldNa0Nic2c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 69,
-      "overdue_by": 68
+      "age_days": 70,
+      "overdue_by": 69
     },
     {
       "id": "google-2026-07-26-2d761b1a",
@@ -544,8 +537,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGTGNuWjBhVUpLUjNOUU9ESktabU0xY21ka1dIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkFLcnZ0aUJKR3NQODJKZmM1cmdkWHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 69,
-      "overdue_by": 68
+      "age_days": 70,
+      "overdue_by": 69
     },
     {
       "id": "google-2026-08-06-831eb748",
@@ -563,8 +556,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205TmNITkdWVkpwUzBKWlJGVnNOREYxVXpGb1EzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOm9NcHNGVVJpS0JZRFVsNDF1UzFoQ3c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 58,
-      "overdue_by": 57
+      "age_days": 59,
+      "overdue_by": 58
     },
     {
       "id": "google-2026-08-14-ef3fe7f6",
@@ -584,8 +577,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsVGFVNUhOVlkyTm5ocVptNXJRVGx0V0hSTmNsRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOllTaU5HNVY2NnhqZm5rQTltWHRNclE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 50,
-      "overdue_by": 49
+      "age_days": 51,
+      "overdue_by": 50
     },
     {
       "id": "google-2026-08-14-bb69113c",
@@ -604,8 +597,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pOUFkzZHNSbVIyU2t0WFRWRnBSekJVWTBSemNYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjNPY3dsRmR2SktXTVFpRzBUY0RzcXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 50,
-      "overdue_by": 49
+      "age_days": 51,
+      "overdue_by": 50
     },
     {
       "id": "google-2026-08-14-047676e9",
@@ -624,8 +617,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pScGVFd3dhRGxYTjJSWGNXMUJRVk50UlUwd2NuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRpeEwwaDlXN2RXcW1BQVNtRU0wcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 50,
-      "overdue_by": 49
+      "age_days": 51,
+      "overdue_by": 50
     },
     {
       "id": "google-2026-08-17-5b1e181b",
@@ -645,8 +638,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pSRmVGRjJRbGxaZDBoMGNHZEtYMVZYTVcwM1RYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRFeFF2QllZd0h0cGdKX1VXMW03TXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 47,
-      "overdue_by": 46
+      "age_days": 48,
+      "overdue_by": 47
     },
     {
       "id": "google-2026-08-22-aae0a501",
@@ -662,8 +655,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKeU0yd3RVa0UyYkVvME5rRnROMWQwY0hSWVJIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkJyM2wtUkE2bEo0NkFtN1d0cHRYRHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 42,
-      "overdue_by": 41
+      "age_days": 43,
+      "overdue_by": 42
     },
     {
       "id": "google-2026-09-05-0fb1273a",
@@ -683,8 +676,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kV1RDMWFabGQyUVc1TFFUQmllbWR5WW5VeGNuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmdWTC1aZld2QW5LQTBiemdyYnUxcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 28,
-      "overdue_by": 27
+      "age_days": 29,
+      "overdue_by": 28
     },
     {
       "id": "google-2026-07-07-d98ea20d",
@@ -705,8 +698,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ac1RGTlVjMnB6UzFGT2FGUlROM2cyWjBKU2IzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZsTFNUc2pzS1FOaFRTN3g2Z0JSb3c%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 2,
-      "age_days": 88,
-      "overdue_by": 86
+      "age_days": 89,
+      "overdue_by": 87
     },
     {
       "id": "google-2026-07-22-5e8addf7",
@@ -725,19 +718,12 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21aNWRFWXRXa05qZUVST2FFbzVlblp0YTBSTFlXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZ5dEYtWkNjeEROaEo5enZta0RLYWc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 5,
-      "age_days": 73,
-      "overdue_by": 68
+      "age_days": 74,
+      "overdue_by": 69
     }
   ],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-04-06",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-04-07",
       "count": 0,
@@ -1993,6 +1979,13 @@
     },
     {
       "date": "2026-10-03",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.62,
+      "trailing_30_count": 8
+    },
+    {
+      "date": "2026-10-04",
       "count": 0,
       "average": null,
       "trailing_30_average": 4.62,
