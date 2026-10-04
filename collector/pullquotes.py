@@ -362,6 +362,8 @@ def build_embed(pool):
     # business without a palette still produces a working bundle.
     accent = ((CONFIG.get("brand") or {}).get("accent") or "#8B2E1F")
     js = js.replace("__BRAND_ACCENT__", accent)
+    js = js.replace("__BRAND_ACCENT_DARK__",
+                    (CONFIG.get("brand") or {}).get("accent_on_dark") or "#E8927C")
     name = CONFIG.get("embed") or f"embed-{ENTITY}.js"
     out = ROOT / "site" / name
     out.write_text(js)

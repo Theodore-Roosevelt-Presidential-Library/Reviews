@@ -50,6 +50,7 @@
   // The Library's bundle substitutes its existing #8B2E1F, so embed.js — which is already
   // in script tags across trlibrary.com — comes out byte-identical to before this change.
   var BRAND = "#8B2E1F";
+  var BRAND_DARK = "#E8927C";
   var SOURCE_LABEL = { google: "Google", tripadvisor: "TripAdvisor",
                        yelp: "Yelp", facebook: "Facebook" };
 
@@ -116,7 +117,11 @@
    * colour, which is guaranteed to read because it is what the quote is set in.
    */
   function pickAccent(requested, bg, fg) {
-    var candidates = [requested, luminance(bg) < 0.45 ? "#E8927C" : BRAND, fg];
+    // BRAND on light blocks, BRAND_DARK on dark ones. Both are written in per business
+    // at build time: a flat brand red that reads on paper is usually too dark to clear
+    // 3:1 on the same brand's black, so the dark variant is a lightened version of the
+    // same hue rather than a different colour.
+    var candidates = [requested, luminance(bg) < 0.45 ? BRAND_DARK : BRAND, fg];
     for (var i = 0; i < candidates.length; i++) {
       if (!candidates[i]) continue;
       var probe = document.createElement("span");

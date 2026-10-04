@@ -227,8 +227,9 @@
         ]
       },
       "brand": {
-        "_note": "Accent written into this entity's embed bundle at build time. Must stay #8B2E1F for the Library: embed.js is already in script tags across trlibrary.com and changing it would restyle every one of them.",
-        "accent": "#8B2E1F"
+        "_note": "Accents written into this entity's embed bundle at build time. Both must keep their current values for the Library: embed.js is already in script tags across trlibrary.com and changing either would restyle every one of them.",
+        "accent": "#8B2E1F",
+        "accent_on_dark": "#E8927C"
       }
     },
     "salt-scoria": {
@@ -339,11 +340,18 @@
         ]
       },
       "brand": {
-        "_note": "Read from saltandscoria.com's rendered stylesheet on 2026-10-03, not chosen: rgb(182,61,37) is the colour the site actually uses for headings and rules, 56 occurrences on the homepage. The earlier #A6452C in `accent` was a guess and was wrong.",
+        "_note": "Read from saltandscoria.com's rendered section backgrounds on 2026-10-03, not chosen. The site alternates exactly two section themes — a black one and a light one — with the scoria red as the accent on both. That is the red-and-black pairing the widget has to survive.",
         "accent": "#B63D25",
         "ink": "#242729",
-        "paper": "#FAFAFA",
-        "sand": "#D1CCBD"
+        "paper": "#FFFFFF",
+        "sand": "#D1CCBD",
+        "accent_on_dark": "#D85940",
+        "accent_on_dark_note": "The scoria red lightened to L=0.55, same hue and saturation. The raw #B63D25 only reaches 2.64:1 on the brand's own ink, under the 3:1 floor, so red-on-black needs a tint rather than the flat brand hex. #D85940 gives 3.88:1 on ink and 5.42:1 on pure black and is still recognisably the same red.",
+        "sand_note": "Button fill and rule colour, never a section background. Listed so nobody styles a block with it expecting the widget to have been checked against it.",
+        "backgrounds_in_use": [
+          "#FFFFFF",
+          "#242729"
+        ]
       }
     }
   }
