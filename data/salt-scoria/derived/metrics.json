@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06",
+  "generated": "2026-10-07",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-09-30",
-        "2026-10-06"
+        "2026-10-01",
+        "2026-10-07"
       ],
       "prior_range": [
-        "2026-09-23",
-        "2026-09-29"
+        "2026-09-24",
+        "2026-09-30"
       ],
       "current": {
         "count": 0,
@@ -109,12 +109,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-09-07",
-        "2026-10-06"
+        "2026-09-08",
+        "2026-10-07"
       ],
       "prior_range": [
-        "2026-08-08",
-        "2026-09-06"
+        "2026-08-09",
+        "2026-09-07"
       ],
       "current": {
         "count": 6,
@@ -224,12 +224,12 @@
     "60": {
       "days": 60,
       "range": [
-        "2026-08-08",
-        "2026-10-06"
+        "2026-08-09",
+        "2026-10-07"
       ],
       "prior_range": [
-        "2026-06-09",
-        "2026-08-07"
+        "2026-06-10",
+        "2026-08-08"
       ],
       "current": {
         "count": 16,
@@ -355,129 +355,129 @@
     "90": {
       "days": 90,
       "range": [
-        "2026-07-09",
-        "2026-10-06"
+        "2026-07-10",
+        "2026-10-07"
       ],
       "prior_range": [
-        "2026-04-10",
-        "2026-07-08"
+        "2026-04-11",
+        "2026-07-09"
       ],
       "current": {
-        "count": 25,
-        "rated_count": 25,
-        "average": 3.52,
+        "count": 24,
+        "rated_count": 24,
+        "average": 3.46,
         "distribution": {
           "1": 6,
           "2": 4,
           "3": 0,
           "4": 1,
-          "5": 14
+          "5": 13
         },
-        "pct_5_star": 56.0,
-        "pct_low": 40.0,
+        "pct_5_star": 54.2,
+        "pct_low": 41.7,
         "by_source": {
-          "google": 25
+          "google": 24
         },
         "sentiment": {
-          "positive": 15,
+          "positive": 14,
           "negative": 9,
           "positive_with_criticism": 1
         },
         "themes": {
-          "food_quality": 18,
+          "food_quality": 17,
           "value": 6,
           "service": 5,
-          "menu_range": 5,
+          "menu_range": 4,
           "wait_time": 3,
           "atmosphere": 3,
           "hours": 1,
           "dietary_needs": 1,
           "indigenous_menu": 1
         },
-        "unanswered": 25
+        "unanswered": 24
       },
       "prior": {
-        "count": 3,
-        "rated_count": 3,
-        "average": 4.33,
+        "count": 4,
+        "rated_count": 4,
+        "average": 4.5,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 1,
           "4": 0,
-          "5": 2
+          "5": 3
         },
-        "pct_5_star": 66.7,
-        "pct_low": 33.3,
+        "pct_5_star": 75.0,
+        "pct_low": 25.0,
         "by_source": {
-          "google": 3
+          "google": 4
         },
         "sentiment": {
-          "positive_with_criticism": 1,
-          "positive": 2
+          "positive": 3,
+          "positive_with_criticism": 1
         },
         "themes": {
-          "food_quality": 3,
+          "food_quality": 4,
+          "menu_range": 2,
           "service": 2,
-          "wait_time": 1,
-          "menu_range": 1
+          "wait_time": 1
         },
-        "unanswered": 3
+        "unanswered": 4
       },
       "delta": {
-        "count": 22,
-        "average": -0.81,
-        "pct_5_star": -10.7,
-        "pct_low": 6.7
+        "count": 20,
+        "average": -1.04,
+        "pct_5_star": -20.8,
+        "pct_low": 16.7
       },
       "theme_movement": [
+        {
+          "theme": "menu_range",
+          "current": 4,
+          "prior": 2,
+          "current_share": 16.7,
+          "prior_share": 50.0,
+          "change": -33.3
+        },
+        {
+          "theme": "food_quality",
+          "current": 17,
+          "prior": 4,
+          "current_share": 70.8,
+          "prior_share": 100.0,
+          "change": -29.2
+        },
         {
           "theme": "service",
           "current": 5,
           "prior": 2,
-          "current_share": 20.0,
-          "prior_share": 66.7,
-          "change": -46.7
-        },
-        {
-          "theme": "food_quality",
-          "current": 18,
-          "prior": 3,
-          "current_share": 72.0,
-          "prior_share": 100.0,
-          "change": -28.0
+          "current_share": 20.8,
+          "prior_share": 50.0,
+          "change": -29.2
         },
         {
           "theme": "value",
           "current": 6,
           "prior": 0,
-          "current_share": 24.0,
+          "current_share": 25.0,
           "prior_share": 0.0,
-          "change": 24.0
-        },
-        {
-          "theme": "wait_time",
-          "current": 3,
-          "prior": 1,
-          "current_share": 12.0,
-          "prior_share": 33.3,
-          "change": -21.3
-        },
-        {
-          "theme": "menu_range",
-          "current": 5,
-          "prior": 1,
-          "current_share": 20.0,
-          "prior_share": 33.3,
-          "change": -13.3
+          "change": 25.0
         },
         {
           "theme": "atmosphere",
           "current": 3,
           "prior": 0,
-          "current_share": 12.0,
+          "current_share": 12.5,
           "prior_share": 0.0,
-          "change": 12.0
+          "change": 12.5
+        },
+        {
+          "theme": "wait_time",
+          "current": 3,
+          "prior": 1,
+          "current_share": 12.5,
+          "prior_share": 25.0,
+          "change": -12.5
         }
       ]
     }
@@ -499,8 +499,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oak9WSkdXa05KYTJaTU1WTm5PVXcyU0d0SmNFRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnhjOVJGWkNJa2ZMMVNnOUw2SGtJcEE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 72,
-      "overdue_by": 71
+      "age_days": 73,
+      "overdue_by": 72
     },
     {
       "id": "google-2026-07-26-3b31558e",
@@ -519,8 +519,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT210MmFubDBaVE52T0hWcE4yWnhUbGROYTBOaWMyYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmt2anl0ZTNvOHVpN2ZxTldNa0Nic2c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 72,
-      "overdue_by": 71
+      "age_days": 73,
+      "overdue_by": 72
     },
     {
       "id": "google-2026-07-26-2d761b1a",
@@ -538,8 +538,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGTGNuWjBhVUpLUjNOUU9ESktabU0xY21ka1dIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkFLcnZ0aUJKR3NQODJKZmM1cmdkWHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 72,
-      "overdue_by": 71
+      "age_days": 73,
+      "overdue_by": 72
     },
     {
       "id": "google-2026-08-06-831eb748",
@@ -557,8 +557,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205TmNITkdWVkpwUzBKWlJGVnNOREYxVXpGb1EzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOm9NcHNGVVJpS0JZRFVsNDF1UzFoQ3c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 61,
-      "overdue_by": 60
+      "age_days": 62,
+      "overdue_by": 61
     },
     {
       "id": "google-2026-08-14-ef3fe7f6",
@@ -578,8 +578,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsVGFVNUhOVlkyTm5ocVptNXJRVGx0V0hSTmNsRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOllTaU5HNVY2NnhqZm5rQTltWHRNclE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 53,
-      "overdue_by": 52
+      "age_days": 54,
+      "overdue_by": 53
     },
     {
       "id": "google-2026-08-14-bb69113c",
@@ -598,8 +598,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pOUFkzZHNSbVIyU2t0WFRWRnBSekJVWTBSemNYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjNPY3dsRmR2SktXTVFpRzBUY0RzcXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 53,
-      "overdue_by": 52
+      "age_days": 54,
+      "overdue_by": 53
     },
     {
       "id": "google-2026-08-14-047676e9",
@@ -618,8 +618,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pScGVFd3dhRGxYTjJSWGNXMUJRVk50UlUwd2NuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRpeEwwaDlXN2RXcW1BQVNtRU0wcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 53,
-      "overdue_by": 52
+      "age_days": 54,
+      "overdue_by": 53
     },
     {
       "id": "google-2026-08-17-5b1e181b",
@@ -639,8 +639,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pSRmVGRjJRbGxaZDBoMGNHZEtYMVZYTVcwM1RYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRFeFF2QllZd0h0cGdKX1VXMW03TXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 50,
-      "overdue_by": 49
+      "age_days": 51,
+      "overdue_by": 50
     },
     {
       "id": "google-2026-08-22-aae0a501",
@@ -656,8 +656,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKeU0yd3RVa0UyYkVvME5rRnROMWQwY0hSWVJIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkJyM2wtUkE2bEo0NkFtN1d0cHRYRHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 45,
-      "overdue_by": 44
+      "age_days": 46,
+      "overdue_by": 45
     },
     {
       "id": "google-2026-09-05-0fb1273a",
@@ -677,8 +677,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kV1RDMWFabGQyUVc1TFFUQmllbWR5WW5VeGNuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmdWTC1aZld2QW5LQTBiemdyYnUxcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 31,
-      "overdue_by": 30
+      "age_days": 32,
+      "overdue_by": 31
     },
     {
       "id": "google-2026-07-07-d98ea20d",
@@ -699,8 +699,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ac1RGTlVjMnB6UzFGT2FGUlROM2cyWjBKU2IzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZsTFNUc2pzS1FOaFRTN3g2Z0JSb3c%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 2,
-      "age_days": 91,
-      "overdue_by": 89
+      "age_days": 92,
+      "overdue_by": 90
     },
     {
       "id": "google-2026-07-22-5e8addf7",
@@ -719,19 +719,12 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21aNWRFWXRXa05qZUVST2FFbzVlblp0YTBSTFlXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZ5dEYtWkNjeEROaEo5enZta0RLYWc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 5,
-      "age_days": 76,
-      "overdue_by": 71
+      "age_days": 77,
+      "overdue_by": 72
     }
   ],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-04-09",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-04-10",
       "count": 0,
@@ -1991,6 +1984,13 @@
       "average": null,
       "trailing_30_average": 5.0,
       "trailing_30_count": 6
+    },
+    {
+      "date": "2026-10-07",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 6
     }
   ],
   "sla": {
@@ -2069,9 +2069,9 @@
     },
     "90": {
       "window": "90",
-      "headline": "Ratings at 3.52 across 25 reviews — worth attention",
+      "headline": "Ratings at 3.46 across 24 reviews — worth attention",
       "paragraphs": [
-        "25 reviews in the last 90 days, up 22 on the previous 90 days. The average is down 0.81. 40.0% rated three stars or below.",
+        "24 reviews in the last 90 days, up 20 on the previous 90 days. The average is down 1.04. 41.7% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
         "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
@@ -2079,11 +2079,11 @@
       "actions": [],
       "notes": [],
       "stats": {
-        "count": 25,
-        "average": 3.52,
-        "count_delta": 22,
-        "average_delta": -0.81,
-        "pct_low": 40.0,
+        "count": 24,
+        "average": 3.46,
+        "count_delta": 20,
+        "average_delta": -1.04,
+        "pct_low": 41.7,
         "unanswered": 12,
         "overdue": 12
       }
