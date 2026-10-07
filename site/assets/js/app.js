@@ -29,6 +29,7 @@
     search: "",
     sort: "newest",
     tier: "all",
+    replied: "all",
     allThemes: false,
     themeSort: "size",
     expanded: {}
@@ -79,6 +80,8 @@
     var out = [];
     if (S.theme) out.push({ key: "theme", label: "Theme", value: titleCase(S.theme) });
     if (S.source !== "all") out.push({ key: "source", label: "Source", value: SOURCE_LABEL(S.source) });
+    if (S.replied !== "all") out.push({ key: "replied", label: "Reply",
+      value: S.replied === "yes" ? "Replied" : "No reply" });
     if (S.rating !== "all") {
       out.push({ key: "rating", label: "Rating",
                  value: S.rating === "low" ? "3★ or below" : S.rating + "★" });
@@ -95,6 +98,7 @@
     if (key === "source") S.source = "all";
     if (key === "rating") S.rating = "all";
     if (key === "tier") S.tier = "all";
+    if (key === "replied") S.replied = "all";
     if (key === "search") { S.search = ""; $("f-search").value = ""; }
   }
 
@@ -192,9 +196,12 @@
         if (S.rating === "low" && !(r.rating != null && r.rating <= 3)) return false;
         if (S.rating !== "low" && String(r.rating) !== S.rating) return false;
       }
+      if (S.replied === "yes" && !r.responded) return false;
+      if (S.replied === "no" && r.responded) return false;
       if (S.theme && (r.themes || []).indexOf(S.theme) === -1) return false;
       if (S.search) {
-        var hay = ((r.text || "") + " " + (r.title || "") + " " + (r.author || "")).toLowerCase();
+        var hay = ((r.text || "") + " " + (r.title || "") + " " + (r.author || "") +
+                   " " + (r.response_text || "")).toLowerCase();
         if (hay.indexOf(S.search.toLowerCase()) === -1) return false;
       }
       return true;
@@ -252,7 +259,7 @@
     // those controls would sit there looking live while changing nothing. Hide them
     // rather than let the interface lie about what it does.
     var listTab = S.tab !== "overview";
-    ["f-source", "f-rating"].forEach(function (id) {
+    ["f-source", "f-rating", "f-replied"].forEach(function (id) {
       var el = $(id); if (el) el.hidden = !listTab;
     });
     var searchWrap = $("f-searchgroup");
@@ -275,6 +282,19 @@
       { value: "all", label: "All" }, { value: "5", label: "5★" }, { value: "4", label: "4★" },
       { value: "low", label: "3★ or below" }
     ], S.rating, function (v) { S.rating = v; render(); });
+
+    // Counted inside the selected period, because that is what clicking it will show.
+    // A corpus-wide count read "Replied (36)" next to a list of 12 — most replies predate
+    // the default 30-day window — and a pill whose number disagrees with the result looks
+    // broken rather than scoped. Widening the period is already how you ask for all time.
+    var repliedTotal = REVIEWS.filter(function (r) {
+      return r.responded && inWindow(r);
+    }).length;
+    pills($("f-replied"), [
+      { value: "all", label: "All" },
+      { value: "yes", label: "Replied" + (repliedTotal ? " (" + repliedTotal + ")" : "") },
+      { value: "no", label: "No reply" }
+    ], S.replied, function (v) { S.replied = v; render(); });
   }
 
   /* ---------- brief ----------------------------------------------------- */
@@ -909,7 +929,8 @@
 
   var TABS = ["overview", "reviews", "triage"];
   var DEFAULTS = { window: "30", source: "all", rating: "all", theme: "", search: "",
-                   sort: "newest", tier: "all", themeSort: "size", allThemes: false };
+                   sort: "newest", tier: "all", replied: "all",
+                   themeSort: "size", allThemes: false };
   var muteHash = false;
 
   function parseHash() {
@@ -1106,7 +1127,7 @@
     $("clear-all").onclick = function () { $("f-reset").click(); };
     $("f-reset").onclick = function () {
       S.source = "all"; S.rating = "all"; S.theme = null; S.search = "";
-      S.tier = "all"; $("f-search").value = ""; render();
+      S.tier = "all"; S.replied = "all"; $("f-search").value = ""; render();
     };
     $("sort-toggle").onclick = function () {
       var order = ["newest", "oldest", "lowest"];
