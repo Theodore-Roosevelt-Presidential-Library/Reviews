@@ -1,6 +1,6 @@
 /*!
  * Theodore Roosevelt Presidential Library — visitor quotes widget
- * Generated 2026-10-08 by collector/pullquotes.py. Do not edit site/embed.js by hand.
+ * Generated 2026-10-09 by collector/pullquotes.py. Do not edit site/embed.js by hand.
  *
  *   <div data-trpl-quotes data-layout="banner"></div>
  *   <script src="https://reviews.labs.trlibrary.com/embed.js" async></script>
@@ -39,7 +39,7 @@
 
   var QUOTES = [{"quote":"Chili and salad quite tasty, and the chocolate chip cookies (with lattes) simply amazing.","draw":"dessert and drink","author":"Mary H.","source":"google","date":"2026-09-17","url":"https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xGTE1uZG9hVVV5VWs1elFubFVTVFJrU21NNWMzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOlFLMndoaUUyUk5zQnlUSTRkSmM5c3c%7C%7C?hl=en","themes":["food_quality"]},{"quote":"Fresh salads, venison chili, other dishes as well, and a perfect view.","draw":"the badlands view","author":"Garett J.","source":"google","date":"2026-08-27","url":"https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xrNE9XZG9Sek5NYlhBeVVWbFFMVWd4YWxsVE5XYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOlk4OWdoRzNMbXAyUVlQLUgxallTNWc%7C%7C?hl=en","themes":["food_quality","atmosphere"]},{"quote":"Wow, they have great espresso and the little that is on the menu is top notch (that’s how I like it).","draw":"great espresso","author":"marcus M.","source":"google","date":"2026-07-09","url":"https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pFNGMxWjBVa1k0ZEdGSGNWWTVlREUyWjNKSWMwRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjE4c1Z0UkY4dGFHcVY5eDE2Z3JIc0E%7C%7C?hl=en","themes":["food_quality"]},{"quote":"We had the breakfast pudding before exploring the library and loved it.","draw":"unique breakfast","author":"Megan R.","source":"google","date":"2026-07-07","url":"https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25Sc01tazRVMGRTU1ZoZlZHNTBjRmRrVEZCQlQwRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnRsMmk4U0dSSVhfVG50cFdkTFBBT0E%7C%7C?hl=en","themes":["food_quality"]}];
   var TOPICS = {};
-  var GENERATED = "2026-10-08";
+  var GENERATED = "2026-10-09";
   if (!QUOTES.length) return;
 
   // The business's own accent, written in at build time from

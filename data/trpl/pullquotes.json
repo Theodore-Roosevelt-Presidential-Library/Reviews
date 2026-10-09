@@ -1,7 +1,12 @@
 {
-  "generated": "2026-10-08",
+  "generated": "2026-10-09",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
+    {
+      "id": "google-2026-10-09-66d8661a",
+      "reason": "length 29 outside 60-220",
+      "offered": "Great interactive AI library."
+    },
     {
       "id": "google-2026-10-06-be5a84e0",
       "reason": "length 43 outside 60-220",
@@ -23,6 +28,11 @@
       "offered": "Well worth visiting!"
     },
     {
+      "id": "google-2026-10-01-b640f176",
+      "reason": "length 43 outside 60-220",
+      "offered": "Library will take at least 4 hours to tour."
+    },
+    {
       "id": "google-2026-09-30-bd16f0b3",
       "reason": "length 55 outside 60-220",
       "offered": "The most brilliant technology to bring history to life."
@@ -34,28 +44,13 @@
     },
     {
       "id": "google-2026-09-30-402a89b7",
-      "reason": "length 37 outside 60-220",
-      "offered": "The interactive displays were awesome"
-    },
-    {
-      "id": "google-2026-09-26-83bf2604",
-      "reason": "length 38 outside 60-220",
-      "offered": "We, on the other hand, we're enamored."
+      "reason": "off-limits subject: email",
+      "offered": "The interactive displays were awesome and we were delighted to get pictures sent to our email from them!!"
     },
     {
       "id": "google-2026-09-26-01a5c8c8",
-      "reason": "length 24 outside 60-220",
-      "offered": "It was very interactive."
-    },
-    {
-      "id": "google-2026-09-23-80889b1d",
-      "reason": "length 21 outside 60-220",
-      "offered": "Fantastic experience."
-    },
-    {
-      "id": "google-2026-09-20-05f963f2",
-      "reason": "length 29 outside 60-220",
-      "offered": "Our group thought it was fun."
+      "reason": "length 51 outside 60-220",
+      "offered": "It was very interactive. It was easy to get around."
     },
     {
       "id": "google-2026-09-19-4567a8f9",
@@ -88,6 +83,11 @@
       "offered": "The way they take your photo and then put it in period shots is great fun."
     },
     {
+      "id": "google-2026-09-11-912aa987",
+      "reason": "length 47 outside 60-220",
+      "offered": "We loved all the interaction and great stories."
+    },
+    {
       "id": "google-2026-09-11-556e0aad",
       "reason": "length 56 outside 60-220",
       "offered": "The use of advanced interactive exhibits is outstanding."
@@ -96,11 +96,6 @@
       "id": "tripadvisor-2026-09-09-8088867b",
       "reason": "length 54 outside 60-220",
       "offered": "Kids are kept entertained by an animal scavenger hunt."
-    },
-    {
-      "id": "google-2026-09-08-dea83a88",
-      "reason": "length 51 outside 60-220",
-      "offered": "They had different things to do inside. And to see."
     },
     {
       "id": "google-2026-09-07-aea41023",
@@ -115,47 +110,58 @@
   ],
   "cut_by_critic_last_run": [
     {
-      "quote": "The town, library, National Park, lots to do. Library will take at least 4 hours to tour.",
-      "reason": "Mentions time needed to tour, which can be interpreted as a reservation or hedging."
-    },
-    {
       "quote": "Really cool museum.  Lots of interactive displays and whatnot.",
-      "reason": "Generic praise ('Really cool museum') and vague mention of 'whatnot' which is not specific or polished."
+      "reason": "Generic praise that could describe any museum."
     },
     {
       "quote": "The fun part is the interaction and the photos that you get emailed to you at the end.",
       "reason": "Mentions photos emailed to visitors, which is disallowed."
     },
     {
-      "quote": "Spent 5 hours there all inside the library, but read a lot and didn't rush. Many audio / video experiences also.",
-      "reason": "Mentions spending 5 hours and not rushing, which implies a reservation about time needed."
+      "quote": "Awsome property.. Tuesday entry ahead of time. Go early,if possible. Fantastic experience.",
+      "reason": "Mentions entry ahead of time and suggests timing, which relates to registration or scheduling."
+    },
+    {
+      "quote": "Our group thought it was fun.  Easy to skip it if you didn't want to do it.",
+      "reason": "Contains hedging language ('Easy to skip it if you didn't want to do it')."
     },
     {
       "quote": "We thought 3 hrs would be enough time, but 5 hrs later we were not finished!",
-      "reason": "Mentions time needed (3 hrs vs 5 hrs), which is a reservation about visit length."
-    },
-    {
-      "quote": "They are very honest in portraying the man, so be prepared that he wasn't perfect.",
-      "reason": "Contains a reservation about the subject not being perfect."
-    },
-    {
-      "quote": "The interactive exhibits were well worth our long trip from Illinois!",
-      "reason": "Generic praise that could describe any similar business and mentions a long trip from Illinois, which is not compelling for a stranger."
+      "reason": "Contains hedging about time needed ('We thought 3 hrs would be enough')."
     },
     {
       "quote": "Uma construcão moderna e muito bem aproveitada, com vistas belissimas das montanhas.",
-      "reason": "Written in Portuguese, not suitable for the English website."
+      "reason": "Not in English and cannot be understood without translation."
     },
     {
       "quote": "You could easily make this a day trip, if you include hiking the trails.",
-      "reason": "Mentions hiking trails and suggests a day trip, which is not directly about the library experience."
+      "reason": "Mentions a day trip but is generic and does not specifically promote the library experience."
     },
     {
       "quote": "Kids are kept entertained by an animal scavenger hunt (I think anyone aver the age of 6 will enjoy).",
-      "reason": "Contains a hedging phrase 'I think' and a minor spelling error 'aver' instead of 'over'."
+      "reason": "Contains a mild hedging phrase 'I think' and a minor spelling error 'aver' instead of 'over'."
     }
   ],
   "quotes": [
+    {
+      "id": "google-2026-10-08-94db959e",
+      "quote": "The presentation using narration and technology to convey the story of Roosevelts life was simply incredible.",
+      "draw": "immersive storytelling",
+      "themes": [
+        "interpretation",
+        "interactive_exhibits"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "architecture",
+        "landscape"
+      ],
+      "author": "Josh G.",
+      "source": "google",
+      "date": "2026-10-08",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xoVWNFbGtWR1JzU2tGUlNFdzFUbE5vZG5NME5XYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlhUcElkVGRsSkFRSEw1TlNodnM0NWc%7C%7C?hl=en"
+    },
     {
       "id": "google-2026-10-07-5be1e624",
       "quote": "Very beautiful; Very interactive; great seating throughout the building; food available; best be ready to walk a lot!",
@@ -1039,6 +1045,26 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xWalJFOXpSak5vVUhnd2QwaEJVR0ptVUZWdFdtYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlVjRE9zRjNoUHgwd0hBUGJmUFVtWmc%7C%7C?hl=en"
     },
     {
+      "id": "google-2026-09-18-afc7fcc7",
+      "quote": "Stunning views, great interactive opportunities,  beautiful building. All good, never felt crowded.",
+      "draw": "stunning views",
+      "themes": [
+        "interactive_exhibits",
+        "architecture",
+        "crowding"
+      ],
+      "review_themes": [
+        "interactive_exhibits",
+        "architecture",
+        "crowding"
+      ],
+      "author": "Judy H.",
+      "source": "google",
+      "date": "2026-09-18",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pObGVVWlFSVVptVFRSaE9XbEVOM1ZEY1hZd2RWRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOjNleUZQRUZmTTRhOWlEN3VDcXYwdVE%7C%7C?hl=en"
+    },
+    {
       "id": "google-2026-09-17-e50edc83",
       "quote": "One of the biggest positives is there was seating everywhere. I thought the interactive photos were hilarious especially the one where I have 3 hands.",
       "draw": "interactive photos",
@@ -1247,45 +1273,6 @@
       "date": "2026-09-11",
       "rating": 5,
       "url": "https://www.yelp.com/biz/theodore-roosevelt-presidential-library-medora-2?hrid=jSA2diqWzMUrdzJC7jpXtw"
-    },
-    {
-      "id": "google-2026-09-11-526c8a49",
-      "quote": "These interactive experiences added to the enjoyment of the exhibits and you did not have to participate if you did not want to.",
-      "draw": "optional interactive experiences",
-      "themes": [
-        "interactive_exhibits"
-      ],
-      "review_themes": [
-        "timed_entry",
-        "staff",
-        "staff_training",
-        "interactive_exhibits",
-        "crowding"
-      ],
-      "author": "Cheryl",
-      "source": "google",
-      "date": "2026-09-11",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25ab1MyMW1VR2hNVVROSU1qWkNTVTFYWW1ObU0yYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnZoS21mUGhMUTNIMjZCSU1XYmNmM2c%7C%7C?hl=en"
-    },
-    {
-      "id": "google-2026-09-11-3e5fc154",
-      "quote": "It was just a spectacular well-done project by the contractors and by everybody involved putting all the displays together",
-      "draw": "well done exhibits",
-      "themes": [
-        "interpretation"
-      ],
-      "review_themes": [
-        "interactive_exhibits",
-        "peer_comparison",
-        "boardwalk_trails",
-        "landscape"
-      ],
-      "author": "Scott P.",
-      "source": "google",
-      "date": "2026-09-11",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21OT2QxUjVYM0pVY1daR1NIRnFjMDFDV25KNU5rRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmNOd1R5X3JUcWZGSHFqc01CWnJ5NkE%7C%7C?hl=en"
     }
   ]
 }

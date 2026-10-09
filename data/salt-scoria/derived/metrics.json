@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08",
+  "generated": "2026-10-09",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -20,7 +20,7 @@
     "by_source": {
       "google": 28
     },
-    "unanswered": 28
+    "unanswered": 25
   },
   "sources": {
     "google": {
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-10-02",
-        "2026-10-08"
+        "2026-10-03",
+        "2026-10-09"
       ],
       "prior_range": [
-        "2026-09-25",
-        "2026-10-01"
+        "2026-09-26",
+        "2026-10-02"
       ],
       "current": {
         "count": 0,
@@ -109,12 +109,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-09-09",
-        "2026-10-08"
+        "2026-09-10",
+        "2026-10-09"
       ],
       "prior_range": [
-        "2026-08-10",
-        "2026-09-08"
+        "2026-08-11",
+        "2026-09-09"
       ],
       "current": {
         "count": 5,
@@ -141,42 +141,42 @@
           "service": 2,
           "atmosphere": 1
         },
-        "unanswered": 5
+        "unanswered": 2
       },
       "prior": {
-        "count": 11,
-        "rated_count": 11,
-        "average": 3.09,
+        "count": 10,
+        "rated_count": 10,
+        "average": 2.9,
         "distribution": {
           "1": 3,
           "2": 3,
           "3": 0,
           "4": 0,
-          "5": 5
+          "5": 4
         },
-        "pct_5_star": 45.5,
-        "pct_low": 54.5,
+        "pct_5_star": 40.0,
+        "pct_low": 60.0,
         "by_source": {
-          "google": 11
+          "google": 10
         },
         "sentiment": {
-          "positive": 6,
+          "positive": 5,
           "negative": 5
         },
         "themes": {
-          "food_quality": 6,
+          "food_quality": 5,
           "value": 5,
           "menu_range": 4,
           "service": 2,
           "atmosphere": 1
         },
-        "unanswered": 11
+        "unanswered": 10
       },
       "delta": {
-        "count": -6,
-        "average": 1.91,
-        "pct_5_star": 54.5,
-        "pct_low": -54.5
+        "count": -5,
+        "average": 2.1,
+        "pct_5_star": 60.0,
+        "pct_low": -60.0
       },
       "theme_movement": [
         {
@@ -192,98 +192,98 @@
           "current": 0,
           "prior": 5,
           "current_share": 0.0,
-          "prior_share": 45.5,
-          "change": -45.5
+          "prior_share": 50.0,
+          "change": -50.0
         },
         {
           "theme": "menu_range",
           "current": 0,
           "prior": 4,
           "current_share": 0.0,
-          "prior_share": 36.4,
-          "change": -36.4
+          "prior_share": 40.0,
+          "change": -40.0
         },
         {
           "theme": "food_quality",
           "current": 4,
-          "prior": 6,
+          "prior": 5,
           "current_share": 80.0,
-          "prior_share": 54.5,
-          "change": 25.5
+          "prior_share": 50.0,
+          "change": 30.0
         },
         {
           "theme": "service",
           "current": 2,
           "prior": 2,
           "current_share": 40.0,
-          "prior_share": 18.2,
-          "change": 21.8
+          "prior_share": 20.0,
+          "change": 20.0
         }
       ]
     },
     "60": {
       "days": 60,
       "range": [
-        "2026-08-10",
-        "2026-10-08"
+        "2026-08-11",
+        "2026-10-09"
       ],
       "prior_range": [
-        "2026-06-11",
-        "2026-08-09"
+        "2026-06-12",
+        "2026-08-10"
       ],
       "current": {
-        "count": 16,
-        "rated_count": 16,
-        "average": 3.69,
+        "count": 15,
+        "rated_count": 15,
+        "average": 3.6,
         "distribution": {
           "1": 3,
           "2": 3,
           "3": 0,
           "4": 0,
-          "5": 10
+          "5": 9
         },
-        "pct_5_star": 62.5,
-        "pct_low": 37.5,
+        "pct_5_star": 60.0,
+        "pct_low": 40.0,
         "by_source": {
-          "google": 16
+          "google": 15
         },
         "sentiment": {
-          "positive": 11,
+          "positive": 10,
           "negative": 5
         },
         "themes": {
-          "food_quality": 10,
+          "food_quality": 9,
           "value": 5,
           "service": 4,
           "menu_range": 4,
           "wait_time": 3,
           "atmosphere": 2
         },
-        "unanswered": 16
+        "unanswered": 12
       },
       "prior": {
-        "count": 12,
-        "rated_count": 12,
-        "average": 3.5,
+        "count": 13,
+        "rated_count": 13,
+        "average": 3.62,
         "distribution": {
           "1": 3,
           "2": 1,
           "3": 1,
           "4": 1,
-          "5": 6
+          "5": 7
         },
-        "pct_5_star": 50.0,
-        "pct_low": 41.7,
+        "pct_5_star": 53.8,
+        "pct_low": 38.5,
         "by_source": {
-          "google": 12
+          "google": 13
         },
         "sentiment": {
+          "positive": 7,
           "negative": 4,
-          "positive": 6,
           "positive_with_criticism": 2
         },
         "themes": {
-          "food_quality": 11,
+          "food_quality": 12,
           "service": 3,
           "menu_range": 2,
           "value": 1,
@@ -293,74 +293,74 @@
           "atmosphere": 1,
           "wait_time": 1
         },
-        "unanswered": 12
+        "unanswered": 13
       },
       "delta": {
-        "count": 4,
-        "average": 0.19,
-        "pct_5_star": 12.5,
-        "pct_low": -4.2
+        "count": 2,
+        "average": -0.02,
+        "pct_5_star": 6.2,
+        "pct_low": 1.5
       },
       "theme_movement": [
         {
           "theme": "food_quality",
-          "current": 10,
-          "prior": 11,
-          "current_share": 62.5,
-          "prior_share": 91.7,
-          "change": -29.2
+          "current": 9,
+          "prior": 12,
+          "current_share": 60.0,
+          "prior_share": 92.3,
+          "change": -32.3
         },
         {
           "theme": "value",
           "current": 5,
           "prior": 1,
-          "current_share": 31.2,
-          "prior_share": 8.3,
-          "change": 22.9
+          "current_share": 33.3,
+          "prior_share": 7.7,
+          "change": 25.6
         },
         {
           "theme": "wait_time",
           "current": 3,
           "prior": 1,
-          "current_share": 18.8,
-          "prior_share": 8.3,
-          "change": 10.4
+          "current_share": 20.0,
+          "prior_share": 7.7,
+          "change": 12.3
         },
         {
           "theme": "menu_range",
           "current": 4,
           "prior": 2,
-          "current_share": 25.0,
-          "prior_share": 16.7,
-          "change": 8.3
+          "current_share": 26.7,
+          "prior_share": 15.4,
+          "change": 11.3
         },
         {
           "theme": "atmosphere",
           "current": 2,
           "prior": 1,
-          "current_share": 12.5,
-          "prior_share": 8.3,
-          "change": 4.2
+          "current_share": 13.3,
+          "prior_share": 7.7,
+          "change": 5.6
         },
         {
           "theme": "service",
           "current": 4,
           "prior": 3,
-          "current_share": 25.0,
-          "prior_share": 25.0,
-          "change": 0.0
+          "current_share": 26.7,
+          "prior_share": 23.1,
+          "change": 3.6
         }
       ]
     },
     "90": {
       "days": 90,
       "range": [
-        "2026-07-11",
-        "2026-10-08"
+        "2026-07-12",
+        "2026-10-09"
       ],
       "prior_range": [
-        "2026-04-12",
-        "2026-07-10"
+        "2026-04-13",
+        "2026-07-11"
       ],
       "current": {
         "count": 24,
@@ -394,7 +394,7 @@
           "dietary_needs": 1,
           "indigenous_menu": 1
         },
-        "unanswered": 24
+        "unanswered": 21
       },
       "prior": {
         "count": 4,
@@ -499,8 +499,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oak9WSkdXa05KYTJaTU1WTm5PVXcyU0d0SmNFRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnhjOVJGWkNJa2ZMMVNnOUw2SGtJcEE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 74,
-      "overdue_by": 73
+      "age_days": 75,
+      "overdue_by": 74
     },
     {
       "id": "google-2026-07-26-3b31558e",
@@ -519,8 +519,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT210MmFubDBaVE52T0hWcE4yWnhUbGROYTBOaWMyYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmt2anl0ZTNvOHVpN2ZxTldNa0Nic2c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 74,
-      "overdue_by": 73
+      "age_days": 75,
+      "overdue_by": 74
     },
     {
       "id": "google-2026-07-26-2d761b1a",
@@ -538,8 +538,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tGTGNuWjBhVUpLUjNOUU9ESktabU0xY21ka1dIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkFLcnZ0aUJKR3NQODJKZmM1cmdkWHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 74,
-      "overdue_by": 73
+      "age_days": 75,
+      "overdue_by": 74
     },
     {
       "id": "google-2026-08-06-831eb748",
@@ -557,8 +557,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205TmNITkdWVkpwUzBKWlJGVnNOREYxVXpGb1EzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOm9NcHNGVVJpS0JZRFVsNDF1UzFoQ3c%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 63,
-      "overdue_by": 62
+      "age_days": 64,
+      "overdue_by": 63
     },
     {
       "id": "google-2026-08-14-ef3fe7f6",
@@ -578,8 +578,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xsVGFVNUhOVlkyTm5ocVptNXJRVGx0V0hSTmNsRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOllTaU5HNVY2NnhqZm5rQTltWHRNclE%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 55,
-      "overdue_by": 54
+      "age_days": 56,
+      "overdue_by": 55
     },
     {
       "id": "google-2026-08-14-bb69113c",
@@ -598,8 +598,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pOUFkzZHNSbVIyU2t0WFRWRnBSekJVWTBSemNYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjNPY3dsRmR2SktXTVFpRzBUY0RzcXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 55,
-      "overdue_by": 54
+      "age_days": 56,
+      "overdue_by": 55
     },
     {
       "id": "google-2026-08-14-047676e9",
@@ -618,8 +618,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pScGVFd3dhRGxYTjJSWGNXMUJRVk50UlUwd2NuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRpeEwwaDlXN2RXcW1BQVNtRU0wcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 55,
-      "overdue_by": 54
+      "age_days": 56,
+      "overdue_by": 55
     },
     {
       "id": "google-2026-08-17-5b1e181b",
@@ -639,8 +639,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2pSRmVGRjJRbGxaZDBoMGNHZEtYMVZYTVcwM1RYYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOjRFeFF2QllZd0h0cGdKX1VXMW03TXc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 52,
-      "overdue_by": 51
+      "age_days": 53,
+      "overdue_by": 52
     },
     {
       "id": "google-2026-08-22-aae0a501",
@@ -656,8 +656,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tKeU0yd3RVa0UyYkVvME5rRnROMWQwY0hSWVJIYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkJyM2wtUkE2bEo0NkFtN1d0cHRYRHc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 47,
-      "overdue_by": 46
+      "age_days": 48,
+      "overdue_by": 47
     },
     {
       "id": "google-2026-09-05-0fb1273a",
@@ -677,8 +677,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21kV1RDMWFabGQyUVc1TFFUQmllbWR5WW5VeGNuYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmdWTC1aZld2QW5LQTBiemdyYnUxcnc%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 33,
-      "overdue_by": 32
+      "age_days": 34,
+      "overdue_by": 33
     },
     {
       "id": "google-2026-07-07-d98ea20d",
@@ -699,8 +699,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21ac1RGTlVjMnB6UzFGT2FGUlROM2cyWjBKU2IzYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZsTFNUc2pzS1FOaFRTN3g2Z0JSb3c%7C%7C?hl=en",
       "tier": "negative",
       "sla_days": 2,
-      "age_days": 93,
-      "overdue_by": 91
+      "age_days": 94,
+      "overdue_by": 92
     },
     {
       "id": "google-2026-07-22-5e8addf7",
@@ -719,19 +719,12 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21aNWRFWXRXa05qZUVST2FFbzVlblp0YTBSTFlXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOmZ5dEYtWkNjeEROaEo5enZta0RLYWc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 5,
-      "age_days": 78,
-      "overdue_by": 73
+      "age_days": 79,
+      "overdue_by": 74
     }
   ],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-04-11",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-04-12",
       "count": 0,
@@ -1991,6 +1984,13 @@
       "average": null,
       "trailing_30_average": 5.0,
       "trailing_30_count": 6
+    },
+    {
+      "date": "2026-10-09",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 5
     }
   ],
   "sla": {
@@ -2029,7 +2029,7 @@
       "window": "30",
       "headline": "Ratings holding at 5.0 across 5 reviews",
       "paragraphs": [
-        "5 reviews in the last 30 days, down 6 on the previous 30 days. The average is up 1.91. 0.0% rated three stars or below.",
+        "5 reviews in the last 30 days, down 5 on the previous 30 days. The average is up 2.1. 0.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
         "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
@@ -2039,8 +2039,8 @@
       "stats": {
         "count": 5,
         "average": 5.0,
-        "count_delta": -6,
-        "average_delta": 1.91,
+        "count_delta": -5,
+        "average_delta": 2.1,
         "pct_low": 0.0,
         "unanswered": 12,
         "overdue": 12
@@ -2048,9 +2048,9 @@
     },
     "60": {
       "window": "60",
-      "headline": "Ratings at 3.69 across 16 reviews — worth attention",
+      "headline": "Ratings at 3.6 across 15 reviews — worth attention",
       "paragraphs": [
-        "16 reviews in the last 60 days, up 4 on the previous 60 days. The average is up 0.19. 37.5% rated three stars or below.",
+        "15 reviews in the last 60 days, up 2 on the previous 60 days. The average is down 0.02. 40.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
         "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 12 reviews are waiting on a reply and 12 are past our own service level."
       ],
@@ -2058,11 +2058,11 @@
       "actions": [],
       "notes": [],
       "stats": {
-        "count": 16,
-        "average": 3.69,
-        "count_delta": 4,
-        "average_delta": 0.19,
-        "pct_low": 37.5,
+        "count": 15,
+        "average": 3.6,
+        "count_delta": 2,
+        "average_delta": -0.02,
+        "pct_low": 40.0,
         "unanswered": 12,
         "overdue": 12
       }
