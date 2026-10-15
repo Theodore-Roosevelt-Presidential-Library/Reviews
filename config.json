@@ -22,9 +22,10 @@
       90
     ],
     "reply_refresh": {
+      "daily_lookback_days": 30,
       "every_days": 7,
       "lookback_days": 120,
-      "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Once a week the collector reaches back this far so replies posted to older reviews are picked up and the response queue actually clears. Costs one deeper Apify pull per week."
+      "note": "Owner replies are only visible by re-reading the review they sit on, and an incremental pull never revisits older reviews. Two windows: every run re-reads the last daily_lookback_days, so replies to recent reviews clear the response queue the next morning. Every every_days days the collector reaches back lookback_days instead, so replies posted to older reviews are picked up too. Costs a modest extra Apify pull daily and one deeper pull per week. Set daily_lookback_days to 0 to turn the daily window off."
     },
     "vocabulary": {
       "auto_promote": true,

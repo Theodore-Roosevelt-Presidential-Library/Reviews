@@ -24,8 +24,8 @@ import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 
-from common import (CONFIG, SNAPSHOTS, blank_record, load_reviews, make_id,
-                    parse_date, save_reviews, today, write_json)
+from common import (CONFIG, REVIEWS_PATH, SNAPSHOTS, blank_record, load_reviews,
+                    make_id, parse_date, save_reviews, today, write_json)
 
 APIFY_BASE = "https://api.apify.com/v2"
 # Re-pull a short overlap window so late-posted or edited reviews aren't missed.
@@ -335,10 +335,61 @@ def fingerprint(rec):
     return (rec.get("source"), text)
 
 
-def merge(existing, incoming):
-    """Merge on id, then on content fingerprint. Incoming wins on owner replies,
-    on filling empty fields, and on date precision."""
+ANALYSIS_FIELDS = ("themes", "sentiment", "tone", "analysis_source", "unmatched")
+
+
+def collapse_platform_duplicates(rows, keep_ids=frozenset()):
+    """Fold rows that share (source, platform_id) into one.
+
+    The stored id embeds the review date, and Google moves publishedAtDate when a
+    reviewer edits their review. The same review then comes back under a new id, is
+    added as a new row carrying the owner reply, and the original row stays
+    responded=false forever. Keep one row per platform review: the id named in
+    decisions.json if there is one, otherwise the earliest-collected row, so triage
+    decisions and analysis keyed on the id survive.
+    """
+    groups, order = {}, []
+    for r in rows:
+        key = (r.get("source"), r.get("platform_id")) if r.get("platform_id") else ("id", r["id"])
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(r)
+    out, folded = [], 0
+    for key in order:
+        g = groups[key]
+        if len(g) == 1:
+            out.append(g[0])
+            continue
+        g.sort(key=lambda r: (r["id"] not in keep_ids, r.get("collected_at") or "", r["id"]))
+        keep, rest = g[0], g[1:]
+        for other in rest:
+            if other.get("responded") and not keep.get("responded"):
+                keep["responded"] = True
+                keep["response_text"] = other.get("response_text")
+            if other.get("text") and other.get("text") != keep.get("text") and \
+                    (other.get("collected_at") or "") >= (keep.get("collected_at") or ""):
+                keep["text"] = other["text"]
+                for f in ANALYSIS_FIELDS:
+                    if f in other:
+                        keep[f] = other[f]
+            for field in ("rating", "title", "author_location", "url", "visit_period"):
+                if not keep.get(field) and other.get(field):
+                    keep[field] = other[field]
+            folded += 1
+        out.append(keep)
+    if folded:
+        print(f"  {folded} duplicate row(s) folded by platform id", flush=True)
+    return out
+
+
+def merge(existing, incoming, keep_ids=frozenset()):
+    """Merge on id, then platform id, then content fingerprint. Incoming wins on owner
+    replies, on filling empty fields, and on date precision."""
+    existing = collapse_platform_duplicates(existing, keep_ids)
     by_id = {r["id"]: r for r in existing}
+    by_platform = {(r.get("source"), r["platform_id"]): r
+                   for r in existing if r.get("platform_id")}
 
     # Collapse hand-seeded rows into their collected equivalents.
     incoming_fps = {fingerprint(r): r for r in incoming if fingerprint(r)}
@@ -349,6 +400,11 @@ def merge(existing, incoming):
             continue
         new = incoming_fps[fp]
         if new["id"] == rid:
+            continue
+        if old.get("platform_id"):
+            # Only hand-seeded rows (no platform id) collapse by text. Two collected rows
+            # with platform ids are either the same review re-dated (updated in place
+            # below) or two people who both wrote "Amazing experience", which must stay.
             continue
         # Carry across analysis already done, then drop the older row.
         new.setdefault("themes", old.get("themes") or [])
@@ -363,15 +419,29 @@ def merge(existing, incoming):
     added = updated = 0
     for rec in incoming:
         prior = by_id.get(rec["id"])
+        if not prior and rec.get("platform_id"):
+            # Same platform review under a shifted date, so a different id. Update the
+            # stored row in place rather than adding a twin.
+            prior = by_platform.get((rec.get("source"), rec["platform_id"]))
         if not prior:
             by_id[rec["id"]] = rec
+            if rec.get("platform_id"):
+                by_platform[(rec.get("source"), rec["platform_id"])] = rec
             added += 1
             continue
         changed = False
-        # An owner reply appearing is the update that matters most.
-        if rec.get("responded") and not prior.get("responded"):
+        # An owner reply appearing is the update that matters most. An edited reply
+        # replaces the stored text too.
+        if rec.get("responded") and (not prior.get("responded")
+                                     or rec.get("response_text") != prior.get("response_text")):
             prior["responded"] = True
             prior["response_text"] = rec.get("response_text")
+            changed = True
+        # A reviewer who edits their review: keep the new words and queue re-analysis.
+        if rec.get("text") and prior.get("text") and rec["text"] != prior["text"] \
+                and prior.get("platform_id") and prior.get("platform_id") == rec.get("platform_id"):
+            prior["text"] = rec["text"]
+            prior.pop("analysis_source", None)
             changed = True
         for field in ("text", "rating", "title", "author_location", "url", "visit_period"):
             if not prior.get(field) and rec.get(field):
@@ -418,11 +488,14 @@ def main():
     doc = load_reviews()
     existing = doc["reviews"]
 
-    # Decide whether this run reaches back far enough to notice new owner replies.
-    # Cheap to do, and skipping it silently breaks the response queue.
+    # Decide how far back this run reaches to notice new owner replies. Two windows:
+    # a short one every run, so replies to recent reviews show up the next morning,
+    # and a deep one every `every_days`, so replies to older reviews are caught too.
+    # Skipping this silently breaks the response queue.
     cadence = CONFIG.get("reply_refresh", {})
     lookback = None
     if not args.full:
+        daily = cadence.get("daily_lookback_days", 0) or None
         every = cadence.get("every_days", 7)
         window = cadence.get("lookback_days", 120)
         last = doc.get("last_reply_refresh")
@@ -437,7 +510,12 @@ def main():
             lookback = window
             doc["last_reply_refresh"] = today()
             print(f"reply refresh: re-reading the last {window} days to catch new "
-                  f"owner replies (runs every {every} days)", flush=True)
+                  f"owner replies (deep window, every {every} days)", flush=True)
+        elif daily:
+            lookback = daily
+            print(f"reply refresh: re-reading the last {daily} days to catch new "
+                  f"owner replies (daily window; deep {window}-day pass every "
+                  f"{every} days, last on {last})", flush=True)
 
     targets = {k: v for k, v in CONFIG["sources"].items()
                if v.get("enabled") and v.get("apify_actor")}
@@ -455,7 +533,12 @@ def main():
             print(f"  !! {cfg['label']} failed: {exc}", file=sys.stderr)
             failures.append(key)
 
-    merged, added, updated = merge(existing, incoming)
+    decisions_path = REVIEWS_PATH.parent / "decisions.json"
+    keep_ids = frozenset()
+    if decisions_path.exists():
+        keep_ids = frozenset(d["id"] for d in
+                             json.loads(decisions_path.read_text()).get("decisions", []))
+    merged, added, updated = merge(existing, incoming, keep_ids)
     print(f"\n{added} new, {updated} updated, {len(merged)} total")
 
     if args.dry_run:
