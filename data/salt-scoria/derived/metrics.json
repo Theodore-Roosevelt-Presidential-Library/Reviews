@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17",
+  "generated": "2026-10-18",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-10-11",
-        "2026-10-17"
+        "2026-10-12",
+        "2026-10-18"
       ],
       "prior_range": [
-        "2026-10-04",
-        "2026-10-10"
+        "2026-10-05",
+        "2026-10-11"
       ],
       "current": {
         "count": 0,
@@ -109,112 +109,126 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-09-18",
-        "2026-10-17"
+        "2026-09-19",
+        "2026-10-18"
       ],
       "prior_range": [
-        "2026-08-19",
-        "2026-09-17"
+        "2026-08-20",
+        "2026-09-18"
       ],
       "current": {
-        "count": 2,
-        "rated_count": 2,
+        "count": 1,
+        "rated_count": 1,
         "average": 5.0,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 0,
-          "5": 2
+          "5": 1
         },
         "pct_5_star": 100.0,
         "pct_low": 0.0,
         "by_source": {
-          "google": 2
+          "google": 1
         },
         "sentiment": {
-          "positive": 2
+          "positive": 1
         },
         "themes": {
-          "food_quality": 2,
-          "wait_time": 2,
-          "service": 1,
-          "atmosphere": 1
+          "food_quality": 1,
+          "wait_time": 1
         },
         "unanswered": 0
       },
       "prior": {
-        "count": 9,
-        "rated_count": 9,
-        "average": 4.22,
+        "count": 10,
+        "rated_count": 10,
+        "average": 4.3,
         "distribution": {
           "1": 1,
           "2": 1,
           "3": 0,
           "4": 0,
-          "5": 7
+          "5": 8
         },
-        "pct_5_star": 77.8,
-        "pct_low": 22.2,
+        "pct_5_star": 80.0,
+        "pct_low": 20.0,
         "by_source": {
-          "google": 9
+          "google": 10
         },
         "sentiment": {
-          "positive": 8,
+          "positive": 9,
           "negative": 1
         },
         "themes": {
-          "food_quality": 5,
+          "food_quality": 6,
+          "service": 2,
+          "wait_time": 2,
+          "atmosphere": 2,
           "menu_range": 2,
-          "service": 1,
-          "wait_time": 1,
-          "value": 1,
-          "atmosphere": 1
+          "value": 1
         },
         "unanswered": 0
       },
       "delta": {
-        "count": -7,
-        "average": 0.78,
-        "pct_5_star": 22.2,
-        "pct_low": -22.2
+        "count": -9,
+        "average": 0.7,
+        "pct_5_star": 20.0,
+        "pct_low": -20.0
       },
       "theme_movement": [
         {
           "theme": "wait_time",
-          "current": 2,
-          "prior": 1,
+          "current": 1,
+          "prior": 2,
           "current_share": 100.0,
-          "prior_share": 11.1,
-          "change": 88.9
+          "prior_share": 20.0,
+          "change": 80.0
         },
         {
           "theme": "food_quality",
-          "current": 2,
-          "prior": 5,
+          "current": 1,
+          "prior": 6,
           "current_share": 100.0,
-          "prior_share": 55.6,
-          "change": 44.4
+          "prior_share": 60.0,
+          "change": 40.0
+        },
+        {
+          "theme": "atmosphere",
+          "current": 0,
+          "prior": 2,
+          "current_share": 0.0,
+          "prior_share": 20.0,
+          "change": -20.0
         },
         {
           "theme": "menu_range",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
-          "prior_share": 22.2,
-          "change": -22.2
+          "prior_share": 20.0,
+          "change": -20.0
+        },
+        {
+          "theme": "service",
+          "current": 0,
+          "prior": 2,
+          "current_share": 0.0,
+          "prior_share": 20.0,
+          "change": -20.0
         }
       ]
     },
     "60": {
       "days": 60,
       "range": [
-        "2026-08-19",
-        "2026-10-17"
+        "2026-08-20",
+        "2026-10-18"
       ],
       "prior_range": [
-        "2026-06-20",
-        "2026-08-18"
+        "2026-06-21",
+        "2026-08-19"
       ],
       "current": {
         "count": 11,
@@ -340,12 +354,12 @@
     "90": {
       "days": 90,
       "range": [
-        "2026-07-20",
-        "2026-10-17"
+        "2026-07-21",
+        "2026-10-18"
       ],
       "prior_range": [
-        "2026-04-21",
-        "2026-07-19"
+        "2026-04-22",
+        "2026-07-20"
       ],
       "current": {
         "count": 22,
@@ -471,13 +485,6 @@
   "triage": [],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-04-20",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-04-21",
       "count": 0,
@@ -1737,6 +1744,13 @@
       "average": null,
       "trailing_30_average": 5.0,
       "trailing_30_count": 3
+    },
+    {
+      "date": "2026-10-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 5.0,
+      "trailing_30_count": 2
     }
   ],
   "sla": {
@@ -1773,9 +1787,9 @@
     },
     "30": {
       "window": "30",
-      "headline": "Ratings holding at 5.0 across 2 reviews",
+      "headline": "Ratings holding at 5.0 across 1 review",
       "paragraphs": [
-        "2 reviews in the last 30 days, down 7 on the previous 30 days. The average is up 0.78. 0.0% rated three stars or below.",
+        "1 review in the last 30 days, down 9 on the previous 30 days. The average is up 0.7. 0.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
         "No complaint appears often enough in this window to form a pattern worth acting on."
       ],
@@ -1783,10 +1797,10 @@
       "actions": [],
       "notes": [],
       "stats": {
-        "count": 2,
+        "count": 1,
         "average": 5.0,
-        "count_delta": -7,
-        "average_delta": 0.78,
+        "count_delta": -9,
+        "average_delta": 0.7,
         "pct_low": 0.0,
         "unanswered": 0,
         "overdue": 0
