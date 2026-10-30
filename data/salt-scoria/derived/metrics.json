@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29",
+  "generated": "2026-10-30",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,14 +55,32 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-10-23",
-        "2026-10-29"
+        "2026-10-24",
+        "2026-10-30"
       ],
       "prior_range": [
-        "2026-10-16",
-        "2026-10-22"
+        "2026-10-17",
+        "2026-10-23"
       ],
       "current": {
+        "count": 0,
+        "rated_count": 0,
+        "average": null,
+        "distribution": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        },
+        "pct_5_star": null,
+        "pct_low": null,
+        "by_source": {},
+        "sentiment": {},
+        "themes": {},
+        "unanswered": 0
+      },
+      "prior": {
         "count": 1,
         "rated_count": 1,
         "average": 1.0,
@@ -88,26 +106,8 @@
         },
         "unanswered": 0
       },
-      "prior": {
-        "count": 0,
-        "rated_count": 0,
-        "average": null,
-        "distribution": {
-          "1": 0,
-          "2": 0,
-          "3": 0,
-          "4": 0,
-          "5": 0
-        },
-        "pct_5_star": null,
-        "pct_low": null,
-        "by_source": {},
-        "sentiment": {},
-        "themes": {},
-        "unanswered": 0
-      },
       "delta": {
-        "count": 1,
+        "count": -1,
         "average": null,
         "pct_5_star": null,
         "pct_low": null
@@ -117,12 +117,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-09-30",
-        "2026-10-29"
+        "2026-10-01",
+        "2026-10-30"
       ],
       "prior_range": [
-        "2026-08-31",
-        "2026-09-29"
+        "2026-09-01",
+        "2026-09-30"
       ],
       "current": {
         "count": 1,
@@ -216,12 +216,12 @@
     "60": {
       "days": 60,
       "range": [
-        "2026-08-31",
-        "2026-10-29"
+        "2026-09-01",
+        "2026-10-30"
       ],
       "prior_range": [
-        "2026-07-02",
-        "2026-08-30"
+        "2026-07-03",
+        "2026-08-31"
       ],
       "current": {
         "count": 9,
@@ -347,12 +347,12 @@
     "90": {
       "days": 90,
       "range": [
-        "2026-08-01",
-        "2026-10-29"
+        "2026-08-02",
+        "2026-10-30"
       ],
       "prior_range": [
-        "2026-05-03",
-        "2026-07-31"
+        "2026-05-04",
+        "2026-08-01"
       ],
       "current": {
         "count": 18,
@@ -479,13 +479,6 @@
   "triage": [],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-05-02",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-05-03",
       "count": 0,
@@ -1745,6 +1738,13 @@
       "average": null,
       "trailing_30_average": 1.0,
       "trailing_30_count": 1
+    },
+    {
+      "date": "2026-10-30",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 1.0,
+      "trailing_30_count": 1
     }
   ],
   "sla": {
@@ -1790,24 +1790,11 @@
   "briefs": {
     "7": {
       "window": "7",
-      "headline": "Ratings at 1.0 across 1 review — worth attention",
+      "headline": "No reviews in this window",
       "paragraphs": [
-        "1 review in the last 7 days, up 1 on the previous 7 days. 100.0% rated three stars or below.",
-        "Visitors are consistently praising the visit overall.",
-        "No complaint appears often enough in this window to form a pattern worth acting on."
+        "Nothing has come in over this period. Widen the window, or check that collection ran."
       ],
-      "coverage_warning": null,
-      "actions": [],
-      "notes": [],
-      "stats": {
-        "count": 1,
-        "average": 1.0,
-        "count_delta": 1,
-        "average_delta": null,
-        "pct_low": 100.0,
-        "unanswered": 0,
-        "overdue": 0
-      }
+      "actions": []
     },
     "30": {
       "window": "30",
