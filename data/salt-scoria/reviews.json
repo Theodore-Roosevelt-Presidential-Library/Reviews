@@ -2,8 +2,35 @@
   "schema_version": "1.0",
   "entity": "Salt+Scoria",
   "address": "3410 Chateau Rd, Medora, ND 58645",
-  "last_updated": "2026-11-01",
+  "last_updated": "2026-11-02",
   "reviews": [
+    {
+      "id": "google-2026-11-01-46e164e0",
+      "source": "google",
+      "date": "2026-11-01",
+      "visit_period": null,
+      "rating": 3,
+      "recommends": null,
+      "tone": 1,
+      "author": "Mae Kusto",
+      "author_location": null,
+      "trip_type": null,
+      "title": null,
+      "text": "Corn, tomato and cucumber salad was great. Venison chili was really bland - needed a lot of salt and pepper. The smoked salmon salad with beans and squash was an awkward combo of flavors. It was nice to have some healthy options but hope they tweak their recipes in the future!",
+      "text_complete": true,
+      "themes": [
+        "food_quality",
+        "menu_range"
+      ],
+      "sentiment": "positive_with_criticism",
+      "unmatched": null,
+      "responded": false,
+      "response_text": null,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t3MVlubFVkWGxoU25NeVQyNVdUSEJJY3psb1RWRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOkw1YnlUdXlhSnMyT25WTHBIczloTVE%7C%7C?hl=en-US",
+      "collected_at": "2026-11-02",
+      "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT2t3MVlubFVkWGxoU25NeVQyNVdUSEJJY3psb1RWRRAB",
+      "analysis_source": "model"
+    },
     {
       "id": "google-2026-10-23-2df3a1fd",
       "source": "google",
