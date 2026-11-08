@@ -2,8 +2,32 @@
   "schema_version": "1.0",
   "entity": "Salt+Scoria",
   "address": "3410 Chateau Rd, Medora, ND 58645",
-  "last_updated": "2026-11-07",
+  "last_updated": "2026-11-08",
   "reviews": [
+    {
+      "id": "google-2026-11-07-b1b953d2",
+      "source": "google",
+      "date": "2026-11-07",
+      "visit_period": null,
+      "rating": 1,
+      "recommends": null,
+      "tone": -2,
+      "author": "Nate Schroeder",
+      "author_location": null,
+      "trip_type": null,
+      "title": null,
+      "text": "",
+      "text_complete": true,
+      "themes": [],
+      "sentiment": "negative",
+      "unmatched": null,
+      "responded": false,
+      "response_text": null,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25CSVRUQmxUVjgxZVdwdFJHOVFUVmhITmpaNFIxRRAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnBITTBlTV81eWptRG9QTVhHNjZ4R1E%7C%7C?hl=en-US",
+      "collected_at": "2026-11-08",
+      "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25CSVRUQmxUVjgxZVdwdFJHOVFUVmhITmpaNFIxRRAB",
+      "analysis_source": "model"
+    },
     {
       "id": "google-2026-11-01-46e164e0",
       "source": "google",
@@ -804,5 +828,5 @@
       "analysis_source": "model"
     }
   ],
-  "last_reply_refresh": "2026-11-01"
+  "last_reply_refresh": "2026-11-08"
 }
