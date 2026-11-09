@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08",
+  "generated": "2026-11-09",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -16,11 +16,6 @@
       "id": "google-2026-10-31-4b11c5a8",
       "reason": "length 48 outside 60-220",
       "offered": "the scenery surrounding the library is stunning."
-    },
-    {
-      "id": "google-2026-10-28-ea1660ee",
-      "reason": "length 24 outside 60-220",
-      "offered": "It was very interactive!"
     },
     {
       "id": "tripadvisor-2026-10-27-a0720237",
@@ -54,18 +49,13 @@
     },
     {
       "id": "google-2026-10-15-b22a1421",
-      "reason": "length 39 outside 60-220",
-      "offered": "I didn't see everything the first time."
+      "reason": "length 28 outside 60-220",
+      "offered": "What a cool place! Loved it!"
     },
     {
       "id": "google-2026-10-14-cb52c015",
       "reason": "length 49 outside 60-220",
       "offered": "A super hands on educational, tech savy facility."
-    },
-    {
-      "id": "tripadvisor-2026-10-13-ba1e72ea",
-      "reason": "length 54 outside 60-220",
-      "offered": "I didn’t think I would like it but it was so much fun."
     },
     {
       "id": "google-2026-10-09-66d8661a",
@@ -76,11 +66,6 @@
       "id": "google-2026-10-06-b5ceb094",
       "reason": "length 27 outside 60-220",
       "offered": "Interactive dynamic is fun."
-    },
-    {
-      "id": "google-2026-10-04-ff12fa36",
-      "reason": "length 30 outside 60-220",
-      "offered": "I felt I really learned a lot."
     },
     {
       "id": "google-2026-10-04-58892544",
@@ -111,7 +96,7 @@
   "cut_by_critic_last_run": [
     {
       "quote": "My entry time was at 1:30pm on a Saturday, and I stayed inside until 4:10pm, then explored the rooftop gardens and trail, and the boardwalk trail.",
-      "reason": "Mentions entry time and duration of visit, which is not suitable for promotional copy."
+      "reason": "Mentions entry time and duration of visit, which is related to registration or scheduling."
     },
     {
       "quote": "The displayed are all explained and many are inter active with the viewer.",
@@ -119,15 +104,11 @@
     },
     {
       "quote": "We especially enjoyed the computer generated hollow gram of TR that U could as him questions and he would reply !",
-      "reason": "Contains a typo and informal language: 'hollow gram' should be 'hologram', 'U' should be 'you'."
+      "reason": "Contains a typo and informal language: 'hollow gram' should be 'hologram'; 'U' should be 'you'."
     },
     {
       "quote": "Being that it took 100 years for the Theodore Roosevelt Presidential Library to come to fruition after Teddy's term of office, I expected a pretty great experience.",
-      "reason": "Contains hedging language: 'I expected a pretty great experience.'"
-    },
-    {
-      "quote": "full of lots of information as well as artifacts, interactive activities that seem to appeal to adults and kids",
-      "reason": "Contains a grammatical error: 'full of lots of information' is incomplete sentence."
+      "reason": "Contains a hedging phrase 'I expected' which is a mild reservation."
     },
     {
       "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
@@ -139,31 +120,47 @@
     },
     {
       "quote": "So many families and school kids were there to absorb and participate since teacher conferences were going on in area districts.",
-      "reason": "Mentions school kids and teacher conferences, which is generic and not compelling for a stranger."
+      "reason": "Mentions 'teacher conferences' and presence of families and school kids, which is generic and not clearly promotional."
     },
     {
       "quote": "Artificial intelligence Roosevelt exhibit lets you ask him questions and makes photos of you in the time period.",
-      "reason": "Mentions photographs of visitors, which is not allowed."
+      "reason": "Mentions making photos of visitors."
+    },
+    {
+      "quote": "Kids were having fun doing activities using the bracelet, as well as the adults.",
+      "reason": "Generic praise that could describe any business of this kind anywhere."
+    },
+    {
+      "quote": "The landscape changes dramatically as we arrived in Medora and came upon the Bad Lands.  That view is spectacular.",
+      "reason": "Mentions landscape outside Medora, not the library itself; not clearly about the library experience."
     },
     {
       "quote": "Between the scenic loop drive, and a visit to the new TR presidential library, your days will be filled.",
-      "reason": "Contains a vague phrase 'your days will be filled' which is generic and could describe any similar attraction."
+      "reason": "Generic praise that could describe any business of this kind anywhere."
+    },
+    {
+      "quote": "I didn’t think I would like it but it was so much fun. Interactive and entertaining.",
+      "reason": "Contains a mild concession ('I didn’t think I would like it')."
     },
     {
       "quote": "Very beautiful; Very interactive; great seating throughout the building; food available; best be ready to walk a lot!",
-      "reason": "Mentions food availability and walking a lot, which is not allowed."
+      "reason": "Mentions food availability and walking a lot, which is not relevant promotional content."
     },
     {
       "quote": "They have used AI and tech to advance the enjoyment of the visitors be sure and use the kiosk before you enter as they send you a journal at the end and it’s not to be believed!!!",
-      "reason": "Mentions kiosk use and receiving a journal, which implies registration or email, disallowed content."
+      "reason": "Mentions registration or email ('they send you a journal at the end')."
+    },
+    {
+      "quote": "The grounds are beautiful..walk around outside of the facility too.",
+      "reason": "Mentions grounds outside the facility, not the library experience itself."
     },
     {
       "quote": "Really cool museum.  Lots of interactive displays and whatnot.",
-      "reason": "Generic praise 'really cool museum' and 'whatnot' is too vague and generic."
+      "reason": "Generic praise ('really cool museum', 'whatnot')."
     },
     {
       "quote": "The fun part is the interaction and the photos that you get emailed to you at the end.",
-      "reason": "Mentions photos emailed to visitors, which is disallowed."
+      "reason": "Mentions photos emailed to visitors."
     }
   ],
   "quotes": [
