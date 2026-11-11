@@ -2,8 +2,34 @@
   "schema_version": "1.0",
   "entity": "Salt+Scoria",
   "address": "3410 Chateau Rd, Medora, ND 58645",
-  "last_updated": "2026-11-10",
+  "last_updated": "2026-11-11",
   "reviews": [
+    {
+      "id": "google-2026-11-10-6f6c1811",
+      "source": "google",
+      "date": "2026-11-10",
+      "visit_period": null,
+      "rating": 2,
+      "recommends": null,
+      "tone": -1,
+      "author": "Brooklyn Haag",
+      "author_location": null,
+      "trip_type": null,
+      "title": null,
+      "text": "Corn & cucumber salad was nothing great. It had no flavor other than very strong onion.",
+      "text_complete": true,
+      "themes": [
+        "food_quality"
+      ],
+      "sentiment": "negative",
+      "unmatched": null,
+      "responded": false,
+      "response_text": null,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25BMFJuUlZkbFV6Y1dRelNFaDRTa3N4Y0dsMlNXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnA0RnRVdlUzcWQzSEh4SksxcGl2SWc%7C%7C?hl=en-US",
+      "collected_at": "2026-11-11",
+      "platform_id": "Ci9DQUlRQUNvZENodHljRjlvT25BMFJuUlZkbFV6Y1dRelNFaDRTa3N4Y0dsMlNXYxAB",
+      "analysis_source": "model"
+    },
     {
       "id": "google-2026-11-07-b1b953d2",
       "source": "google",
