@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11",
+  "generated": "2026-11-12",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-11-05",
-        "2026-11-11"
+        "2026-11-06",
+        "2026-11-12"
       ],
       "prior_range": [
-        "2026-10-29",
-        "2026-11-04"
+        "2026-10-30",
+        "2026-11-05"
       ],
       "current": {
         "count": 2,
@@ -122,12 +122,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-10-13",
-        "2026-11-11"
+        "2026-10-14",
+        "2026-11-12"
       ],
       "prior_range": [
-        "2026-09-13",
-        "2026-10-12"
+        "2026-09-14",
+        "2026-10-13"
       ],
       "current": {
         "count": 4,
@@ -228,12 +228,12 @@
     "60": {
       "days": 60,
       "range": [
-        "2026-09-13",
-        "2026-11-11"
+        "2026-09-14",
+        "2026-11-12"
       ],
       "prior_range": [
-        "2026-07-15",
-        "2026-09-12"
+        "2026-07-16",
+        "2026-09-13"
       ],
       "current": {
         "count": 7,
@@ -359,70 +359,70 @@
     "90": {
       "days": 90,
       "range": [
-        "2026-08-14",
-        "2026-11-11"
+        "2026-08-15",
+        "2026-11-12"
       ],
       "prior_range": [
-        "2026-05-16",
-        "2026-08-13"
+        "2026-05-17",
+        "2026-08-14"
       ],
       "current": {
-        "count": 19,
-        "rated_count": 19,
-        "average": 3.21,
+        "count": 16,
+        "rated_count": 16,
+        "average": 3.5,
         "distribution": {
-          "1": 5,
-          "2": 4,
+          "1": 4,
+          "2": 2,
           "3": 1,
           "4": 0,
           "5": 9
         },
-        "pct_5_star": 47.4,
-        "pct_low": 52.6,
+        "pct_5_star": 56.2,
+        "pct_low": 43.8,
         "by_source": {
-          "google": 19
+          "google": 16
         },
         "sentiment": {
-          "negative": 8,
+          "negative": 5,
           "positive_with_criticism": 1,
           "positive": 10
         },
         "themes": {
-          "food_quality": 11,
-          "menu_range": 6,
-          "value": 6,
-          "service": 5,
+          "food_quality": 9,
+          "menu_range": 5,
+          "service": 4,
+          "value": 3,
           "wait_time": 3,
           "atmosphere": 2
         },
         "unanswered": 1
       },
       "prior": {
-        "count": 13,
-        "rated_count": 13,
-        "average": 3.62,
+        "count": 16,
+        "rated_count": 16,
+        "average": 3.25,
         "distribution": {
-          "1": 3,
-          "2": 1,
+          "1": 4,
+          "2": 3,
           "3": 1,
           "4": 1,
           "5": 7
         },
-        "pct_5_star": 53.8,
-        "pct_low": 38.5,
+        "pct_5_star": 43.8,
+        "pct_low": 50.0,
         "by_source": {
-          "google": 13
+          "google": 16
         },
         "sentiment": {
+          "negative": 7,
           "positive": 7,
-          "negative": 4,
           "positive_with_criticism": 2
         },
         "themes": {
-          "food_quality": 12,
-          "service": 3,
-          "menu_range": 2,
-          "value": 1,
+          "food_quality": 14,
+          "value": 4,
+          "service": 4,
+          "menu_range": 3,
           "hours": 1,
           "dietary_needs": 1,
           "indigenous_menu": 1,
@@ -432,59 +432,59 @@
         "unanswered": 0
       },
       "delta": {
-        "count": 6,
-        "average": -0.41,
-        "pct_5_star": -6.4,
-        "pct_low": 14.1
+        "count": 0,
+        "average": 0.25,
+        "pct_5_star": 12.4,
+        "pct_low": -6.2
       },
       "theme_movement": [
         {
           "theme": "food_quality",
-          "current": 11,
-          "prior": 12,
-          "current_share": 57.9,
-          "prior_share": 92.3,
-          "change": -34.4
-        },
-        {
-          "theme": "value",
-          "current": 6,
-          "prior": 1,
-          "current_share": 31.6,
-          "prior_share": 7.7,
-          "change": 23.9
+          "current": 9,
+          "prior": 14,
+          "current_share": 56.2,
+          "prior_share": 87.5,
+          "change": -31.2
         },
         {
           "theme": "menu_range",
-          "current": 6,
-          "prior": 2,
-          "current_share": 31.6,
-          "prior_share": 15.4,
-          "change": 16.2
+          "current": 5,
+          "prior": 3,
+          "current_share": 31.2,
+          "prior_share": 18.8,
+          "change": 12.5
         },
         {
           "theme": "wait_time",
           "current": 3,
           "prior": 1,
-          "current_share": 15.8,
-          "prior_share": 7.7,
-          "change": 8.1
+          "current_share": 18.8,
+          "prior_share": 6.2,
+          "change": 12.5
         },
         {
-          "theme": "service",
-          "current": 5,
-          "prior": 3,
-          "current_share": 26.3,
-          "prior_share": 23.1,
-          "change": 3.2
+          "theme": "value",
+          "current": 3,
+          "prior": 4,
+          "current_share": 18.8,
+          "prior_share": 25.0,
+          "change": -6.2
         },
         {
           "theme": "atmosphere",
           "current": 2,
           "prior": 1,
-          "current_share": 10.5,
-          "prior_share": 7.7,
-          "change": 2.8
+          "current_share": 12.5,
+          "prior_share": 6.2,
+          "change": 6.2
+        },
+        {
+          "theme": "service",
+          "current": 4,
+          "prior": 4,
+          "current_share": 25.0,
+          "prior_share": 25.0,
+          "change": 0.0
         }
       ]
     }
@@ -506,19 +506,12 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25BMFJuUlZkbFV6Y1dRelNFaDRTa3N4Y0dsMlNXYxAB!2m1!1s0x0:0x58873ad1e72324d6!3m1!1s2@1:CAIQACodChtycF9oOnA0RnRVdlUzcWQzSEh4SksxcGl2SWc%7C%7C?hl=en-US",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 1,
-      "overdue_by": 0
+      "age_days": 2,
+      "overdue_by": 1
     }
   ],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-05-15",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-05-16",
       "count": 0,
@@ -1778,6 +1771,13 @@
       "average": null,
       "trailing_30_average": 1.75,
       "trailing_30_count": 4
+    },
+    {
+      "date": "2026-11-12",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 1.75,
+      "trailing_30_count": 4
     }
   ],
   "sla": {
@@ -1827,7 +1827,7 @@
       "paragraphs": [
         "2 reviews in the last 7 days, up 1 on the previous 7 days. The average is down 1.5. 100.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 0 are past our own service level."
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 1 is past our own service level."
       ],
       "coverage_warning": null,
       "actions": [],
@@ -1839,7 +1839,7 @@
         "average_delta": -1.5,
         "pct_low": 100.0,
         "unanswered": 1,
-        "overdue": 0
+        "overdue": 1
       }
     },
     "30": {
@@ -1848,7 +1848,7 @@
       "paragraphs": [
         "4 reviews in the last 30 days, up 1 on the previous 30 days. The average is down 3.25. 100.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 0 are past our own service level."
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 1 is past our own service level."
       ],
       "coverage_warning": null,
       "actions": [],
@@ -1860,7 +1860,7 @@
         "average_delta": -3.25,
         "pct_low": 100.0,
         "unanswered": 1,
-        "overdue": 0
+        "overdue": 1
       }
     },
     "60": {
@@ -1869,7 +1869,7 @@
       "paragraphs": [
         "7 reviews in the last 60 days, down 14 on the previous 60 days. The average is down 0.1. 57.1% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 0 are past our own service level."
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 1 is past our own service level."
       ],
       "coverage_warning": null,
       "actions": [],
@@ -1881,28 +1881,28 @@
         "average_delta": -0.1,
         "pct_low": 57.1,
         "unanswered": 1,
-        "overdue": 0
+        "overdue": 1
       }
     },
     "90": {
       "window": "90",
-      "headline": "Ratings at 3.21 across 19 reviews — worth attention",
+      "headline": "Ratings at 3.5 across 16 reviews — worth attention",
       "paragraphs": [
-        "19 reviews in the last 90 days, up 6 on the previous 90 days. The average is down 0.41. 52.6% rated three stars or below.",
+        "16 reviews in the last 90 days, level with the previous period. The average is up 0.25. 43.8% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 0 are past our own service level."
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 1 review is waiting on a reply and 1 is past our own service level."
       ],
       "coverage_warning": null,
       "actions": [],
       "notes": [],
       "stats": {
-        "count": 19,
-        "average": 3.21,
-        "count_delta": 6,
-        "average_delta": -0.41,
-        "pct_low": 52.6,
+        "count": 16,
+        "average": 3.5,
+        "count_delta": 0,
+        "average_delta": 0.25,
+        "pct_low": 43.8,
         "unanswered": 1,
-        "overdue": 0
+        "overdue": 1
       }
     }
   }
