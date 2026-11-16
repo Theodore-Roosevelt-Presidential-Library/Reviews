@@ -1,7 +1,12 @@
 {
-  "generated": "2026-11-15",
+  "generated": "2026-11-16",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
+    {
+      "id": "google-2026-11-14-6b3eea91",
+      "reason": "length 35 outside 60-220",
+      "offered": "The history was laid out very well."
+    },
     {
       "id": "google-2026-11-14-5a307000",
       "reason": "length 53 outside 60-220",
@@ -13,11 +18,6 @@
       "offered": "Many are interactive."
     },
     {
-      "id": "google-2026-11-13-2c3af695",
-      "reason": "length 32 outside 60-220",
-      "offered": "4 hr visit to see and do it all."
-    },
-    {
       "id": "google-2026-11-11-177ce935",
       "reason": "length 43 outside 60-220",
       "offered": "The AI features were quite amazing as well."
@@ -26,6 +26,16 @@
       "id": "google-2026-11-09-82c293c5",
       "reason": "length 58 outside 60-220",
       "offered": "So many facets of his life portrayed in engaging exhibits."
+    },
+    {
+      "id": "google-2026-11-09-4ee141b9",
+      "reason": "off-limits subject: sign up",
+      "offered": "Make sure to sign up for your entry time and plan at least 5 hours."
+    },
+    {
+      "id": "tripadvisor-2026-11-06-8bedbade",
+      "reason": "length 44 outside 60-220",
+      "offered": "It's truly amazing and well worth the visit."
     },
     {
       "id": "google-2026-11-02-45db54bf",
@@ -48,19 +58,14 @@
       "offered": "It was very interactive!"
     },
     {
-      "id": "tripadvisor-2026-10-27-a0720237",
-      "reason": "length 37 outside 60-220",
-      "offered": "Very interactive for adults and kids."
-    },
-    {
       "id": "google-2026-10-26-38839332",
       "reason": "length 56 outside 60-220",
       "offered": "Lots to see.  Plenty of interactive for adults and kids."
     },
     {
       "id": "google-2026-10-24-ca3ebbd9",
-      "reason": "length 23 outside 60-220",
-      "offered": "Enjoyed the  boardwalk!"
+      "reason": "length 27 outside 60-220",
+      "offered": "Loved all the interactives!"
     },
     {
       "id": "google-2026-10-24-8c429bf2",
@@ -74,18 +79,8 @@
     },
     {
       "id": "google-2026-10-15-b22a1421",
-      "reason": "length 39 outside 60-220",
-      "offered": "I didn't see everything the first time."
-    },
-    {
-      "id": "google-2026-10-14-cb52c015",
-      "reason": "length 49 outside 60-220",
-      "offered": "A super hands on educational, tech savy facility."
-    },
-    {
-      "id": "tripadvisor-2026-10-13-ba1e72ea",
-      "reason": "length 54 outside 60-220",
-      "offered": "I didn’t think I would like it but it was so much fun."
+      "reason": "length 55 outside 60-220",
+      "offered": "What a cool place! Loved it! I will definitely be back."
     },
     {
       "id": "google-2026-10-09-66d8661a",
@@ -94,86 +89,87 @@
     },
     {
       "id": "google-2026-10-06-b5ceb094",
-      "reason": "length 27 outside 60-220",
-      "offered": "Interactive dynamic is fun."
+      "reason": "length 40 outside 60-220",
+      "offered": "Great visit! Interactive dynamic is fun."
+    },
+    {
+      "id": "google-2026-10-04-ff12fa36",
+      "reason": "length 58 outside 60-220",
+      "offered": "It was a great experience.  I felt I really learned a lot."
     }
   ],
   "cut_by_critic_last_run": [
     {
+      "quote": "the ai interaction was a cool addition and the handful of original items they had were stretched throughout the museum.",
+      "reason": "Contains a mild reservation about the number of original items."
+    },
+    {
       "quote": "The history from birth to death of a great man that did great things and admitted to his mistakes was so worth the trip.",
-      "reason": "Mentions admission to mistakes, which is a mild concession."
+      "reason": "Contains a concession about the subject admitting to mistakes."
     },
     {
-      "quote": "I was very impressed with the depth of information and the interactiveness of the exhibitions.",
-      "reason": "Contains a minor grammatical error: 'interactiveness' is awkward and nonstandard."
-    },
-    {
-      "quote": "It was informative, interactive, fun, wonderful greeters, everything was perfect!",
-      "reason": "Mentions 'wonderful greeters' (staff member) and reads as generic praise."
+      "quote": "4 hr visit to see and do it all. Loved all the interactments",
+      "reason": "Contains a typo ('interactments') and unclear meaning."
     },
     {
       "quote": "My entry time was at 1:30pm on a Saturday, and I stayed inside until 4:10pm, then explored the rooftop gardens and trail, and the boardwalk trail.",
-      "reason": "Mentions entry time and visiting specific areas, which is akin to registration or timing details."
+      "reason": "Mentions entry time and duration of visit, which relates to registration or timing."
     },
     {
       "quote": "The displayed are all explained and many are inter active with the viewer.",
-      "reason": "Contains spelling errors: 'displayed' instead of 'displays' and 'inter active' instead of 'interactive'."
+      "reason": "Contains a typo ('displayed' instead of 'displays') and awkward grammar."
     },
     {
       "quote": "We especially enjoyed the computer generated hollow gram of TR that U could as him questions and he would reply !",
-      "reason": "Contains spelling errors and informal language: 'hollow gram' instead of 'hologram', 'U' instead of 'you'."
+      "reason": "Contains typos and informal language ('hollow gram', 'U', 'as him')."
     },
     {
       "quote": "My favorite spot in the museum was visiting Teddy in his office and asking him questions!",
-      "reason": "Mentions asking questions to 'Teddy' (staff member or character), which is a named staff interaction."
+      "reason": "Mentions asking questions to a figure, which may not be clear without context."
     },
     {
-      "quote": "Bring the young people here to learn about democracy, I say.",
-      "reason": "Generic exhortation to bring young people; not specific enough to this location."
+      "quote": "Being that it took 100 years for the Theodore Roosevelt Presidential Library to come to fruition after Teddy's term of office, I expected a pretty great experience.",
+      "reason": "Contains a hedging phrase about expectations."
     },
     {
-      "quote": "artifacts, interactive activities that seem to appeal to adults and kids, and a good restaurant for lunch or a snack while you are there.",
-      "reason": "Mentions restaurant and food, which is outside the scope."
-    },
-    {
-      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Mentions visitors' faces in exhibits, which could imply photographs of visitors."
-    },
-    {
-      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Mentions 'featuring their own faces,' implying photographs of visitors."
+      "quote": "full of lots of information as well as artifacts, interactive activities that seem to appeal to adults and kids, and a good restaurant for lunch or a snack while you are there.",
+      "reason": "Mentions a restaurant, which is outside the scope of the library itself."
     },
     {
       "quote": "So many families and school kids were there to absorb and participate since teacher conferences were going on in area districts.",
-      "reason": "Mentions school kids and teacher conferences, which is generic and not specifically about the library experience."
+      "reason": "Mentions school kids and teacher conferences, which is context-specific and not clearly promotional."
     },
     {
       "quote": "Artificial intelligence Roosevelt exhibit lets you ask him questions and makes photos of you in the time period.",
-      "reason": "Mentions making photos of visitors, which is disallowed."
+      "reason": "Mentions photos of visitors, which is disallowed."
     },
     {
       "quote": "LOVED HOW THEY DESIGNED THE BUILDING INTO THE SURROUNDING TOGRAPHY",
-      "reason": "Contains a spelling error: 'TOGRAPHY' instead of 'topography'."
+      "reason": "Contains spelling error: 'TOGRAPHY' instead of 'topography'."
     },
     {
-      "quote": "Kids were having fun doing activities using the bracelet, as well as the adults.",
-      "reason": "Mentions kids and adults having fun doing activities using the bracelet, implying visitor tracking or registration."
+      "quote": "Between the scenic loop drive, and a visit to the new TR presidential library, your days will be filled.",
+      "reason": "Generic praise that could describe any similar attraction anywhere."
     },
     {
-      "quote": "Truly, one of the most complete National Park experiences obe could have.",
-      "reason": "Contains a spelling error: 'obe' instead of 'one'."
+      "quote": "This building  is beautiful. A super hands on educational, tech savy facility.",
+      "reason": "Contains spelling error: 'savy' instead of 'savvy'."
+    },
+    {
+      "quote": "I didn’t think I would like it but it was so much fun. Interactive and entertaining.",
+      "reason": "Contains hedging: 'I didn’t think I would like it but...'."
     },
     {
       "quote": "Takes 2 hrs if you're quick & up to 4 hrs to fully participate & enjoy a most memorable experience!",
-      "reason": "Mentions duration of visit, which is borderline but could be considered generic or logistical information."
+      "reason": "Mentions duration and implies ticketing context, which is disallowed."
     },
     {
       "quote": "Very beautiful; Very interactive; great seating throughout the building; food available; best be ready to walk a lot!",
-      "reason": "Mentions food availability and walking a lot, which is logistical and not promotional."
+      "reason": "Mentions food availability and walking, which are generic and not specific to the library experience; also includes a mild warning that could be seen as a reservation."
     },
     {
-      "quote": "They have used AI and tech to advance the enjoyment of the visitors be sure and use the kiosk before you enter as they send you a journal at the end and it’s not to be believed!!!",
-      "reason": "Mentions kiosk use and receiving a journal, implying registration or visitor tracking."
+      "quote": "Many of the displays are interactive, for adults as well as children.",
+      "reason": "Generic praise that could describe any museum or similar venue; not specific enough to the Theodore Roosevelt Presidential Library."
     }
   ],
   "quotes": [
