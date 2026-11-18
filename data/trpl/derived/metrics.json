@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-17",
+  "generated": "2026-11-18",
   "entity": "Theodore Roosevelt Presidential Library",
   "excluded_from_windows": {
     "count": 0,
@@ -7,23 +7,23 @@
     "reviews": []
   },
   "all_time": {
-    "count": 1005,
-    "rated_count": 1002,
+    "count": 1006,
+    "rated_count": 1003,
     "average": 4.69,
     "distribution": {
       "1": 34,
       "2": 22,
       "3": 25,
       "4": 54,
-      "5": 867
+      "5": 868
     },
     "by_source": {
-      "google": 905,
+      "google": 906,
       "tripadvisor": 77,
       "yelp": 20,
       "facebook": 3
     },
-    "unanswered": 162
+    "unanswered": 156
   },
   "sources": {
     "google": {
@@ -86,40 +86,40 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-11-11",
-        "2026-11-17"
+        "2026-11-12",
+        "2026-11-18"
       ],
       "prior_range": [
-        "2026-11-04",
-        "2026-11-10"
+        "2026-11-05",
+        "2026-11-11"
       ],
       "current": {
-        "count": 23,
-        "rated_count": 23,
+        "count": 21,
+        "rated_count": 21,
         "average": 5.0,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 0,
-          "5": 23
+          "5": 21
         },
         "pct_5_star": 100.0,
         "pct_low": 0.0,
         "by_source": {
-          "google": 23
+          "google": 21
         },
         "sentiment": {
           "positive_with_criticism": 4,
-          "positive": 18,
+          "positive": 16,
           "mixed": 1
         },
         "themes": {
-          "interactive_exhibits": 11,
-          "dwell_time": 5,
+          "interactive_exhibits": 8,
           "architecture": 4,
-          "ai_criticism": 4,
+          "dwell_time": 4,
           "historical_balance": 4,
+          "ai_criticism": 2,
           "landscape": 2,
           "families": 1,
           "interpretation": 1,
@@ -127,233 +127,232 @@
           "food_beverage": 1,
           "staff": 1
         },
-        "unanswered": 8
+        "unanswered": 2
       },
       "prior": {
-        "count": 19,
-        "rated_count": 19,
+        "count": 22,
+        "rated_count": 22,
         "average": 4.95,
         "distribution": {
           "1": 0,
           "2": 0,
           "3": 0,
           "4": 1,
-          "5": 18
+          "5": 21
         },
-        "pct_5_star": 94.7,
+        "pct_5_star": 95.5,
         "pct_low": 0.0,
         "by_source": {
-          "google": 18,
+          "google": 21,
           "tripadvisor": 1
         },
         "sentiment": {
-          "positive_with_criticism": 3,
-          "positive": 16
+          "positive": 19,
+          "positive_with_criticism": 3
         },
         "themes": {
-          "interactive_exhibits": 5,
+          "interactive_exhibits": 8,
+          "ai_criticism": 3,
           "interpretation": 3,
           "architecture": 3,
+          "dwell_time": 2,
           "food_beverage": 2,
           "historical_balance": 1,
-          "ai_criticism": 1,
           "staff": 1,
-          "timed_entry": 1,
-          "dwell_time": 1
+          "timed_entry": 1
         },
         "unanswered": 1
       },
       "delta": {
-        "count": 4,
+        "count": -1,
         "average": 0.05,
-        "pct_5_star": 5.3,
+        "pct_5_star": 4.5,
         "pct_low": 0.0
       },
       "theme_movement": [
         {
-          "theme": "interactive_exhibits",
-          "current": 11,
-          "prior": 5,
-          "current_share": 47.8,
-          "prior_share": 26.3,
-          "change": 21.5
-        },
-        {
-          "theme": "dwell_time",
-          "current": 5,
-          "prior": 1,
-          "current_share": 21.7,
-          "prior_share": 5.3,
-          "change": 16.5
-        },
-        {
-          "theme": "ai_criticism",
-          "current": 4,
-          "prior": 1,
-          "current_share": 17.4,
-          "prior_share": 5.3,
-          "change": 12.1
-        },
-        {
           "theme": "historical_balance",
           "current": 4,
           "prior": 1,
-          "current_share": 17.4,
-          "prior_share": 5.3,
-          "change": 12.1
+          "current_share": 19.0,
+          "prior_share": 4.5,
+          "change": 14.5
         },
         {
-          "theme": "interpretation",
-          "current": 1,
-          "prior": 3,
-          "current_share": 4.3,
-          "prior_share": 15.8,
-          "change": -11.4
+          "theme": "dwell_time",
+          "current": 4,
+          "prior": 2,
+          "current_share": 19.0,
+          "prior_share": 9.1,
+          "change": 10.0
         },
         {
           "theme": "landscape",
           "current": 2,
           "prior": 0,
-          "current_share": 8.7,
+          "current_share": 9.5,
           "prior_share": 0.0,
-          "change": 8.7
+          "change": 9.5
         },
         {
-          "theme": "food_beverage",
+          "theme": "interpretation",
           "current": 1,
-          "prior": 2,
-          "current_share": 4.3,
-          "prior_share": 10.5,
-          "change": -6.2
+          "prior": 3,
+          "current_share": 4.8,
+          "prior_share": 13.6,
+          "change": -8.9
         },
         {
           "theme": "architecture",
           "current": 4,
           "prior": 3,
-          "current_share": 17.4,
-          "prior_share": 15.8,
-          "change": 1.6
+          "current_share": 19.0,
+          "prior_share": 13.6,
+          "change": 5.4
+        },
+        {
+          "theme": "food_beverage",
+          "current": 1,
+          "prior": 2,
+          "current_share": 4.8,
+          "prior_share": 9.1,
+          "change": -4.3
+        },
+        {
+          "theme": "ai_criticism",
+          "current": 2,
+          "prior": 3,
+          "current_share": 9.5,
+          "prior_share": 13.6,
+          "change": -4.1
+        },
+        {
+          "theme": "interactive_exhibits",
+          "current": 8,
+          "prior": 8,
+          "current_share": 38.1,
+          "prior_share": 36.4,
+          "change": 1.7
         }
       ]
     },
     "30": {
       "days": 30,
       "range": [
-        "2026-10-19",
-        "2026-11-17"
+        "2026-10-20",
+        "2026-11-18"
       ],
       "prior_range": [
-        "2026-09-19",
-        "2026-10-18"
+        "2026-09-20",
+        "2026-10-19"
       ],
       "current": {
-        "count": 137,
-        "rated_count": 137,
+        "count": 135,
+        "rated_count": 135,
         "average": 4.88,
         "distribution": {
           "1": 1,
           "2": 0,
           "3": 3,
           "4": 6,
-          "5": 127
+          "5": 125
         },
-        "pct_5_star": 92.7,
-        "pct_low": 2.9,
+        "pct_5_star": 92.6,
+        "pct_low": 3.0,
         "by_source": {
           "google": 125,
-          "tripadvisor": 8,
-          "yelp": 4
+          "tripadvisor": 7,
+          "yelp": 3
         },
         "sentiment": {
-          "positive_with_criticism": 20,
-          "positive": 106,
+          "positive_with_criticism": 19,
+          "positive": 105,
           "mixed": 9,
           "negative": 2
         },
         "themes": {
-          "interactive_exhibits": 61,
+          "interactive_exhibits": 59,
           "architecture": 37,
-          "interpretation": 17,
-          "dwell_time": 13,
-          "landscape": 13,
+          "interpretation": 16,
+          "dwell_time": 12,
+          "landscape": 12,
           "food_beverage": 11,
           "ai_criticism": 10,
           "historical_balance": 10,
           "staff": 10,
-          "families": 9,
           "boardwalk_trails": 8,
+          "families": 7,
           "age_tiers": 6,
-          "parking": 6,
           "rooftop": 5,
           "conservation_message": 5,
-          "visitor_flow": 5,
+          "parking": 5,
           "drive_market": 5,
+          "visitor_flow": 4,
           "retail": 4,
           "accessibility": 3,
-          "timed_entry": 3,
           "wayfinding_signage": 3,
           "guided_tours": 3,
+          "timed_entry": 2,
           "crowding": 2,
           "retail_pricing": 2,
           "peer_comparison": 1,
           "ticket_pricing": 1,
           "capacity": 1,
           "value_for_money": 1,
-          "grounds_conduct": 1,
-          "restrooms": 1
+          "grounds_conduct": 1
         },
-        "unanswered": 9
+        "unanswered": 3
       },
       "prior": {
-        "count": 176,
-        "rated_count": 176,
-        "average": 4.66,
+        "count": 173,
+        "rated_count": 173,
+        "average": 4.65,
         "distribution": {
           "1": 9,
           "2": 5,
           "3": 1,
           "4": 7,
-          "5": 154
+          "5": 151
         },
-        "pct_5_star": 87.5,
-        "pct_low": 8.5,
+        "pct_5_star": 87.3,
+        "pct_low": 8.7,
         "by_source": {
-          "google": 154,
+          "yelp": 5,
           "tripadvisor": 18,
-          "yelp": 4
+          "google": 150
         },
         "sentiment": {
-          "negative": 13,
-          "positive": 123,
           "positive_with_criticism": 30,
-          "mixed": 10
+          "positive": 121,
+          "negative": 13,
+          "mixed": 9
         },
         "themes": {
-          "interactive_exhibits": 72,
-          "architecture": 35,
-          "interpretation": 21,
+          "interactive_exhibits": 71,
+          "architecture": 34,
+          "interpretation": 22,
           "landscape": 20,
           "timed_entry": 18,
           "ai_criticism": 17,
-          "parking": 15,
+          "parking": 16,
           "crowding": 13,
           "ticket_pricing": 12,
           "food_beverage": 12,
-          "historical_balance": 10,
+          "families": 10,
           "dwell_time": 10,
-          "families": 9,
+          "historical_balance": 10,
           "retail": 9,
-          "rooftop": 8,
           "grounds_conduct": 8,
           "visitor_flow": 7,
+          "rooftop": 7,
           "staff": 6,
           "wayfinding_signage": 6,
-          "boardwalk_trails": 6,
           "accessibility": 5,
+          "boardwalk_trails": 5,
+          "restrooms": 4,
           "conservation_message": 4,
-          "peer_comparison": 4,
-          "restrooms": 3,
           "retail_pricing": 3,
+          "peer_comparison": 3,
           "guided_tours": 2,
           "queues": 2,
           "media_driven_awareness": 2,
@@ -363,164 +362,156 @@
           "water_availability": 1,
           "capacity": 1
         },
-        "unanswered": 24
+        "unanswered": 21
       },
       "delta": {
-        "count": -39,
-        "average": 0.22,
-        "pct_5_star": 5.2,
-        "pct_low": -5.6
+        "count": -38,
+        "average": 0.23,
+        "pct_5_star": 5.3,
+        "pct_low": -5.7
       },
       "theme_movement": [
         {
           "theme": "timed_entry",
-          "current": 3,
+          "current": 2,
           "prior": 18,
-          "current_share": 2.2,
-          "prior_share": 10.2,
-          "change": -8.0
+          "current_share": 1.5,
+          "prior_share": 10.4,
+          "change": -8.9
         },
         {
           "theme": "architecture",
           "current": 37,
-          "prior": 35,
-          "current_share": 27.0,
-          "prior_share": 19.9,
-          "change": 7.1
+          "prior": 34,
+          "current_share": 27.4,
+          "prior_share": 19.7,
+          "change": 7.8
         },
         {
           "theme": "ticket_pricing",
           "current": 1,
           "prior": 12,
           "current_share": 0.7,
-          "prior_share": 6.8,
-          "change": -6.1
+          "prior_share": 6.9,
+          "change": -6.2
         },
         {
           "theme": "crowding",
           "current": 2,
           "prior": 13,
           "current_share": 1.5,
-          "prior_share": 7.4,
-          "change": -5.9
+          "prior_share": 7.5,
+          "change": -6.0
         },
         {
           "theme": "parking",
-          "current": 6,
-          "prior": 15,
-          "current_share": 4.4,
-          "prior_share": 8.5,
-          "change": -4.1
+          "current": 5,
+          "prior": 16,
+          "current_share": 3.7,
+          "prior_share": 9.2,
+          "change": -5.5
         },
         {
           "theme": "staff",
           "current": 10,
           "prior": 6,
-          "current_share": 7.3,
-          "prior_share": 3.4,
+          "current_share": 7.4,
+          "prior_share": 3.5,
           "change": 3.9
-        },
-        {
-          "theme": "dwell_time",
-          "current": 13,
-          "prior": 10,
-          "current_share": 9.5,
-          "prior_share": 5.7,
-          "change": 3.8
         },
         {
           "theme": "grounds_conduct",
           "current": 1,
           "prior": 8,
           "current_share": 0.7,
-          "prior_share": 4.5,
-          "change": -3.8
-        },
-        {
-          "theme": "interactive_exhibits",
-          "current": 61,
-          "prior": 72,
-          "current_share": 44.5,
-          "prior_share": 40.9,
-          "change": 3.6
+          "prior_share": 4.6,
+          "change": -3.9
         },
         {
           "theme": "drive_market",
           "current": 5,
           "prior": 0,
-          "current_share": 3.6,
+          "current_share": 3.7,
           "prior_share": 0.0,
-          "change": 3.6
+          "change": 3.7
         },
         {
           "theme": "age_tiers",
           "current": 6,
           "prior": 2,
           "current_share": 4.4,
-          "prior_share": 1.1,
-          "change": 3.2
+          "prior_share": 1.2,
+          "change": 3.3
+        },
+        {
+          "theme": "dwell_time",
+          "current": 12,
+          "prior": 10,
+          "current_share": 8.9,
+          "prior_share": 5.8,
+          "change": 3.1
+        },
+        {
+          "theme": "boardwalk_trails",
+          "current": 8,
+          "prior": 5,
+          "current_share": 5.9,
+          "prior_share": 2.9,
+          "change": 3.0
+        },
+        {
+          "theme": "interactive_exhibits",
+          "current": 59,
+          "prior": 71,
+          "current_share": 43.7,
+          "prior_share": 41.0,
+          "change": 2.7
+        },
+        {
+          "theme": "landscape",
+          "current": 12,
+          "prior": 20,
+          "current_share": 8.9,
+          "prior_share": 11.6,
+          "change": -2.7
         },
         {
           "theme": "ai_criticism",
           "current": 10,
           "prior": 17,
-          "current_share": 7.3,
-          "prior_share": 9.7,
+          "current_share": 7.4,
+          "prior_share": 9.8,
           "change": -2.4
         },
         {
-          "theme": "boardwalk_trails",
-          "current": 8,
-          "prior": 6,
-          "current_share": 5.8,
-          "prior_share": 3.4,
-          "change": 2.4
+          "theme": "restrooms",
+          "current": 0,
+          "prior": 4,
+          "current_share": 0.0,
+          "prior_share": 2.3,
+          "change": -2.3
         },
         {
           "theme": "retail",
           "current": 4,
           "prior": 9,
-          "current_share": 2.9,
-          "prior_share": 5.1,
+          "current_share": 3.0,
+          "prior_share": 5.2,
           "change": -2.2
-        },
-        {
-          "theme": "landscape",
-          "current": 13,
-          "prior": 20,
-          "current_share": 9.5,
-          "prior_share": 11.4,
-          "change": -1.9
         },
         {
           "theme": "historical_balance",
           "current": 10,
           "prior": 10,
-          "current_share": 7.3,
-          "prior_share": 5.7,
+          "current_share": 7.4,
+          "prior_share": 5.8,
           "change": 1.6
-        },
-        {
-          "theme": "families",
-          "current": 9,
-          "prior": 9,
-          "current_share": 6.6,
-          "prior_share": 5.1,
-          "change": 1.5
-        },
-        {
-          "theme": "peer_comparison",
-          "current": 1,
-          "prior": 4,
-          "current_share": 0.7,
-          "prior_share": 2.3,
-          "change": -1.5
         },
         {
           "theme": "conservation_message",
           "current": 5,
           "prior": 4,
-          "current_share": 3.6,
+          "current_share": 3.7,
           "prior_share": 2.3,
           "change": 1.4
         },
@@ -528,8 +519,8 @@
           "theme": "food_beverage",
           "current": 11,
           "prior": 12,
-          "current_share": 8.0,
-          "prior_share": 6.8,
+          "current_share": 8.1,
+          "prior_share": 6.9,
           "change": 1.2
         },
         {
@@ -537,43 +528,51 @@
           "current": 3,
           "prior": 6,
           "current_share": 2.2,
-          "prior_share": 3.4,
+          "prior_share": 3.5,
           "change": -1.2
-        },
-        {
-          "theme": "guided_tours",
-          "current": 3,
-          "prior": 2,
-          "current_share": 2.2,
-          "prior_share": 1.1,
-          "change": 1.1
         },
         {
           "theme": "media_driven_awareness",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
-          "prior_share": 1.1,
-          "change": -1.1
+          "prior_share": 1.2,
+          "change": -1.2
         },
         {
           "theme": "queues",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
-          "prior_share": 1.1,
-          "change": -1.1
+          "prior_share": 1.2,
+          "change": -1.2
         },
         {
           "theme": "sellouts",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
-          "prior_share": 1.1,
+          "prior_share": 1.2,
+          "change": -1.2
+        },
+        {
+          "theme": "visitor_flow",
+          "current": 4,
+          "prior": 7,
+          "current_share": 3.0,
+          "prior_share": 4.0,
           "change": -1.1
         },
         {
-          "theme": "restrooms",
+          "theme": "guided_tours",
+          "current": 3,
+          "prior": 2,
+          "current_share": 2.2,
+          "prior_share": 1.2,
+          "change": 1.1
+        },
+        {
+          "theme": "peer_comparison",
           "current": 1,
           "prior": 3,
           "current_share": 0.7,
@@ -581,11 +580,11 @@
           "change": -1.0
         },
         {
-          "theme": "rooftop",
-          "current": 5,
-          "prior": 8,
-          "current_share": 3.6,
-          "prior_share": 4.5,
+          "theme": "interpretation",
+          "current": 16,
+          "prior": 22,
+          "current_share": 11.9,
+          "prior_share": 12.7,
           "change": -0.9
         },
         {
@@ -593,30 +592,30 @@
           "current": 3,
           "prior": 5,
           "current_share": 2.2,
-          "prior_share": 2.8,
+          "prior_share": 2.9,
           "change": -0.7
         },
         {
-          "theme": "interpretation",
-          "current": 17,
-          "prior": 21,
-          "current_share": 12.4,
-          "prior_share": 11.9,
-          "change": 0.5
+          "theme": "families",
+          "current": 7,
+          "prior": 10,
+          "current_share": 5.2,
+          "prior_share": 5.8,
+          "change": -0.6
         },
         {
           "theme": "value_for_money",
           "current": 1,
           "prior": 2,
           "current_share": 0.7,
-          "prior_share": 1.1,
+          "prior_share": 1.2,
           "change": -0.4
         },
         {
-          "theme": "visitor_flow",
+          "theme": "rooftop",
           "current": 5,
           "prior": 7,
-          "current_share": 3.6,
+          "current_share": 3.7,
           "prior_share": 4.0,
           "change": -0.3
         },
@@ -626,63 +625,63 @@
           "prior": 3,
           "current_share": 1.5,
           "prior_share": 1.7,
-          "change": -0.2
+          "change": -0.3
         }
       ]
     },
     "60": {
       "days": 60,
       "range": [
-        "2026-09-19",
-        "2026-11-17"
+        "2026-09-20",
+        "2026-11-18"
       ],
       "prior_range": [
-        "2026-07-21",
-        "2026-09-18"
+        "2026-07-22",
+        "2026-09-19"
       ],
       "current": {
-        "count": 313,
-        "rated_count": 313,
-        "average": 4.76,
+        "count": 308,
+        "rated_count": 308,
+        "average": 4.75,
         "distribution": {
           "1": 10,
           "2": 5,
           "3": 4,
           "4": 13,
-          "5": 281
+          "5": 276
         },
-        "pct_5_star": 89.8,
-        "pct_low": 6.1,
+        "pct_5_star": 89.6,
+        "pct_low": 6.2,
         "by_source": {
-          "google": 279,
-          "tripadvisor": 26,
+          "google": 275,
+          "tripadvisor": 25,
           "yelp": 8
         },
         "sentiment": {
-          "positive_with_criticism": 50,
-          "positive": 229,
-          "mixed": 19,
+          "positive_with_criticism": 49,
+          "positive": 226,
+          "mixed": 18,
           "negative": 15
         },
         "themes": {
-          "interactive_exhibits": 133,
-          "architecture": 72,
+          "interactive_exhibits": 130,
+          "architecture": 71,
           "interpretation": 38,
-          "landscape": 33,
+          "landscape": 32,
           "ai_criticism": 27,
-          "dwell_time": 23,
           "food_beverage": 23,
-          "timed_entry": 21,
+          "dwell_time": 22,
           "parking": 21,
           "historical_balance": 20,
-          "families": 18,
+          "timed_entry": 20,
+          "families": 17,
           "staff": 16,
           "crowding": 15,
-          "boardwalk_trails": 14,
-          "rooftop": 13,
+          "boardwalk_trails": 13,
           "retail": 13,
           "ticket_pricing": 13,
-          "visitor_flow": 12,
+          "rooftop": 12,
+          "visitor_flow": 11,
           "conservation_message": 9,
           "wayfinding_signage": 9,
           "grounds_conduct": 9,
@@ -690,8 +689,8 @@
           "age_tiers": 8,
           "drive_market": 5,
           "guided_tours": 5,
-          "peer_comparison": 5,
           "retail_pricing": 5,
+          "peer_comparison": 4,
           "restrooms": 4,
           "value_for_money": 3,
           "capacity": 2,
@@ -700,51 +699,51 @@
           "sellouts": 2,
           "water_availability": 1
         },
-        "unanswered": 33
+        "unanswered": 24
       },
       "prior": {
-        "count": 515,
-        "rated_count": 512,
+        "count": 514,
+        "rated_count": 511,
         "average": 4.62,
         "distribution": {
           "1": 20,
           "2": 15,
           "3": 18,
-          "4": 36,
+          "4": 35,
           "5": 423
         },
-        "pct_5_star": 82.6,
+        "pct_5_star": 82.8,
         "pct_low": 10.4,
         "by_source": {
-          "google": 463,
           "tripadvisor": 38,
-          "yelp": 11,
+          "google": 463,
+          "yelp": 10,
           "facebook": 3
         },
         "sentiment": {
-          "positive": 358,
+          "positive": 356,
           "mixed": 28,
-          "negative": 33,
-          "positive_with_criticism": 96
+          "positive_with_criticism": 97,
+          "negative": 33
         },
         "themes": {
-          "interactive_exhibits": 174,
-          "architecture": 91,
-          "timed_entry": 63,
-          "interpretation": 56,
-          "ai_criticism": 56,
-          "families": 51,
+          "interactive_exhibits": 175,
+          "architecture": 90,
+          "timed_entry": 64,
+          "interpretation": 55,
+          "ai_criticism": 54,
+          "families": 52,
           "landscape": 40,
           "crowding": 38,
-          "dwell_time": 36,
-          "staff": 26,
-          "rooftop": 24,
-          "ticket_pricing": 23,
+          "dwell_time": 37,
+          "rooftop": 25,
+          "staff": 25,
           "queues": 22,
-          "visitor_flow": 20,
+          "ticket_pricing": 22,
+          "visitor_flow": 21,
+          "boardwalk_trails": 20,
           "food_beverage": 19,
           "parking": 19,
-          "boardwalk_trails": 19,
           "age_tiers": 17,
           "wayfinding_signage": 15,
           "retail": 14,
@@ -752,13 +751,13 @@
           "grounds_conduct": 13,
           "security_screening": 12,
           "restrooms": 11,
-          "accessibility": 11,
-          "historical_balance": 10,
+          "accessibility": 10,
           "guided_tours": 9,
+          "historical_balance": 9,
+          "peer_comparison": 6,
           "conservation_message": 6,
           "retail_pricing": 6,
           "value_for_money": 5,
-          "peer_comparison": 5,
           "drive_market": 5,
           "staff_training": 4,
           "walkup_expectations": 3,
@@ -767,62 +766,62 @@
           "capacity": 2,
           "international_visitor": 1
         },
-        "unanswered": 123
+        "unanswered": 126
       },
       "delta": {
-        "count": -202,
-        "average": 0.14,
-        "pct_5_star": 7.2,
-        "pct_low": -4.3
+        "count": -206,
+        "average": 0.13,
+        "pct_5_star": 6.8,
+        "pct_low": -4.2
       },
       "theme_movement": [
         {
           "theme": "interactive_exhibits",
-          "current": 133,
-          "prior": 174,
-          "current_share": 42.5,
-          "prior_share": 33.8,
-          "change": 8.7
+          "current": 130,
+          "prior": 175,
+          "current_share": 42.2,
+          "prior_share": 34.0,
+          "change": 8.2
         },
         {
           "theme": "timed_entry",
-          "current": 21,
-          "prior": 63,
-          "current_share": 6.7,
-          "prior_share": 12.2,
-          "change": -5.5
+          "current": 20,
+          "prior": 64,
+          "current_share": 6.5,
+          "prior_share": 12.5,
+          "change": -6.0
         },
         {
           "theme": "architecture",
-          "current": 72,
-          "prior": 91,
-          "current_share": 23.0,
-          "prior_share": 17.7,
-          "change": 5.3
+          "current": 71,
+          "prior": 90,
+          "current_share": 23.1,
+          "prior_share": 17.5,
+          "change": 5.5
         },
         {
           "theme": "historical_balance",
           "current": 20,
-          "prior": 10,
-          "current_share": 6.4,
-          "prior_share": 1.9,
-          "change": 4.4
+          "prior": 9,
+          "current_share": 6.5,
+          "prior_share": 1.8,
+          "change": 4.7
         },
         {
           "theme": "families",
-          "current": 18,
-          "prior": 51,
-          "current_share": 5.8,
-          "prior_share": 9.9,
-          "change": -4.2
+          "current": 17,
+          "prior": 52,
+          "current_share": 5.5,
+          "prior_share": 10.1,
+          "change": -4.6
         },
         {
           "theme": "food_beverage",
           "current": 23,
           "prior": 19,
-          "current_share": 7.3,
+          "current_share": 7.5,
           "prior_share": 3.7,
-          "change": 3.7
+          "change": 3.8
         },
         {
           "theme": "queues",
@@ -836,25 +835,25 @@
           "theme": "parking",
           "current": 21,
           "prior": 19,
-          "current_share": 6.7,
+          "current_share": 6.8,
           "prior_share": 3.7,
-          "change": 3.0
+          "change": 3.1
         },
         {
           "theme": "landscape",
-          "current": 33,
+          "current": 32,
           "prior": 40,
-          "current_share": 10.5,
+          "current_share": 10.4,
           "prior_share": 7.8,
-          "change": 2.8
+          "change": 2.6
         },
         {
           "theme": "crowding",
           "current": 15,
           "prior": 38,
-          "current_share": 4.8,
+          "current_share": 4.9,
           "prior_share": 7.4,
-          "change": -2.6
+          "change": -2.5
         },
         {
           "theme": "security_screening",
@@ -863,14 +862,6 @@
           "current_share": 0.0,
           "prior_share": 2.3,
           "change": -2.3
-        },
-        {
-          "theme": "ai_criticism",
-          "current": 27,
-          "prior": 56,
-          "current_share": 8.6,
-          "prior_share": 10.9,
-          "change": -2.2
         },
         {
           "theme": "sellouts",
@@ -886,7 +877,23 @@
           "prior": 6,
           "current_share": 2.9,
           "prior_share": 1.2,
-          "change": 1.7
+          "change": 1.8
+        },
+        {
+          "theme": "ai_criticism",
+          "current": 27,
+          "prior": 54,
+          "current_share": 8.8,
+          "prior_share": 10.5,
+          "change": -1.7
+        },
+        {
+          "theme": "interpretation",
+          "current": 38,
+          "prior": 55,
+          "current_share": 12.3,
+          "prior_share": 10.7,
+          "change": 1.6
         },
         {
           "theme": "retail",
@@ -894,15 +901,15 @@
           "prior": 14,
           "current_share": 4.2,
           "prior_share": 2.7,
-          "change": 1.4
+          "change": 1.5
         },
         {
-          "theme": "interpretation",
-          "current": 38,
-          "prior": 56,
-          "current_share": 12.1,
-          "prior_share": 10.9,
-          "change": 1.3
+          "theme": "rooftop",
+          "current": 12,
+          "prior": 25,
+          "current_share": 3.9,
+          "prior_share": 4.9,
+          "change": -1.0
         },
         {
           "theme": "restrooms",
@@ -910,15 +917,7 @@
           "prior": 11,
           "current_share": 1.3,
           "prior_share": 2.1,
-          "change": -0.9
-        },
-        {
-          "theme": "boardwalk_trails",
-          "current": 14,
-          "prior": 19,
-          "current_share": 4.5,
-          "prior_share": 3.7,
-          "change": 0.8
+          "change": -0.8
         },
         {
           "theme": "staff_training",
@@ -927,6 +926,14 @@
           "current_share": 0.0,
           "prior_share": 0.8,
           "change": -0.8
+        },
+        {
+          "theme": "accessibility",
+          "current": 8,
+          "prior": 10,
+          "current_share": 2.6,
+          "prior_share": 1.9,
+          "change": 0.7
         },
         {
           "theme": "age_tiers",
@@ -942,15 +949,7 @@
           "prior": 5,
           "current_share": 1.6,
           "prior_share": 1.0,
-          "change": 0.6
-        },
-        {
-          "theme": "peer_comparison",
-          "current": 5,
-          "prior": 5,
-          "current_share": 1.6,
-          "prior_share": 1.0,
-          "change": 0.6
+          "change": 0.7
         },
         {
           "theme": "media_driven_awareness",
@@ -977,20 +976,20 @@
           "change": -0.6
         },
         {
-          "theme": "rooftop",
-          "current": 13,
-          "prior": 24,
-          "current_share": 4.2,
-          "prior_share": 4.7,
+          "theme": "visitor_flow",
+          "current": 11,
+          "prior": 21,
+          "current_share": 3.6,
+          "prior_share": 4.1,
           "change": -0.5
         },
         {
-          "theme": "dwell_time",
-          "current": 23,
-          "prior": 36,
-          "current_share": 7.3,
-          "prior_share": 7.0,
-          "change": 0.4
+          "theme": "retail_pricing",
+          "current": 5,
+          "prior": 6,
+          "current_share": 1.6,
+          "prior_share": 1.2,
+          "change": 0.5
         },
         {
           "theme": "grounds_conduct",
@@ -1001,28 +1000,20 @@
           "change": 0.4
         },
         {
-          "theme": "accessibility",
-          "current": 8,
-          "prior": 11,
-          "current_share": 2.6,
-          "prior_share": 2.1,
-          "change": 0.4
+          "theme": "staff",
+          "current": 16,
+          "prior": 25,
+          "current_share": 5.2,
+          "prior_share": 4.9,
+          "change": 0.3
         },
         {
-          "theme": "retail_pricing",
-          "current": 5,
-          "prior": 6,
-          "current_share": 1.6,
-          "prior_share": 1.2,
-          "change": 0.4
-        },
-        {
-          "theme": "ticket_pricing",
+          "theme": "boardwalk_trails",
           "current": 13,
-          "prior": 23,
+          "prior": 20,
           "current_share": 4.2,
-          "prior_share": 4.5,
-          "change": -0.3
+          "prior_share": 3.9,
+          "change": 0.3
         },
         {
           "theme": "capacity",
@@ -1041,28 +1032,36 @@
           "change": -0.3
         },
         {
+          "theme": "dwell_time",
+          "current": 22,
+          "prior": 37,
+          "current_share": 7.1,
+          "prior_share": 7.2,
+          "change": -0.1
+        },
+        {
+          "theme": "ticket_pricing",
+          "current": 13,
+          "prior": 22,
+          "current_share": 4.2,
+          "prior_share": 4.3,
+          "change": -0.1
+        },
+        {
           "theme": "guided_tours",
           "current": 5,
           "prior": 9,
           "current_share": 1.6,
-          "prior_share": 1.7,
-          "change": -0.2
+          "prior_share": 1.8,
+          "change": -0.1
         },
         {
-          "theme": "staff",
-          "current": 16,
-          "prior": 26,
-          "current_share": 5.1,
-          "prior_share": 5.0,
+          "theme": "peer_comparison",
+          "current": 4,
+          "prior": 6,
+          "current_share": 1.3,
+          "prior_share": 1.2,
           "change": 0.1
-        },
-        {
-          "theme": "visitor_flow",
-          "current": 12,
-          "prior": 20,
-          "current_share": 3.8,
-          "prior_share": 3.9,
-          "change": -0.0
         },
         {
           "theme": "wayfinding_signage",
@@ -1070,7 +1069,7 @@
           "prior": 15,
           "current_share": 2.9,
           "prior_share": 2.9,
-          "change": -0.0
+          "change": 0.0
         },
         {
           "theme": "value_for_money",
@@ -1078,60 +1077,60 @@
           "prior": 5,
           "current_share": 1.0,
           "prior_share": 1.0,
-          "change": -0.0
+          "change": 0.0
         }
       ]
     },
     "90": {
       "days": 90,
       "range": [
-        "2026-08-20",
-        "2026-11-17"
+        "2026-08-21",
+        "2026-11-18"
       ],
       "prior_range": [
-        "2026-05-22",
-        "2026-08-19"
+        "2026-05-23",
+        "2026-08-20"
       ],
       "current": {
-        "count": 565,
-        "rated_count": 563,
+        "count": 562,
+        "rated_count": 560,
         "average": 4.69,
         "distribution": {
           "1": 20,
           "2": 14,
           "3": 12,
           "4": 29,
-          "5": 488
+          "5": 485
         },
-        "pct_5_star": 86.7,
+        "pct_5_star": 86.6,
         "pct_low": 8.2,
         "by_source": {
-          "google": 501,
+          "google": 498,
           "tripadvisor": 50,
           "yelp": 12,
           "facebook": 2
         },
         "sentiment": {
           "positive_with_criticism": 98,
-          "positive": 403,
+          "positive": 400,
           "mixed": 32,
           "negative": 32
         },
         "themes": {
-          "interactive_exhibits": 224,
+          "interactive_exhibits": 222,
           "architecture": 116,
           "interpretation": 64,
           "timed_entry": 54,
-          "ai_criticism": 53,
+          "ai_criticism": 52,
           "landscape": 51,
-          "families": 43,
+          "families": 42,
           "dwell_time": 39,
           "crowding": 34,
           "parking": 33,
           "food_beverage": 32,
-          "rooftop": 28,
-          "staff": 27,
+          "rooftop": 27,
           "ticket_pricing": 27,
+          "staff": 26,
           "boardwalk_trails": 25,
           "historical_balance": 24,
           "visitor_flow": 23,
@@ -1156,50 +1155,50 @@
           "media_driven_awareness": 2,
           "walkup_expectations": 2
         },
-        "unanswered": 151
+        "unanswered": 145
       },
       "prior": {
-        "count": 440,
-        "rated_count": 439,
+        "count": 444,
+        "rated_count": 443,
         "average": 4.7,
         "distribution": {
           "1": 14,
           "2": 8,
           "3": 13,
           "4": 25,
-          "5": 379
+          "5": 383
         },
-        "pct_5_star": 86.3,
-        "pct_low": 8.0,
+        "pct_5_star": 86.5,
+        "pct_low": 7.9,
         "by_source": {
-          "google": 404,
+          "google": 408,
           "yelp": 8,
           "tripadvisor": 27,
           "facebook": 1
         },
         "sentiment": {
+          "positive": 340,
           "negative": 21,
           "positive_with_criticism": 63,
-          "positive": 336,
           "mixed": 20
         },
         "themes": {
-          "interactive_exhibits": 152,
+          "interactive_exhibits": 154,
           "architecture": 72,
-          "families": 49,
+          "families": 50,
+          "ai_criticism": 48,
           "landscape": 48,
-          "ai_criticism": 47,
           "interpretation": 40,
           "timed_entry": 34,
           "dwell_time": 33,
-          "staff": 23,
+          "staff": 24,
           "crowding": 23,
           "age_tiers": 20,
           "food_beverage": 19,
           "grounds_conduct": 16,
           "ticket_pricing": 16,
           "boardwalk_trails": 15,
-          "rooftop": 13,
+          "rooftop": 14,
           "historical_balance": 13,
           "retail": 13,
           "queues": 12,
@@ -1225,43 +1224,43 @@
         "unanswered": 11
       },
       "delta": {
-        "count": 125,
+        "count": 118,
         "average": -0.01,
-        "pct_5_star": 0.4,
-        "pct_low": 0.2
+        "pct_5_star": 0.1,
+        "pct_low": 0.3
       },
       "theme_movement": [
         {
           "theme": "interactive_exhibits",
-          "current": 224,
-          "prior": 152,
-          "current_share": 39.6,
-          "prior_share": 34.5,
-          "change": 5.1
+          "current": 222,
+          "prior": 154,
+          "current_share": 39.5,
+          "prior_share": 34.7,
+          "change": 4.8
         },
         {
           "theme": "architecture",
           "current": 116,
           "prior": 72,
-          "current_share": 20.5,
-          "prior_share": 16.4,
-          "change": 4.2
+          "current_share": 20.6,
+          "prior_share": 16.2,
+          "change": 4.4
+        },
+        {
+          "theme": "families",
+          "current": 42,
+          "prior": 50,
+          "current_share": 7.5,
+          "prior_share": 11.3,
+          "change": -3.8
         },
         {
           "theme": "parking",
           "current": 33,
           "prior": 9,
-          "current_share": 5.8,
+          "current_share": 5.9,
           "prior_share": 2.0,
           "change": 3.8
-        },
-        {
-          "theme": "families",
-          "current": 43,
-          "prior": 49,
-          "current_share": 7.6,
-          "prior_share": 11.1,
-          "change": -3.5
         },
         {
           "theme": "wayfinding_signage",
@@ -1272,6 +1271,14 @@
           "change": 2.8
         },
         {
+          "theme": "interpretation",
+          "current": 64,
+          "prior": 40,
+          "current_share": 11.4,
+          "prior_share": 9.0,
+          "change": 2.4
+        },
+        {
           "theme": "sellouts",
           "current": 14,
           "prior": 1,
@@ -1280,36 +1287,28 @@
           "change": 2.3
         },
         {
-          "theme": "interpretation",
-          "current": 64,
-          "prior": 40,
-          "current_share": 11.3,
-          "prior_share": 9.1,
-          "change": 2.2
-        },
-        {
-          "theme": "rooftop",
-          "current": 28,
-          "prior": 13,
-          "current_share": 5.0,
-          "prior_share": 3.0,
+          "theme": "timed_entry",
+          "current": 54,
+          "prior": 34,
+          "current_share": 9.6,
+          "prior_share": 7.7,
           "change": 2.0
         },
         {
           "theme": "landscape",
           "current": 51,
           "prior": 48,
-          "current_share": 9.0,
-          "prior_share": 10.9,
-          "change": -1.9
+          "current_share": 9.1,
+          "prior_share": 10.8,
+          "change": -1.7
         },
         {
-          "theme": "timed_entry",
-          "current": 54,
-          "prior": 34,
-          "current_share": 9.6,
-          "prior_share": 7.7,
-          "change": 1.8
+          "theme": "rooftop",
+          "current": 27,
+          "prior": 14,
+          "current_share": 4.8,
+          "prior_share": 3.2,
+          "change": 1.7
         },
         {
           "theme": "accessibility",
@@ -1328,6 +1327,14 @@
           "change": -1.7
         },
         {
+          "theme": "ai_criticism",
+          "current": 52,
+          "prior": 48,
+          "current_share": 9.3,
+          "prior_share": 10.8,
+          "change": -1.6
+        },
+        {
           "theme": "visitor_flow",
           "current": 23,
           "prior": 11,
@@ -1342,6 +1349,14 @@
           "current_share": 2.1,
           "prior_share": 3.6,
           "change": -1.5
+        },
+        {
+          "theme": "food_beverage",
+          "current": 32,
+          "prior": 19,
+          "current_share": 5.7,
+          "prior_share": 4.3,
+          "change": 1.4
         },
         {
           "theme": "peer_comparison",
@@ -1360,27 +1375,11 @@
           "change": -1.4
         },
         {
-          "theme": "ai_criticism",
-          "current": 53,
-          "prior": 47,
-          "current_share": 9.4,
-          "prior_share": 10.7,
-          "change": -1.3
-        },
-        {
-          "theme": "food_beverage",
-          "current": 32,
-          "prior": 19,
-          "current_share": 5.7,
-          "prior_share": 4.3,
-          "change": 1.3
-        },
-        {
           "theme": "historical_balance",
           "current": 24,
           "prior": 13,
-          "current_share": 4.2,
-          "prior_share": 3.0,
+          "current_share": 4.3,
+          "prior_share": 2.9,
           "change": 1.3
         },
         {
@@ -1389,7 +1388,7 @@
           "prior": 16,
           "current_share": 4.8,
           "prior_share": 3.6,
-          "change": 1.1
+          "change": 1.2
         },
         {
           "theme": "boardwalk_trails",
@@ -1397,7 +1396,7 @@
           "prior": 15,
           "current_share": 4.4,
           "prior_share": 3.4,
-          "change": 1.0
+          "change": 1.1
         },
         {
           "theme": "crowding",
@@ -1405,7 +1404,23 @@
           "prior": 23,
           "current_share": 6.0,
           "prior_share": 5.2,
-          "change": 0.8
+          "change": 0.9
+        },
+        {
+          "theme": "staff",
+          "current": 26,
+          "prior": 24,
+          "current_share": 4.6,
+          "prior_share": 5.4,
+          "change": -0.8
+        },
+        {
+          "theme": "restrooms",
+          "current": 10,
+          "prior": 5,
+          "current_share": 1.8,
+          "prior_share": 1.1,
+          "change": 0.7
         },
         {
           "theme": "security_screening",
@@ -1413,7 +1428,7 @@
           "prior": 8,
           "current_share": 1.1,
           "prior_share": 1.8,
-          "change": -0.8
+          "change": -0.7
         },
         {
           "theme": "staff_training",
@@ -1424,27 +1439,11 @@
           "change": 0.7
         },
         {
-          "theme": "dwell_time",
-          "current": 39,
-          "prior": 33,
-          "current_share": 6.9,
-          "prior_share": 7.5,
-          "change": -0.6
-        },
-        {
           "theme": "retail",
           "current": 20,
           "prior": 13,
-          "current_share": 3.5,
-          "prior_share": 3.0,
-          "change": 0.6
-        },
-        {
-          "theme": "restrooms",
-          "current": 10,
-          "prior": 5,
-          "current_share": 1.8,
-          "prior_share": 1.1,
+          "current_share": 3.6,
+          "prior_share": 2.9,
           "change": 0.6
         },
         {
@@ -1453,15 +1452,15 @@
           "prior": 7,
           "current_share": 2.1,
           "prior_share": 1.6,
-          "change": 0.5
+          "change": 0.6
         },
         {
-          "theme": "staff",
-          "current": 27,
-          "prior": 23,
-          "current_share": 4.8,
-          "prior_share": 5.2,
-          "change": -0.4
+          "theme": "dwell_time",
+          "current": 39,
+          "prior": 33,
+          "current_share": 6.9,
+          "prior_share": 7.4,
+          "change": -0.5
         },
         {
           "theme": "queues",
@@ -1555,8 +1554,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT205M05EUnliWGw0WkMxcFIzSnZObXQxU2sxR1ExRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOm93NDRybXl4ZC1pR3JvNmt1Sk1GQ1E%7C%7C?hl=en",
       "tier": "critical",
       "sla_days": 1,
-      "age_days": 39,
-      "overdue_by": 38
+      "age_days": 40,
+      "overdue_by": 39
     },
     {
       "id": "facebook-2026-08-18-92d466aa",
@@ -1575,8 +1574,8 @@
       "url": "https://www.facebook.com/bennjamyn/posts/pfbid0dywhJuT3RqfMAzRBYPzax6xe3nE61eCNTDh6iBHEdRomsnsHtHEGcmCu2BjWUh6pl",
       "tier": "negative",
       "sla_days": 3,
-      "age_days": 91,
-      "overdue_by": 88
+      "age_days": 92,
+      "overdue_by": 89
     },
     {
       "id": "google-2026-08-18-0b92d954",
@@ -1598,8 +1597,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25nd2NXRmlRVk5mYW5sSE9VYzFaWEV3WTFjd1FYYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOngwcWFiQVNfanlHOUc1ZXEwY1cwQXc%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 91,
-      "overdue_by": 84
+      "age_days": 92,
+      "overdue_by": 85
     },
     {
       "id": "google-2026-10-10-faaf574d",
@@ -1621,8 +1620,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25RdGFHWXRSMXBxWVVZelRIY3lRbGhOVWtSeFNrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnQtaGYtR1pqYUYzTHcyQlhNUkRxSkE%7C%7C?hl=en",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 38,
-      "overdue_by": 31
+      "age_days": 39,
+      "overdue_by": 32
     },
     {
       "id": "google-2026-11-10-fbe9ce12",
@@ -1641,8 +1640,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT21jNVVuSlFjWHBRU2tjd1pXd3lNMnhoVWxCeVoyYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOmc5UnJQcXpQSkcwZWwyM2xhUlByZ2c%7C%7C?hl=en-US",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 7,
-      "overdue_by": 0
+      "age_days": 8,
+      "overdue_by": 1
     },
     {
       "id": "google-2026-11-15-fd7c3a45",
@@ -1661,49 +1660,8 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2s1TVEybHBlRmMxUjA4dFRFUjZkV2g2UmxWYVJWRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOk5MQ2lpeFc1R08tTER6dWh6RlVaRVE%7C%7C?hl=en-US",
       "tier": "positive_with_criticism",
       "sla_days": 7,
-      "age_days": 2,
-      "overdue_by": -5
-    },
-    {
-      "id": "google-2026-11-15-2f11b452",
-      "source": "google",
-      "date": "2026-11-15",
-      "rating": 5,
-      "recommends": null,
-      "author": "Jeff Brandon",
-      "title": null,
-      "text": "I found the layout of the library done well for an older person like me.  The writing for the exhibits was displayed for easy reading without having to bend over or use my bifocals to read the information.  It was easy walking except if you were handicaped it was a long walk (I have a heart condition) to get to the front door but it was all level walking.  Some accomdation should have made for drop off at the door.  The little cafeteria was very weak.",
-      "themes": [
-        "accessibility",
-        "food_beverage"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2xOZk5TMVFPQzFFYURSSlp6aHJlazh3WkVGUlQyYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOlNfNS1QOC1EaDRJZzhrek8wZEFRT2c%7C%7C?hl=en-US",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 2,
-      "overdue_by": -5
-    },
-    {
-      "id": "google-2026-11-17-eae4ad2b",
-      "source": "google",
-      "date": "2026-11-17",
-      "rating": 5,
-      "recommends": null,
-      "author": "Susanne Wallace",
-      "title": null,
-      "text": "Loved the building design and layout … even tho you can get lost in there. I thought I had gotten to see the entire library but found I missed a couple of rooms. I’ll have to go back. It’s also very kid friendly with lots of interactive spots and storytelling. Don’t miss this library.",
-      "themes": [
-        "architecture",
-        "interactive_exhibits",
-        "families"
-      ],
-      "sentiment": "positive_with_criticism",
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25jMlFVRnRZbTlRVkVoMVRsRXRlWFZpVUZkTmFsRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnc2QUFtYm9QVEh1TlEteXViUFdNalE%7C%7C?hl=en-US",
-      "tier": "positive_with_criticism",
-      "sla_days": 7,
-      "age_days": 0,
-      "overdue_by": -7
+      "age_days": 3,
+      "overdue_by": -4
     }
   ],
   "closed_without_reply": [
@@ -1733,13 +1691,6 @@
     }
   ],
   "series": [
-    {
-      "date": "2026-05-21",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-05-22",
       "count": 0,
@@ -2995,10 +2946,17 @@
     },
     {
       "date": "2026-11-17",
-      "count": 3,
+      "count": 4,
       "average": 5.0,
       "trailing_30_average": 4.86,
-      "trailing_30_count": 141
+      "trailing_30_count": 142
+    },
+    {
+      "date": "2026-11-18",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 4.88,
+      "trailing_30_count": 138
     }
   ],
   "sla": {
@@ -3811,11 +3769,11 @@
   "briefs": {
     "7": {
       "window": "7",
-      "headline": "Ratings holding at 5.0 across 23 reviews",
+      "headline": "Ratings holding at 5.0 across 21 reviews",
       "paragraphs": [
-        "23 reviews in the last 7 days, up 4 on the previous 7 days. The average is up 0.05. 0.0% rated three stars or below.",
+        "21 reviews in the last 7 days, down 1 on the previous 7 days. The average is up 0.05. 0.0% rated three stars or below.",
         "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience continues to divide a small minority: 100 reviews to date name it as the reason for a low rating, against heavy praise for the same feature. Low volume, but it is the most likely subject of a critical feature story.",
-        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 8 reviews are waiting on a reply and 4 are past our own service level."
+        "No complaint appears often enough in this window to form a pattern worth acting on. Separately, 6 reviews are waiting on a reply and 5 are past our own service level."
       ],
       "coverage_warning": null,
       "actions": [],
@@ -3823,22 +3781,22 @@
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
-        "count": 23,
+        "count": 21,
         "average": 5.0,
-        "count_delta": 4,
+        "count_delta": -1,
         "average_delta": 0.05,
         "pct_low": 0.0,
-        "unanswered": 8,
-        "overdue": 4
+        "unanswered": 6,
+        "overdue": 5
       }
     },
     "30": {
       "window": "30",
-      "headline": "Ratings holding at 4.88 across 137 reviews",
+      "headline": "Ratings holding at 4.88 across 135 reviews",
       "paragraphs": [
-        "137 reviews in the last 30 days, down 39 on the previous 30 days. The average is up 0.22. 2.9% rated three stars or below.",
+        "135 reviews in the last 30 days, down 38 on the previous 30 days. The average is up 0.23. 3.0% rated three stars or below.",
         "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience continues to divide a small minority: 100 reviews to date name it as the reason for a low rating, against heavy praise for the same feature. Low volume, but it is the most likely subject of a critical feature story.",
-        "The complaints that cost us stars cluster tightly. The most frequent is crowding inside the galleries (1 mention), followed by how visitors move through the galleries and the reaction against the AI experience. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 8 reviews are waiting on a reply and 4 are past our own service level."
+        "The complaints that cost us stars cluster tightly. The most frequent is crowding inside the galleries (1 mention), followed by how visitors move through the galleries and the reaction against the AI experience. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 6 reviews are waiting on a reply and 5 are past our own service level."
       ],
       "coverage_warning": null,
       "actions": [
@@ -3859,22 +3817,22 @@
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
-        "count": 137,
+        "count": 135,
         "average": 4.88,
-        "count_delta": -39,
-        "average_delta": 0.22,
-        "pct_low": 2.9,
-        "unanswered": 8,
-        "overdue": 4
+        "count_delta": -38,
+        "average_delta": 0.23,
+        "pct_low": 3.0,
+        "unanswered": 6,
+        "overdue": 5
       }
     },
     "60": {
       "window": "60",
-      "headline": "Ratings holding at 4.76 across 313 reviews",
+      "headline": "Ratings holding at 4.75 across 308 reviews",
       "paragraphs": [
-        "313 reviews in the last 60 days, down 202 on the previous 60 days. The average is up 0.14. 6.1% rated three stars or below.",
+        "308 reviews in the last 60 days, down 206 on the previous 60 days. The average is up 0.13. 6.2% rated three stars or below.",
         "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 6 low ratings in this window.",
-        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (6 mentions), followed by crowding inside the galleries and confusion about timed entry. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 8 reviews are waiting on a reply and 4 are past our own service level."
+        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (6 mentions), followed by crowding inside the galleries and confusion about timed entry. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 6 reviews are waiting on a reply and 5 are past our own service level."
       ],
       "coverage_warning": null,
       "actions": [
@@ -3899,22 +3857,22 @@
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
-        "count": 313,
-        "average": 4.76,
-        "count_delta": -202,
-        "average_delta": 0.14,
-        "pct_low": 6.1,
-        "unanswered": 8,
-        "overdue": 4
+        "count": 308,
+        "average": 4.75,
+        "count_delta": -206,
+        "average_delta": 0.13,
+        "pct_low": 6.2,
+        "unanswered": 6,
+        "overdue": 5
       }
     },
     "90": {
       "window": "90",
-      "headline": "Ratings easing to 4.69 across 565 reviews",
+      "headline": "Ratings easing to 4.69 across 562 reviews",
       "paragraphs": [
-        "565 reviews in the last 90 days, up 125 on the previous 90 days. The average is down 0.01. 8.2% rated three stars or below.",
+        "562 reviews in the last 90 days, up 118 on the previous 90 days. The average is down 0.01. 8.2% rated three stars or below.",
         "Visitors are consistently praising the interactive exhibits, the building and the setting. The AI experience is the sharpest split in the feedback: it is the most praised feature in the building and the named reason for 12 low ratings in this window.",
-        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (12 mentions), followed by confusion about timed entry and wayfinding and signage. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 8 reviews are waiting on a reply and 4 are past our own service level."
+        "The complaints that cost us stars cluster tightly. The most frequent is the reaction against the AI experience (12 mentions), followed by confusion about timed entry and wayfinding and signage. These are operational and messaging fixes rather than problems with the experience itself, which is the better problem to have. Separately, 6 reviews are waiting on a reply and 5 are past our own service level."
       ],
       "coverage_warning": null,
       "actions": [
@@ -3939,13 +3897,13 @@
         "20 reviews predate public opening, averaging 4.4. These are press, donor and Founding Member previews. They count toward all-time figures but are held out of the response queue."
       ],
       "stats": {
-        "count": 565,
+        "count": 562,
         "average": 4.69,
-        "count_delta": 125,
+        "count_delta": 118,
         "average_delta": -0.01,
         "pct_low": 8.2,
-        "unanswered": 8,
-        "overdue": 4
+        "unanswered": 6,
+        "overdue": 5
       }
     }
   }
