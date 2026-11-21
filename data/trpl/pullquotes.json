@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20",
+  "generated": "2026-11-21",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -11,6 +11,11 @@
       "id": "google-2026-11-18-ba029418",
       "reason": "length 50 outside 60-220",
       "offered": "interactive, immersive, very enriching experience."
+    },
+    {
+      "id": "google-2026-11-15-fd7c3a45",
+      "reason": "length 38 outside 60-220",
+      "offered": "the ai interaction was a cool addition"
     },
     {
       "id": "google-2026-11-14-5a307000",
@@ -58,11 +63,6 @@
       "offered": "Lots to see.  Plenty of interactive for adults and kids."
     },
     {
-      "id": "google-2026-10-24-8c429bf2",
-      "reason": "length 34 outside 60-220",
-      "offered": "so beautiful and very educational."
-    },
-    {
       "id": "google-2026-10-15-b22a1421",
       "reason": "length 55 outside 60-220",
       "offered": "What a cool place! Loved it! I will definitely be back."
@@ -80,48 +80,48 @@
   ],
   "cut_by_critic_last_run": [
     {
-      "quote": "the ai interaction was a cool addition and the handful of original items they had were stretched throughout the museum.",
-      "reason": "Contains a minor spelling error ('ai' should be 'AI') and 'stretched throughout' is awkward and unclear."
-    },
-    {
       "quote": "The history from birth to death of a great man that did great things and admitted to his mistakes was so worth the trip.",
-      "reason": "Mentions 'admitted to his mistakes' which is a mild concession."
-    },
-    {
-      "quote": "Not your typical Library you have interaction with some of the exhibits.",
-      "reason": "Starts with a negation 'Not your typical Library' which is a mild hedging."
+      "reason": "Contains a concession about mistakes, which is a mild reservation."
     },
     {
       "quote": "It was informative, interactive, fun, wonderful greeters, everything was perfect!",
-      "reason": "Mentions 'wonderful greeters' which names staff indirectly and 'everything was perfect' is generic."
+      "reason": "Mentions greeters, which are staff members."
     },
     {
       "quote": "My entry time was at 1:30pm on a Saturday, and I stayed inside until 4:10pm, then explored the rooftop gardens and trail, and the boardwalk trail.",
-      "reason": "Mentions specific entry time and detailed visit schedule, which is not allowed."
-    },
-    {
-      "quote": "The displayed are all explained and many are inter active with the viewer.",
-      "reason": "Contains a spelling error 'inter active' should be 'interactive'."
+      "reason": "Mentions entry time and visiting duration, which relates to registration/time."
     },
     {
       "quote": "We especially enjoyed the computer generated hollow gram of TR that U could as him questions and he would reply !",
-      "reason": "Contains spelling errors and informal language ('hollow gram', 'U', 'as him')."
+      "reason": "Contains spelling errors ('hollow gram', 'U', 'as' instead of 'ask')."
     },
     {
       "quote": "Kids and adults had so much fun. We could have spent another 2 hours there if we wanted!",
-      "reason": "Mentions hypothetical future visit time which is not allowed."
+      "reason": "Mentions time spent, which relates to visiting duration."
+    },
+    {
+      "quote": "Full of lots of information as well as artifacts, interactive activities that seem to appeal to adults and kids, and a good restaurant for lunch or a snack while you are there.",
+      "reason": "Mentions restaurant, which is not allowed."
     },
     {
       "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Mentions 'featuring their own faces,' implying photos of visitors, which is disallowed."
+      "reason": "Mentions 'featuring their own faces,' implying photographs of visitors, which is disallowed."
     },
     {
       "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Mentions 'featuring their own faces,' implying photos of visitors, which is disallowed."
+      "reason": "Mentions 'featuring their own faces,' implying photographs of visitors, which is disallowed."
     },
     {
       "quote": "So many families and school kids were there to absorb and participate since teacher conferences were going on in area districts.",
       "reason": "Mentions school kids and teacher conferences, which is generic and not compelling for a stranger to visit."
+    },
+    {
+      "quote": "this place is amazing.  by far the best museum i have ever been too.   so beautiful and very educational.",
+      "reason": "Contains multiple spelling errors and grammatical mistakes."
+    },
+    {
+      "quote": "The flow the interactive things,  seating was everywhere,  flow was well planned and kids will not be bored.",
+      "reason": "Poor grammar and punctuation errors; also generic and unclear."
     },
     {
       "quote": "Artificial intelligence Roosevelt exhibit lets you ask him questions and makes photos of you in the time period.",
@@ -129,15 +129,15 @@
     },
     {
       "quote": "LOVED HOW THEY DESIGNED THE BUILDING INTO THE SURROUNDING TOGRAPHY, IMMERSIVE EXCIBITS FIRST CLASS, YOU CAN ASK ROOSEVELT QUESTIONS",
-      "reason": "Contains spelling errors ('TOGRAPHY', 'EXCIBITS') and all caps."
+      "reason": "Contains spelling errors and mentions asking Roosevelt questions but in all caps and poor grammar."
     },
     {
-      "quote": "I didn’t think I would like it but it was so much fun. Interactive and entertaining.",
-      "reason": "Contains a hedging phrase ('I didn’t think I would like it'), which is disallowed."
+      "quote": "Truly, one of the most complete National Park experiences obe could have.",
+      "reason": "Contains a spelling error ('obe' instead of 'one') making it unpublishable."
     },
     {
       "quote": "Exceptional experience!   Takes 2 hrs if you're quick & up to 4 hrs to fully participate & enjoy a most memorable experience!",
-      "reason": "The quote mentions duration of visit times, which is a form of registration or scheduling information and is not allowed."
+      "reason": "The quote mentions duration and participation details that could be interpreted as generic or logistical information rather than promotional content."
     }
   ],
   "quotes": [
@@ -355,6 +355,24 @@
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2t4bGFrRXdlRmMwYzNkVFJucGhTelZMWTJNeGNVRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkxlakEweFc0c3dTRnphSzVLY2MxcUE%7C%7C?hl=en-US"
     },
     {
+      "id": "google-2026-11-02-0ad5bc8a",
+      "quote": "The displayed are all explained and many are inter active with the viewer.",
+      "draw": "kids stayed engaged",
+      "themes": [
+        "interactive_exhibits",
+        "interpretation"
+      ],
+      "review_themes": [
+        "staff",
+        "interactive_exhibits"
+      ],
+      "author": "Robert G.",
+      "source": "google",
+      "date": "2026-11-02",
+      "rating": 5,
+      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT2tkdkxVbFpOVU0zTFdoak1WZGtOVTQ0Y1dsWWFWRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOkdvLUlZNUM3LWhjMVdkNU44cWlYaVE%7C%7C?hl=en-US"
+    },
+    {
       "id": "google-2026-11-01-29cc7391",
       "quote": "In a beautiful setting with architect to match and content to inspire, we walked away telling everyone it is worth the trip!",
       "draw": "worth the drive",
@@ -478,25 +496,6 @@
       "date": "2026-10-30",
       "rating": 5,
       "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25KVE0yNXNiakJ5Y21GT1Z6TmZSVXRETVZaQmVXYxAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnJTM25sbjBycmFOVzNfRUtDMVZBeWc%7C%7C?hl=en-US"
-    },
-    {
-      "id": "google-2026-10-30-084f04ac",
-      "quote": "Adults & children are pulled into becoming personally involved through the senses of sight & touch.",
-      "draw": "kids stayed engaged",
-      "themes": [
-        "interactive_exhibits"
-      ],
-      "review_themes": [
-        "architecture",
-        "conservation_message",
-        "interactive_exhibits",
-        "families"
-      ],
-      "author": "Jerry M.",
-      "source": "google",
-      "date": "2026-10-30",
-      "rating": 5,
-      "url": "https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sCi9DQUlRQUNvZENodHljRjlvT25oa1dtZG9RVnA2U200Mk1FVmxkalZFVTNoMllrRRAB!2m1!1s0x0:0x588995e798312048!3m1!1s2@1:CAIQACodChtycF9oOnhkWmdoQVp6Sm42MEVldjVEU3h2YkE%7C%7C?hl=en-US"
     },
     {
       "id": "google-2026-10-29-f28690d7",
