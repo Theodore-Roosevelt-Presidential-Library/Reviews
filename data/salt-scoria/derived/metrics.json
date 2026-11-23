@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-22",
+  "generated": "2026-11-23",
   "entity": "Salt+Scoria",
   "excluded_from_windows": {
     "count": 0,
@@ -55,12 +55,12 @@
     "7": {
       "days": 7,
       "range": [
-        "2026-11-16",
-        "2026-11-22"
+        "2026-11-17",
+        "2026-11-23"
       ],
       "prior_range": [
-        "2026-11-09",
-        "2026-11-15"
+        "2026-11-10",
+        "2026-11-16"
       ],
       "current": {
         "count": 0,
@@ -115,12 +115,12 @@
     "30": {
       "days": 30,
       "range": [
-        "2026-10-24",
-        "2026-11-22"
+        "2026-10-25",
+        "2026-11-23"
       ],
       "prior_range": [
-        "2026-09-24",
-        "2026-10-23"
+        "2026-09-25",
+        "2026-10-24"
       ],
       "current": {
         "count": 3,
@@ -194,12 +194,12 @@
     "60": {
       "days": 60,
       "range": [
-        "2026-09-24",
-        "2026-11-22"
+        "2026-09-25",
+        "2026-11-23"
       ],
       "prior_range": [
-        "2026-07-26",
-        "2026-09-23"
+        "2026-07-27",
+        "2026-09-24"
       ],
       "current": {
         "count": 4,
@@ -230,28 +230,28 @@
         "unanswered": 0
       },
       "prior": {
-        "count": 21,
-        "rated_count": 21,
-        "average": 3.29,
+        "count": 18,
+        "rated_count": 18,
+        "average": 3.61,
         "distribution": {
-          "1": 6,
-          "2": 4,
+          "1": 4,
+          "2": 3,
           "3": 0,
           "4": 0,
           "5": 11
         },
-        "pct_5_star": 52.4,
-        "pct_low": 47.6,
+        "pct_5_star": 61.1,
+        "pct_low": 38.9,
         "by_source": {
-          "google": 21
+          "google": 18
         },
         "sentiment": {
           "positive": 12,
-          "negative": 9
+          "negative": 6
         },
         "themes": {
-          "food_quality": 14,
-          "value": 6,
+          "food_quality": 11,
+          "value": 5,
           "service": 4,
           "menu_range": 4,
           "wait_time": 3,
@@ -260,10 +260,10 @@
         "unanswered": 0
       },
       "delta": {
-        "count": -17,
-        "average": -1.54,
-        "pct_5_star": -52.4,
-        "pct_low": 52.4
+        "count": -14,
+        "average": -1.86,
+        "pct_5_star": -61.1,
+        "pct_low": 61.1
       },
       "theme_movement": [
         {
@@ -271,60 +271,60 @@
           "current": 2,
           "prior": 4,
           "current_share": 50.0,
-          "prior_share": 19.0,
-          "change": 31.0
-        },
-        {
-          "theme": "food_quality",
-          "current": 2,
-          "prior": 14,
-          "current_share": 50.0,
-          "prior_share": 66.7,
-          "change": -16.7
+          "prior_share": 22.2,
+          "change": 27.8
         },
         {
           "theme": "wait_time",
           "current": 0,
           "prior": 3,
           "current_share": 0.0,
-          "prior_share": 14.3,
-          "change": -14.3
+          "prior_share": 16.7,
+          "change": -16.7
+        },
+        {
+          "theme": "food_quality",
+          "current": 2,
+          "prior": 11,
+          "current_share": 50.0,
+          "prior_share": 61.1,
+          "change": -11.1
         },
         {
           "theme": "atmosphere",
           "current": 0,
           "prior": 2,
           "current_share": 0.0,
-          "prior_share": 9.5,
-          "change": -9.5
+          "prior_share": 11.1,
+          "change": -11.1
         },
         {
           "theme": "service",
           "current": 1,
           "prior": 4,
           "current_share": 25.0,
-          "prior_share": 19.0,
-          "change": 6.0
+          "prior_share": 22.2,
+          "change": 2.8
         },
         {
           "theme": "value",
           "current": 1,
-          "prior": 6,
+          "prior": 5,
           "current_share": 25.0,
-          "prior_share": 28.6,
-          "change": -3.6
+          "prior_share": 27.8,
+          "change": -2.8
         }
       ]
     },
     "90": {
       "days": 90,
       "range": [
-        "2026-08-25",
-        "2026-11-22"
+        "2026-08-26",
+        "2026-11-23"
       ],
       "prior_range": [
-        "2026-05-27",
-        "2026-08-24"
+        "2026-05-28",
+        "2026-08-25"
       ],
       "current": {
         "count": 13,
@@ -452,13 +452,6 @@
   "triage": [],
   "closed_without_reply": [],
   "series": [
-    {
-      "date": "2026-05-26",
-      "count": 0,
-      "average": null,
-      "trailing_30_average": null,
-      "trailing_30_count": 0
-    },
     {
       "date": "2026-05-27",
       "count": 0,
@@ -1718,6 +1711,13 @@
       "average": null,
       "trailing_30_average": 1.75,
       "trailing_30_count": 4
+    },
+    {
+      "date": "2026-11-23",
+      "count": 0,
+      "average": null,
+      "trailing_30_average": 2.0,
+      "trailing_30_count": 3
     }
   ],
   "sla": {
@@ -1794,7 +1794,7 @@
       "window": "60",
       "headline": "Ratings at 1.75 across 4 reviews — worth attention",
       "paragraphs": [
-        "4 reviews in the last 60 days, down 17 on the previous 60 days. The average is down 1.54. 100.0% rated three stars or below.",
+        "4 reviews in the last 60 days, down 14 on the previous 60 days. The average is down 1.86. 100.0% rated three stars or below.",
         "Visitors are consistently praising the visit overall.",
         "No complaint appears often enough in this window to form a pattern worth acting on."
       ],
@@ -1804,8 +1804,8 @@
       "stats": {
         "count": 4,
         "average": 1.75,
-        "count_delta": -17,
-        "average_delta": -1.54,
+        "count_delta": -14,
+        "average_delta": -1.86,
         "pct_low": 100.0,
         "unanswered": 0,
         "overdue": 0
