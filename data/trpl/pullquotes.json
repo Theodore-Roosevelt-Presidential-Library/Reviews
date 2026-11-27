@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26",
+  "generated": "2026-11-27",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -11,6 +11,11 @@
       "id": "google-2026-11-18-ba029418",
       "reason": "length 50 outside 60-220",
       "offered": "interactive, immersive, very enriching experience."
+    },
+    {
+      "id": "google-2026-11-15-fd7c3a45",
+      "reason": "length 38 outside 60-220",
+      "offered": "the ai interaction was a cool addition"
     },
     {
       "id": "google-2026-11-14-6b3eea91",
@@ -43,6 +48,11 @@
       "offered": "Make sure to sign up for your entry time and plan at least 5 hours."
     },
     {
+      "id": "google-2026-11-02-45db54bf",
+      "reason": "length 31 outside 60-220",
+      "offered": "We loved the interactive areas."
+    },
+    {
       "id": "google-2026-11-01-7dbc8eb2",
       "reason": "length 54 outside 60-220",
       "offered": "Wonderful, fun and educational place to spend the day!"
@@ -53,9 +63,9 @@
       "offered": "the scenery surrounding the library is stunning."
     },
     {
-      "id": "google-2026-10-29-f935e5d4",
-      "reason": "length 46 outside 60-220",
-      "offered": "And we had fun with all the interactive parts."
+      "id": "tripadvisor-2026-10-26-94adbb44",
+      "reason": "length 246 outside 60-220",
+      "offered": "The library is located within Theodore Roosevelt National Park in Medora, North Dakota, so first you drive through the national park, enjoy the bison, prairie d"
     },
     {
       "id": "google-2026-10-26-38839332",
@@ -76,76 +86,57 @@
       "id": "google-2026-10-14-cb52c015",
       "reason": "length 49 outside 60-220",
       "offered": "A super hands on educational, tech savy facility."
+    },
+    {
+      "id": "google-2026-10-09-66d8661a",
+      "reason": "length 29 outside 60-220",
+      "offered": "Great interactive AI library."
     }
   ],
   "cut_by_critic_last_run": [
     {
-      "quote": "the ai interaction was a cool addition and the handful of original items they had were stretched throughout the museum.",
-      "reason": "Contains a minor grammatical issue and the phrase 'were stretched throughout the museum' is awkward and unclear."
-    },
-    {
       "quote": "It was informative, interactive, fun, wonderful greeters, everything was perfect!",
-      "reason": "Mentions 'wonderful greeters' which names staff indirectly and is generic praise."
+      "reason": "Mentions 'wonderful greeters,' which names staff members."
     },
     {
       "quote": "My entry time was at 1:30pm on a Saturday, and I stayed inside until 4:10pm, then explored the rooftop gardens and trail, and the boardwalk trail.",
-      "reason": "Mentions specific entry time and duration of visit, which is not allowed."
+      "reason": "Mentions specific times of entry and duration of visit, which is not allowed."
     },
     {
       "quote": "We especially enjoyed the computer generated hollow gram of TR that U could as him questions and he would reply !",
-      "reason": "Contains spelling errors ('hollow gram' instead of hologram, 'U' instead of you)."
+      "reason": "Contains a spelling error ('hollow gram' instead of 'hologram') and informal language ('U')."
     },
     {
-      "quote": "My favorite spot in the museum was visiting Teddy in his office and asking him questions!",
-      "reason": "Mentions asking questions to 'Teddy' which is a staff member or interactive exhibit named as a person, borderline but safer to reject."
+      "quote": "Kids and adults had so much fun. We could have spent another 2 hours there if we wanted!",
+      "reason": "Mentions hypothetical time spent ('We could have spent another 2 hours'), which is speculative."
     },
     {
-      "quote": "Then, at the library, parking lots abound, so if you cannot find parking right away, chances are you will find a spot in another lot.",
-      "reason": "Mentions parking lots and availability, which is logistical information not suitable for promotional quote."
-    },
-    {
-      "quote": "interactive activities that seem to appeal to adults and kids",
-      "reason": "Too generic and incomplete sentence fragment; does not stand alone as a full quote."
-    },
-    {
-      "quote": "Looks like they are trying to add more walking paths around the building also.",
-      "reason": "Mentions ongoing construction or additions, which is not suitable promotional content."
-    },
-    {
-      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Mentions 'featuring their own faces' which implies photos of visitors, disallowed content."
-    },
-    {
-      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
-      "reason": "Same as above, mentions photos of visitors."
+      "quote": "Full of lots of information as well as artifacts, interactive activities that seem to appeal to adults and kids, and a good restaurant for lunch or a snack while you are there.",
+      "reason": "Mentions a restaurant, which is not allowed."
     },
     {
       "quote": "So many families and school kids were there to absorb and participate since teacher conferences were going on in area districts.",
-      "reason": "Mentions school kids and teacher conferences, which is context not suitable for promotional quote."
+      "reason": "Mentions external events (teacher conferences) not relevant to the library experience."
     },
     {
       "quote": "The flow the interactive things,  seating was everywhere,  flow was well planned and kids will not be bored.",
-      "reason": "Contains grammatical errors and awkward phrasing, not suitable as is."
+      "reason": "Contains grammatical errors and awkward phrasing."
     },
     {
       "quote": "Artificial intelligence Roosevelt exhibit lets you ask him questions and makes photos of you in the time period.",
-      "reason": "Mentions photos of visitors, disallowed content."
+      "reason": "Mentions photos of visitors, which is disallowed."
     },
     {
       "quote": "LOVED HOW THEY DESIGNED THE BUILDING INTO THE SURROUNDING TOGRAPHY, IMMERSIVE EXCIBITS FIRST CLASS, YOU CAN ASK ROOSEVELT QUESTIONS",
-      "reason": "Contains spelling errors and all caps, also mentions photos of visitors."
-    },
-    {
-      "quote": "Truly, one of the most complete National Park experiences obe could have.",
-      "reason": "Contains a typo ('obe' instead of 'one')."
+      "reason": "Contains spelling errors and mentions photos of visitors."
     },
     {
       "quote": "I didn’t think I would like it but it was so much fun. Interactive and entertaining.",
-      "reason": "Contains a mild concession ('I didn’t think I would like it')."
+      "reason": "Contains hedging ('I didn’t think I would like it')."
     },
     {
-      "quote": "Exceptional experience!   Takes 2 hrs if you're quick & up to 4 hrs to fully participate & enjoy a most memorable experience!",
-      "reason": "Mentions duration and implies timing details, which is similar to mentioning opening times or scheduling."
+      "quote": "Very beautiful; Very interactive; great seating throughout the building; food available; best be ready to walk a lot!",
+      "reason": "Mentions food availability and walking, which is generic and not specific to the library experience."
     }
   ],
   "quotes": [
