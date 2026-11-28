@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27",
+  "generated": "2026-11-28",
   "note": "Curated pull quotes for the public widget. Every quote is a verbatim substring of the review it came from — see collector/pullquotes.py. Remove one by deleting its object and running --rebuild.",
   "rejected_last_run": [
     {
@@ -78,6 +78,11 @@
       "offered": "so beautiful and very educational."
     },
     {
+      "id": "google-2026-10-24-68a1b42c",
+      "reason": "length 53 outside 60-220",
+      "offered": "The flow was well planned and kids will not be bored."
+    },
+    {
       "id": "google-2026-10-15-b22a1421",
       "reason": "length 55 outside 60-220",
       "offered": "What a cool place! Loved it! I will definitely be back."
@@ -96,47 +101,51 @@
   "cut_by_critic_last_run": [
     {
       "quote": "It was informative, interactive, fun, wonderful greeters, everything was perfect!",
-      "reason": "Mentions 'wonderful greeters,' which names staff members."
+      "reason": "Mentions 'wonderful greeters' which names staff members, violating guidelines."
     },
     {
       "quote": "My entry time was at 1:30pm on a Saturday, and I stayed inside until 4:10pm, then explored the rooftop gardens and trail, and the boardwalk trail.",
-      "reason": "Mentions specific times of entry and duration of visit, which is not allowed."
+      "reason": "Mentions specific entry time and duration of visit, which is akin to mentioning registration or timing details."
     },
     {
       "quote": "We especially enjoyed the computer generated hollow gram of TR that U could as him questions and he would reply !",
-      "reason": "Contains a spelling error ('hollow gram' instead of 'hologram') and informal language ('U')."
+      "reason": "Contains spelling errors ('hollow gram' instead of hologram, 'U' instead of you)."
     },
     {
       "quote": "Kids and adults had so much fun. We could have spent another 2 hours there if we wanted!",
-      "reason": "Mentions hypothetical time spent ('We could have spent another 2 hours'), which is speculative."
+      "reason": "Mentions hypothetical extended visit time, which is similar to mentioning timing details."
     },
     {
       "quote": "Full of lots of information as well as artifacts, interactive activities that seem to appeal to adults and kids, and a good restaurant for lunch or a snack while you are there.",
-      "reason": "Mentions a restaurant, which is not allowed."
+      "reason": "Mentions a restaurant and food options, which is not allowed."
+    },
+    {
+      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
+      "reason": "Mentions 'featuring their own faces' which implies photographs of visitors, not allowed."
+    },
+    {
+      "quote": "The interactive exhibits were enjoyed by visitors of all ages, bringing history to life while featuring their own faces.",
+      "reason": "Mentions 'featuring their own faces' which implies photographs of visitors, not allowed."
     },
     {
       "quote": "So many families and school kids were there to absorb and participate since teacher conferences were going on in area districts.",
-      "reason": "Mentions external events (teacher conferences) not relevant to the library experience."
-    },
-    {
-      "quote": "The flow the interactive things,  seating was everywhere,  flow was well planned and kids will not be bored.",
-      "reason": "Contains grammatical errors and awkward phrasing."
+      "reason": "Mentions school kids and teacher conferences, which is generic and not compelling for a stranger to visit."
     },
     {
       "quote": "Artificial intelligence Roosevelt exhibit lets you ask him questions and makes photos of you in the time period.",
-      "reason": "Mentions photos of visitors, which is disallowed."
+      "reason": "Mentions making photos of visitors, which is not allowed."
     },
     {
       "quote": "LOVED HOW THEY DESIGNED THE BUILDING INTO THE SURROUNDING TOGRAPHY, IMMERSIVE EXCIBITS FIRST CLASS, YOU CAN ASK ROOSEVELT QUESTIONS",
-      "reason": "Contains spelling errors and mentions photos of visitors."
+      "reason": "Contains multiple spelling errors and typos ('TOGRAPHY', 'EXCIBITS'), also mentions asking Roosevelt questions but errors are disqualifying."
     },
     {
       "quote": "I didn’t think I would like it but it was so much fun. Interactive and entertaining.",
-      "reason": "Contains hedging ('I didn’t think I would like it')."
+      "reason": "Contains hedging ('I didn’t think I would like it but...'), which is not allowed."
     },
     {
       "quote": "Very beautiful; Very interactive; great seating throughout the building; food available; best be ready to walk a lot!",
-      "reason": "Mentions food availability and walking, which is generic and not specific to the library experience."
+      "reason": "Mentions food availability and walking a lot, which is generic and includes info about amenities not allowed."
     }
   ],
   "quotes": [
